@@ -1,4 +1,4 @@
-alert("OL works");
+// alert("OL works");
 var index1 = document.getElementById('index1');
 var index2 = document.getElementById('index2');
 var index3 = document.getElementById('index3');
