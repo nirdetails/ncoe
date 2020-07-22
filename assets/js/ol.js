@@ -11,10 +11,15 @@ $("#sel1").change(function(){
     if($("#sel1").val() == 1){
         // alert($("#sel1").val());
         index1.style.display = "block";
+        index2.style.display = "none";
+        index3.style.display = "none";
+
     }
     else if($("#sel1").val() == 2){
         index1.style.display = "block";
         index2.style.display = "block";
+        index3.style.display = "none";
+
     }
     else if($("#sel1").val() == 3){
         index1.style.display = "block";
