@@ -29,5 +29,5 @@
     <button type="submit" class="btn btn-info">Submit</button>
   </form>
 
-  <script src="ol.js"></script>
+  <script src="<?php echo site_url(); ?>assets/js/ol.js"></script>
 
