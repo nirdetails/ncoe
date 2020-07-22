@@ -1,3 +1,4 @@
+<h2><?= $title; ?></h2>
 <h2>A/L Results Sheet</h2>
   <table class="table">
     <thead>

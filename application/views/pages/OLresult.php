@@ -1,3 +1,4 @@
+<h2><?= $title; ?></h2>
 <div class="container1" id="con1">
   <h2>O/L Results Sheet</h2>
   <table class="table">

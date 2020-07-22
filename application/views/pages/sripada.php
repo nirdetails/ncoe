@@ -1,4 +1,4 @@
-  <h2></h2>
+<h2><?= $title; ?></h2>
   <form action="/action_page.php">
     <div class="form-group">
       <label for="index1" id="label1" title=" National College of Education">Are you applying for Sripada NCoE?</label>

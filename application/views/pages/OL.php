@@ -1,6 +1,6 @@
-
-  <h2></h2>
-  <form name="olform" action="/action_page.php">
+<h2><?= $title; ?></h2>
+<?php echo validation_errors(); ?>
+<?php echo form_open_multipart('posts/create'); ?>
   <div class="form-group">
       <label for="attempts">How many attempts?</label>
       <select name="sel1" class="form-control" id="sel1">
@@ -25,9 +25,7 @@
       <label for="emailindex" style="display :none">O/L index number:</label>
       <input type="text" class="form-control" id="index3" placeholder="Enter your 3rd index" name="index3" style="display :none">
     </div>
-
     <button type="submit" class="btn btn-info">Submit</button>
-  </form>
-
-  <script src="<?php echo site_url(); ?>assets/js/ol.js"></script>
+</form>
+<script src="<?php echo site_url(); ?>assets/js/ol.js"></script>
 

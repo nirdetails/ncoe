@@ -1,3 +1,4 @@
+<h2><?= $title; ?></h2>
 <form action="/action_page.php">
     <div class="form-group">
       <h2 style="text-align:center">Applicant's Declaration</h2>

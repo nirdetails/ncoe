@@ -1,3 +1,4 @@
+<h2><?= $title; ?></h2>
 <h2>Personal Details Form</h2>
   <form action="/action_page.php">
   <div class="form-group">
