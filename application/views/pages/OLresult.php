@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>A/L Results</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<div class="container">
-
-
+<h2><?= $title; ?></h2>
 <div class="container1" id="con1">
   <h2>O/L Results Sheet</h2>
   <table class="table">
@@ -208,12 +194,6 @@
     </tbody>
   </table>
 </div>
-</div>
-
-
-</body>
-</html>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="js/ol.js">
+<script src="<?php echo site_url(); ?>assets/js/olResult.js"></script>
 
 
