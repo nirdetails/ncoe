@@ -2,9 +2,10 @@
 <h2>A/L Results Sheet </h2>
 <?php foreach($alresults as $alresult): ?>
 <h4>Index Number : <?php echo $alresult['AL_index']; ?></h4>
+<?php $_SESSION['alindex'] = $alresult['AL_index']; ?>
   <table class="table">
     
-      <?php // var_dump($alresults); ?>
+      <?php // var_dump($_SESSION); ?>
     <thead>
       <tr>
         <th>Attempt</th>
@@ -36,7 +37,8 @@
   </table>
   <?php endforeach; ?>
   <div style="text-align:right">
-    <button  type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button>
+  <a class="btn btn-primary" href="<?php echo site_url(); ?>/olresults">Next</a>  
+  <!-- <button  type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
   </div>
 
 

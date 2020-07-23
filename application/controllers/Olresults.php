@@ -1,16 +1,24 @@
 <?php
 class Olresults extends CI_Controller{
-    public function showresult(){
-        
-        
-        $this->form_validation->set_rules('index1', 'index1', 'required');
+    public function index(){
+        $data['title'] = 'Ol index';
 
-        if($this->form_validation->run() === FALSE){
-            $this->load->view('templates/header');
-            $this->load->view('olresults/showresult',$data);
-            $this->load->view('templates/footer');
-        }else{
-            $this->olresults_model->get_result()
-        }
+        $this->load->view('templates/header');
+        $this->load->view('pages/ol',$data);
+        $this->load->view('templates/footer');
+    }
+
+
+    public function checkolres(){
+        $data['title'] = 'olresults';
+
+        $data['olresults'] = $this->olresults_model-> get_olresults();
+        // redirect('alresults');
+        $this->load->view('templates/header');
+        $this->load->view('pages/olresults',$data);
+        $this->load->view('templates/footer');
+
+        // var_dump($data);
+        
     }
 }
