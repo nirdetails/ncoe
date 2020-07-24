@@ -1,5 +1,9 @@
+<?php include ("header.php")?>
+
 <!DOCTYPE html>
 <html lang="en">
+<?php // var_dump($olresults1); ?>
+
 <head>
   <title>O/L Results</title>
   <meta charset="utf-8">
@@ -175,12 +179,11 @@
       </table>
       </div>
     </div>
+
   </table>
-  <a class="btn btn-primary float-left" href="<?php echo site_url(); ?>/personal">Next</a> 
   </div>
-  <br>
-  <br>
-</div>  
+</div>
+<a class="btn btn-primary" href="<?php echo site_url(); ?>/personal">Next</a>  
 </div>
 
 <?php //var_dump($_SESSION); ?> 

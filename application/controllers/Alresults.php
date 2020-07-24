@@ -2,6 +2,7 @@
 class Alresults extends CI_Controller{
     public function index(){
         $data['title'] = 'Al index';
+        $this->load->library('session');
 
         $this->load->view('templates/header');
         $this->load->view('pages/al',$data);
