@@ -1,21 +1,6 @@
-<?php include ("header.php")?>
-
-<!DOCTYPE html>
-<html lang="en">
-<?php // var_dump($olresults1); ?>
-
-<head>
-  <title>O/L Results</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-<div class="container">
-<h2>O/L Results Sheet</h2><br>
-
+<h2><?= $title; ?></h2><br>
 <div class="row">
-<?php if( $olresults1 != ""){foreach($olresults1 as $olresult1): ?>
+<?php if( $olresults1 != "N/A"){foreach($olresults1 as $olresult1): ?>
 <?php //$_SESSION['olindex1'] = $olresult1["OL_index"]; ?>
     <div class="container1" id="con1">    
       <div class= "col-sm-8">
@@ -70,7 +55,7 @@
     </div>
   <?php endforeach;} ?>
 
-  <?php if( $olresults2 != ""){foreach($olresults2 as $olresult2): ?>
+  <?php if( $olresults2 != "N/A"){foreach($olresults2 as $olresult2): ?>
   <?php //$_SESSION['olindex2'] = $olresult2["OL_index"]; ?>
     <div class="container2" id="con2">
     <div class= "col-sm-8">
@@ -125,7 +110,7 @@
       </div>
     </div>
   <?php endforeach;} ?>
-  <?php if( $olresults3 != ""){foreach($olresults3 as $olresult3): ?>
+  <?php if( $olresults3 != "N/A"){foreach($olresults3 as $olresult3): ?>
   <?php //$_SESSION['olindex3'] = $olresult3["OL_index"]; ?>
     <div class="container3" id="con3">
       <div class= "col-sm-8">
@@ -182,15 +167,12 @@
 
   </table>
   </div>
+  <a class="btn btn-primary" href="<?php echo site_url(); ?>/personal">Next</a>  
 </div>
-<a class="btn btn-primary" href="<?php echo site_url(); ?>/personal">Next</a>  
+
 </div>
 
 <?php //var_dump($_SESSION); ?> 
 <?php //$this->session->unset_userdata('alindex', 'olindex1', 'olindex2', 'olindex3') ?>
-</body>
-</html>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="js/ol.js">
-
-<?php include ("footer.php")?>
