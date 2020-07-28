@@ -9,7 +9,7 @@
     <label for="stream">Stream</label>
     <div class="form-group">
       <select name="sel1" class="form-control" id="sel1">
-        <option id="maths" selected>STREAM</option>
+        <option id="" selected>STREAM</option>
         <option id="maths">MATHS</option>
         <option id="bio">BIO SCIENCE</option>
         <option id="commerce">COMMERCE</option>

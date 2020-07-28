@@ -4,7 +4,7 @@ var index3 = document.getElementById('index3');
 
 
 $("#sel1").change(function(){
-    //alert($("#sel1").val());
+    // alert($("#sel1").val());
     //$(this).css("background-color", "#D6D6FF");
     //alert("dd");
 

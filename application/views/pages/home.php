@@ -7,6 +7,7 @@
                 </div>      
          </div>
         </div>
+        <?php// var_dump($_SESSION); ?>
         <div class="col-sm-6">   
             <div class="form-group">  
                <div style="text-align :right">

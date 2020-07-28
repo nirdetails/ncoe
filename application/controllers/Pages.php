@@ -5,6 +5,7 @@ class Pages extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst($page);
+        $this->load->library('session');
 
         $this->load->view('templates/header');
         $this->load->view('pages/'.$page,$data);
