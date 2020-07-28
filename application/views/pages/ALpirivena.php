@@ -1,5 +1,5 @@
 <h2><?= $title; ?></h2>
-  <form action="/action_page.php">
+<form action="/action_page.php">
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
@@ -213,4 +213,4 @@
     </div>
 
   
-  </form>
+</form>
