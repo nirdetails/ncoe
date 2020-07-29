@@ -10,7 +10,7 @@ class Alpirivena extends CI_Controller{
 
 
     public function checkalres(){
-        $data['title'] = 'alpirivena';
+        $data['title'] = 'al_pirivena';
 
         $this->form_validation->set_rules('alyear', 'Year', 'required');
         $this->form_validation->set_rules('index', 'Index No.', 'required');
@@ -41,7 +41,9 @@ class Alpirivena extends CI_Controller{
 
             $pirivena = 1;
             $this->session->set_userdata('pirivena', $pirivena);
-            echo "results entered";
+            $this->load->view('templates/header');
+            $this->load->view('pages/olresults',$data);
+            $this->load->view('templates/footer');
 
         }
     }

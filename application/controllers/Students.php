@@ -84,14 +84,22 @@
 				$this->load->view('templates/footer');
             }
             else{
-                $this->form_validation->set_rules('sworker', 'Second field', 'required');
-                if($this->form_validation->run() === FALSE){
-                    $this->load->view('templates/header');
-				    $this->load->view('pages/sripada', $data);
-				    $this->load->view('templates/footer');
+                $sripada = $this->input->post("sripada");
+                if($sripada ==  "Yes"){
+                    // echo "yes";
+                    $this->form_validation->set_rules('sworker', 'Second field', 'required');
+                    if($this->form_validation->run() === FALSE){
+                        $this->load->view('templates/header');
+                        $this->load->view('pages/sripada', $data);
+                        $this->load->view('templates/footer');
+                    }else{
+                        $this->load->view('templates/header');
+                        $this->load->view('pages/coursepage', $data);
+                        $this->load->view('templates/footer');
+                    }
                 }else{
                     $this->load->view('templates/header');
-				    $this->load->view('pages/personal', $data);
+                    $this->load->view('pages/coursepage', $data);
                     $this->load->view('templates/footer');
                 }
             }

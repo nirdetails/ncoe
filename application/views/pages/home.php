@@ -1,4 +1,6 @@
 <h2><?= $title; ?></h2>
+<?php session_destroy(); ?>
+<?php // var_dump($_SESSION); ?>
 <div class="row">
         <div class="col-sm-6">
             <div class="form-group"> 
