@@ -32,7 +32,7 @@ class Students_model extends CI_Model{
         );
 
         // Insert student personal detail
-         return $this->db->insert('stuents', $data);//Tablename is used as 'student      
+        return $this->db->insert('al_pirivena', $data);//Tablename is used as 'student      
 
 
     }

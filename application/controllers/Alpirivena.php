@@ -10,21 +10,39 @@ class Alpirivena extends CI_Controller{
 
 
     public function checkalres(){
-        // $data['title'] = 'alpirivena';
+        $data['title'] = 'alpirivena';
 
-        $data['alresults'] = $this->alpirivena_model-> post_alresults()();
+        $this->form_validation->set_rules('alyear', 'Year', 'required');
+        $this->form_validation->set_rules('index', 'Index No.', 'required');
+        $this->form_validation->set_rules('stream', 'Stream', 'required');
+        $this->form_validation->set_rules('medium', 'Medium', 'required');
+        $this->form_validation->set_rules('attempt', 'Attempt', 'required');
+        $this->form_validation->set_rules('subjectnumber1', 'Subject No.', 'required');
+        $this->form_validation->set_rules('subjectnumber2', 'Subject No.', 'required');
+        $this->form_validation->set_rules('subjectnumber3', 'Subject No.', 'required');
+        $this->form_validation->set_rules('subjectnumber4', 'Subject No.', 'required');
+        $this->form_validation->set_rules('subjectname1', 'Subject Name', 'required');
+        $this->form_validation->set_rules('subjectname2', 'Subject Name', 'required');
+        $this->form_validation->set_rules('subjectname3', 'Subject Name', 'required');
+        $this->form_validation->set_rules('subjectname4', 'Subject Name', 'required');
+        $this->form_validation->set_rules('grade1', 'Grade', 'required');
+        $this->form_validation->set_rules('grade2', 'Grade', 'required');
+        $this->form_validation->set_rules('grade3', 'Grade', 'required');
+        $this->form_validation->set_rules('grade4', 'Grade', 'required');
+        $this->form_validation->set_rules('gentst', 'Grade', 'required');
+        $this->form_validation->set_rules('zscore', 'Grade', 'required');
 
-        $pirivena = 1;
-        $this->session->set_userdata('pirivena', $pirivena);
-        echo "results entered"; 
-        // $alstream = $this->input->post('sel1');
-        // $this->session->set_userdata('alstream', $alstream);
-        // redirect('alresults');
-        // $this->load->view('templates/header');
-        // $this->load->view('pages/alresults',$data);
-        // $this->load->view('templates/footer');
+        if($this->form_validation->run() === FALSE){
+            $this->load->view('templates/header');
+			$this->load->view('alpirivena/index', $data);
+			$this->load->view('templates/footer');
+        }else{
+            $data['alresults'] = $this->alpirivena_model-> post_alresults();
 
-        // var_dump($alstream);
-        
+            $pirivena = 1;
+            $this->session->set_userdata('pirivena', $pirivena);
+            echo "results entered";
+
+        }
     }
 }
