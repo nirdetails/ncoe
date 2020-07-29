@@ -14,8 +14,10 @@ class Alresults extends CI_Controller{
 
         $data['alresults'] = $this->alresults_model-> get_alresults();
 
-        $alstream = $this->input->post('sel1');
-        $this->session->set_userdata('alstream', $alstream);
+        $pirivena = 0;
+        $this->session->set_userdata('pirivena', $pirivena);
+        // $alstream = $this->input->post('sel1');
+        // $this->session->set_userdata('alstream', $alstream);
         // redirect('alresults');
         $this->load->view('templates/header');
         $this->load->view('pages/alresults',$data);

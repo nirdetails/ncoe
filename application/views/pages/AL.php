@@ -5,7 +5,7 @@
     <label for="index">A\L index number:</label>
     <input type="text" class="form-control" id="index" placeholder="Enter your A\L index number" name="index">
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="stream">Stream</label>
     <div class="form-group">
       <select name="sel1" class="form-control" id="sel1">
@@ -17,9 +17,9 @@
         <option id="tech">TECHNOLOGY</option>
         <option id="comm">COMMON</option>
       </select>
-    </div>
-    <br>
-  </div>
+    </div> -->
+    <!-- <br>
+  </div> -->
   
   <button type="submit" class="btn btn-info">Submit</button>
 

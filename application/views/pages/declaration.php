@@ -1,5 +1,5 @@
 <h2><?= $title; ?></h2>
-<form action="/action_page.php">
+<form action="">
     <div class="form-group">
       <h2 style="text-align:center">Applicant's Declaration</h2>
     </div>
@@ -28,7 +28,8 @@
       </div>
     </div>
     <div class="form-group">
-    <button type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button>
-     </div>
+      <!-- <button type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
+      <a class="btn btn-primary" href="<?php echo site_url(); ?>/submission">Accept</a> 
+    </div>
   </div>
 </form>

@@ -89,9 +89,12 @@
     <input type="hidden" value="<?php echo $_SESSION['olindex1']; ?>" name="olindex1">
     <input type="hidden" value="<?php echo $_SESSION['olindex2']; ?>" name="olindex2">
     <input type="hidden" value="<?php echo $_SESSION['olindex3']; ?>" name="olindex3">
+    <input type="hidden" value="<?php echo $_SESSION['sripada']; ?>" name="sripada">
+    <input type="hidden" value="<?php echo $_SESSION['sworker']; ?>" name="sworker">
     <!-- <button type="submit" name="btnprv" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span> Previous</button> -->
-
+    <a class="btn btn-primary" href="">Recheck</a>
     <button type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button>
+
 
 </form>
 

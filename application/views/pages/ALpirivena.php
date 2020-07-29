@@ -1,25 +1,44 @@
 <h2><?= $title; ?></h2>
-<form action="/action_page.php">
+<?php echo form_open_multipart('Alpirivena/checkalres'); ?>
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
                 <label for="index">A\L year:</label>
-                <input type="text" class="form-control" id="index" placeholder="Enter your A\L year" name="index">
+                <!-- <input type="text" class="form-control" id="alyear" placeholder="Enter your A\L year" name="alyear"> -->
+                <select class="form-control" id="alyear" placeholder="Enter your A\L year" name="alyear">
+                    <option value="">SELECT</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                </select>
             </div>
         </div>
-        <div class="col-sm-4">
+        
+
+        
+        <!-- <div style="text-align:center">
+            <button style="margin-top:10px; margin-left:300px" type="submit" class="btn btn-info">Submit</button>
+        </div> -->
+        
+    </div>
+   
+   
+    <h2>A/L Results</h2>
+    <div class="row">
+    <div class="col-sm-6">
                 <div class="form-group">
                     <label for="index">A\L index:</label>
-                    <input type="text" class="form-control" id="index" placeholder="Enter your A\L year" name="index">
+                    <input type="text" class="form-control" id="index" placeholder="Enter your A\L index" name="index">
                 </div>
-        </div>
-
-        <div class="col-sm-4">
+    </div>
+    <div class="col-sm-6">
             <div class="form-group">
                 <label for="stream">Stream</label>
                 <div class="form-group">
                 <select name="sel1" class="form-control" id="sel1">
-                    <option id="maths" selected>STREAM</option>
+                    <option id="" selected>STREAM</option>
                     <option id="maths">MATHS</option>
                     <option id="bio">BIO SCIENCE</option>
                     <option id="commerce">COMMERCE</option>
@@ -31,14 +50,7 @@
                  <br>
             </div>
         </div>
-        <div style="text-align:center">
-            <button style="margin-top:10px; margin-left:300px" type="submit" class="btn btn-info">Submit</button>
-        </div>
-        
-    </div>
-   
-   
-    <h2>A/L Results</h2>
+</div>
 
   <div class="row">
         <div class="col-sm-3">
@@ -214,3 +226,4 @@
 
   
 </form>
+<script src="<?php echo site_url(); ?>assets/js/alpir.js"></script>
