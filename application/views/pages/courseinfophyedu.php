@@ -5,11 +5,23 @@
   <title>Personal Declaration</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+ 
+  <script><?php include "js/courseinfo.js" ?> </script>
+
+  <script>
+
+$(function(){
+  $("input[type='submit']").click(function(){
+      var $fileUpload = $("input[type='file']");
+      if (parseInt($fileUpload.get(0).files.length)>3){
+       alert("You can only upload a maximum of 3 certificates");
+      }
+  });    
+});
+
+</script>
+
   <style>
-	
 	body{
 		background: #aaa;
 	}
@@ -56,10 +68,10 @@ The company's hardware products include the iPhone smartphone, the iPad tablet c
      <input title="you can upload 3 Certificates only" type="file" id="myfile" name="myfile" multiple><br><br>
   </form>
    
-    <div class="form-group">
-     <div style="text-align :right">
-         <button type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button>
-     </div>
+  <div class="form-group">
+    <div style="text-align :right">     
+      <input type="submit" value="Next" class="btn btn-info" />      
+    </div>
     </div>
   </div>
   </form>
