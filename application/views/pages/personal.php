@@ -22,7 +22,34 @@
     </div>
     <div class="form-group">
       <label for="district">Recendent District Name and Number: </label>
-      <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district">
+      <select class="form-control" id="district" name="district" required>
+                        <option value="0" selected disabled>Select a District</option>
+                                                  <option value="16">D16 - Ampara</option>
+                                                  <option value="20">D20 - Anuradhapura</option>
+                                                  <option value="22">D22 - Badulla</option>
+                                                  <option value="15">D15 - Batticaloa</option>
+                                                  <option value="01">D01 - Colombo</option>
+                                                  <option value="07">D07 - Galle</option>
+                                                  <option value="02">D02 - Gampaha</option>
+                                                  <option value="09">D09 - Hambantota</option>
+                                                  <option value="10">D10 - Jaffna</option>
+                                                  <option value="03">D03 - Kaluthara</option>
+                                                  <option value="04">D04 - Kandy</option>
+                                                  <option value="25">D25 - Kegalle</option>
+                                                  <option value="11">D11 - Kilinochchi</option>
+                                                  <option value="18">D18 - Kurunegala</option>
+                                                  <option value="12">D12 - Mannar</option>
+                                                  <option value="05">D05 - Matale</option>
+                                                  <option value="08">D08 - Matara</option>
+                                                  <option value="23">D23 - Monaragala</option>
+                                                  <option value="14">D14 - Mullaitivu</option>
+                                                  <option value="06">D06 - Nuwara Eliya</option>
+                                                  <option value="21">D21 - Polonnaruwa</option>
+                                                  <option value="19">D19 - Puttalam</option>
+                                                  <option value="24">D24 - Ratnapura</option>
+                                                  <option value="17">D17 - Trincomalee</option>
+                                                  <option value="13">D13 - Vavuniya</option>
+                                              </select>
     </div>
    
     <div class="row">

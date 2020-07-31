@@ -1,5 +1,45 @@
-<h2><?= $title; ?></h2>
-<form action="/action_page.php">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Personal Declaration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+  <script>
+  function terms_changed(termsCheckBox){
+    //If the checkbox has been checked
+    if(termsCheckBox.checked){
+        //Set the disabled property to FALSE and enable the button.
+        document.getElementById("submit_button").disabled = false;
+    } else{
+        //Otherwise, disable the submit button.
+        document.getElementById("submit_button").disabled = true;
+    }
+}
+</script>
+  
+  
+  <style>
+	body{
+		background: #aaa;
+	}
+	.container{
+		background: #fff;
+		padding: 10px;
+		margin-top: 10px;
+		border-radius: 10px;
+		max-width: 700px;
+	}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2></h2>
+  <form action="/action_page.php">
     <div class="form-group">
       <h2 style="text-align:center">Applicant's Declaration</h2>
     </div>
@@ -21,14 +61,18 @@
     <!-- <div class="col-sm-2">Checkbox</div> -->
     <div class="col-sm-10">
       <div class="form-check" style="font-size:20px;padding-left:50px">
-        <input class="form-check-input" type="checkbox" id="gridCheck1" >
+        <input class="form-check-input" onclick="terms_changed(this)" type="checkbox" id="gridCheck1" >
         <label style="font-size:20px;padding-left:10px" class="form-check-label" for="gridCheck1">
           Agree 
         </label>
       </div>
     </div>
     <div class="form-group">
-    <button type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button>
+    <button type="submit" id="submit_button" name="btnnext" class="btn btn-info" disabled><span  class="glyphicon glyphicon-arrow-right" ></span> Next </button>
      </div>
   </div>
-</form>
+  </form>
+</div>
+
+</body>
+</html>

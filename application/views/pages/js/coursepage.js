@@ -1,4 +1,28 @@
 
+//initial checkCount of zero 
+var checkCount = 0;
+
+//maximum number of allowed checked boxes 
+var maxChecks = 53;
+
+$(document).ready(function() {
+
+     $(':checkbox[name=checkbox]').change(function() {
+
+        checkCount = $(':checked').length;
+
+        console.log(checkCount);
+        if (checkCount >= maxChecks) {
+            $(':checkbox[name=checkbox]').not(':checked').attr('disabled', true);
+        } else {
+            $(':checkbox[name=checkbox]:disabled').attr('disabled', false);
+        }
+
+    });
+
+});
+
+
 $(document).ready(function(){
     // $('input[type="checkbox"]').click(function(){
       $('#one').click(function(){
