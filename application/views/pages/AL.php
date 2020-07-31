@@ -8,14 +8,14 @@
   <div class="form-group">
     <label for="stream">Stream</label>
     <div class="form-group">
-      <select name="sel1" class="form-control" id="sel1">
+    <select name="sel1" class="form-control" id="sel1">
         <option id="maths" selected>STREAM</option>
-        <option id="maths">MATHS</option>
-        <option id="bio">BIO SCIENCE</option>
-        <option id="commerce">COMMERCE</option>
-        <option id="arts">ARTS</option>
-        <option id="tech">TECHNOLOGY</option>
-        <option id="comm">COMMON</option>
+        <option id="maths">BIOLOGICAL SCIENCE STREAM - 1</option>
+        <option id="bio">PHYSICAL SCIENCE STREAM - 2</option>
+        <option id="commerce">COMMERCE - 3</option>
+        <option id="arts">ARTS - 4</option>
+        <option id="tech">TECHNOLOGY - 5</option>
+        <option id="comm">OTHER - 6</option>
       </select>
     </div>
     <br>
