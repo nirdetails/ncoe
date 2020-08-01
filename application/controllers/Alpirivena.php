@@ -34,7 +34,7 @@ class Alpirivena extends CI_Controller{
 
         if($this->form_validation->run() === FALSE){
             $this->load->view('templates/header');
-			$this->load->view('alpirivena/index', $data);
+			$this->load->view('pages/ALpirivena',$data);
 			$this->load->view('templates/footer');
         }else{
             $data['alresults'] = $this->alpirivena_model-> post_alresults();

@@ -29,27 +29,28 @@
 
             // echo "We are here";
             // var_dump($_REQUEST);
-            $fullname = $this->input->post("fullname");
-            $namewithinitials = $this->input->post("namewithinitials");
-            $dob = $this->input->post("dob");
-            $addressline1 = $this->input->post("addressline1");
-            $addressline2 = $this->input->post("addressline2");
-            $addressline3 = $this->input->post("addressline3");
-            $addressline4 = $this->input->post("addressline4");
-            $district = $this->input->post("district");
-            $nic = $this->input->post("nic");
-            $gender = $this->input->post("gender");
-            $title = $this->input->post("title");
-            $ethnicity = $this->input->post("ethnicity");
-            $mobile = $this->input->post("mobile");
-            $home = $this->input->post("home");
-            $email = $this->input->post("email");
 
 			if($this->form_validation->run() === FALSE){
 				$this->load->view('templates/header');
 				$this->load->view('pages/personal', $data);
 				$this->load->view('templates/footer');
 			} else {
+                $fullname = $this->input->post("fullname");
+                $namewithinitials = $this->input->post("namewithinitials");
+                $dob = $this->input->post("dob");
+                $addressline1 = $this->input->post("addressline1");
+                $addressline2 = $this->input->post("addressline2");
+                $addressline3 = $this->input->post("addressline3");
+                $addressline4 = $this->input->post("addressline4");
+                $district = $this->input->post("district");
+                $nic = $this->input->post("nic");
+                $gender = $this->input->post("gender");
+                $title = $this->input->post("title");
+                $ethnicity = $this->input->post("ethnicity");
+                $mobile = $this->input->post("mobile");
+                $home = $this->input->post("home");
+                $email = $this->input->post("email");
+                
                 // $this->students_model->personaldetails();
                 $this->session->set_userdata('fullname', $fullname);
                 $this->session->set_userdata('namewithinitials', $namewithinitials);
@@ -93,34 +94,49 @@
                         $this->load->view('pages/sripada', $data);
                         $this->load->view('templates/footer');
                     }else{
-                        $this->load->view('templates/header');
-                        $this->load->view('pages/coursepage', $data);
-                        $this->load->view('templates/footer');
-                    }
-                }else{
-                    $this->load->view('templates/header');
-                    $this->load->view('pages/coursepage', $data);
-                    $this->load->view('templates/footer');
-                }
-            }
-            $sripada = $this->input->post("sripada");
-            $sworker = $this->input->post("sworker");
+                        $sworker = $this->input->post("sworker");
 
-            if($sripada == "Yes"){
-                $sripadam = 1;
-            }elseif($sripada = "No"){
-                $sripadam = 0;
-            }
-            // var_dump($sworker);
-            if($sworker == "Yes"){
-                $sworkerm = 1;
-            }elseif($sripada = "No"){
-                $sworkerm = 0;
+                        if($sripada == "Yes"){
+                            $sripadam = 1;
+                        }elseif($sripada = "No"){
+                            $sripadam = 0;
+                        }
+                        // var_dump($sworker);
+                        if($sworker == "Yes"){
+                            $sworkerm = 1;
+                        }elseif($sripada = "No"){
+                            $sworkerm = 0;
+                        }
+                        $this->session->set_userdata('sripada', $sripadam);
+                        $this->session->set_userdata('sworker', $sworkerm);
+                        // $this->load->view('templates/header');
+                        // $this->load->view('pages/coursepage', $data);
+                        // $this->load->view('templates/footer');
+                        redirect('courses/index');
+                    }
+                }else{   
+                    $sworker = $this->input->post("sworker");
+
+                    if($sripada == "Yes"){
+                        $sripadam = 1;
+                    }elseif($sripada = "No"){
+                        $sripadam = 0;
+                    }
+                    // var_dump($sworker);
+                    if($sworker == "Yes"){
+                        $sworkerm = 1;
+                    }elseif($sripada = "No"){
+                        $sworkerm = 0;
+                    }
+                    $this->session->set_userdata('sripada', $sripadam);
+                    $this->session->set_userdata('sworker', $sworkerm);
+                    // $this->load->view('templates/header');
+                    // $this->load->view('pages/coursepage', $data);
+                    // $this->load->view('templates/footer');
+                    redirect('courses/index');
+                }
             }
             // var_dump($sripadam);
             // var_dump($sworkerm);
-
-            $this->session->set_userdata('sripada', $sripadam);
-            $this->session->set_userdata('sworker', $sworkerm);
         }
 	}

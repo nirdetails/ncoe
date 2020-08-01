@@ -20,4 +20,13 @@
 			$this->load->view('pages/view', $data);
 			$this->load->view('templates/footer');
         }
+
+        function mypdf(){
+            $this->load->library('pdf');       
+        
+              $this->pdf->load_view('mypdf');
+              $this->pdf->render();
+        
+              $this->pdf->stream("welcome.pdf");
+           }
     }

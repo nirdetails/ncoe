@@ -3,7 +3,7 @@
 <?php echo validation_errors(); ?>
 <?php echo form_open_multipart('students/personaldetails'); ?>
   <div class="form-group">
-  <?php // var_dump($_SESSION); ?>
+  <?php // var_dump($_SESSION['sworker']); ?>
       <label for="fullname">Name in Full: </label>
       <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" name="fullname">
     </div>
