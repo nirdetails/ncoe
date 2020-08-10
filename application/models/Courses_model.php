@@ -14,4 +14,26 @@ class Courses_model extends CI_Model{
 		return $query->row_array();
         // var_dump($query);
     }
+
+    public function preferdetails($post_file1, $post_file2, $post_file3, $post_filer1, $post_filer2, $post_filer3){
+        // Students data array
+        $data = array(
+            'pref1' => $this->input->post('course1'),
+            'pref2' => $this->input->post('course2'),
+            'pref3' => $this->input->post('course3'),
+            'stuid' => $this->input->post('alindex'),
+            // 'marks' => $this->input->post('pemarks1'),
+            // 'marks2' => $this->input->post('pemarks2'),
+            // 'marks3' => $this->input->post('pemarks3'),
+            // 'myfile' => $this->input->post('myfile'),
+            'filename' => $post_file1.','.$post_file2.','.$post_file3,
+            'filenamer' => $post_filer1.','.$post_filer2.','.$post_filer3
+
+       );
+
+        // Insert preference detail
+         return $this->db->insert('courseselect', $data);//Tablename is used as 'student      
+
+
+    }
 }

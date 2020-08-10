@@ -24,13 +24,15 @@ input:checked {
         <td><a href="<?php echo base_url('/course/'.$course['course_no']); ?>"><?= $course['name'] ?></a></td>
         <!-- <td><?php //echo $course['medium']; ?></td> -->
         <div style="text-align : center">
-        <td><input id="checkbox<?php echo $i ?>" type="checkbox" name="checkbox"> Select</td></div>
-        <td><select name="sel1" class="form-control" id="sel<?php echo $i; ?>" style= "display :none">
+        <!-- <td><input id="checkbox<?php //echo $i ?>" type="checkbox" name="checkbox"> Select</td></div> -->
+        <!-- <td>
+          <select name="sel1" class="form-control" id="sel<?php echo $i; ?>" style= "display :none">
                 <option id="def" selected>Select</option>
                 <option id="1">1</option>
                 <option id="2">2</option>
                 <option id="3">3</option>
-            </select></td>
+          </select>
+        </td> -->
       </tr>
       <?php $i++; ?>
     <?php endforeach; ?>

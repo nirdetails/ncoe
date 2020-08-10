@@ -9,10 +9,10 @@ class Alresults extends CI_Controller{
     }
 
 
-    public function checkalres(){
+    public function checkalres($alindex = NULL){
         $data['title'] = 'alresults';
 
-        $data['alresults'] = $this->alresults_model-> get_alresults();
+        $data['alresults'] = $this->alresults_model-> get_alresults($alindex);
 
         $pirivena = 0;
         $this->session->set_userdata('pirivena', $pirivena);

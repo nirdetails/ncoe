@@ -9,7 +9,7 @@ class Olresults extends CI_Controller{
     }
 
 
-    public function checkolres(){
+    public function checkolres($olind1 = NULL, $olind2 = NULL, $olind3 = NULL){
         $data['title'] = 'O/L Results sheet';
 
         $olindex1 = $this->input->post('index1');
@@ -17,21 +17,21 @@ class Olresults extends CI_Controller{
         $olindex3 = $this->input->post('index3');
         
         if($olindex1 != ""){
-            $data['olresults1'] = $this->olresults_model-> get_olresults1();
+            $data['olresults1'] = $this->olresults_model-> get_olresults1($olind1);
         }
         else{
             $data['olresults1'] = '';
             $olindex1 = 'N/A';
         }
         if($olindex2 != ""){
-            $data['olresults2'] = $this->olresults_model-> get_olresults2();
+            $data['olresults2'] = $this->olresults_model-> get_olresults2($olind2);
             
         }else{
             $data['olresults2'] = '';
             $olindex2 = 'N/A';
         }
         if($olindex3 != ""){
-            $data['olresults3'] = $this->olresults_model-> get_olresults3();
+            $data['olresults3'] = $this->olresults_model-> get_olresults3($olind3);
         }else{
             $data['olresults3'] = '';
             $olindex3 = 'N/A';

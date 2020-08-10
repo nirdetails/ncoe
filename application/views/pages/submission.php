@@ -30,7 +30,9 @@ function myFunction() {
     <input type="hidden" value="<?php echo $_SESSION['home']; ?>" name="home">
     <input type="hidden" value="<?php echo $_SESSION['email']; ?>" name="email">
     <input type="hidden" value="<?php echo $_SESSION['pirivena']; ?>" name="pirivena">
-
+    <?php if($_SESSION['pemarks1'] != NULL){  ?>
+      <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks">
+    <?php } ?>
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group"> 
@@ -50,7 +52,7 @@ function myFunction() {
     </div>
 
     <p style="text-align :center"><b>Download your application here:</b></br></br>
-        <a href="#" class="btn btn-info btn-lg">
+        <a href="pdfgen/pdf" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-save-file"></span> Save File 
         </a>
       </p> 

@@ -92,7 +92,7 @@
     <input type="hidden" value="<?php echo $_SESSION['sripada']; ?>" name="sripada">
     <input type="hidden" value="<?php echo $_SESSION['sworker']; ?>" name="sworker">
     <!-- <button type="submit" name="btnprv" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span> Previous</button> -->
-    <a class="btn btn-primary" href="">Recheck</a>
+    <!-- <a class="btn btn-primary" href="">Recheck</a> -->
     <button type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button>
 
 

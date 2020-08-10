@@ -28,7 +28,8 @@ class Students_model extends CI_Model{
             'OLindex3' => $this->input->post('olindex3'),
             'sripadancoe'=> $this->input->post('sripada'),
             'stateworker'=> $this->input->post('sworker'),
-            'pirivena'=> $this->input->post('pirivena')
+            'pirivena'=> $this->input->post('pirivena'),
+            'pemarks'=> $this->input->post('pemarks')
         );
 
         // Insert student personal detail

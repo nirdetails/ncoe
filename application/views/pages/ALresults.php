@@ -16,22 +16,26 @@
         <th>Grade</th>
         <th>Subject</th>
         <th>Grade</th>
+        <th>Subject</th>
+        <th>Grade</th>
         <th>Gen. Test marks</th>
         <th>Z-score</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th><?php echo $alresult['attempt'] ?></th>
-        <th><?php echo $alresult['medium'] ?></th>
-        <th><?php echo $alresult['sub1'] ?></th>
-        <th><?php echo $alresult['grade1'] ?></th>
-        <th><?php echo $alresult['sub2'] ?></th>
-        <th><?php echo $alresult['grade2'] ?></th>
-        <th><?php echo $alresult['sub3'] ?></th>
-        <th><?php echo $alresult['grade3'] ?></th>
-        <th><?php echo $alresult['gentst'] ?></th>
-        <th><?php echo $alresult['zscore'] ?></th>
+        <td><?php echo $alresult['attempt'] ?></td>
+        <td><?php echo $alresult['medium'] ?></td>
+        <td><?php echo $alresult['sub1'] ?></td>
+        <td><?php echo $alresult['grade1'] ?></td>
+        <td><?php echo $alresult['sub2'] ?></td>
+        <td><?php echo $alresult['grade2'] ?></td>
+        <td><?php echo $alresult['sub3'] ?></td>
+        <td><?php echo $alresult['grade3'] ?></td>
+        <td><?php echo $alresult['sub4'] ?></td>
+        <td><?php echo $alresult['grade4'] ?></td>
+        <td><?php echo $alresult['gentst'] ?></td>
+        <td><?php echo $alresult['zscore'] ?></td>
       </tr>      
     </tbody>
   </table>
