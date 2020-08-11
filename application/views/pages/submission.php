@@ -30,6 +30,7 @@ function myFunction() {
     <input type="hidden" value="<?php echo $_SESSION['home']; ?>" name="home">
     <input type="hidden" value="<?php echo $_SESSION['email']; ?>" name="email">
     <input type="hidden" value="<?php echo $_SESSION['pirivena']; ?>" name="pirivena">
+    <input type="hidden" value="<?php echo $_SESSION['git']; ?>" name="git">
     <?php if($_SESSION['pemarks1'] != NULL){  ?>
       <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks">
     <?php } ?>

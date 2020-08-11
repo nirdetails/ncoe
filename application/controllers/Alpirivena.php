@@ -10,7 +10,7 @@ class Alpirivena extends CI_Controller{
 
 
     public function checkalres(){
-        $data['title'] = 'al_pirivena';
+        $data['title'] = 'OL_index';
 
         $this->form_validation->set_rules('alyear', 'Year', 'required');
         $this->form_validation->set_rules('index', 'Index No.', 'required');
@@ -29,20 +29,26 @@ class Alpirivena extends CI_Controller{
         $this->form_validation->set_rules('grade2', 'Grade', 'required');
         $this->form_validation->set_rules('grade3', 'Grade', 'required');
         $this->form_validation->set_rules('grade4', 'Grade', 'required');
-        $this->form_validation->set_rules('gentst', 'Grade', 'required');
-        $this->form_validation->set_rules('zscore', 'Grade', 'required');
+        $this->form_validation->set_rules('gentst', 'General test marks', 'required');
+        $this->form_validation->set_rules('zscore', 'Zscore', 'required');
+        $this->form_validation->set_rules('git', 'Grade', 'required');
 
         if($this->form_validation->run() === FALSE){
             $this->load->view('templates/header');
 			$this->load->view('pages/ALpirivena',$data);
 			$this->load->view('templates/footer');
         }else{
+            $palindex = $this->input->post("index");
+            $git = $this->input->post('git');
+
+            $this->session->set_userdata('alindex', $palindex);
+            $this->session->set_userdata('git', $git);
             $data['alresults'] = $this->alpirivena_model-> post_alresults();
 
             $pirivena = 1;
             $this->session->set_userdata('pirivena', $pirivena);
             $this->load->view('templates/header');
-            $this->load->view('pages/olresults',$data);
+            $this->load->view('pages/OL',$data);
             $this->load->view('templates/footer');
 
         }

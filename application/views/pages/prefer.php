@@ -7,7 +7,7 @@
     <select class="form-control" id="course1" name="course1">
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
-        <option value="<?php echo $course['course_no']?>"><?php echo $course['name'] ?></option>
+        <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
       <?php endforeach; ?>                                                   
     </select>
   </div>
@@ -16,7 +16,7 @@
     <select class="form-control" id="course2" name="course2">
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
-        <option value="<?php echo $course['course_no']?>"><?php echo $course['name'] ?></option>
+        <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
       <?php endforeach; ?>                                                   
     </select>
   </div>
@@ -25,13 +25,13 @@
     <select class="form-control" id="course3" name="course3">
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
-        <option value="<?php echo $course['course_no']?>"><?php echo $course['name'] ?></option>
+        <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
       <?php endforeach; ?>                                                   
     </select>
   </div>
-
+<?php if($_SESSION['alindex'] != ""){ ?>
   <input type="hidden" name="alindex" value="<?php echo $_SESSION['alindex']; ?>">
-
+<?php } ?>
   <div class="row" >
     <div id="certificates" style="display :none">
       <div class="col-sm-6">

@@ -14,11 +14,8 @@
 
             $this->session->unset_userdata('alindex', 'olindex1', 'olindex2', 'olindex3', 'fullname', 'namewithinitials', 
             'addressline1', 'addressline2', 'addressline3', 'addressline4', 'district', 'nic', 'gender',
-            'title', 'ethnicity', 'mobile', 'home', 'email', 'sripada', 'sworker', 'pirivena');
+            'title', 'ethnicity', 'mobile', 'home', 'email', 'sripada', 'sworker', 'pirivena', 'palindex');
             session_destroy();
-            $this->load->view('templates/header');
-			$this->load->view('pages/view', $data);
-			$this->load->view('templates/footer');
+            redirect('/');
         }
-
     }

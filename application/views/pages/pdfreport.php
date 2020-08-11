@@ -259,11 +259,21 @@ ob_start();
             <?php }endforeach; ?>
     <h5>Selected Courses: </h5>
     <ol>
-        <li><?php echo $_SESSION['course1']; ?></li>
-        <li><?php echo $_SESSION['course2']; ?></li>
-        <li><?php echo $_SESSION['course3']; ?></li>
+        <?php if($_SESSION['course1'] != ""){ ?>
+            <li><?php echo $course1["course_no"]; ?> - <?php echo $course1["name"]; ?></li>
+        <?php } ?>
+
+        <?php if($_SESSION['course2'] != ""){ ?>
+            <li><?php echo $course2["course_no"]; ?> - <?php echo $course2["name"]; ?></li>
+        <?php } ?>
+
+        <?php if($_SESSION['course3'] != ""){ ?>
+            <li><?php echo $course3["course_no"]; ?> - <?php echo $course3["name"]; ?></li>
+        <?php } ?>
     </ol>
-    <label for="pemarks">23. Physical Education Marks: <br><br>
+    <?php if($_SESSION['pemarks1'] != NULL){ ?>
+        <label for="pemarks">23. Physical Education Marks: </label><?php echo $_SESSION['pemarks1']; ?><br><br>
+    <?php }?>
     <h5>Declaration: </h5>
         <p style="text-align: justify">I am aware that I have forwarded my application in accordance with paragraph10.0 of the Gazette Notification, after reading and comprehending the Gazette Notification well. I certify that I have already acquired the qualifications mentioned in the Gazette Notification relevant to the Courses that have been applied by me. I am aware that the particulars furnished in the application by me are true and correct. I am aware that if any particulars given by me in this application are found to be false or incorrect or contradictory to the Gazette Notification, I am liable to be disqualified before selection or to be discontinued after selection. I certify that I have not registered to follow a course in a University/University Institute/any other Higher Education Institute/ I am not currently following a relevant course in an afore mentioned institute. I further certify that I agree to be discontinued from the course if It is found that the section 8.4 of the Gazette Notification has been/is violated by me. I declare that I agree to accept any punishment pronounced by the disciplinary board of the National College of Education and the Ministry of Education if I am found and proven to have been engaged in any action against the code of conduct of National Colleges of Education.</p>
         <div style="text-align:center">

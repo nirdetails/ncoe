@@ -4,10 +4,10 @@
   <div class="form-group">
       <label for="attempts">How many attempts?</label>
       <select name="sel1" class="form-control" id="sel1">
-        <option id="def" selected>ATTEMPTS</option>
-        <option id="1">1</option>
-        <option id="2">2</option>
-        <option id="3">3</option>
+        <option id="def" selected value="">ATTEMPTS</option>
+        <option id="1" value="1">1</option>
+        <option id="2" value="2">2</option>
+        <option id="3" value="3">3</option>
       </select>
       <br>
     

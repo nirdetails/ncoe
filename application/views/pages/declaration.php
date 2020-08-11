@@ -29,7 +29,18 @@
     </div>
     <div class="form-group">
       <!-- <button type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
-      <a class="btn btn-primary" href="<?php echo site_url(); ?>/submission">Accept</a> 
+      <a class="btn btn-primary" id="submit_button" href="<?php echo site_url(); ?>/submission">Accept</a> 
     </div>
   </div>
-</form>
+<script>
+  function terms_changed(termsCheckBox){
+    //If the checkbox has been checked
+    if(termsCheckBox.checked){
+        //Set the disabled property to FALSE and enable the button.
+        document.getElementById("submit_button").disabled = false;
+    } else{
+        //Otherwise, disable the submit button.
+        document.getElementById("submit_button").disabled = true;
+    }
+}
+</script>

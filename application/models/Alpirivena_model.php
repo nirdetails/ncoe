@@ -30,4 +30,19 @@ class Alpirivena_model extends CI_Model{
         return $this->db->insert('al_pirivena', $data);
         // var_dump($query);
     }
+
+    public function get_palresults($palindex = NULL){
+        if($palindex == NULL){
+            $palindex = $_SESSION['alindex'];
+            $this->db->where('AL_index', $palindex);
+            $query = $this->db->get('al_pirivena');
+
+            return $query->result_array();
+        }
+        $palindex = $this->input->post('index');
+        $this->db->where('AL_index', $palindex);
+        $query = $this->db->get('al_pirivena');
+
+        return $query->result_array();
+    }
 }

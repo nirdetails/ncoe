@@ -29,11 +29,12 @@ class Students_model extends CI_Model{
             'sripadancoe'=> $this->input->post('sripada'),
             'stateworker'=> $this->input->post('sworker'),
             'pirivena'=> $this->input->post('pirivena'),
-            'pemarks'=> $this->input->post('pemarks')
+            'pemarks'=> $this->input->post('pemarks'),
+            'git'=> $this->input->post('git')
         );
 
         // Insert student personal detail
-        return $this->db->insert('al_pirivena', $data);//Tablename is used as 'student      
+        return $this->db->insert('stuents', $data);//Tablename is used as 'student      
 
 
     }

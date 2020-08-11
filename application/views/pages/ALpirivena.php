@@ -80,19 +80,19 @@
 </div>
 
   <div class="row">
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="index">Subject Number</label>
-                <input type="text" class="form-control" id="subjectnumber1" placeholder="Subject Number" name="subjectnumber1">
-            </div>
-        </div>
+        
         <div class="col-sm-4">
                 <div class="form-group">
                     <label for="index">Subject Name</label>
                     <input type="text" class="form-control" id="subjectname1" placeholder="Subject Name" name="subjectname1">
                 </div>
         </div>
-
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="index">Subject Number</label>
+                <input type="text" class="form-control" id="subjectnumber1" placeholder="Subject Number" name="subjectnumber1">
+            </div>
+        </div>
         <div class="col-sm-4">
             <div class="form-group">
                 <div class="form-group">
@@ -107,17 +107,17 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-4">
-            <div class="form-group">
-                <input type="text" class="form-control" id="subjectnumber2" placeholder="Subject Number" name="subjectnumber2">
-            </div>
-        </div>
+        
         <div class="col-sm-4">
                 <div class="form-group">
                     <input type="text" class="form-control" id="subjectname2" placeholder="Subject Name" name="subjectname2">
                 </div>
         </div>
-
+        <div class="col-sm-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="subjectnumber2" placeholder="Subject Number" name="subjectnumber2">
+            </div>
+        </div>
         <div class="col-sm-4">
             <div class="form-group">
                 <div class="form-group">
@@ -134,17 +134,17 @@
         </div> -->
     </div>
     <div class="row">
-        <div class="col-sm-4">
-            <div class="form-group">
-                <input type="text" class="form-control" id="subjectnumber3" placeholder="Subject Number" name="subjectnumber3">
-            </div>
-        </div>
+        
         <div class="col-sm-4">
                 <div class="form-group">
                     <input type="text" class="form-control" id="subjectname3" placeholder="Subject Name" name="subjectname3">
                 </div>
         </div>
-
+        <div class="col-sm-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="subjectnumber3" placeholder="Subject Number" name="subjectnumber3">
+            </div>
+        </div>
         <div class="col-sm-4">
             <div class="form-group">
                 <div class="form-group">
@@ -161,17 +161,17 @@
         </div> -->
     </div>
     <div class="row">
-        <div class="col-sm-4">
-            <div class="form-group">
-                <input type="text" class="form-control" id="subjectnumber4" placeholder="Subject Number" name="subjectnumber4">
-            </div>
-        </div>
+        
         <div class="col-sm-4">
                 <div class="form-group">
                     <input type="text" class="form-control" id="subjectname4" placeholder="Subject Name" name="subjectname4">
                 </div>
         </div>
-
+        <div class="col-sm-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="subjectnumber4" placeholder="Subject Number" name="subjectnumber4">
+            </div>
+        </div>
         <div class="col-sm-4">
             <div class="form-group">
                 <div class="form-group">
@@ -187,14 +187,15 @@
                 </div>
         </div> -->
     </div>
+    <hr>
     <div class="row">
-    <div class="col-sm-4">
+        <div class="col-sm-4">
+        <div class="form-group">
             <div class="form-group">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="gentst" placeholder="General Test Marks" name="gentst">
-                </div>
-                 <br>
+                <input type="text" class="form-control" id="gentst" placeholder="General Test Marks" name="gentst">
             </div>
+            <br>
+        </div>
         </div>
         <div class="col-sm-4">
             <div class="form-group">
@@ -204,12 +205,20 @@
                  <br>
             </div>
         </div>
+    
+    <div class="col-sm-4">
+        <div class="form-group">
+            <div class="form-group">
+                <input type="text" class="form-control" id="git" placeholder="GIT marks" name="git">
+            </div>
+            <br>
+        </div>
     </div>
-
+    </div>
     <div style="text-align:center">
         <button style="margin-top:25px; margin-left:15px" type="submit" class="btn btn-info">Submit</button>
     </div>
-
+<br><br>
   
 </form>
 <script src="<?php echo site_url(); ?>assets/js/alpir.js"></script>
