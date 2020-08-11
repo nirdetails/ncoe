@@ -26,16 +26,27 @@ class Alresults extends CI_Controller{
             $this->session->set_userdata('alindex', $alindex);
             $this->session->set_userdata('git', $git);
 
-            $data['alresults'] = $this->alresults_model-> get_alresults($alindex);
+            $data['alresults'] = $this->alresults_model-> get_alresults();
 
+            // var_dump($data['alresults']);
             $pirivena = 0;
             $this->session->set_userdata('pirivena', $pirivena);
             // $alstream = $this->input->post('sel1');
             // $this->session->set_userdata('alstream', $alstream);
             // redirect('alresults');
-            $this->load->view('templates/header');
-            $this->load->view('pages/alresults',$data);
-            $this->load->view('templates/footer');
+            if (empty($playerlist)) {
+                // list is empty.
+                $data['title'] = 'Al index';
+                echo "<script>alert('Please enter a valid Index')</script>";
+                $this->load->view('templates/header');
+                $this->load->view('pages/al',$data);
+                $this->load->view('templates/footer');
+            }else{
+                $this->load->view('templates/header');
+                $this->load->view('pages/alresults',$data);
+                $this->load->view('templates/footer');
+            }
+            
         }
 
         // var_dump($alstream);

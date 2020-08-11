@@ -35,14 +35,13 @@ function myFunction() {
       <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks">
     <?php } ?>
     <div class="row">
-        <div class="col-sm-6">
+        <!-- <div class="col-sm-6">
             <div class="form-group"> 
                 <div style="text-align :left">
-                  <!-- <button style= "padding:20px;font-size:20px" type="submit" name="btnprv" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span> Recheck</button> -->
                   <a href="" class="btn btn-primary">Recheck</a>
                 </div>      
          </div>
-        </div>
+        </div> -->
         <div class="col-sm-6">   
             <div class="form-group">  
                 <div style="text-align :right">
@@ -54,7 +53,7 @@ function myFunction() {
 
     <p style="text-align :center"><b>Download your application here:</b></br></br>
         <a href="pdfgen/pdf" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-save-file"></span> Save File 
+          <span class="glyphicon glyphicon-save-file"></span> PDF File 
         </a>
       </p> 
 
