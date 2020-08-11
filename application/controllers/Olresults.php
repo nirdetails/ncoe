@@ -49,11 +49,31 @@ class Olresults extends CI_Controller{
                 $olindex3 = 'N/A';
             }
             // var_dump($olindex2);
-            
+            if (empty($data['olresults1'])) {
+                echo "<script>alert('Please enter a valid Index')</script>";
+                $data['title'] = 'Ol index';
+                $this->load->view('templates/header');
+                $this->load->view('pages/ol',$data);
+                $this->load->view('templates/footer');
+            }elseif ($olindex2 != "N/A" && empty($data['olresults2'])) {
+                echo "<script>alert('Please enter a valid Index2')</script>";
+                $data['title'] = 'Ol index';
+                $this->load->view('templates/header');
+                $this->load->view('pages/ol',$data);
+                $this->load->view('templates/footer');
+            }elseif ($olindex3 != "N/A" && empty($data['olresults3'])) {
+                echo "<script>alert('Please enter a valid Index3')</script>";
+                $data['title'] = 'Ol index';
+                $this->load->view('templates/header');
+                $this->load->view('pages/ol',$data);
+                $this->load->view('templates/footer');
+            }
+            else{
             // redirect('alresults');
-            $this->load->view('templates/header');
-            $this->load->view('pages/olresults',$data);
-            $this->load->view('templates/footer');
+                $this->load->view('templates/header');
+                $this->load->view('pages/olresults',$data);
+                $this->load->view('templates/footer');
+            }
         }
         // var_dump($data);
         

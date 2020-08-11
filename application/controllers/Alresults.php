@@ -34,7 +34,7 @@ class Alresults extends CI_Controller{
             // $alstream = $this->input->post('sel1');
             // $this->session->set_userdata('alstream', $alstream);
             // redirect('alresults');
-            if (empty($playerlist)) {
+            if (empty($data['alresults'])) {
                 // list is empty.
                 $data['title'] = 'Al index';
                 echo "<script>alert('Please enter a valid Index')</script>";
