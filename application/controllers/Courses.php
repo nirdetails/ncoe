@@ -103,6 +103,28 @@ class Courses extends CI_Controller{
                 $data = array('upload_data' => $this->upload->data());
                 $post_filer3 = $_FILES['rupload3']['name'];  
             }
+
+            if(!$this->upload->do_upload('wupload1')){
+                $post_filew1 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_filew1 = $_FILES['wupload1']['name'];  
+            }
+            if(!$this->upload->do_upload('wupload2')){
+                $post_filew2 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_filew2 = $_FILES['wupload2']['name'];  
+            }
+            if(!$this->upload->do_upload('wupload3')){
+                $post_filew3 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_filew3 = $_FILES['wupload3']['name'];  
+            }
             // var_dump($post_file2);
 
             $this->session->set_userdata('course1', $course1);
@@ -110,7 +132,7 @@ class Courses extends CI_Controller{
             $this->session->set_userdata('course3', $course3);
             $this->session->set_userdata('pemarks1', $pemarks1);
             // var_dump($post_file);
-            $this->courses_model->preferdetails($post_file1, $post_file2, $post_file3, $post_filer1, $post_filer2, $post_filer3);
+            $this->courses_model->preferdetails($post_file1, $post_file2, $post_file3, $post_filer1, $post_filer2, $post_filer3, $post_filew1, $post_filew2, $post_filew3);
             
             //next page
             redirect('students/index');

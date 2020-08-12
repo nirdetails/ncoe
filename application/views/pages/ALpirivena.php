@@ -40,12 +40,12 @@
                 <div class="form-group">
                 <select name="stream" class="form-control" id="stream">
                     <option id="" selected>STREAM</option>
-                    <option value="1">MATHS</option>
-                    <option value="2">BIO SCIENCE</option>
-                    <option value="3">COMMERCE</option>
-                    <option value="4">ARTS</option>
-                    <option value="5">TECHNOLOGY</option>
-                    <option value="6">COMMON</option>
+                    <option value="1">Physical Science</option>
+                    <option value="2">Biological Science</option>
+                    <option value="3">Commerce</option>
+                    <option value="4">Arts</option>
+                    <option value="5">Technology</option>
+                    <option value="6">Common</option>
                 </select>
                 </div>
                  <br>

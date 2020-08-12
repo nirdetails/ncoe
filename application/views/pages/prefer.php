@@ -48,12 +48,25 @@
       </div>
     </div>
   </div>
-
+  <div class="col-sm-6" id="category"  style="display :none">  
+    <div class="form-group">
+      <label for="category">Category: </label><br>
+      <input type="radio" name="category" value="Catholic">Catholic
+      <input type="radio" name="category" value="Christianity">Christianity
+    </div>
+  </div>
   <div id="box" style="display :none">
     <label for="myfile"><b>Upload your religion Certificates:</b></label><br>
     <input title="you can upload 3 Certificates only" type="file" id="rupload1" name="rupload1" multiple><br><br>
     <input title="you can upload 3 Certificates only" type="file" id="rupload2" name="rupload2" multiple><br><br>
     <input title="you can upload 3 Certificates only" type="file" id="rupload3" name="rupload3" multiple><br><br>
+  </div>
+
+  <div id="west" style="display :none">
+    <label for="myfile"><b>Upload your Western Music Certificates:</b></label><br>
+    <input title="you can upload 3 Certificates only" type="file" id="wupload1" name="wupload1" multiple><br><br>
+    <input title="you can upload 3 Certificates only" type="file" id="wupload2" name="wupload2" multiple><br><br>
+    <input title="you can upload 3 Certificates only" type="file" id="wupload3" name="wupload3" multiple><br><br>
   </div>
 
   <div style="text-align :right">     

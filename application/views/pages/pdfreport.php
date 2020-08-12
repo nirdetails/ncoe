@@ -37,7 +37,15 @@ ob_start();
             <label for="mobile">09. Mobile: </label><?php echo $_SESSION['mobile']; ?><br>
             <label for="home">10. Home Tel: </label><?php echo $_SESSION['home']; ?><br>
             <label for="email">11. Email: </label><?php echo $_SESSION['email']; ?><br>
-
+            <?php 
+                $districts = array('16' => 'Ampara', "20" => 'Anuradhapura',"22" => 'Badulla',"15" => 'Batticaloa',"01" => 'Colombo',"07" => 'Galle',"02" => 'Gampaha',"09" => 'Hambantota',"10" => 'Jaffna',"03" => 'Kaluthara',"04" => 'Kandy',"25" => 'Kegalle',"11" => 'Kilinochchi',"18" => 'Kurunegala',"12" => 'Mannar',"05" => 'Matale',"08" => 'Matara',"23" => 'Monaragala',"14" => 'Mullaitivu',"06" => 'Nuwara Eliya',"21" => 'Polonnaruwa',"19" => 'Puttalam',"24" => 'Ratnapura',"17" => 'Trincomalee',"13" => 'Vavuniya');
+            
+                foreach ($districts as $key => $value) {
+                    if ($key == $_SESSION['district']) { 
+                        echo "<label for='district'>12. District: </label>". $_SESSION['district']." - " .$value."<br>";
+                   
+                    }
+                }?>
             <!-- <label for="Sripada">12. Are you applying for Sripada NCoE? </label><br>
             <label for="state">13. Are your parents are State Workers? </label><br><br> -->
 
@@ -86,7 +94,7 @@ ob_start();
             <h5>O/L Details: </h5>
             <?php foreach($olresults1 as $olresult1): if( $olresult1["OL_index"] != "N/A"){?>
             <label for="olattempts">21. Number of Attempts: <br>
-            <label for="olindex">22. Index Number: <br><br>
+            <label for="olindex">22. Index Number: <?php echo $olresult1["OL_index"]; ?><br><br>
             <h5>O/L Results: </h5>
             <table>
                 <tr>
@@ -144,7 +152,7 @@ ob_start();
 
             <?php foreach($olresults2 as $olresult2): if( $olresult2["OL_index"] != "N/A"){?>
             <label for="olattempts">21. Number of Attempts: <br>
-            <label for="olindex">22. Index Number: <br><br>
+            <label for="olindex">22. Index Number: <?php echo $olresult2["OL_index"]; ?><br><br>
             <h5>O/L Results: </h5>
             <table>
                 <tr>
@@ -154,48 +162,48 @@ ob_start();
                 </tr>
                 <tr>
                     <td>01. </td>
-                    <td><?php echo $olresults2['sub1']; ?></td>
-                    <td><?php echo $olresults2['grade1']; ?></td>
+                    <td><?php echo $olresult2['sub1']; ?></td>
+                    <td><?php echo $olresult2['grade1']; ?></td>
                 </tr>
                 <tr>
                     <td>02. </td>
-                    <td><?php echo $olresults2['sub2']; ?></td>
-                    <td><?php echo $olresults2['grade2']; ?></td>
+                    <td><?php echo $olresult2['sub2']; ?></td>
+                    <td><?php echo $olresult2['grade2']; ?></td>
                 </tr>
                 <tr>
                     <td>03. </td>
-                    <td><?php echo $olresults2['sub3']; ?></td>
-                    <td><?php echo $olresults2['grade3']; ?></td>
+                    <td><?php echo $olresult2['sub3']; ?></td>
+                    <td><?php echo $olresult2['grade3']; ?></td>
                 </tr>
                 <tr>
                     <td>04. </td>
-                    <td><?php echo $olresults2['sub4']; ?></td>
-                    <td><?php echo $olresults2['grade4']; ?></td>
+                    <td><?php echo $olresult2['sub4']; ?></td>
+                    <td><?php echo $olresult2['grade4']; ?></td>
                 </tr>
                 <tr>
                     <td>05. </td>
-                    <td><?php echo $olresults2['sub5']; ?></td>
-                    <td><?php echo $olresults2['grade5']; ?></td>
+                    <td><?php echo $olresult2['sub5']; ?></td>
+                    <td><?php echo $olresult2['grade5']; ?></td>
                 </tr>
                 <tr>
                     <td>06. </td>
-                    <td><?php echo $olresults2['sub6']; ?></td>
-                    <td><?php echo $olresults2['grade6']; ?></td>
+                    <td><?php echo $olresult2['sub6']; ?></td>
+                    <td><?php echo $olresult2['grade6']; ?></td>
                 </tr>
                 <tr>
                     <td>07. </td>
-                    <td><?php echo $olresults2['sub7']; ?></td>
-                    <td><?php echo $olresults2['grade7']; ?></td>
+                    <td><?php echo $olresult2['sub7']; ?></td>
+                    <td><?php echo $olresult2['grade7']; ?></td>
                 </tr>
                 <tr>
                     <td>08. </td>
-                    <td><?php echo $olresults2['sub8']; ?></td>
-                    <td><?php echo $olresults2['grade8']; ?></td>
+                    <td><?php echo $olresult2['sub8']; ?></td>
+                    <td><?php echo $olresult2['grade8']; ?></td>
                 </tr>
                 <tr>
                     <td>09. </td>
-                    <td><?php echo $olresults2['sub9']; ?></td>
-                    <td><?php echo $olresults2['grade9']; ?></td>
+                    <td><?php echo $olresult2['sub9']; ?></td>
+                    <td><?php echo $olresult2['grade9']; ?></td>
                 </tr>
             </table><br>
             <?php }endforeach; ?>
@@ -212,48 +220,48 @@ ob_start();
                 </tr>
                 <tr>
                     <td>01. </td>
-                    <td><?php echo $olresults3['sub1']; ?></td>
-                    <td><?php echo $olresults3['grade1']; ?></td>
+                    <td><?php echo $olresult3['sub1']; ?></td>
+                    <td><?php echo $olresult3['grade1']; ?></td>
                 </tr>
                 <tr>
                     <td>02. </td>
-                    <td><?php echo $olresults3['sub2']; ?></td>
-                    <td><?php echo $olresults3['grade2']; ?></td>
+                    <td><?php echo $olresult3['sub2']; ?></td>
+                    <td><?php echo $olresult3['grade2']; ?></td>
                 </tr>
                 <tr>
                     <td>03. </td>
-                    <td><?php echo $olresults3['sub3']; ?></td>
-                    <td><?php echo $olresults3['grade3']; ?></td>
+                    <td><?php echo $olresult3['sub3']; ?></td>
+                    <td><?php echo $olresult3['grade3']; ?></td>
                 </tr>
                 <tr>
                     <td>04. </td>
-                    <td><?php echo $olresults3['sub4']; ?></td>
-                    <td><?php echo $olresults3['grade4']; ?></td>
+                    <td><?php echo $olresult3['sub4']; ?></td>
+                    <td><?php echo $olresult3['grade4']; ?></td>
                 </tr>
                 <tr>
                     <td>05. </td>
-                    <td><?php echo $olresults3['sub5']; ?></td>
-                    <td><?php echo $olresults3['grade5']; ?></td>
+                    <td><?php echo $olresult3['sub5']; ?></td>
+                    <td><?php echo $olresult3['grade5']; ?></td>
                 </tr>
                 <tr>
                     <td>06. </td>
-                    <td><?php echo $olresults3['sub6']; ?></td>
-                    <td><?php echo $olresults3['grade6']; ?></td>
+                    <td><?php echo $olresult3['sub6']; ?></td>
+                    <td><?php echo $olresult3['grade6']; ?></td>
                 </tr>
                 <tr>
                     <td>07. </td>
-                    <td><?php echo $olresults3['sub7']; ?></td>
-                    <td><?php echo $olresults3['grade7']; ?></td>
+                    <td><?php echo $olresult3['sub7']; ?></td>
+                    <td><?php echo $olresult3['grade7']; ?></td>
                 </tr>
                 <tr>
                     <td>08. </td>
-                    <td><?php echo $olresults3['sub8']; ?></td>
-                    <td><?php echo $olresults3['grade8']; ?></td>
+                    <td><?php echo $olresult3['sub8']; ?></td>
+                    <td><?php echo $olresult3['grade8']; ?></td>
                 </tr>
                 <tr>
                     <td>09. </td>
-                    <td><?php echo $olresults3['sub9']; ?></td>
-                    <td><?php echo $olresults3['grade9']; ?></td>
+                    <td><?php echo $olresult3['sub9']; ?></td>
+                    <td><?php echo $olresult3['grade9']; ?></td>
                 </tr>
             </table><br>
             <?php }endforeach; ?>

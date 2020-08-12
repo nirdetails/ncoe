@@ -1,7 +1,7 @@
 <?php
 class Alresults extends CI_Controller{
     public function index(){
-        $data['title'] = 'Al index';
+        $data['title'] = 'A/L index';
 
         $this->load->view('templates/header');
         $this->load->view('pages/al',$data);
@@ -13,7 +13,7 @@ class Alresults extends CI_Controller{
         $data['title'] = 'alresults';
 
         $this->form_validation->set_rules('index','Index Number', 'required');
-        $this->form_validation->set_rules('git','GIT Marks', 'required');
+        // $this->form_validation->set_rules('git','GIT Marks', 'required');
 
         if($this->form_validation->run() === FALSE){
             $this->load->view('templates/header');

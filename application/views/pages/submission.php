@@ -3,7 +3,11 @@ function myFunction() {
   alert("Your Application is submitted. Thank you!");
 }
 </script>
-
+<?php
+  if (!isset($_SESSION["nic"])){
+    redirect('/');
+  }
+?>
   <h2><?= $title; ?></h2>
   <?php echo form_open_multipart('submission/submit'); ?>
     <input type="hidden" value="<?php echo $_SESSION['alindex']; ?>" name="alindex">
