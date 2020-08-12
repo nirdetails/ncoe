@@ -21,26 +21,27 @@
     <!-- <div class="col-sm-2">Checkbox</div> -->
     <div class="col-sm-10">
       <div class="form-check" style="font-size:20px;padding-left:50px">
-        <input class="form-check-input" type="checkbox" id="gridCheck1" >
+        <input class="form-check-input" type="checkbox" id="gridCheck1" onchange="terms_changed()">
         <label style="font-size:20px;padding-left:10px" class="form-check-label" for="gridCheck1">
           Agree 
         </label>
       </div>
     </div>
     <div class="form-group">
-      <!-- <button type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
-      <a class="btn btn-primary" id="submit_button" href="<?php echo site_url(); ?>/submission">Accept</a> 
+      <!-- <button type="submit" id="submit_button" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
+      <a class="btn btn-primary" style="display:none" id="submit_button"  href="<?php echo site_url(); ?>/submission">Accept</a> 
     </div>
   </div>
 <script>
-  function terms_changed(termsCheckBox){
+  var termsCheckBox = document.getElementById("gridCheck1")
+  function terms_changed(){
     //If the checkbox has been checked
     if(termsCheckBox.checked){
         //Set the disabled property to FALSE and enable the button.
-        document.getElementById("submit_button").disabled = false;
+        document.getElementById("submit_button").style.display = 'block';
     } else{
         //Otherwise, disable the submit button.
-        document.getElementById("submit_button").disabled = true;
+        document.getElementById("submit_button").style.display = 'none';
     }
 }
 </script>

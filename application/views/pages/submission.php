@@ -35,13 +35,13 @@ function myFunction() {
       <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks">
     <?php } ?>
     <div class="row">
-        <!-- <div class="col-sm-6">
+        <div class="col-sm-6">
             <div class="form-group"> 
                 <div style="text-align :left">
-                  <a href="" class="btn btn-primary">Recheck</a>
+                  <a href="pages/view/editpersonal" class="btn btn-primary">Recheck</a>
                 </div>      
          </div>
-        </div> -->
+        </div>
         <div class="col-sm-6">   
             <div class="form-group">  
                 <div style="text-align :right">

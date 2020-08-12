@@ -29,10 +29,10 @@
     <h2>A/L Results</h2>
     <div class="row">
     <div class="col-sm-3">
-                <div class="form-group">
-                    <label for="index">A\L index:</label>
-                    <input type="text" class="form-control" id="index" placeholder="Enter your A\L index" name="index">
-                </div>
+        <div class="form-group">
+            <label for="index">A\L index:</label>
+            <input type="text" class="form-control" id="index" placeholder="Enter your A\L index" name="index">
+        </div>
     </div>
     <div class="col-sm-3">
             <div class="form-group">
