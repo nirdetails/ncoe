@@ -6,12 +6,11 @@ class Pdfgen extends CI_Controller {
 	{
 		$data['title'] = 'Test Page';
         $this->load->helper('pdf_helper');
-        // if($_SESSION['palindex'] != NULL){
-        // $data['alresults'] = $this->alpirivena_model-> get_palresults($palindex);
-            
-        // }else{
+        if($_SESSION['pirivena'] == 1){
+            $data['alresults'] = $this->alpirivena_model-> get_palresults($palindex);
+        }else{
             $data['alresults'] = $this->alresults_model-> get_alresults();
-        // }
+        }
         
         $data['olresults1'] = $this->olresults_model-> get_olresults1();
         $data['olresults2'] = $this->olresults_model-> get_olresults2();

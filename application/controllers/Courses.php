@@ -29,6 +29,97 @@ class Courses extends CI_Controller{
         $this->load->view('templates/footer');
     }
 
+    public function nextpage(){
+        $course1 = $this->input->post("course1");
+            $course2 = $this->input->post("course2");
+            $course3 = $this->input->post("course3");
+            $pemarks1 = $this->input->post("pemarks1");
+
+            $config['upload_path'] = './uploads/';
+            $config['allowed_types'] = 'pdf';
+            $config['max_size'] = 2048;
+            $config['max_file_uploads'] = 3;
+
+            $this->load->library('upload', $config);
+
+            if(!$this->upload->do_upload('peupload1')){
+                $post_file1 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_file1 = $_FILES['peupload1']['name'];  
+            }
+            if(!$this->upload->do_upload('peupload2')){
+                $post_file2 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_file2 = $_FILES['peupload2']['name'];  
+            }
+            if(!$this->upload->do_upload('peupload3')){
+                $post_file3 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_file3 = $_FILES['peupload3']['name'];  
+            }
+
+            if(!$this->upload->do_upload('rupload1')){
+                $post_filer1 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_filer1 = $_FILES['rupload1']['name'];  
+            }
+            if(!$this->upload->do_upload('rupload2')){
+                $post_filer2 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_filer2 = $_FILES['rupload2']['name'];  
+            }
+            if(!$this->upload->do_upload('rupload3')){
+                $post_filer3 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_filer3 = $_FILES['rupload3']['name'];  
+            }
+
+            if(!$this->upload->do_upload('wupload1')){
+                $post_filew1 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_filew1 = $_FILES['wupload1']['name'];  
+            }
+            if(!$this->upload->do_upload('wupload2')){
+                $post_filew2 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_filew2 = $_FILES['wupload2']['name'];  
+            }
+            if(!$this->upload->do_upload('wupload3')){
+                $post_filew3 = 'nofile';
+                
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_filew3 = $_FILES['wupload3']['name'];  
+            }
+            // var_dump($post_file2);
+
+            $this->session->set_userdata('course1', $course1);
+            $this->session->set_userdata('course2', $course2);
+            $this->session->set_userdata('course3', $course3);
+            $this->session->set_userdata('pemarks1', $pemarks1);
+            // var_dump($post_file);
+            $this->courses_model->preferdetails($post_file1, $post_file2, $post_file3, $post_filer1, $post_filer2, $post_filer3, $post_filew1, $post_filew2, $post_filew3);
+            
+            //next page
+            redirect('students/index');
+    }
+
     public function select(){
         $data['title'] = 'Course Selection';
         //validation
@@ -60,96 +151,13 @@ class Courses extends CI_Controller{
                     $this->load->view('pages/prefer',$data);
                     $this->load->view('templates/footer');
                 }else{
-                    $course1 = $this->input->post("course1");
-                    $course2 = $this->input->post("course2");
-                    $course3 = $this->input->post("course3");
-                    $pemarks1 = $this->input->post("pemarks1");
-
-                    $config['upload_path'] = './uploads/';
-                    $config['allowed_types'] = 'pdf';
-                    $config['max_size'] = 2048;
-                    $config['max_file_uploads'] = 3;
-
-                    $this->load->library('upload', $config);
-
-                    if(!$this->upload->do_upload('peupload1')){
-                        $post_file1 = 'nofile';
-                        
-                    }else{
-                        $data = array('upload_data' => $this->upload->data());
-                        $post_file1 = $_FILES['peupload1']['name'];  
-                    }
-                    if(!$this->upload->do_upload('peupload2')){
-                        $post_file2 = 'nofile';
-                        
-                    }else{
-                        $data = array('upload_data' => $this->upload->data());
-                        $post_file2 = $_FILES['peupload2']['name'];  
-                    }
-                    if(!$this->upload->do_upload('peupload3')){
-                        $post_file3 = 'nofile';
-                        
-                    }else{
-                        $data = array('upload_data' => $this->upload->data());
-                        $post_file3 = $_FILES['peupload3']['name'];  
-                    }
-
-                    if(!$this->upload->do_upload('rupload1')){
-                        $post_filer1 = 'nofile';
-                        
-                    }else{
-                        $data = array('upload_data' => $this->upload->data());
-                        $post_filer1 = $_FILES['rupload1']['name'];  
-                    }
-                    if(!$this->upload->do_upload('rupload2')){
-                        $post_filer2 = 'nofile';
-                        
-                    }else{
-                        $data = array('upload_data' => $this->upload->data());
-                        $post_filer2 = $_FILES['rupload2']['name'];  
-                    }
-                    if(!$this->upload->do_upload('rupload3')){
-                        $post_filer3 = 'nofile';
-                        
-                    }else{
-                        $data = array('upload_data' => $this->upload->data());
-                        $post_filer3 = $_FILES['rupload3']['name'];  
-                    }
-
-                    if(!$this->upload->do_upload('wupload1')){
-                        $post_filew1 = 'nofile';
-                        
-                    }else{
-                        $data = array('upload_data' => $this->upload->data());
-                        $post_filew1 = $_FILES['wupload1']['name'];  
-                    }
-                    if(!$this->upload->do_upload('wupload2')){
-                        $post_filew2 = 'nofile';
-                        
-                    }else{
-                        $data = array('upload_data' => $this->upload->data());
-                        $post_filew2 = $_FILES['wupload2']['name'];  
-                    }
-                    if(!$this->upload->do_upload('wupload3')){
-                        $post_filew3 = 'nofile';
-                        
-                    }else{
-                        $data = array('upload_data' => $this->upload->data());
-                        $post_filew3 = $_FILES['wupload3']['name'];  
-                    }
-                    // var_dump($post_file2);
-
-                    $this->session->set_userdata('course1', $course1);
-                    $this->session->set_userdata('course2', $course2);
-                    $this->session->set_userdata('course3', $course3);
-                    $this->session->set_userdata('pemarks1', $pemarks1);
-                    // var_dump($post_file);
-                    $this->courses_model->preferdetails($post_file1, $post_file2, $post_file3, $post_filer1, $post_filer2, $post_filer3, $post_filew1, $post_filew2, $post_filew3);
-                    
-                    //next page
-                    redirect('students/index');
+                    $this->nextpage();
                 }
+            }else{
+                $this->nextpage();
             }
         }
     }
+            
 }
+    

@@ -13,7 +13,7 @@ class Alpirivena extends CI_Controller{
         $data['title'] = 'OL_index';
 
         $this->form_validation->set_rules('alyear', 'Year', 'required');
-        $this->form_validation->set_rules('index', 'Index No.', 'required');
+        $this->form_validation->set_rules('index', 'Index No.', 'required|is_unique[stuents.alindex]');
         $this->form_validation->set_rules('stream', 'Stream', 'required');
         $this->form_validation->set_rules('medium', 'Medium', 'required');
         $this->form_validation->set_rules('attempt', 'Attempt', 'required');
@@ -31,7 +31,7 @@ class Alpirivena extends CI_Controller{
         $this->form_validation->set_rules('grade4', 'Grade', 'required');
         $this->form_validation->set_rules('gentst', 'General test marks', 'required');
         $this->form_validation->set_rules('zscore', 'Zscore', 'required');
-        $this->form_validation->set_rules('git', 'Grade', 'required');
+        // $this->form_validation->set_rules('git', 'Grade', 'required');
 
         if($this->form_validation->run() === FALSE){
             $this->load->view('templates/header');
