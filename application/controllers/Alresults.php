@@ -8,11 +8,18 @@ class Alresults extends CI_Controller{
         $this->load->view('templates/footer');
     }
 
+    // function exist($str, $value){       
+    //     list($table, $column) = explode('.', $value, 2);    
+    //     $query = $this->CI->db->query("SELECT COUNT(*) AS count FROM $table WHERE $column = '$str'");
+    //     $row = $query->row();
+      
+    //     return ($row->count > 0) ? FALSE : TRUE;
+    // }
 
     public function checkalres($alindex = NULL){
         $data['title'] = 'alresults';
-
-        $this->form_validation->set_rules('index','Index Number', 'required');
+        // $this->load->helper('security');
+        $this->form_validation->set_rules('index','Index Number', 'required|xss_clean|is_unique[stuents.alindex]');
         // $this->form_validation->set_rules('git','GIT Marks', 'required');
 
         if($this->form_validation->run() === FALSE){
@@ -34,6 +41,7 @@ class Alresults extends CI_Controller{
             // $alstream = $this->input->post('sel1');
             // $this->session->set_userdata('alstream', $alstream);
             // redirect('alresults');
+            
             if (empty($data['alresults'])) {
                 // list is empty.
                 $data['title'] = 'Al index';

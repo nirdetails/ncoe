@@ -51,7 +51,7 @@ ob_start();
 
 
             <h5>A/L Details: </h5>
-            <?php foreach($alresults as $alresult): ?>
+            <?php foreach($alresults as $alresult): ?><br>
             <label for="alindex">14. A/L Index No:</label><?php echo $_SESSION['alindex']; ?><br>
             <label for="alyear">15. A/L Year: </label>2018<br>
             <label for="alstream">16. Stream: </label><?php echo $alresult['stream'] ?><br>
@@ -86,68 +86,68 @@ ob_start();
                 </tr>
                 </table>
                 
-
-                <label for="gtest">19. General Test Marks: </label><?php echo $alresult['gentst'] ?><br>
-                <label for="zcore">20. Z-Core: </label><?php echo $alresult['zscore'] ?><br><br>
+                <br><br>
+                <label>19. General Test Marks: </label><?php echo $alresult['gentst'] ?><br>
+                <label>20. Z-Core: </label><?php echo $alresult['zscore'] ?><br>
                 <?php endforeach; ?>
 
             <h5>O/L Details: </h5>
-            <?php foreach($olresults1 as $olresult1): if( $olresult1["OL_index"] != "N/A"){?>
-            <label for="olattempts">21. Number of Attempts: <br>
-            <label for="olindex">22. Index Number: <?php echo $olresult1["OL_index"]; ?><br><br>
-            <h5>O/L Results: </h5>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Subject</th>
-                    <th>Grade</th>
-                </tr>
-                <tr>
-                    <td>01. </td>
-                    <td><?php echo $olresult1['sub1']; ?></td>
-                    <td><?php echo $olresult1['grade1']; ?></td>
-                </tr>
-                <tr>
-                    <td>02. </td>
-                    <td><?php echo $olresult1['sub2']; ?></td>
-                    <td><?php echo $olresult1['grade2']; ?></td>
-                </tr>
-                <tr>
-                    <td>03. </td>
-                    <td><?php echo $olresult1['sub3']; ?></td>
-                    <td><?php echo $olresult1['grade3']; ?></td>
-                </tr>
-                <tr>
-                    <td>04. </td>
-                    <td><?php echo $olresult1['sub4']; ?></td>
-                    <td><?php echo $olresult1['grade4']; ?></td>
-                </tr>
-                <tr>
-                    <td>05. </td>
-                    <td><?php echo $olresult1['sub5']; ?></td>
-                    <td><?php echo $olresult1['grade5']; ?></td>
-                </tr>
-                <tr>
-                    <td>06. </td>
-                    <td><?php echo $olresult1['sub6']; ?></td>
-                    <td><?php echo $olresult1['grade6']; ?></td>
-                </tr>
-                <tr>
-                    <td>07. </td>
-                    <td><?php echo $olresult1['sub7']; ?></td>
-                    <td><?php echo $olresult1['grade7']; ?></td>
-                </tr>
-                <tr>
-                    <td>08. </td>
-                    <td><?php echo $olresult1['sub8']; ?></td>
-                    <td><?php echo $olresult1['grade8']; ?></td>
-                </tr>
-                <tr>
-                    <td>09. </td>
-                    <td><?php echo $olresult1['sub9']; ?></td>
-                    <td><?php echo $olresult1['grade9']; ?></td>
-                </tr>
-            </table><br>
+            <br><label for="olattempts">21. Number of Attempts: <?php echo $_SESSION['attempts']; ?><br>
+            <?php foreach($olresults1 as $olresult1): if( $olresult1["OL_index"] != "N/A"){?><br>
+                <label for="olindex">22. Index Number: <?php echo $olresult1["OL_index"]; ?><br><br>
+                <h5>O/L Results: </h5>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Subject</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td>01. </td>
+                        <td><?php echo $olresult1['sub1']; ?></td>
+                        <td><?php echo $olresult1['grade1']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>02. </td>
+                        <td><?php echo $olresult1['sub2']; ?></td>
+                        <td><?php echo $olresult1['grade2']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>03. </td>
+                        <td><?php echo $olresult1['sub3']; ?></td>
+                        <td><?php echo $olresult1['grade3']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>04. </td>
+                        <td><?php echo $olresult1['sub4']; ?></td>
+                        <td><?php echo $olresult1['grade4']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>05. </td>
+                        <td><?php echo $olresult1['sub5']; ?></td>
+                        <td><?php echo $olresult1['grade5']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>06. </td>
+                        <td><?php echo $olresult1['sub6']; ?></td>
+                        <td><?php echo $olresult1['grade6']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>07. </td>
+                        <td><?php echo $olresult1['sub7']; ?></td>
+                        <td><?php echo $olresult1['grade7']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>08. </td>
+                        <td><?php echo $olresult1['sub8']; ?></td>
+                        <td><?php echo $olresult1['grade8']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>09. </td>
+                        <td><?php echo $olresult1['sub9']; ?></td>
+                        <td><?php echo $olresult1['grade9']; ?></td>
+                    </tr>
+                </table><br>
             <?php }endforeach; ?>
 
             <?php foreach($olresults2 as $olresult2): if( $olresult2["OL_index"] != "N/A"){?>

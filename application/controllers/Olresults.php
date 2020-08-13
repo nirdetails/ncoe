@@ -12,7 +12,9 @@ class Olresults extends CI_Controller{
     public function checkolres($olind1 = NULL, $olind2 = NULL, $olind3 = NULL){
         $data['title'] = 'O/L Results sheet';
 
-        $this->form_validation->set_rules('index1', 'Index Number', 'required');
+        $this->form_validation->set_rules('index1', 'Index Number', 'required|is_unique[stuents.olindex1]|is_unique[stuents.olindex2]|is_unique[stuents.olindex3]');
+        $this->form_validation->set_rules('index1', 'Index Number 2', 'is_unique[stuents.olindex1]|is_unique[stuents.olindex2]|is_unique[stuents.olindex3]');
+        $this->form_validation->set_rules('index1', 'Index Number 3', 'is_unique[stuents.olindex1]|is_unique[stuents.olindex2]|is_unique[stuents.olindex3]');
         $this->form_validation->set_rules('sel1', 'Number of attempts', 'required');
         
         if($this->form_validation->run() === FALSE){
@@ -23,10 +25,12 @@ class Olresults extends CI_Controller{
             $olindex1 = $this->input->post('index1');
             $olindex2 = $this->input->post('index2');
             $olindex3 = $this->input->post('index3');
+            $attempts = $this->input->post('sel1');
 
             $this->session->set_userdata('olindex1', $olindex1);
             $this->session->set_userdata('olindex2', $olindex2);
             $this->session->set_userdata('olindex3', $olindex3);
+            $this->session->set_userdata('attempts', $attempts);
             
             if($olindex1 != ""){
                 $data['olresults1'] = $this->olresults_model-> get_olresults1($olind1);

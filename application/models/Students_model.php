@@ -14,7 +14,7 @@ class Students_model extends CI_Model{
             'Addressl3' => $this->input->post('addressline3'),
             'Addressl4' => $this->input->post('addressline4'),
             'Resdistrict' => $this->input->post('district'),
-            'id' => $this->input->post('nic'),
+            'NIC' => $this->input->post('nic'),
             'gender' => $this->input->post('gender'),//Radio button for gender
             // 'optradio' => $this->input->post('optradio'),//Radio button for gender
             'Title' => $this->input->post('title'),

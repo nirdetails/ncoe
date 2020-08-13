@@ -60,6 +60,11 @@ $("#category").hide();
     }else{
       $("#west").hide();
     }
+
+    if(c1 == c2 || c1 == c3){
+      alert("Select a different subject");
+      $( "#course1" )[0].selectedIndex = "";
+    }
   });
 
   $("#course2" ).change(function() {
@@ -118,6 +123,11 @@ $("#category").hide();
       $("#west").show();
     }else{
       $("#west").hide();
+    }
+
+    if(c1 == c2 || c3 == c2){
+      alert("Select a different subject");
+      $( "#course2" )[0].selectedIndex = "";
     }
       
   });
@@ -178,5 +188,10 @@ $("#category").hide();
       $("#west").show();
     }else{
       $("#west").hide();
+    }
+
+    if(c1 == c3 || c2 == c3){
+      alert("Select a different subject");
+      $( "#course3" )[0].selectedIndex = "";
     }
   });

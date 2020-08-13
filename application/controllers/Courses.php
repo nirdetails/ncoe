@@ -32,11 +32,13 @@ class Courses extends CI_Controller{
     public function select(){
         $data['title'] = 'Course Selection';
         //validation
+        $course1 = $this->input->post("course1");
         $this->form_validation->set_rules('course1', 'course1', 'required');
         // $this->form_validation->set_rules('marks', 'marks', 'required');
         // $this->form_validation->set_rules('marks2', 'marks2', 'required');
         // $this->form_validation->set_rules('marks3', 'marks3', 'required');
         // $this->form_validation->set_rules('myfile', 'myfile', 'required');
+        
 
         // $myfile = $this->input->post("myfile");
 
@@ -48,6 +50,17 @@ class Courses extends CI_Controller{
             $this->load->view('templates/footer');
        
         }else{
+            if($course1 == 15 || $course1 == 14){
+                $this->form_validation->set_rules('category', 'category', 'required');
+    
+                if($this->form_validation->run() === FALSE){
+                    $data['courses'] = $this->courses_model-> get_courses();
+                    
+                    $this->load->view('templates/header');
+                    $this->load->view('pages/prefer',$data);
+                    $this->load->view('templates/footer');
+                }
+            }else{
             $course1 = $this->input->post("course1");
             $course2 = $this->input->post("course2");
             $course3 = $this->input->post("course3");
@@ -136,6 +149,7 @@ class Courses extends CI_Controller{
             
             //next page
             redirect('students/index');
+        }
         }
     }
 }
