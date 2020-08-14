@@ -6,7 +6,7 @@ class Courses extends CI_Controller{
     }
     
     public function index(){
-        $data['title'] = 'Courses';
+        $data['title'] = 'Select Courses';
         $data['courses'] = $this->courses_model-> get_courses();
 
         $this->load->view('templates/header');
@@ -30,32 +30,33 @@ class Courses extends CI_Controller{
     }
 
     public function nextpage(){
+        
         $course1 = $this->input->post("course1");
-            $course2 = $this->input->post("course2");
-            $course3 = $this->input->post("course3");
-            $pemarks1 = $this->input->post("pemarks1");
+        $course2 = $this->input->post("course2");
+        $course3 = $this->input->post("course3");
+        $pemarks1 = $this->input->post("pemarks1");
 
-            $config['upload_path'] = './uploads/';
-            $config['allowed_types'] = 'pdf';
-            $config['max_size'] = 2048;
-            $config['max_file_uploads'] = 3;
+        $config['upload_path'] = './uploads/';
+        $config['allowed_types'] = 'pdf';
+        $config['max_size'] = 2048;
+        $config['max_file_uploads'] = 3;
 
-            $this->load->library('upload', $config);
+        $this->load->library('upload', $config);
 
-            if(!$this->upload->do_upload('peupload1')){
-                $post_file1 = 'nofile';
+        if(!$this->upload->do_upload('peupload1')){
+            $post_file1 = 'nofile';
                 
-            }else{
-                $data = array('upload_data' => $this->upload->data());
-                $post_file1 = $_FILES['peupload1']['name'];  
-            }
-            if(!$this->upload->do_upload('peupload2')){
-                $post_file2 = 'nofile';
+        }else{
+            $data = array('upload_data' => $this->upload->data());
+            $post_file1 = $_FILES['peupload1']['name'];  
+        }
+        if(!$this->upload->do_upload('peupload2')){
+            $post_file2 = 'nofile';
                 
-            }else{
-                $data = array('upload_data' => $this->upload->data());
-                $post_file2 = $_FILES['peupload2']['name'];  
-            }
+        }else{
+            $data = array('upload_data' => $this->upload->data());
+            $post_file2 = $_FILES['peupload2']['name'];  
+        }
             if(!$this->upload->do_upload('peupload3')){
                 $post_file3 = 'nofile';
                 

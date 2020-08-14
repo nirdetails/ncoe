@@ -6,10 +6,12 @@
   <?php // var_dump($_SESSION['sworker']); ?>
       <label for="fullname">Name in Full: </label>
       <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" name="fullname">
+      <label><i>Ex: Wasala Arachchilage Saman Kumara Rajapaksha</i></label>
     </div>
     <div class="form-group">
       <label for="namewithinitials">Name with Initials: </label>
       <input type="text" class="form-control" id="namewithinitials" placeholder="Enter your name with Initials" name="namewithinitials">
+      <label><i>Ex: W.A Saman Kumara Rajapaksha</i></label>
     </div>
     <div class="form-group">
       <label for="dob">Date of Birth: </label>
@@ -24,6 +26,7 @@
     </div>
     <div class="form-group">
       <label for="district">Recendent District Name and Number: </label>
+      <label><i>(*Applicant’s permanent address according to the section “6.2 Determination of Permanent Residence” of the gazette notification.)</i></label>
       <!-- <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district"> -->
       <select class="form-control" id="district" name="district">
         <option value="" selected disabled>Select a District</option>

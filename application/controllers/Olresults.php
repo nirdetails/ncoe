@@ -1,7 +1,7 @@
 <?php
 class Olresults extends CI_Controller{
     public function index(){
-        $data['title'] = 'O/L index';
+        $data['title'] = 'Enter O/L index number/numbers';
 
         $this->load->view('templates/header');
         $this->load->view('pages/ol',$data);

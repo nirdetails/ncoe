@@ -1,7 +1,7 @@
 <?php
 class Alresults extends CI_Controller{
     public function index(){
-        $data['title'] = 'A/L index';
+        $data['title'] = 'Enter A/L index number';
 
         $this->load->view('templates/header');
         $this->load->view('pages/al',$data);
@@ -17,7 +17,7 @@ class Alresults extends CI_Controller{
     // }
 
     public function checkalres($alindex = NULL){
-        $data['title'] = 'alresults';
+        $data['title'] = 'A/L Results';
         // $this->load->helper('security');
         $this->form_validation->set_rules('index','Index Number', 'required|xss_clean|is_unique[stuents.alindex]');
         // $this->form_validation->set_rules('git','GIT Marks', 'required');

@@ -1,7 +1,7 @@
 <?php
 class Alpirivena extends CI_Controller{
     public function index(){
-        $data['title'] = 'Al Pirivena';
+        $data['title'] = 'Add your A/L results';
 
         $this->load->view('templates/header');
         $this->load->view('pages/ALpirivena',$data);
@@ -10,7 +10,7 @@ class Alpirivena extends CI_Controller{
 
 
     public function checkalres(){
-        $data['title'] = 'OL_index';
+        $data['title'] = 'Enter O/L index number';
 
         $this->form_validation->set_rules('alyear', 'Year', 'required');
         $this->form_validation->set_rules('index', 'Index No.', 'required|is_unique[stuents.alindex]');
