@@ -10,7 +10,7 @@
     <div class="col-sm-4">
         <div class="form-group"> 
             <div style="text-align: left;">
-                <a href="prirvenaal" class="btn btn-primary btn-lg" style="width: 100%; padding-bottom:40px;">Clergy<br>පූජ්‍ය/ පූජක<br>மதகுருமார்கள் /வணக்கத்துக்குரியவர்கள்</a>
+                <a href="prirvenaal" class="btn btn-primary btn-lg" style="width: 100%; ">Clergy<br>පූජ්‍ය/ පූජක<br>மதகுருமார்கள் /வணக்கத்துக்குரியவர்கள்<br>&nbsp;<br></a>
             </div>      
         </div>
     </div>
