@@ -1,6 +1,6 @@
 <?php // var_dump($courses); ?>
   <h2>Select your Courses Here..... </h2>
-  <?php echo validation_errors(); ?>
+  <span style="color: red;"><?php echo validation_errors(); ?></span>
   <?php echo form_open_multipart('courses/select'); ?>
   <div class="form-group">
     <label for="preference1">Select Your First Preference: </label>

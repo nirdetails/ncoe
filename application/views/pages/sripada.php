@@ -1,5 +1,5 @@
 <h2><?= $title; ?></h2>
-<?php echo validation_errors(); ?>
+<span style="color: red;"><?php echo validation_errors(); ?></span>
 <?php echo form_open_multipart('students/sripada'); ?>
     <div class="form-group">
       <label for="index1" id="label1" title=" National College of Education">Are you applying for Sripada NCoE? <span style="color:red">* </span></label>

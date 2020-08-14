@@ -1,5 +1,4 @@
 <h2><?= $title; ?></h2>
-<h2>A/L Results Sheet </h2>
 <?php foreach($alresults as $alresult): ?>
 <h4>Index Number : <?php echo $alresult['AL_index']; ?></h4>
 <?php //$_SESSION['alindex'] = $alresult['AL_index']; ?>

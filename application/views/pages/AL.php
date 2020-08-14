@@ -1,5 +1,5 @@
 <h2><?= $title; ?></h2>
-<?php echo validation_errors(); ?>
+<span style="color: red;"><?php echo validation_errors(); ?></span>
 <?php echo form_open_multipart('alresults/checkalres'); ?>
   <div class="form-group">
     <label for="index">A\L index number: <span style="color:red">* </span></label>

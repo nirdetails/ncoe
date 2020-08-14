@@ -18,6 +18,7 @@ class Olresults extends CI_Controller{
         $this->form_validation->set_rules('sel1', 'Number of attempts', 'required');
         
         if($this->form_validation->run() === FALSE){
+            $data['title'] = 'Enter O/L index number/numbers';
             $this->load->view('templates/header');
             $this->load->view('pages/ol', $data);
             $this->load->view('templates/footer');
@@ -55,19 +56,19 @@ class Olresults extends CI_Controller{
             // var_dump($olindex2);
             if (empty($data['olresults1'])) {
                 echo "<script>alert('Please enter a valid Index')</script>";
-                $data['title'] = 'Ol index';
+                $data['title'] = 'Enter O/L index number/numbers';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');
             }elseif ($olindex2 != "N/A" && empty($data['olresults2'])) {
                 echo "<script>alert('Please enter a valid Index2')</script>";
-                $data['title'] = 'Ol index';
+                $data['title'] = 'Enter O/L index number/numbers';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');
             }elseif ($olindex3 != "N/A" && empty($data['olresults3'])) {
                 echo "<script>alert('Please enter a valid Index3')</script>";
-                $data['title'] = 'Ol index';
+                $data['title'] = 'Enter O/L index number/numbers';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');

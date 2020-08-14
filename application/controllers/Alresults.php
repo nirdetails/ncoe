@@ -17,12 +17,13 @@ class Alresults extends CI_Controller{
     // }
 
     public function checkalres($alindex = NULL){
-        $data['title'] = 'A/L Results';
+        $data['title'] = 'A/L Results sheet';
         // $this->load->helper('security');
         $this->form_validation->set_rules('index','Index Number', 'required|xss_clean|is_unique[stuents.alindex]');
         // $this->form_validation->set_rules('git','GIT Marks', 'required');
 
         if($this->form_validation->run() === FALSE){
+            $data['title'] = 'Enter A/L index number';
             $this->load->view('templates/header');
             $this->load->view('pages/al', $data);
             $this->load->view('templates/footer');

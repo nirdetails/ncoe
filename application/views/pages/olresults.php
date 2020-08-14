@@ -165,11 +165,11 @@
         </tbody>
       </table>
       </div>
+      <a class="btn btn-primary" href="<?php echo site_url(); ?>/sripada">Next</a>
     </div>
-  </table>
    
   <!-- </div> -->
-  <a class="btn btn-primary" href="<?php echo site_url(); ?>/sripada">Next</a>
+
   <br>
   <br>
 </div>  

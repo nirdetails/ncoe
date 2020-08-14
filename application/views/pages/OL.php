@@ -1,5 +1,5 @@
 <h2><?= $title; ?></h2>
-<?php echo validation_errors(); ?>
+<span style="color: red;"><?php echo validation_errors(); ?></span>
 <?php echo form_open_multipart('olresults/checkolres'); ?>
   <div class="form-group">
       <label for="attempts">How many attempts? <span style="color:red">* </span></label>
