@@ -4,28 +4,28 @@
 <?php echo form_open_multipart('students/personaldetails'); ?>
   <div class="form-group">
   <?php // var_dump($_SESSION['sworker']); ?>
-      <label for="fullname">Name in Full: </label>
+      <label for="fullname">Name in Full: <span style="color:red">* </span></label>
       <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" name="fullname">
       <label><i>Ex: Wasala Arachchilage Saman Kumara Rajapaksha</i></label>
     </div>
     <div class="form-group">
-      <label for="namewithinitials">Name with Initials: </label>
+      <label for="namewithinitials">Name with Initials: <span style="color:red">* </span></label>
       <input type="text" class="form-control" id="namewithinitials" placeholder="Enter your name with Initials" name="namewithinitials">
       <label><i>Ex: W.A Saman Kumara Rajapaksha</i></label>
     </div>
     <div class="form-group">
-      <label for="dob">Date of Birth: </label>
+      <label for="dob">Date of Birth: <span style="color:red">* </span></label>
       <input type="date" class="form-control" id="dob"  name="dob">
     </div>
     <div class="form-group">
-      <label for="address">Permanent Address: </label>
+      <label for="address">Permanent Address: <span style="color:red">* </span></label>
       <input type="text" class="form-control" id="addressline1" placeholder="Enter your address- line01" name="addressline1"><br>
       <input type="text" class="form-control" id="addressline2" placeholder="Enter your address- line02" name="addressline2"><br>
       <input type="text" class="form-control" id="addressline3" placeholder="Enter your address- line03" name="addressline3"><br>
       <input type="text" class="form-control" id="addressline4" placeholder="Enter your address- line04" name="addressline4"><br>
     </div>
     <div class="form-group">
-      <label for="district">Recendent District Name and Number: </label>
+      <label for="district">Recendent District Name and Number: <span style="color:red">* </span></label>
       <label><i>(*Applicant’s permanent address according to the section “6.2 Determination of Permanent Residence” of the gazette notification.)</i></label>
       <!-- <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district"> -->
       <select class="form-control" id="district" name="district">
@@ -61,14 +61,14 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
-             <label for="nic">NIC Number: </label>
+             <label for="nic">NIC Number: <span style="color:red">* </span></label>
              <input type="text" class="form-control" id="nic" placeholder="Enter your NIC" name="nic">
            </div>
         </div>
 
         <div class="col-sm-6">  
             <div class="form-group">
-              <label for="gender">Gender: </label><br>
+              <label for="gender">Gender: <span style="color:red">* </span></label><br>
               <input type="radio" name="gender"
               <?php if (isset($gender) && $gender=="female") echo "checked";?>
               value="female">Female
@@ -83,13 +83,13 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group"> 
-                <label for="title">Title: </label>
+                <label for="title">Title: <span style="color:red">* </span></label>
                 <input type="text" class="form-control" id="title" placeholder="Mr/Mrs/Miss/Rev.." name="title">
              </div>
         </div>
         <div class="col-sm-6">   
             <div class="form-group">          
-                <label for="ethnicity">Ethnicity: </label>
+                <label for="ethnicity">Ethnicity: <span style="color:red">* </span></label>
                 <input type="text" class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity">      
              </div>
         </div>
@@ -100,20 +100,20 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group"> 
-               <label for="mobile">Mobile: </label>
+               <label for="mobile">Mobile: <span style="color:red">* </span></label>
                 <input type="text" class="form-control" id="mobile" placeholder="0700000000" name="mobile">
             </div>
         </div>
         <div class="col-sm-6">  
             <div class="form-group">           
-                <label for="home">Home: </label>
+                <label for="home">Home: <span style="color:red">* </span></label>
                 <input type="text" class="form-control" id="home" placeholder="0000000000" name="home"> 
             </div>     
         </div>
     </div>
 
     <div class="form-group">            
-            <label for="home">Email: </label>
+            <label for="home">Email: <span style="color:red">* </span></label>
             <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email">             
     </div>
     <input type="hidden" value="<?php echo $_SESSION['alindex']; ?>" name="alindex">

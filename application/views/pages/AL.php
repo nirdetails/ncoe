@@ -2,7 +2,7 @@
 <?php echo validation_errors(); ?>
 <?php echo form_open_multipart('alresults/checkalres'); ?>
   <div class="form-group">
-    <label for="index">A\L index number:</label>
+    <label for="index">A\L index number: <span style="color:red">* </span></label>
     <input type="text" class="form-control" id="index" placeholder="Enter your A\L index number" name="index">
   </div>
   <div class="form-group">

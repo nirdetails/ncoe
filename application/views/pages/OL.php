@@ -2,7 +2,7 @@
 <?php echo validation_errors(); ?>
 <?php echo form_open_multipart('olresults/checkolres'); ?>
   <div class="form-group">
-      <label for="attempts">How many attempts?</label>
+      <label for="attempts">How many attempts? <span style="color:red">* </span></label>
       <select name="sel1" class="form-control" id="sel1">
         <option id="def" selected value="">ATTEMPTS</option>
         <option id="1" value="1">1</option>
