@@ -12,7 +12,7 @@ $obj_pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
 $obj_pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 $obj_pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
 $obj_pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-$obj_pdf->SetFont('helvetica', '', 9);
+$obj_pdf->SetFont('helvetica', '', 12);
 $obj_pdf->setFontSubsetting(false);
 $obj_pdf->AddPage();
 ob_start();
@@ -21,28 +21,29 @@ ob_start();
     // var_dump($alresults);
 ?>    
     <body>
-    <div class="container  mt-5">
+    <div class="container mt-5" style="padding-top: 0px;">
             <h1>National Colleges of Education (NCoE) Admission</h1><br>
-            <label for="fullname">01. Name in Full:  </label><?php echo $_SESSION['fullname']; ?><br>
-            <label for="initials">02. Name with Initials:    </label><?php echo $_SESSION['namewithinitials']; ?><br>
-            <label for="address">03. Permanent Address: </label><?php echo $_SESSION['addressline1']; ?>
+            <label for="fullname"><b>01. Name in Full:  </b></label><?php echo $_SESSION['fullname']; ?><br>
+            <label for="initials"><b>02. Name with Initials:    </b></label><?php echo $_SESSION['namewithinitials']; ?><br>
+            <label for="address"><b>03. Permanent Address: </b></label><?php echo $_SESSION['addressline1']; ?>
             <?php echo $_SESSION['addressline2']; ?>
             <?php echo $_SESSION['addressline3']; ?>
             <?php echo $_SESSION['addressline4']; ?><br>
-            <label for="district">04. Recendent District Name and Number: </label><?php echo $_SESSION['district']; ?><br>
-            <label for="nic">05. NIC Number: </label><?php echo $_SESSION['nic']; ?><br>
-            <label for="gender">06. Gender: </label><?php echo $_SESSION['gender']; ?><br>
-            <label for="title">07. Title: </label><?php echo $_SESSION['title']; ?><br>
-            <label for="ethnicity">08. Ethnicity: </label><?php echo $_SESSION['ethnicity']; ?><br>
-            <label for="mobile">09. Mobile: </label><?php echo $_SESSION['mobile']; ?><br>
-            <label for="home">10. Home Tel: </label><?php echo $_SESSION['home']; ?><br>
-            <label for="email">11. Email: </label><?php echo $_SESSION['email']; ?><br>
+            <label for="district"><b>04. Recendent District Name and Number: </b></label><?php echo $_SESSION['district']; ?><br>
+            <label for="nic"><b>05. NIC Number: </b></label><?php echo $_SESSION['nic']; ?><br>
+            <label for="dob"><b>06. Date of Birth: </b></label><?php echo $_SESSION['dob']; ?> 
+            <label for="gender"><b>07. Gender: </b></label><?php echo $_SESSION['gender']; ?><br>
+            <label for="title"><b>08. Title: </b></label><?php echo $_SESSION['title']; ?><br>
+            <label for="ethnicity"><b>09. Ethnicity: </b></label><?php echo $_SESSION['ethnicity']; ?><br>
+            <label for="mobile"><b>10. Mobile: </b></label><?php echo $_SESSION['mobile']; ?><br>
+            <label for="home"><b>11. Home Tel: </b></label><?php echo $_SESSION['home']; ?><br>
+            <label for="email"><b>12. Email: </b></label><?php echo $_SESSION['email']; ?><br>
             <?php 
                 $districts = array('16' => 'Ampara', "20" => 'Anuradhapura',"22" => 'Badulla',"15" => 'Batticaloa',"01" => 'Colombo',"07" => 'Galle',"02" => 'Gampaha',"09" => 'Hambantota',"10" => 'Jaffna',"03" => 'Kaluthara',"04" => 'Kandy',"25" => 'Kegalle',"11" => 'Kilinochchi',"18" => 'Kurunegala',"12" => 'Mannar',"05" => 'Matale',"08" => 'Matara',"23" => 'Monaragala',"14" => 'Mullaitivu',"06" => 'Nuwara Eliya',"21" => 'Polonnaruwa',"19" => 'Puttalam',"24" => 'Ratnapura',"17" => 'Trincomalee',"13" => 'Vavuniya');
             
                 foreach ($districts as $key => $value) {
                     if ($key == $_SESSION['district']) { 
-                        echo "<label for='district'>12. District: </label>". $_SESSION['district']." - " .$value."<br>";
+                        echo "<label for='district'><b>13. District: </b></label>". $_SESSION['district']." - " .$value."<br>";
                    
                     }
                 }?>
@@ -50,19 +51,19 @@ ob_start();
             <label for="state">13. Are your parents are State Workers? </label><br><br> -->
 
 
-            <h5>A/L Details: </h5>
+            <h4><b>A/L Details: </b></h4>
             <?php foreach($alresults as $alresult): ?><br>
-            <label for="alindex">14. A/L Index No:</label><?php echo $_SESSION['alindex']; ?><br>
-            <label for="alyear">15. A/L Year: </label>2018<br>
-            <label for="alstream">16. Stream: </label><?php echo $alresult['stream'] ?><br>
-            <label for="almedium">17. Medium: </label><?php echo $alresult['medium'] ?><br>
-            <label for="alattempt">18. Attempt: </label><?php echo $alresult['attempt'] ?><br><br>
-            <h5>A/L Results: </h5>
-                <table>
+            <label for="alindex"><b>14. A/L Index No:</b></label><?php echo $_SESSION['alindex']; ?><br>
+            <label for="alyear"><b>15. A/L Year: </b></label>2018<br>
+            <label for="alstream"><b>16. Stream: </b></label><?php echo $alresult['stream'] ?><br>
+            <label for="almedium"><b>17. Medium: </b></label><?php echo $alresult['medium'] ?><br>
+            <label for="alattempt"><b>18. Attempt: </b></label><?php echo $alresult['attempt'] ?><br><br>
+            <h4><b>A/L Results: </b></h4>
+                <table style="width: 100%">
                 <tr>
-                    <th></th>
-                    <th>Subject</th>
-                    <th>Grade</th>
+                    <th style="width: 10%"></th>
+                    <th><b>Subject</b></th>
+                    <th><b>Grade</b></th>
                 </tr>
                 <tr>
                     <td>01. </td>
@@ -86,21 +87,22 @@ ob_start();
                 </tr>
                 </table>
                 
+                <div style="height: 10px;"></div>
                 <br><br>
-                <label>19. General Test Marks: </label><?php echo $alresult['gentst'] ?><br>
-                <label>20. Z-Core: </label><?php echo $alresult['zscore'] ?><br>
+                <label><b>19. General Test Marks: </b></label><?php echo $alresult['gentst'] ?><br>
+                <label><b>20. Z-Core: </b></label><?php echo $alresult['zscore'] ?><br>
                 <?php endforeach; ?>
-
-            <h5>O/L Details: </h5>
-            <br><label for="olattempts">21. Number of Attempts: <?php echo $_SESSION['attempts']; ?><br>
+                <br>
+            <h4><b>O/L Details: </b></h4>
+            <br>&nbsp;&nbsp;<label for="olattempts"><b>21. Number of Attempts: </b><?php echo $_SESSION['attempts']; ?>
             <?php foreach($olresults1 as $olresult1): if( $olresult1["OL_index"] != "N/A"){?><br>
-                <label for="olindex">22. Index Number: <?php echo $olresult1["OL_index"]; ?><br><br>
-                <h5>O/L Results: </h5>
-                <table>
+                <label for="olindex"><b>22. Index Number: </b><?php echo $olresult1["OL_index"]; ?><br><br>
+                <h4><b>O/L Results: </b></h4>
+                <table style="width: 100%">
                     <tr>
-                        <th></th>
-                        <th>Subject</th>
-                        <th>Grade</th>
+                        <th style="width: 10%"></th>
+                        <th><b>Subject</b></th>
+                        <th><b>Grade</b></th>
                     </tr>
                     <tr>
                         <td>01. </td>
@@ -153,12 +155,12 @@ ob_start();
             <?php foreach($olresults2 as $olresult2): if( $olresult2["OL_index"] != "N/A"){?>
             <label for="olattempts">21. Number of Attempts: <br>
             <label for="olindex">22. Index Number: <?php echo $olresult2["OL_index"]; ?><br><br>
-            <h5>O/L Results: </h5>
+            <h4>O/L Results: </h4>
             <table>
                 <tr>
                     <th></th>
-                    <th>Subject</th>
-                    <th>Grade</th>
+                    <th><b>Subject</b></th>
+                    <th><b>Grade</b></th>
                 </tr>
                 <tr>
                     <td>01. </td>
@@ -209,14 +211,14 @@ ob_start();
             <?php }endforeach; ?>
 
             <?php foreach($olresults3 as $olresult3): if( $olresult3["OL_index"] != "N/A"){?>
-            <label for="olattempts">21. Number of Attempts: <br>
-            <label for="olindex">22. Index Number: <?php echo $olresult3["OL_index"] ?><br><br>
-            <h5>O/L Results: </h5>
+            <br><label for="olattempts"><b>21. Number of Attempts: </b><br>
+            <label for="olindex"><b>22. Index Number: </b><?php echo $olresult3["OL_index"] ?><br><br>
+            <h4><b>O/L Results: </b></h4>
             <table>
                 <tr>
                     <th></th>
-                    <th>Subject</th>
-                    <th>Grade</th>
+                    <th><b>Subject</b></th>
+                    <th><b>Grade</b></th>
                 </tr>
                 <tr>
                     <td>01. </td>
@@ -265,7 +267,8 @@ ob_start();
                 </tr>
             </table><br>
             <?php }endforeach; ?>
-    <h5>Selected Courses: </h5>
+            
+    <h4><b>Selected Courses: </b></h4>
     <ol>
         <?php if($_SESSION['course1'] != ""){ ?>
             <li><?php echo $course1["course_no"]; ?> - <?php echo $course1["name"]; ?></li>
@@ -280,13 +283,13 @@ ob_start();
         <?php } ?>
     </ol>
     <?php if($_SESSION['pemarks1'] != NULL){ ?>
-        <label for="pemarks">23. Physical Education Marks: </label><?php echo $_SESSION['pemarks1']; ?><br><br>
+        <label for="pemarks"><b>23. Physical Education Marks: </b></label><?php echo $_SESSION['pemarks1']; ?><br><br>
     <?php }?>
-    <h5>Declaration: </h5>
+    <!-- <h5>Declaration: </h5>
         <p style="text-align: justify">I am aware that I have forwarded my application in accordance with paragraph10.0 of the Gazette Notification, after reading and comprehending the Gazette Notification well. I certify that I have already acquired the qualifications mentioned in the Gazette Notification relevant to the Courses that have been applied by me. I am aware that the particulars furnished in the application by me are true and correct. I am aware that if any particulars given by me in this application are found to be false or incorrect or contradictory to the Gazette Notification, I am liable to be disqualified before selection or to be discontinued after selection. I certify that I have not registered to follow a course in a University/University Institute/any other Higher Education Institute/ I am not currently following a relevant course in an afore mentioned institute. I further certify that I agree to be discontinued from the course if It is found that the section 8.4 of the Gazette Notification has been/is violated by me. I declare that I agree to accept any punishment pronounced by the disciplinary board of the National College of Education and the Ministry of Education if I am found and proven to have been engaged in any action against the code of conduct of National Colleges of Education.</p>
         <div style="text-align:center">
             <strong> I Agreed </strong> <br/>
-        </div>
+        </div> -->
     </div>
 </body>
 <?php
@@ -295,5 +298,3 @@ ob_end_clean();
 $obj_pdf->writeHTML($content, true, false, true, false, '');
 $obj_pdf->Output('output.pdf', 'I');
 ?>
-
-<h1>This is it <?php var_dump($_SESSION); ?></h1>

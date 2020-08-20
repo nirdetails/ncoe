@@ -15,9 +15,9 @@
             $this->form_validation->set_rules('namewithinitials', 'Name with Initials', 'required');
             $this->form_validation->set_rules('dob', 'Date of Birth', 'required');
             $this->form_validation->set_rules('addressline1', 'Permenant Address', 'required');//all the lines were required.
-            $this->form_validation->set_rules('addressline2', 'Permenant Address', 'required');
-            $this->form_validation->set_rules('addressline3', 'Permenant Address', 'required');
-            $this->form_validation->set_rules('addressline4', 'Permenant Address', 'required');
+            // $this->form_validation->set_rules('addressline2', 'Permenant Address', 'required');
+            // $this->form_validation->set_rules('addressline3', 'Permenant Address', 'required');
+            // $this->form_validation->set_rules('addressline4', 'Permenant Address', 'required');
             $this->form_validation->set_rules('district', 'Recendent District Name and Number', 'required');
             $this->form_validation->set_rules('nic', 'NIC Number', 'required|is_unique[stuents.NIC]|max_length[12]|min_length[10]');
             $this->form_validation->set_rules('gender', 'Gender', 'required');//gender validation

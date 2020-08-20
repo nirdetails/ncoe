@@ -81,19 +81,19 @@
 
 <div class="row">
         
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4">
                 <div class="form-group">
                     <label for="index">Subject Name</label>
                     <input type="text" class="form-control" id="subjectname1" placeholder="Subject Name" name="subjectname1">
                 </div>
-        </div>
-        <div class="col-sm-4">
+        </div> -->
+        <div class="col-sm-6">
             <div class="form-group">
                 <label for="index">Subject Number</label>
                 <input type="text" class="form-control" id="subjectnumber1" placeholder="Subject Number" name="subjectnumber1">
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="form-group">
                 <div class="form-group">
                     <label for="index">Grade</label>
@@ -116,17 +116,17 @@
 
 <div class="row">
         
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4">
                 <div class="form-group">
                     <input type="text" class="form-control" id="subjectname2" placeholder="Subject Name" name="subjectname2">
                 </div>
-        </div>
-        <div class="col-sm-4">
+        </div> -->
+        <div class="col-sm-6">
             <div class="form-group">
                 <input type="text" class="form-control" id="subjectnumber2" placeholder="Subject Number" name="subjectnumber2">
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="form-group">
                 <div class="form-group">
                     <select class="form-control" id="grade2" placeholder="Grade" name="grade2">
@@ -153,17 +153,17 @@
 </div>
     <div class="row">
         
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4">
                 <div class="form-group">
                     <input type="text" class="form-control" id="subjectname3" placeholder="Subject Name" name="subjectname3">
                 </div>
-        </div>
-        <div class="col-sm-4">
+        </div> -->
+        <div class="col-sm-6">
             <div class="form-group">
                 <input type="text" class="form-control" id="subjectnumber3" placeholder="Subject Number" name="subjectnumber3">
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="form-group">
                 <div class="form-group">
                     <select class="form-control" id="grade3" placeholder="Grade" name="grade3">
@@ -190,17 +190,17 @@
     </div>
     <div class="row">
         
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4">
                 <div class="form-group">
                     <input type="text" class="form-control" id="subjectname4" placeholder="Subject Name" name="subjectname4">
                 </div>
-        </div>
-        <div class="col-sm-4">
+        </div> -->
+        <div class="col-sm-6">
             <div class="form-group">
                 <input type="text" class="form-control" id="subjectnumber4" placeholder="Subject Number" name="subjectnumber4">
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="form-group">
                 <div class="form-group">
                     <select class="form-control" id="grade4" placeholder="Grade" name="grade4">
@@ -264,398 +264,70 @@
         <th>Subject Name</th>
         <th>Subject Number </th>
     </tr>
-    <tr>
-        <td>Accountancy</td>
-        <td>01</td>
-    </tr>
-    <tr>
-        <td>Aesthetics  appreciation</td>
-        <td>02</td>
-    </tr> 
-    <tr>
-        <td>Agricultural Science</td>
-        <td>03</td>
-    </tr>
-    <tr>
-        <td>Agro Science For Advanced Level</td>
-        <td>04</td>
-    </tr>
-    <tr>
-        <td>Agro Technology</td>
-        <td>05</td>
-    </tr>
-    <tr>
-        <td>Aluminum Fabrication Studies</td>
-        <td>06</td>
-    </tr>
-    <tr>
-        <td>Applied English and communication skills</td>
-        <td>07</td>
-    </tr>
-    <tr>
-        <td>Applied Horticultural Studies</td>
-        <td>08</td>
-    </tr>
-    <tr>
-        <td>Aquatic Resource Studies</td>
-        <td>09</td>
-    </tr>
-    <tr>
-        <td>Arabic</td>
-        <td>10</td>
-    </tr>
-    <tr>
-        <td>Art</td>
-        <td>11</td>
-    </tr>
-    <tr>
-        <td>Art & Designing</td>
-        <td>12</td>
-    </tr>
-    <tr>
-        <td>Arts & Crafts</td>
-        <td>13</td>
-    </tr>
-    <tr>
-        <td>Automobile Studies</td>
-        <td>14</td>
-    </tr>
-    <tr>
-        <td>Bio Resource Technology </td>
-        <td>15</td>
-    </tr>
-    <tr>
-        <td>Bio Science</td>
-        <td>16</td>
-    </tr>
-    <tr>
-        <td>Bio System Technology</td>
-        <td>17</td>
-    </tr>
-    <tr>
-        <td>Buddhism </td>
-        <td>18</td>
-    </tr>
-    <tr>
-        <td>Buddhist Civilization</td>
-        <td>19</td>
-    </tr>
-    <tr>
-        <td>Business Statistics </td>
-        <td>20</td>
-    </tr>
-    <tr>
-        <td>Business Studies</td>
-        <td>21</td>
-    </tr>
-    <tr>
-        <td>Career guidance programs</td>
-        <td>22</td>
-    </tr>
-    <tr>
-        <td>Carnatic Music </td>
-        <td>23</td>
-    </tr>
-    <tr>
-        <td>Chemistry </td>
-        <td>24</td>
-    </tr>
-    <tr>
-        <td>Child Psychology & Care</td>
-        <td>25</td>
-    </tr>
-    <tr>
-        <td>Chinese</td>
-        <td>26</td>
-    </tr>
-    <tr>
-        <td>Christian Civilization</td>
-        <td>27</td>
-    </tr>
-    <tr>
-        <td>Christianity</td>
-        <td>28</td>
-    </tr>
-    <tr>
-        <td>Civil Technology</td>
-        <td>29</td>
-    </tr>
-    <tr>
-        <td>Combined Mathematics</td>
-        <td>30</td>
-    </tr>
-    <tr>
-        <td>Communication & Media Studies</td>
-        <td>31</td>
-    </tr>
-    <tr>
-        <td>Communication & Media Studies</td>
-        <td>32</td>
-    </tr>
-    <tr>
-        <td>Construction Studies</td>
-        <td>33</td>
-    </tr>
-    <tr>
-        <td>Dancing - Bharatha</td>
-        <td>34</td>
-    </tr>
-    <tr>
-        <td>Dancing - Indigeneous</td>
-        <td>35</td>
-    </tr>
-    <tr>
-        <td>Drama & Theatre</td>
-        <td>36</td>
-    </tr>
-    <tr>
-        <td>Economics</td>
-        <td>37</td>
-    </tr>
-    <tr>
-        <td>Electrical and Electronic Studies</td>
-        <td>38</td>
-    </tr>
-    <tr>
-        <td>Electrical, Electronic & Information Technology</td>
-        <td>39</td>
-    </tr>
-    <tr>
-        <td>Engineering Technology </td>
-        <td>40</td>
-    </tr>
-    <tr>
-        <td>English</td>
-        <td>41</td>
-    </tr>
-    <tr>
-        <td>Entrepreneurial skills</td>
-        <td>42</td>
-    </tr>
-    <tr>
-        <td>Environment Studies</td>
-        <td>43</td>
-    </tr>
-    <tr>
-        <td>Event Management</td>
-        <td>44</td>
-    </tr>
-    <tr>
-        <td>Fashion Designing</td>
-        <td>45</td>
-    </tr>
-    <tr>
-        <td>First Language (Sinhala or Tamil)</td>
-        <td>46</td>
-    </tr>
-    <tr>
-        <td>Food Processing Studies</td>
-        <td>47</td>
-    </tr>
-    <tr>
-        <td>Food Technology</td>
-        <td>48</td>
-    </tr>
-    <tr>
-        <td>French</td>
-        <td>49</td>
-    </tr>
-    <tr>
-        <td>General English</td>
-        <td>50</td>
-    </tr>
-    <tr>
-        <td>General Information  Technology</td>
-        <td>51</td>
-    </tr>
-    <tr>
-        <td>Geography</td>
-        <td>52</td>
-    </tr>
-    <tr>
-        <td>German</td>
-        <td>53</td>
-    </tr>
-    <tr>
-        <td>Graphic Design </td>
-        <td>54</td>
-    </tr>
-    <tr>
-        <td>Greek &Roman Civilization</td>
-        <td>55</td>
-    </tr>
-    <tr>
-        <td>Health &Social Care</td>
-        <td>56</td>
-    </tr>
-    <tr>
-        <td>Health and life skills needed for social well-being </td>
-        <td>57</td>
-    </tr>
-    <tr>
-        <td>Higher Mathematics</td>
-        <td>58</td>
-    </tr>
-    <tr>
-        <td>Hindi</td>
-        <td>59</td>
-    </tr>
-    <tr>
-        <td>Hindu Civilization</td>
-        <td>60</td>
-    </tr>
-    <tr>
-        <td>Hinduism</td>
-        <td>61</td>
-    </tr>
-    <tr>
-        <td>History of (India,Modern World,Europe)</td>
-        <td>62</td>
-    </tr>
-    <tr>
-        <td>History of Ceylon</td>
-        <td>63</td>
-    </tr>
-    <tr>
-        <td>Home Economics</td>
-        <td>64</td>
-    </tr>
-    <tr>
-        <td>Information & Communication Technology</td>
-        <td>65</td>
-    </tr>
-    <tr>
-        <td>Information and communication technology skills </td>
-        <td>66</td>
-    </tr>
-    <tr>
-        <td>Interior Designing</td>
-        <td>67</td>
-    </tr>
-    <tr>
-        <td>Islam</td>
-        <td>68</td>
-    </tr>
-    <tr>
-        <td>Islamic Civilization</td>
-        <td>69</td>
-    </tr>
-    <tr>
-        <td>Japanese</td>
-        <td>70</td>
-    </tr>
-    <tr>
-        <td>Landscaping</td>
-        <td>71</td>
-    </tr>
-    <tr>
-        <td>Livestock Product Studies</td>
-        <td>72</td>
-    </tr>
-    <tr>
-        <td>Logic & Scientific Method</td>
-        <td>73</td>
-    </tr>
-    <tr>
-        <td>Malay </td>
-        <td>74</td>
-    </tr>
-    <tr>
-        <td>Mathematics</td>
-        <td>75</td>
-    </tr>
-    <tr>
-        <td>Mechanical Technology </td>
-        <td>76</td>
-    </tr>
-    <tr>
-        <td>Metal Fabrication Studies</td>
-        <td>77</td>
-    </tr>
-    <tr>
-        <td>Music - Eastern</td>
-        <td>78</td>
-    </tr>
-    <tr>
-        <td>Other English medium subjects</td>
-        <td>79</td>
-    </tr>
-    <tr>
-        <td>Other Subjects</td>
-        <td>80</td>
-    </tr>
-    <tr>
-        <td>Paly</td>
-        <td>81</td>
-    </tr>
-    <tr>
-        <td>Performing Arts</td>
-        <td>82</td>
-    </tr>
-    <tr>
-        <td>Physical Education & sports</td>
-        <td>83</td>
-    </tr>
-    <tr>
-        <td>Physics </td>
-        <td>84</td>
-    </tr>
-    <tr>
-        <td>Plantation product Studies </td>
-        <td>85</td>
-    </tr>
-    <tr>
-        <td>Political Science</td>
-        <td>86</td>
-    </tr>
-    <tr>
-        <td>Russian</td>
-        <td>87</td>
-    </tr>
-    <tr>
-        <td>Sanskrit </td>
-        <td>88</td>
-    </tr>
-    <tr>
-        <td>Science For Technology </td>
-        <td>89</td>
-    </tr>
-    <tr>
-        <td>Sinhala</td>
-        <td>90</td>
-    </tr>
-    <tr>
-        <td>Skills related to citizenship </td>
-        <td>91</td>
-    </tr>
-    <tr>
-        <td>Software design</td>
-        <td>92</td>
-    </tr>
-    <tr>
-        <td>Sports and other curriculum activities </td>
-        <td>93</td>
-    </tr>
-    <tr>
-        <td>Tamil</td>
-        <td>94</td>
-    </tr>
-    <tr>
-        <td>Textile & Apparel Studies </td>
-        <td>95</td>
-    </tr>
-    <tr>
-        <td>Tourism & Hospitality</td>
-        <td>96</td>
-    </tr>
-    <tr>
-        <td>Web design</td>
-        <td>97</td>
-    </tr>
-    <tr>
-        <td>Western Music</td>
-        <td>98</td>
-    </tr>
+    <tr><td>1</td>	<td>Physics</td></tr>			
+    <tr><td>2</td>	<td>Chemistry</td></td></tr>			
+    <tr><td>7</td>	<td>Mathematics</td></td></tr>			
+    <tr><td>8</td>	<td>Agricultural Science</td></td></tr>			
+    <tr><td>9</td>	<td>Biology</td></td>	</tr>		
+    <tr><td>10</td>	<td>Combind Mathematics</td></td></tr>			
+    <tr><td>11</td>	<td>Higher Mathematics</td></td></tr>			
+    <tr><td>12</td>	<td>Common General Test	</td></td></tr>		
+    <tr><td>13</td>	<td>General English</td></td>	</tr>	
+    <tr><td>14</td>	<td>Civil Technology</td></td></tr>			
+    <tr><td>15</td>	<td>Mechanical Technology</td></td>	</tr>		
+    <tr><td>16</td>	<td>Eletrical,Electronic and Information Technology	</td></td></tr>		
+    <tr><td>17</td>	<td>Food Technology</td></td>	</tr>		
+    <tr><td>18</td>	<td>Agro Technology	</td></td></tr>		
+    <tr><td>19</td>	<td>Bio- Resource Technology</td></td></tr>			
+    <tr><td>20</td>	<td>Information & Communication Technology</td></tr>			
+    <tr><td>21</td>	<td>Economics</td></td>		</tr>	
+    <tr><td>22</td>	<td>Geography</td></td></tr>			
+    <tr><td>23</td>	<td>Political Science</td></td>	</tr>		
+    <tr><td>24</td>	<td>Logic and Scientific Method	</td></td>	</tr>	
+    <tr><td>25 A</td><td>History of India</td></tr>			
+    <tr><td>25 B</td><td>History of Europe</td></tr>			
+    <tr><td>25 C</td><td>History of Modern world	</td>	</tr>	
+    <tr><td>28</td><td>Home Economics	</td>	</tr>	
+    <tr><td>29</td><td>Communication & Media Studies</td></tr>			
+    <tr><td>31</td><td>Business Statistics	</td>	</tr>	
+    <tr><td>32</td><td>Business Studies</td></tr>			
+    <tr><td>33</td><td>Accounting	</td></tr>		
+    <tr><td>41</td><td>Buddhism</td>		</tr>	
+    <tr><td>42</td><td>Hinduism</td></tr>			
+    <tr><td>43</td><td>Christianity</td>	</tr>		
+    <tr><td>44</td><td>Islam	</td>	</tr>		
+    <tr><td>45</td><td>Buddhist Civilization</td></tr>
+    <tr><td>46</td><td>Hindu Civilization</td></tr>
+    <tr><td>47</td><td>Islam Civilization</td></tr>
+    <tr><td>48</td><td>Greek & Rooman Civilization</td></tr>
+    <tr><td>49</td><td>Christian Civilization</td></tr>
+    <tr><td>51</td><td>Art</td></tr>
+    <tr><td>52 A</td><td>Dancing (Indigenous  -Kandyan)</td></tr>
+    <tr><td>52 B</td><td>Dancing (Indigenous  -Low country)</td></tr>
+    <tr><td>52 C</td><td>Dancing (Indigenous Sabaragamu)</td></tr>
+    <tr><td>53</td><td>Dancing (Bharata)</td></tr>
+    <tr><td>54</td><td>Oriental Music</td></tr>
+    <tr><td>55</td><td>Carnatic Music</td></tr>
+    <tr><td>56</td><td>Western Music</td></tr>
+    <tr><td>57</td><td>Drama and Theatre (Sinhala)</td></tr>
+    <tr><td>58</td><td>Drama and Theatre (Tamil)</td></tr>
+    <tr><td>59</td><td>Drama and Theatre (English)</td></tr>
+    <tr><td>65</td><td>Engineering Technology</td></tr>
+    <tr><td>66</td><td>Bio Systems Technology</td></tr>
+    <tr><td>67</td><td>Science fot Technology</td></tr>
+    <tr><td>71</td><td>Sinhala</td></tr>
+    <tr><td>72</td><td>Tamil</td></tr>
+    <tr><td>73</td><td>English</td></tr>
+    <tr><td>74</td><td>pali</td></tr>
+    <tr><td>75</td><td>Sanskrit</td></tr>
+    <tr><td>78</td><td>Arabic</td></tr>
+    <tr><td>79</td><td>Malay</td></tr>
+    <tr><td>81</td><td>French</td></tr>
+    <tr><td>82</td><td>German</td></tr>
+    <tr><td>83</td><td>Russian</td></tr>
+    <tr><td>84</td><td>Hindi</td></tr>
+    <tr><td>86</td><td>Chinese</td></tr>
+    <tr><td>87</td><td>Japanese</td></tr>
 </table>
 </div>
 &nbsp;

@@ -40,21 +40,38 @@ class Olresults extends CI_Controller{
                 $data['olresults1'] = '';
                 $olindex1 = 'N/A';
             }
-            if($olindex2 != ""){
+            if($olindex2 != "" && $olindex2 != $olindex1){
                 $data['olresults2'] = $this->olresults_model-> get_olresults2($olind2);
-                
+                // var_dump($data['olresults2']);
+                if(!empty($data['olresults2'])){
+                    if($data['olresults2'][0]['year'] != $data['olresults1'][0]['year'] ){
+                    
+                    }else{
+                        $data['olresults2'] = '';
+                        $olindex2 = 'N/A';
+                    }
+                    // var_dump($data['olresults2'][0]);
+                }  
             }else{
                 $data['olresults2'] = '';
                 $olindex2 = 'N/A';
             }
-            if($olindex3 != ""){
+            if($olindex3 != "" && $olindex3 != $olindex1 && $olindex3 != $olindex2){
                 $data['olresults3'] = $this->olresults_model-> get_olresults3($olind3);
+                if(!empty($data['olresults3'])){
+                    if($data['olresults3'][0]['year'] != $data['olresults1'][0]['year'] && $data['olresults3'][0]['year'] != $data['olresults2'][0]['year']){
+                    
+                    }else{
+                        $data['olresults3'] = '';
+                        $olindex3 = 'N/A';
+                    }
+                }
             }else{
                 $data['olresults3'] = '';
                 $olindex3 = 'N/A';
             }
             // var_dump($olindex2);
-            if (empty($data['olresults1'])) {
+            if ($olindex1 == "N/A" || empty($data['olresults1'])) {
                 echo "<script>alert('Please enter a valid Index')</script>";
                 $data['title'] = 'Enter O/L index number/numbers';
                 $this->load->view('templates/header');
