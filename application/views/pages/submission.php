@@ -35,6 +35,13 @@ function myFunction() {
     <input type="hidden" value="<?php echo $_SESSION['email']; ?>" name="email">
     <input type="hidden" value="<?php echo $_SESSION['pirivena']; ?>" name="pirivena">
     <input type="hidden" value="<?php echo $_SESSION['git']; ?>" name="git">
+
+    <input type="hidden" value="<?php echo $_SESSION['course1']; ?>" name="course1">
+    <input type="hidden" value="<?php echo $_SESSION['course2']; ?>" name="course2">
+    <input type="hidden" value="<?php echo $_SESSION['course3']; ?>" name="course3">
+    <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks1">
+    <input type="hidden" value="<?php echo $_SESSION['category']; ?>" name="category">
+
     <?php if($_SESSION['pemarks1'] != NULL){  ?>
       <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks">
     <?php } ?>

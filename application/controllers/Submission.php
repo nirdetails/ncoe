@@ -9,8 +9,18 @@
         }
 
         public function submit(){
+            $post_file1 = $_SESSION['post_file1']; 
+            $post_file2 = $_SESSION['post_file2']; 
+            $post_file3 = $_SESSION['post_file3']; 
+            $post_filer1 = $_SESSION['post_filer1']; 
+            $post_filer2 = $_SESSION['post_filer2']; 
+            $post_filer3 = $_SESSION['post_filer3']; 
+            $post_filew1 = $_SESSION['post_filew1']; 
+            $post_filew2 = $_SESSION['post_filew2']; 
+            $post_filew3 = $_SESSION['post_filew3'];
             $data['title'] = 'Form Submit';
             $this->students_model->personaldetails();
+            $this->courses_model->preferdetails($post_file1, $post_file2, $post_file3, $post_filer1, $post_filer2, $post_filer3, $post_filew1, $post_filew2, $post_filew3);
 
             $this->session->unset_userdata('alindex', 'olindex1', 'olindex2', 'olindex3', 'fullname', 'namewithinitials', 
             'addressline1', 'addressline2', 'addressline3', 'addressline4', 'district', 'nic', 'gender',

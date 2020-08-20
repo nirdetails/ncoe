@@ -35,6 +35,7 @@ class Courses extends CI_Controller{
         $course2 = $this->input->post("course2");
         $course3 = $this->input->post("course3");
         $pemarks1 = $this->input->post("pemarks1");
+        $category = $this->input->post("category");
 
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'pdf';
@@ -114,8 +115,18 @@ class Courses extends CI_Controller{
             $this->session->set_userdata('course2', $course2);
             $this->session->set_userdata('course3', $course3);
             $this->session->set_userdata('pemarks1', $pemarks1);
+            $this->session->set_userdata('category', $category);
             // var_dump($post_file);
-            $this->courses_model->preferdetails($post_file1, $post_file2, $post_file3, $post_filer1, $post_filer2, $post_filer3, $post_filew1, $post_filew2, $post_filew3);
+            $this->session->set_userdata('post_file1', $post_file1);
+            $this->session->set_userdata('post_file2', $post_file2);
+            $this->session->set_userdata('post_file3', $post_file3);
+            $this->session->set_userdata('post_filer1', $post_filer1);
+            $this->session->set_userdata('post_filer2', $post_filer2);
+            $this->session->set_userdata('post_filer3', $post_file3);
+            $this->session->set_userdata('post_filew1', $post_filew1);
+            $this->session->set_userdata('post_filew2', $post_filew2);
+            $this->session->set_userdata('post_filew3', $post_filew3);
+            // $this->courses_model->preferdetails($post_file1, $post_file2, $post_file3, $post_filer1, $post_filer2, $post_filer3, $post_filew1, $post_filew2, $post_filew3);
             
             //next page
             redirect('students/index');
@@ -126,11 +137,6 @@ class Courses extends CI_Controller{
         //validation
         $course1 = $this->input->post("course1");
         $this->form_validation->set_rules('course1', 'course1', 'required');
-        // $this->form_validation->set_rules('marks', 'marks', 'required');
-        // $this->form_validation->set_rules('marks2', 'marks2', 'required');
-        // $this->form_validation->set_rules('marks3', 'marks3', 'required');
-        // $this->form_validation->set_rules('myfile', 'myfile', 'required');
-        
 
         // $myfile = $this->input->post("myfile");
 
@@ -144,6 +150,22 @@ class Courses extends CI_Controller{
         }else{
             if($course1 == 15 || $course1 == 14){
                 $this->form_validation->set_rules('category', 'category', 'required');
+    
+                if($this->form_validation->run() === FALSE){
+                    $data['courses'] = $this->courses_model-> get_courses();
+                    
+                    $this->load->view('templates/header');
+                    $this->load->view('pages/prefer',$data);
+                    $this->load->view('templates/footer');
+                }else{
+                    $this->nextpage();
+                }
+            }else{
+                $this->nextpage();
+            }
+
+            if($course1 == 28 || $course1 == 29){
+                $this->form_validation->set_rules('pemarks1', 'PE marks', 'required');
     
                 if($this->form_validation->run() === FALSE){
                     $data['courses'] = $this->courses_model-> get_courses();
