@@ -15,6 +15,16 @@ class Courses extends CI_Controller{
         $this->load->view('templates/footer');
     }
 
+    public function edit(){
+        $data['title'] = 'Edit Courses';
+        $data['courses'] = $this->courses_model-> get_courses();
+
+        $this->load->view('templates/header');
+        // $this->load->view('pages/coursepage',$data);
+        $this->load->view('pages/editchoices',$data);
+        $this->load->view('templates/footer');
+    }
+
     public function info($course_no = NULL){
         // var_dump($course_no);
         $data['course'] = $this->courses_model->get_courses($course_no);
@@ -44,20 +54,20 @@ class Courses extends CI_Controller{
 
         $this->load->library('upload', $config);
 
-        if(!$this->upload->do_upload('peupload1')){
-            $post_file1 = 'nofile';
-                
-        }else{
-            $data = array('upload_data' => $this->upload->data());
-            $post_file1 = $_FILES['peupload1']['name'];  
-        }
-        if(!$this->upload->do_upload('peupload2')){
-            $post_file2 = 'nofile';
-                
-        }else{
-            $data = array('upload_data' => $this->upload->data());
-            $post_file2 = $_FILES['peupload2']['name'];  
-        }
+            if(!$this->upload->do_upload('peupload1')){
+                $post_file1 = 'nofile';
+                    
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_file1 = $_FILES['peupload1']['name'];  
+            }
+            if(!$this->upload->do_upload('peupload2')){
+                $post_file2 = 'nofile';
+                    
+            }else{
+                $data = array('upload_data' => $this->upload->data());
+                $post_file2 = $_FILES['peupload2']['name'];  
+            }
             if(!$this->upload->do_upload('peupload3')){
                 $post_file3 = 'nofile';
                 
@@ -122,14 +132,14 @@ class Courses extends CI_Controller{
             $this->session->set_userdata('post_file3', $post_file3);
             $this->session->set_userdata('post_filer1', $post_filer1);
             $this->session->set_userdata('post_filer2', $post_filer2);
-            $this->session->set_userdata('post_filer3', $post_file3);
+            $this->session->set_userdata('post_filer3', $post_filer3);
             $this->session->set_userdata('post_filew1', $post_filew1);
             $this->session->set_userdata('post_filew2', $post_filew2);
             $this->session->set_userdata('post_filew3', $post_filew3);
             // $this->courses_model->preferdetails($post_file1, $post_file2, $post_file3, $post_filer1, $post_filer2, $post_filer3, $post_filew1, $post_filew2, $post_filew3);
             
             //next page
-            redirect('students/index');
+            
     }
 
     public function select(){
@@ -159,9 +169,11 @@ class Courses extends CI_Controller{
                     $this->load->view('templates/footer');
                 }else{
                     $this->nextpage();
+                    redirect('students/index');
                 }
             }else{
                 $this->nextpage();
+                redirect('students/index');
             }
 
             if($course1 == 28 || $course1 == 29){
@@ -175,9 +187,65 @@ class Courses extends CI_Controller{
                     $this->load->view('templates/footer');
                 }else{
                     $this->nextpage();
+                    redirect('students/index');
                 }
             }else{
                 $this->nextpage();
+                redirect('students/index');
+            }
+        }
+    }
+
+    public function editsubmit(){
+        $data['title'] = 'Course Selection';
+        //validation
+        $course1 = $this->input->post("course1");
+        $this->form_validation->set_rules('course1', 'course1', 'required');
+
+        // $myfile = $this->input->post("myfile");
+
+        if($this->form_validation->run() === FALSE){
+            $data['courses'] = $this->courses_model-> get_courses();
+            
+            $this->load->view('templates/header');
+            $this->load->view('pages/prefer',$data);
+            $this->load->view('templates/footer');
+       
+        }else{
+            if($course1 == 15 || $course1 == 14){
+                $this->form_validation->set_rules('category', 'category', 'required');
+    
+                if($this->form_validation->run() === FALSE){
+                    $data['courses'] = $this->courses_model-> get_courses();
+                    
+                    $this->load->view('templates/header');
+                    $this->load->view('pages/prefer',$data);
+                    $this->load->view('templates/footer');
+                }else{
+                    $this->nextpage();
+                    redirect('submission/index');
+                }
+            }else{
+                $this->nextpage();
+                redirect('submission/index');
+            }
+
+            if($course1 == 28 || $course1 == 29){
+                $this->form_validation->set_rules('pemarks1', 'PE marks', 'required');
+    
+                if($this->form_validation->run() === FALSE){
+                    $data['courses'] = $this->courses_model-> get_courses();
+                    
+                    $this->load->view('templates/header');
+                    $this->load->view('pages/prefer',$data);
+                    $this->load->view('templates/footer');
+                }else{
+                    $this->nextpage();
+                    redirect('submission/index');
+                }
+            }else{
+                $this->nextpage();
+                redirect('submission/index');
             }
         }
     }

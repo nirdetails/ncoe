@@ -49,7 +49,7 @@ function myFunction() {
         <div class="col-sm-6">
             <div class="form-group"> 
                 <div style="text-align :left">
-                  <a href="pages/view/editpersonal" class="btn btn-primary">Recheck</a>
+                  <a href="<?php echo site_url(); ?>pages/view/editpersonal" class="btn btn-primary">Recheck Personal Details</a>
                 </div>      
          </div>
         </div>
@@ -61,13 +61,19 @@ function myFunction() {
              </div>
         </div>
     </div>
-
-    <p style="text-align :center"><b>Download your application here:</b></br></br>
-        <a href="pdfgen/pdf" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-save-file"></span> PDF File 
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group"> 
+          <div style="text-align :left">
+            <a href="<?php echo site_url(); ?>courses/edit" class="btn btn-primary">Recheck Choices</a>
+          </div>      
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <!-- <p style="text-align :center"><b>Download your application here:</b></br></br> -->
+        <a href="<?php echo site_url(); ?>pdfgen/pdf" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-save-file"></span>Download PDF File 
         </a>
-      </p> 
-
-
-
+        <!-- </p>  -->
+      </div>
   </form>
