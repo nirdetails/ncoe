@@ -90,7 +90,14 @@
         <div class="col-sm-6">   
             <div class="form-group">          
                 <label for="ethnicity">Ethnicity: <span style="color:red">* <?php echo form_error('ethnicity'); ?></span></label>
-                <input type="text" class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity">      
+                <select class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity">
+                  <option value="">Select</option>
+                  <option value="Sinhalese">Sinhalese</option>
+                  <option value="Sri Lankan Tamil">Sri Lankan Tamil</option>
+                  <option value="Tamil of Indian Origin">Tamil of Indian Origin</option>
+                  <option value="Muslim">Muslim</option>
+                  <option value="Other">Other</option>
+                </select>      
              </div>
         </div>
     </div>

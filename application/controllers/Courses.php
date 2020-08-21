@@ -208,7 +208,7 @@ class Courses extends CI_Controller{
             $data['courses'] = $this->courses_model-> get_courses();
             
             $this->load->view('templates/header');
-            $this->load->view('pages/prefer',$data);
+            $this->load->view('pages/editchoices',$data);
             $this->load->view('templates/footer');
        
         }else{
@@ -219,7 +219,7 @@ class Courses extends CI_Controller{
                     $data['courses'] = $this->courses_model-> get_courses();
                     
                     $this->load->view('templates/header');
-                    $this->load->view('pages/prefer',$data);
+                    $this->load->view('pages/editchoices',$data);
                     $this->load->view('templates/footer');
                 }else{
                     $this->nextpage();
@@ -237,7 +237,7 @@ class Courses extends CI_Controller{
                     $data['courses'] = $this->courses_model-> get_courses();
                     
                     $this->load->view('templates/header');
-                    $this->load->view('pages/prefer',$data);
+                    $this->load->view('pages/editchoices',$data);
                     $this->load->view('templates/footer');
                 }else{
                     $this->nextpage();

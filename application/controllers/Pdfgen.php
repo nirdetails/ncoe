@@ -35,6 +35,10 @@ class Pdfgen extends CI_Controller {
         your code here
         ---- ---- ---- ----
     */
-	    $this->load->view('pages/pdfreport', $data);
+        $this->load->view('pages/pdfreport', $data);
+        $this->session->unset_userdata('alindex', 'olindex1', 'olindex2', 'olindex3', 'fullname', 'namewithinitials', 
+            'addressline1', 'addressline2', 'addressline3', 'addressline4', 'district', 'nic', 'gender',
+            'title', 'ethnicity', 'mobile', 'home', 'email', 'sripada', 'sworker', 'pirivena', 'palindex');
+            session_destroy();
 	}
 }

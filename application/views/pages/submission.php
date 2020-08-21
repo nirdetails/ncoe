@@ -46,34 +46,24 @@ function myFunction() {
       <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks">
     <?php } ?>
     <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group"> 
-                <div style="text-align :left">
-                  <a href="<?php echo site_url(); ?>pages/view/editpersonal" class="btn btn-primary">Recheck Personal Details</a>
-                </div>      
-         </div>
-        </div>
-        <div class="col-sm-6">   
-            <div class="form-group">  
-                <div style="text-align :right">
-                  <button style= "padding:20px;font-size:20px" type="submit" name="btnprv" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span> Submit</button>
-                </div> 
-             </div>
-        </div>
+      <div class="col-sm-3">
+        &nbsp;
+      </div>
+      <div class="col-sm-3 form-group">
+        <a href="<?php echo site_url(); ?>pages/view/editpersonal" class="btn btn-info" style="width: 100%; height: 4em">Recheck Personal Details</a>
+      </div>
+      <div class="col-sm-3 form-group">
+        <a href="<?php echo site_url(); ?>courses/edit" class="btn btn-info" style="width: 100%; height: 4em">Recheck Choices</a>
+      </div>
+      <div class="col-sm-3">
+        &nbsp;
+      </div>
     </div>
     <div class="row">
-      <div class="col-sm-6">
-        <div class="form-group"> 
-          <div style="text-align :left">
-            <a href="<?php echo site_url(); ?>courses/edit" class="btn btn-primary">Recheck Choices</a>
-          </div>      
-        </div>
+      <div class="col-sm-4">&nbsp;</div>
+      <div class="col-sm-4">
+        <button style= "padding:20px;font-size:20px; width: 100%;" type="submit" name="btnprv" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Submit</button>
       </div>
-      <div class="col-sm-6">
-        <!-- <p style="text-align :center"><b>Download your application here:</b></br></br> -->
-        <a href="<?php echo site_url(); ?>pdfgen/pdf" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-save-file"></span>Download PDF File 
-        </a>
-        <!-- </p>  -->
-      </div>
+      <div class="col-sm-4">&nbsp;</div>
+    </div>
   </form>
