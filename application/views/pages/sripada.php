@@ -12,7 +12,7 @@
     <br>
    
     <div class="form-group">
-    <label for="sworker" id="label2" name="state" style="display :none">Are your parents are State Workers? <span style="color:red">* </span></label>
+    <label for="sworker" id="label2" name="state" style="display :none">Are you a child of a Estate Worker? <span style="color:red">* </span></label>
       <select name="sworker"  id="sworker" height="4" style="display :none" class="form-control">
         <option selected value="">SELECT</option>
         <option id="y">Yes</option>

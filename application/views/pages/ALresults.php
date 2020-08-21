@@ -20,7 +20,7 @@
         <th>Grade</th>
         <!-- <th>Subject</th> -->
         <!-- <th>Grade</th> -->
-        <th>Gen. Test marks</th>
+        <!-- <th>Gen. Test marks</th> -->
         <th>Z-score</th>
       </tr>
     </thead>
@@ -71,7 +71,7 @@
         <td><?php echo $alresult['grade3'] ?></td>
         <!-- <td><?php //echo $alresult['sub4'] ?></td> -->
         <!-- <td><?php //echo $alresult['grade4'] ?></td> -->
-        <td><?php echo $alresult['gentst'] ?></td>
+        <!-- <td><?php //echo $alresult['gentst'] ?></td> -->
         <td><?php echo $alresult['zscore'] ?></td>
       </tr>      
     </tbody>

@@ -12,7 +12,7 @@
         <div class="container">
             <img src="<?php echo base_url();?>assets/images/filename.jpg" height="50px" width="50px">
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="navbar-brand" href="<?php echo base_url();?>"><h2>National Collages Of Education</h2></a>
+            <a class="navbar-brand" href="<?php echo base_url();?>"><h2>National Colleges Of Education</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
