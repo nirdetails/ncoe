@@ -18,11 +18,11 @@
             </button>
         	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             	<div class="navbar-nav">
-                	<!-- <a class="nav-item nav-link active mr-auto" href="<?php echo base_url();?>">Home</a> -->
+                	<!-- <a class="nav-item nav-link active mr-auto" href="<?php// echo base_url();?>">Home</a> -->
             	</div>
         	</div>
         </div>
         </nav>
         <div class="row">&nbsp;</div>
-		<div class="container">
+		<div class="container"  style="height: 100%;">
 		

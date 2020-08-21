@@ -1,10 +1,19 @@
-/* body{
-    background: #aaa;
-}
-.container{
-    background: #fff;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    max-width: 700px;
-} */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  .content {
+    padding: 20px;
+    min-height: 100%;
+    margin: 0 auto -50px;
+  }
+  .footer,
+  .push {
+    height: 100px;
+    background-color: #343a40;
+  }
+  .footer-text{
+      color: rgb(255, 255, 255);
+      font-weight: 400;
+      width: 100%;
+  }
