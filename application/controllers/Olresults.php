@@ -12,9 +12,9 @@ class Olresults extends CI_Controller{
     public function checkolres($olind1 = NULL, $olind2 = NULL, $olind3 = NULL){
         $data['title'] = 'O/L Results sheet';
 
-        $this->form_validation->set_rules('index1', 'Index Number', 'required|is_unique[stuents.olindex1]|is_unique[stuents.olindex2]|is_unique[stuents.olindex3]');
-        $this->form_validation->set_rules('index2', 'Index Number', 'is_unique[stuents.olindex1]|is_unique[stuents.olindex2]|is_unique[stuents.olindex3]');
-        $this->form_validation->set_rules('index3', 'Index Number', 'is_unique[stuents.olindex1]|is_unique[stuents.olindex2]|is_unique[stuents.olindex3]');
+        $this->form_validation->set_rules('index1', 'Index Number', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        $this->form_validation->set_rules('index2', 'Index Number', 'is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        $this->form_validation->set_rules('index3', 'Index Number', 'is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
         $this->form_validation->set_rules('sel1', 'Number of attempts', 'required');
         
         if($this->form_validation->run() === FALSE){

@@ -13,7 +13,7 @@ class Alpirivena extends CI_Controller{
         $data['title'] = 'Enter O/L index number';
 
         $this->form_validation->set_rules('alyear', 'Year', 'required');
-        $this->form_validation->set_rules('index', 'Index No.', 'required|is_unique[stuents.alindex]');
+        $this->form_validation->set_rules('index', 'Index No.', 'required|is_exist[stuents.alindex]');
         $this->form_validation->set_rules('stream', 'Stream', 'required');
         $this->form_validation->set_rules('medium', 'Medium', 'required');
         $this->form_validation->set_rules('attempt', 'Attempt', 'required');
