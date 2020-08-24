@@ -17,7 +17,6 @@ class Pdfgen extends CI_Controller {
         $data['olresults3'] = $this->olresults_model-> get_olresults3();
         // var_dump($data['olresults3']);
         // var_dump($data['olresults2']);
-
         if($_SESSION['course1'] != ""){
             $course_no = $_SESSION['course1'];
             $data['course1'] = $this->courses_model->get_courses($course_no);
@@ -35,6 +34,7 @@ class Pdfgen extends CI_Controller {
         your code here
         ---- ---- ---- ----
     */
+        
         $this->load->view('pages/pdfreport', $data);
         $this->session->unset_userdata('alindex', 'olindex1', 'olindex2', 'olindex3', 'fullname', 'namewithinitials', 
             'addressline1', 'addressline2', 'addressline3', 'addressline4', 'district', 'nic', 'gender',

@@ -11,7 +11,7 @@
     <div class="form-group">
       <label for="namewithinitials">Name with Initials: <span style="color:red">* <?php echo form_error('namewithinitials'); ?></span></label>
       <input type="text" class="form-control" id="namewithinitials" placeholder="Enter your name with Initials" name="namewithinitials">
-      <label><i>Ex: W.A Saman Kumara Rajapaksha</i></label>
+      <label><i>Ex: Rajapaksha W.A.S.K. </i></label>
     </div>
     <div class="form-group">
       <label for="dob">Date of Birth: <span style="color:red">* </span></label>
@@ -26,7 +26,7 @@
     </div>
     <div class="form-group">
       <label for="district">Recendent District Name and Number: <span style="color:red">* <?php echo form_error('district'); ?></span></label>
-      <label><i>(*Applicant’s permanent address according to the section “6.2 Determination of Permanent Residence” of the gazette notification.)</i></label>
+      <label><i>(<span style="color:red">*</span>Applicant’s permanent address according to the section <b>“6.2 Determination of Permanent Residence”</b> of the gazette notification.)</i></label>
       <!-- <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district"> -->
       <select class="form-control" id="district" name="district">
         <option value="" selected disabled>Select a District</option>
@@ -84,7 +84,12 @@
         <div class="col-sm-6">
             <div class="form-group"> 
                 <label for="title">Title: <span style="color:red">* <?php echo form_error('title'); ?></span></label>
-                <input type="text" class="form-control" id="title" placeholder="Mr/Mrs/Miss/Rev.." name="title">
+                <select class="form-control" id="title" placeholder="Mr/Mrs/Miss/Rev.." name="title">
+                  <option value="">Select</option>
+                  <option value="Mr">Mr</option>
+                  <option value="Miss">Miss</option>
+                  <option value="Rev">Rev</option>
+                </select>
              </div>
         </div>
         <div class="col-sm-6">   
