@@ -16,11 +16,14 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            	<div class="navbar-nav">
-                	<!-- <a class="nav-item nav-link active mr-auto" href="<?php// echo base_url();?>">Home</a> -->
-            	</div>
-        	</div>
+                <div class="navbar-nav">
+                    <a class="btn btn-success" target="_blank" href="<?php echo base_url();?>/pages/gazette.pdf" download>View Gazette</a>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <p class="nav-item nav-link active mr-auto"><b>Contacts: 0112-2235706 </b></p> 
+                </div>
+            </div>
         </div>
         </nav>
         <div class="row">&nbsp;</div>
