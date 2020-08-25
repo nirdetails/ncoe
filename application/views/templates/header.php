@@ -9,7 +9,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+        <div class="container" style="padding-top: 1em; padding-bottom: 1em">
             <img src="<?php echo base_url();?>assets/images/filename.jpg" height="50px" width="50px">
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a class="navbar-brand" href="<?php echo base_url();?>"><h2>National Colleges Of Education</h2></a>
@@ -21,7 +21,7 @@
                 <div class="navbar-nav">
                     <a class="btn btn-success" target="_blank" href="<?php echo base_url();?>/pages/gazette.pdf" download>View Gazette</a>
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    <p class="nav-item nav-link active mr-auto"><b>Contacts: 0112-2235706 </b></p> 
+                    <p class="nav-item nav-link active mr-auto"><b>Contact: 0112-2235706</b></p> 
                 </div>
             </div>
         </div>
