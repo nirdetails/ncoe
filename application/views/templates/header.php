@@ -19,7 +19,7 @@
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="btn btn-success" target="_blank" href="<?php echo base_url();?>/pages/gazette.pdf" download>View Gazette</a>
+                    <a class="btn btn-success" target="_blank" href="<?php echo base_url();?>/assets/files/gazette.pdf" download>View Gazette</a>
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <p class="nav-item nav-link active mr-auto"><b>Contact: 0112-2235706</b></p> 
                 </div>
