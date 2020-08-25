@@ -188,13 +188,7 @@
                 </div>
         </div> -->
     </div>
-    <div class="row">
-        
-        <!-- <div class="col-sm-4">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="subjectname4" placeholder="Subject Name" name="subjectname4">
-                </div>
-        </div> -->
+    <!-- <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
                 <input type="text" class="form-control" id="subjectnumber4" placeholder="Subject Number" name="subjectnumber4">
@@ -218,13 +212,7 @@
                  <br>
             </div>
         </div>
-
-        <!-- <div class="col-sm-4">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="medium4" placeholder="Medium" name="medium4">
-                </div>
-        </div> -->
-    </div>
+    </div> -->
     <hr>
     <div class="row">
         <div class="col-sm-4">

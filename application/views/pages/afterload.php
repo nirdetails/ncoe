@@ -14,7 +14,7 @@ function myFunction() {
     window.location.href = "<?php echo site_url(); ?>/pdfgen/pdf";
     target = "_blank";
   } else {
-    window.location.href = "<?php echo site_url(); ?>/";
+    window.location.href = "<?php echo site_url(); ?>/pdfgen/pdf";
   }
   document.getElementById("demo").innerHTML = txt;
 }

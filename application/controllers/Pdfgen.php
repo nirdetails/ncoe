@@ -44,5 +44,5 @@ class Pdfgen extends CI_Controller {
             'addressline1', 'addressline2', 'addressline3', 'addressline4', 'district', 'nic', 'gender',
             'title', 'ethnicity', 'mobile', 'home', 'email', 'sripada', 'sworker', 'pirivena', 'palindex');
         session_destroy();
-	}
+    }
 }
