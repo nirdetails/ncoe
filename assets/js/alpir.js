@@ -3,7 +3,7 @@ $("#alyear").change(function(){
 
     if(alyear == 2018){
         $("#alyear")[0].selectedIndex = "";
-        window.location.href = "http://localhost/ncoe/al";
+        window.location.href = "http://localhost/ncoe/alresults";
 
     }
     // alert(alyear);
