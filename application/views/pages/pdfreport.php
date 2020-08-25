@@ -20,6 +20,7 @@ ob_start();
     // var_dump($_SESSION);
     // var_dump($alresults);
 ?>    
+
     <body>
     <div class="container mt-5" style="padding-top: 0px;">
             <h1>National Colleges of Education (NCoE) Admission</h1><br>
@@ -31,7 +32,7 @@ ob_start();
             <?php echo $_SESSION['addressline4']; ?><br>
             <label for="district"><b>04. Recendent District Name and Number: </b></label><?php echo $_SESSION['district']; ?><br>
             <label for="nic"><b>05. NIC Number: </b></label><?php echo $_SESSION['nic']; ?><br>
-            <label for="dob"><b>06. Date of Birth: </b></label><?php echo $_SESSION['dob']; ?> 
+            <label for="dob"><b>06. Date of Birth: </b></label><?php echo $_SESSION['dob']; ?><br> 
             <label for="gender"><b>07. Gender: </b></label><?php echo $_SESSION['gender']; ?><br>
             <label for="title"><b>08. Title: </b></label><?php echo $_SESSION['title']; ?><br>
             <label for="ethnicity"><b>09. Ethnicity: </b></label><?php echo $_SESSION['ethnicity']; ?><br>

@@ -1,5 +1,10 @@
 <h2><?= $title; ?></h2>
 <!-- <h2>Personal Details Form</h2> -->
+<?php
+  if (!isset($_SESSION["alindex"])){
+    redirect('/');
+  }
+?>
 <?php echo validation_errors(); ?>
 <?php echo form_open_multipart('students/personaldetails'); ?>
   <div class="form-group">

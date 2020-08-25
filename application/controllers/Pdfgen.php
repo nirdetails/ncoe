@@ -4,6 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Pdfgen extends CI_Controller {
     function pdf($palindex = NULL)
 	{
+        if (!isset($_SESSION["alindex"])){
+            redirect('/');
+        }
+
 		$data['title'] = 'Test Page';
         $this->load->helper('pdf_helper');
         if($_SESSION['pirivena'] == 1){
@@ -39,6 +43,6 @@ class Pdfgen extends CI_Controller {
         $this->session->unset_userdata('alindex', 'olindex1', 'olindex2', 'olindex3', 'fullname', 'namewithinitials', 
             'addressline1', 'addressline2', 'addressline3', 'addressline4', 'district', 'nic', 'gender',
             'title', 'ethnicity', 'mobile', 'home', 'email', 'sripada', 'sworker', 'pirivena', 'palindex');
-            session_destroy();
+        session_destroy();
 	}
 }

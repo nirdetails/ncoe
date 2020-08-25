@@ -1,4 +1,9 @@
 <h2><?//= $title; ?></h2>
+<?php
+  if (!isset($_SESSION["alindex"])){
+    redirect('/');
+  }
+?>
 <form action="">
     <div class="form-group">
       <h2 style="text-align:center">Applicant's Declaration</h2>

@@ -4,7 +4,7 @@ function myFunction() {
 }
 </script>
 <?php
-  if (!isset($_SESSION["nic"])){
+  if (!isset($_SESSION["alindex"])){
     redirect('/');
   }
 ?>

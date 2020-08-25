@@ -1,4 +1,9 @@
 <h2><?= $title; ?></h2>
+<?php
+  if (!isset($_SESSION["alindex"])){
+    redirect('/');
+  }
+?>
 <?php foreach($alresults as $alresult): ?>
 <h4>Index Number : <?php echo $alresult['AL_index']; ?></h4>
 <?php //$_SESSION['alindex'] = $alresult['AL_index']; ?>

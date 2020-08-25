@@ -1,4 +1,9 @@
 <?php // var_dump($courses); ?>
+<?php
+  if (!isset($_SESSION["alindex"])){
+    redirect('/');
+  }
+?>
   <h2>Edit your Courses Here..... </h2>
   <span style="color: red;"><?php echo validation_errors(); ?></span>
   <?php echo form_open_multipart('courses/editsubmit'); ?>
