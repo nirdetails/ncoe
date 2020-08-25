@@ -1,10 +1,10 @@
-<h2><?= $title; ?></h2>
-<?php echo validation_errors(); ?>
+ <h2><?= $title; ?></h2>
+<?php // echo validation_errors(); ?>
 <?php echo form_open_multipart('Alpirivena/checkalres'); ?>
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
-                <label for="index">A\L year:</label>
+                <label for="index">A\L year: <span style="color:red">* <?php echo form_error('alyear'); ?></span></label>
                 <!-- <input type="text" class="form-control" id="alyear" placeholder="Enter your A\L year" name="alyear"> -->
                 <select class="form-control" id="alyear" placeholder="Enter your A\L year" name="alyear">
                     <option value="">SELECT</option>
@@ -30,13 +30,13 @@
     <div class="row">
     <div class="col-sm-3">
         <div class="form-group">
-            <label for="index">A\L index:</label>
+            <label for="index">A\L index: <span style="color:red">* <?php echo form_error('index'); ?></span></label>
             <input type="text" class="form-control" id="index" placeholder="Enter your A\L index" name="index">
         </div>
     </div>
     <div class="col-sm-3">
             <div class="form-group">
-                <label for="stream">Stream</label>
+                <label for="stream">Stream <span style="color:red">* <?php echo form_error('stream'); ?></span></label>
                 <div class="form-group">
                 <select name="stream" class="form-control" id="stream">
                     <option id="" selected>STREAM</option>
@@ -53,7 +53,7 @@
         </div>
         <div class="col-sm-3">
             <div class="form-group">
-                <label for="index">Medium</label>
+                <label for="index">Medium <span style="color:red">* <?php echo form_error('medium'); ?></span></label>
                 <!-- <input type="text" class="form-control" id="medium" placeholder="Medium" name="medium"> -->
                 <select name="medium" class="form-control" id="medium">
                     <option id="" selected>Medium</option>
@@ -65,7 +65,7 @@
         </div>
         <div class="col-sm-3">
             <div class="form-group">
-                <label for="attempt">Attempt</label>
+                <label for="attempt">Attempt <span style="color:red">* <?php echo form_error('attempt'); ?></span></label>
                 <div class="form-group">
                 <select name="attempt" class="form-control" id="attempt">
                     <option id="" selected>Attempt</option>
@@ -89,14 +89,14 @@
         </div> -->
         <div class="col-sm-6">
             <div class="form-group">
-                <label for="index">Subject Number</label>
+                <label for="index">Subject Number <br><span style="color:red">* <?php echo form_error('subjectnumber1'); ?></span></label>
                 <input type="text" class="form-control" id="subjectnumber1" placeholder="Subject Number" name="subjectnumber1">
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group">
                 <div class="form-group">
-                    <label for="index">Grade</label>
+                    <label for="index">Grade <br><span style="color:red">* <?php echo form_error('grade1'); ?></span></label>
                     <select class="form-control" id="grade1" placeholder="Grade" name="grade1">
                         <option value="0" selected disabled>Select your Grade</option>
                         <option value="A">A</option>
@@ -123,12 +123,14 @@
         </div> -->
         <div class="col-sm-6">
             <div class="form-group">
+                <span style="color:red">* <?php echo form_error('subjectnumber2'); ?></span>
                 <input type="text" class="form-control" id="subjectnumber2" placeholder="Subject Number" name="subjectnumber2">
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group">
                 <div class="form-group">
+                    <span style="color:red">* <?php echo form_error('grade2'); ?></span>
                     <select class="form-control" id="grade2" placeholder="Grade" name="grade2">
                         <option value="0" selected disabled>Select your Grade</option>
                         <option value="A">A</option>
@@ -160,12 +162,14 @@
         </div> -->
         <div class="col-sm-6">
             <div class="form-group">
+                <span style="color:red">* <?php echo form_error('subjectnumber3'); ?></span>
                 <input type="text" class="form-control" id="subjectnumber3" placeholder="Subject Number" name="subjectnumber3">
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group">
                 <div class="form-group">
+                    <span style="color:red">* <?php echo form_error('grade3'); ?></span>
                     <select class="form-control" id="grade3" placeholder="Grade" name="grade3">
                         <option value="0" selected disabled>Select your Grade</option>
                         <option value="A">A</option>
@@ -217,27 +221,27 @@
     <div class="row">
         <div class="col-sm-4">
         <div class="form-group">
-            <div class="form-group">
-                <input type="text" class="form-control" id="gentst" placeholder="General Test Marks" name="gentst">
-            </div>
+            <label for="git">General Test Marks: <span style="color:red">* <?php echo form_error('gentst'); ?></span></label>
+            <input type="text" class="form-control" id="gentst" placeholder="General Test Marks" name="gentst">
             <br>
         </div>
         </div>
         <div class="col-sm-4">
             <div class="form-group">
-                <div class="form-group">
+                <label for="git">Z-score: <span style="color:red">* <?php echo form_error('zscore'); ?></span></label>
                     <input type="text" class="form-control" id="zscore" placeholder="Z-score" name="zscore">
-                </div>
-                 <br>
+                <br>
             </div>
         </div>
     
     <div class="col-sm-4">
         <div class="form-group">
-            <div class="form-group">
-                <input type="text" class="form-control" id="git" placeholder="GIT marks" name="git">
-            </div>
-            <br>
+            <label for="git">Sat for the GIT exam: <span style="color:red">* <?php echo form_error('git'); ?></span></label>
+            <select class="form-control" id="git" name="git" placeholder="Enter the GIT marks">
+                <option value="">SELECT</option>
+                <option value="yes">YES</option>
+                <option value="no">NO</option>
+            </select>
         </div>
     </div>
 </div>

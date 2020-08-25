@@ -77,10 +77,10 @@
               <label for="gender">Gender: <span style="color:red">* <?php echo form_error('gender'); ?></span></label><br>
               <input type="radio" name="gender"
               <?php if (isset($gender) && $gender=="female") echo "checked";?>
-              value="female">Female
+              value="female"> Female
               <input type="radio" name="gender"
               <?php if (isset($gender) && $gender=="male") echo "checked";?>
-              value="male">Male
+              value="male"> Male
             </div>
          </div>
 

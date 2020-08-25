@@ -31,7 +31,7 @@ class Alpirivena extends CI_Controller{
         // $this->form_validation->set_rules('grade4', 'Grade', 'required');
         $this->form_validation->set_rules('gentst', 'General test marks', 'required');
         $this->form_validation->set_rules('zscore', 'Zscore', 'required');
-        // $this->form_validation->set_rules('git', 'Grade', 'required');
+        $this->form_validation->set_rules('git', 'GIT', 'required');
 
         if($this->form_validation->run() === FALSE){
             $this->load->view('templates/header');
