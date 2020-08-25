@@ -48,7 +48,9 @@
       </div>
       <div id="div2" class="col-sm-12">
         <label for="myfile"  ><b>Upload your Physical Education Certificates:</b></label><br>
-        <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></p></label><br>
+        <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></label><br>
+        <label><span style="color:red">* </span><i>Use esch button to upload one file. You can upload upto 3 files<br></i></label><br>
+        <label><span style="color:red">* </span><i>Only pdf files are accepted.<br></i></p></label><br>
         <input title="you can upload 3 Certificates only" type="file" id="peupload1" name="peupload1" multiple><br><br>
         <input title="you can upload 3 Certificates only" type="file" id="peupload2" name="peupload2" multiple><br><br>
         <input title="you can upload 3 Certificates only" type="file" id="peupload3" name="peupload3" multiple><br><br>
@@ -64,7 +66,9 @@
   </div>
   <div id="box" style="display :none">
     <label for="myfile"><b>Upload your religion Certificates:</b></label><br>
-    <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></p></label><br>
+    <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></label><br>
+    <label><span style="color:red">* </span><i>Use esch button to upload one file. You can upload upto 3 files<br></i></label><br>
+    <label><span style="color:red">* </span><i>Only pdf files are accepted.<br></i></p></label><br>
     <input title="you can upload 3 Certificates only" type="file" id="rupload1" name="rupload1" multiple><br><br>
     <input title="you can upload 3 Certificates only" type="file" id="rupload2" name="rupload2" multiple><br><br>
     <input title="you can upload 3 Certificates only" type="file" id="rupload3" name="rupload3" multiple><br><br>
@@ -72,7 +76,9 @@
 
   <div id="west" style="display :none">
     <label for="myfile"><b>Upload your Western Music Certificates:</b></label><br>
-    <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></p></label><br>
+    <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></label><br>
+    <label><span style="color:red">* </span><i>Use esch button to upload one file. You can upload upto 3 files<br></i></label><br>
+    <label><span style="color:red">* </span><i>Only pdf files are accepted.<br></i></p></label><br>
     <input title="you can upload 3 Certificates only" type="file" id="wupload1" name="wupload1" multiple><br><br>
     <input title="you can upload 3 Certificates only" type="file" id="wupload2" name="wupload2" multiple><br><br>
     <input title="you can upload 3 Certificates only" type="file" id="wupload3" name="wupload3" multiple><br><br>
