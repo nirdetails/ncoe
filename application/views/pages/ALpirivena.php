@@ -39,7 +39,7 @@
                 <label for="stream">Stream <span style="color:red">* <?php echo form_error('stream'); ?></span></label>
                 <div class="form-group">
                 <select name="stream" class="form-control" id="stream">
-                    <option id="" selected>STREAM</option>
+                    <option value="" selected>STREAM</option>
                     <option value="1">Physical Science</option>
                     <option value="2">Biological Science</option>
                     <option value="3">Commerce</option>
@@ -56,7 +56,7 @@
                 <label for="index">Medium <span style="color:red">* <?php echo form_error('medium'); ?></span></label>
                 <!-- <input type="text" class="form-control" id="medium" placeholder="Medium" name="medium"> -->
                 <select name="medium" class="form-control" id="medium">
-                    <option id="" selected>Medium</option>
+                    <option value="" selected>Medium</option>
                     <option value="1">Sinhala</option>
                     <option value="2">Tamil</option>
                     <option value="3">English</option>
@@ -68,7 +68,7 @@
                 <label for="attempt">Attempt <span style="color:red">* <?php echo form_error('attempt'); ?></span></label>
                 <div class="form-group">
                 <select name="attempt" class="form-control" id="attempt">
-                    <option id="" selected>Attempt</option>
+                    <option value="" selected>Attempt</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
