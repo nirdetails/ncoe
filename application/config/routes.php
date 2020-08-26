@@ -6,7 +6,7 @@ $route['students/personaldetails'] = 'students/personaldetails';
 $route['personal'] = 'students/index';
 $route['olresults'] = 'olresults/index';
 $route['alresults'] = 'alresults/index';
-$route['prirvenaal'] = 'pages/view/ALpirivena';
+$route['prirvenaal'] = 'alpirivena/index';
 $route['pdfgen/pdf'] = 'pdfgen/pdf';
 
 $route['default_controller'] = 'pages/view';

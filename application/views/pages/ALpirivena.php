@@ -325,4 +325,5 @@
 &nbsp;
 
 </form>
+</div>
 <script src="<?php echo site_url(); ?>assets/js/alpir.js"></script>
