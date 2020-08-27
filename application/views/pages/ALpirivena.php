@@ -24,7 +24,9 @@
         </div> -->
         
     </div>
-   
+    <?php 
+        $alsubs = array(1 => 'Physics', 2 =>	'Chemistry' ,7 => 'Mathematics' ,8 => 'Agricultural Science' ,9 => 'Biology' ,10 => 'Combind Mathematics' ,11 => 'Higher Mathematics' ,12 => 'Common General Test'	,13 => 'General English',14 => 'Civil Technology' ,15 => 'Mechanical Technology ',16 => 'Eletrical,Electronic and Information Technology'	,17 => 'Food Technology' ,18 => 'Agro Technology'	,19 => 'Bio- Resource Technology' ,20 => 'Information & Communication Technology' ,21 => 'Economics' ,22 => 'Geography' ,23 => 'Political Science' ,24 => 'Logic and Scientific Method'	,25 => 'History'	,28 => 'Home Economics'	,29 => 'Communication & Media Studies' ,31 => 'Business Statistics'	,32 => 'Business Studies' ,33 => 'Accounting'	,41 => 'Buddhism' ,42 => 'Hinduism' ,43 => 'Christianity' ,44 => 'Islam'				, 45 => 'Buddhist Civilization', 46 => 'Hindu Civilization', 47 => 'Islam Civilization', 48 => 'Greek & Rooman Civilization', 49 => 'Christian Civilization', 51 => 'Art', 52 => 'A Dancing (Indigenous  -Kandyan)', 52 => 'B Dancing (Indigenous  -Low country)', 52 => 'C Dancing (Indigenous Sabaragamu)', 53 => 'Dancing (Bharata)', 54 => 'Oriental Music', 55 => 'Carnatic Music', 56 => 'Western Music', 57 => 'Drama and Theatre (Sinhala)', 58 => 'Drama and Theatre (Tamil)', 59 => 'Drama and Theatre (English)', 65 => 'Engineering Technology', 66 => 'Bio Systems Technology', 67 => 'Science fot Technology', 71 => 'Sinhala', 72 => 'Tamil', 73 => 'English', 74 => 'pali', 75 => 'Sanskrit', 78 => 'Arabic', 79 => 'Malay', 81 => 'French', 82 => 'German', 83 => 'Russian', 84 => 'Hindi', 86 => 'Chinese', 87 => 'Japanese');
+    ?> 
    
     <h2>A/L Results</h2>
     <div class="row">
@@ -90,7 +92,14 @@
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="index">Subject Number <br><span style="color:red">* <?php echo form_error('subjectnumber1'); ?></span></label>
-                <input type="text" class="form-control" id="subjectnumber1" placeholder="Subject Number" name="subjectnumber1">
+                <select class="form-control" id="subjectnumber1" placeholder="Subject Number" name="subjectnumber1">
+                <option value="">SELECT</option>
+                    <?php
+                        foreach($alsubs as $key => $value){
+                            echo "<option value='$key'>$key - $value</option>";
+                        }
+                    ?>
+                </select>
             </div>
         </div>
         <div class="col-sm-6">
@@ -124,7 +133,14 @@
         <div class="col-sm-6">
             <div class="form-group">
                 <span style="color:red">* <?php echo form_error('subjectnumber2'); ?></span>
-                <input type="text" class="form-control" id="subjectnumber2" placeholder="Subject Number" name="subjectnumber2">
+                <select class="form-control" id="subjectnumber2" placeholder="Subject Number" name="subjectnumber2">
+                <option value="">SELECT</option>
+                <?php
+                    foreach($alsubs as $key => $value){
+                        echo "<option value='$key'>$key - $value</option>";
+                    }
+                ?>
+                </select>
             </div>
         </div>
         <div class="col-sm-6">
@@ -163,7 +179,14 @@
         <div class="col-sm-6">
             <div class="form-group">
                 <span style="color:red">* <?php echo form_error('subjectnumber3'); ?></span>
-                <input type="text" class="form-control" id="subjectnumber3" placeholder="Subject Number" name="subjectnumber3">
+                <select class="form-control" id="subjectnumber3" placeholder="Subject Number" name="subjectnumber3">
+                <option value="">SELECT</option>
+                <?php
+                        foreach($alsubs as $key => $value){
+                            echo "<option value='$key'>$key - $value</option>";
+                        }
+                    ?>
+                </select>
             </div>
         </div>
         <div class="col-sm-6">
@@ -249,78 +272,6 @@
     <button style="margin-top:25px; margin-left:15px" type="submit" class="btn btn-info">Submit</button>
 </div>
 <br><br>
-<h3  style="text-align:center">Subject List</h3>
-<div class="table" style=" font-size:small;">
-<table style="width: 100%;">
-    <tr>
-        <th>Subject Name</th>
-        <th>Subject Number </th>
-    </tr>
-    <tr><td>1</td>	<td>Physics</td></tr>			
-    <tr><td>2</td>	<td>Chemistry</td></td></tr>			
-    <tr><td>7</td>	<td>Mathematics</td></td></tr>			
-    <tr><td>8</td>	<td>Agricultural Science</td></td></tr>			
-    <tr><td>9</td>	<td>Biology</td></td>	</tr>		
-    <tr><td>10</td>	<td>Combind Mathematics</td></td></tr>			
-    <tr><td>11</td>	<td>Higher Mathematics</td></td></tr>			
-    <tr><td>12</td>	<td>Common General Test	</td></td></tr>		
-    <tr><td>13</td>	<td>General English</td></td>	</tr>	
-    <tr><td>14</td>	<td>Civil Technology</td></td></tr>			
-    <tr><td>15</td>	<td>Mechanical Technology</td></td>	</tr>		
-    <tr><td>16</td>	<td>Eletrical,Electronic and Information Technology	</td></td></tr>		
-    <tr><td>17</td>	<td>Food Technology</td></td>	</tr>		
-    <tr><td>18</td>	<td>Agro Technology	</td></td></tr>		
-    <tr><td>19</td>	<td>Bio- Resource Technology</td></td></tr>			
-    <tr><td>20</td>	<td>Information & Communication Technology</td></tr>			
-    <tr><td>21</td>	<td>Economics</td></td>		</tr>	
-    <tr><td>22</td>	<td>Geography</td></td></tr>			
-    <tr><td>23</td>	<td>Political Science</td></td>	</tr>		
-    <tr><td>24</td>	<td>Logic and Scientific Method	</td></td>	</tr>	
-    <tr><td>25 A</td><td>History of India</td></tr>			
-    <tr><td>25 B</td><td>History of Europe</td></tr>			
-    <tr><td>25 C</td><td>History of Modern world	</td>	</tr>	
-    <tr><td>28</td><td>Home Economics	</td>	</tr>	
-    <tr><td>29</td><td>Communication & Media Studies</td></tr>			
-    <tr><td>31</td><td>Business Statistics	</td>	</tr>	
-    <tr><td>32</td><td>Business Studies</td></tr>			
-    <tr><td>33</td><td>Accounting	</td></tr>		
-    <tr><td>41</td><td>Buddhism</td>		</tr>	
-    <tr><td>42</td><td>Hinduism</td></tr>			
-    <tr><td>43</td><td>Christianity</td>	</tr>		
-    <tr><td>44</td><td>Islam	</td>	</tr>		
-    <tr><td>45</td><td>Buddhist Civilization</td></tr>
-    <tr><td>46</td><td>Hindu Civilization</td></tr>
-    <tr><td>47</td><td>Islam Civilization</td></tr>
-    <tr><td>48</td><td>Greek & Rooman Civilization</td></tr>
-    <tr><td>49</td><td>Christian Civilization</td></tr>
-    <tr><td>51</td><td>Art</td></tr>
-    <tr><td>52 A</td><td>Dancing (Indigenous  -Kandyan)</td></tr>
-    <tr><td>52 B</td><td>Dancing (Indigenous  -Low country)</td></tr>
-    <tr><td>52 C</td><td>Dancing (Indigenous Sabaragamu)</td></tr>
-    <tr><td>53</td><td>Dancing (Bharata)</td></tr>
-    <tr><td>54</td><td>Oriental Music</td></tr>
-    <tr><td>55</td><td>Carnatic Music</td></tr>
-    <tr><td>56</td><td>Western Music</td></tr>
-    <tr><td>57</td><td>Drama and Theatre (Sinhala)</td></tr>
-    <tr><td>58</td><td>Drama and Theatre (Tamil)</td></tr>
-    <tr><td>59</td><td>Drama and Theatre (English)</td></tr>
-    <tr><td>65</td><td>Engineering Technology</td></tr>
-    <tr><td>66</td><td>Bio Systems Technology</td></tr>
-    <tr><td>67</td><td>Science fot Technology</td></tr>
-    <tr><td>71</td><td>Sinhala</td></tr>
-    <tr><td>72</td><td>Tamil</td></tr>
-    <tr><td>73</td><td>English</td></tr>
-    <tr><td>74</td><td>pali</td></tr>
-    <tr><td>75</td><td>Sanskrit</td></tr>
-    <tr><td>78</td><td>Arabic</td></tr>
-    <tr><td>79</td><td>Malay</td></tr>
-    <tr><td>81</td><td>French</td></tr>
-    <tr><td>82</td><td>German</td></tr>
-    <tr><td>83</td><td>Russian</td></tr>
-    <tr><td>84</td><td>Hindi</td></tr>
-    <tr><td>86</td><td>Chinese</td></tr>
-    <tr><td>87</td><td>Japanese</td></tr>
-</table>
 </div>
 &nbsp;
 
