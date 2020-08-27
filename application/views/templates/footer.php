@@ -2,11 +2,14 @@
 </div>
  <!-- Site footer -->
  
-
+<div class="row">
+  &nbsp;
+</div>
+<br>
 <!-- <footer class="footer">
-  <div class="container footer-text">
-      <h2>Test Footer<h2>
-  </div>
+   <div class="container footer-text">
+       <h5 style="padding-top:7px;">Ministry of Education<h5>
+   </div>
 </footer> -->
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

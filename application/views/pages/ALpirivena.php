@@ -271,10 +271,17 @@
 <div style="text-align:center">
     <button style="margin-top:25px; margin-left:15px" type="submit" class="btn btn-info">Submit</button>
 </div>
-<br><br>
 </div>
-&nbsp;
-
 </form>
+</div>
+<br><br>
+<div class="row">
+  &nbsp;
+</div>
+<div class="row">
+  &nbsp;
+</div>
+<div class="row">
+  &nbsp;
 </div>
 <script src="<?php echo site_url(); ?>assets/js/alpir.js"></script>
