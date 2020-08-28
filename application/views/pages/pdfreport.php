@@ -19,32 +19,33 @@ ob_start();
     // we can have any view part here like HTML, PHP etc
     // var_dump($_SESSION);
     // var_dump($alresults);
+    // $_SESSION['pdfdone'] = 1;
 ?>    
 
     <body>
     <div class="container mt-5" style="padding-top: 0px;">
             <h1>National Colleges of Education (NCoE) Admission</h1><br>
-            <label for="fullname"><b>01. Name in Full:  </b></label><?php echo $_SESSION['fullname']; ?><br>
-            <label for="initials"><b>02. Name with Initials:    </b></label><?php echo $_SESSION['namewithinitials']; ?><br>
-            <label for="address"><b>03. Permanent Address: </b></label><?php echo $_SESSION['addressline1']; ?>
-            <?php echo $_SESSION['addressline2']; ?>
-            <?php echo $_SESSION['addressline3']; ?>
-            <?php echo $_SESSION['addressline4']; ?><br>
-            <label for="district"><b>04. Recendent District Name and Number: </b></label><?php echo $_SESSION['district']; ?><br>
-            <label for="nic"><b>05. NIC Number: </b></label><?php echo $_SESSION['nic']; ?><br>
-            <label for="dob"><b>06. Date of Birth: </b></label><?php echo $_SESSION['dob']; ?><br> 
-            <label for="gender"><b>07. Gender: </b></label><?php echo $_SESSION['gender']; ?><br>
-            <label for="title"><b>08. Title: </b></label><?php echo $_SESSION['title']; ?><br>
-            <label for="ethnicity"><b>09. Ethnicity: </b></label><?php echo $_SESSION['ethnicity']; ?><br>
-            <label for="mobile"><b>10. Mobile: </b></label><?php echo $_SESSION['mobile']; ?><br>
-            <label for="home"><b>11. Home Tel: </b></label><?php echo $_SESSION['home']; ?><br>
-            <label for="email"><b>12. Email: </b></label><?php echo $_SESSION['email']; ?><br>
+            <label for="fullname"><b>01. Name in Full:  </b></label><?php echo $fullname; ?><br>
+            <label for="initials"><b>02. Name with Initials:    </b></label><?php echo $namewithinitials; ?><br>
+            <label for="address"><b>03. Permanent Address: </b></label><?php echo $addressline1; ?>
+            <?php echo $addressline2; ?>
+            <?php echo $addressline3; ?>
+            <?php echo $addressline4; ?><br>
+            <label for="district"><b>04. Recendent District Name and Number: </b></label><?php echo $district; ?><br>
+            <label for="nic"><b>05. NIC Number: </b></label><?php echo $nic; ?><br>
+            <label for="dob"><b>06. Date of Birth: </b></label><?php echo $dob; ?><br> 
+            <label for="gender"><b>07. Gender: </b></label><?php echo $gender; ?><br>
+            <label for="title"><b>08. Title: </b></label><?php echo $title; ?><br>
+            <label for="ethnicity"><b>09. Ethnicity: </b></label><?php echo $ethnicity; ?><br>
+            <label for="mobile"><b>10. Mobile: </b></label><?php echo $mobile; ?><br>
+            <label for="home"><b>11. Home Tel: </b></label><?php echo $home; ?><br>
+            <label for="email"><b>12. Email: </b></label><?php echo $email; ?><br>
             <?php 
                 $districts = array('16' => 'Ampara', "20" => 'Anuradhapura',"22" => 'Badulla',"15" => 'Batticaloa',"01" => 'Colombo',"07" => 'Galle',"02" => 'Gampaha',"09" => 'Hambantota',"10" => 'Jaffna',"03" => 'Kaluthara',"04" => 'Kandy',"25" => 'Kegalle',"11" => 'Kilinochchi',"18" => 'Kurunegala',"12" => 'Mannar',"05" => 'Matale',"08" => 'Matara',"23" => 'Monaragala',"14" => 'Mullaitivu',"06" => 'Nuwara Eliya',"21" => 'Polonnaruwa',"19" => 'Puttalam',"24" => 'Ratnapura',"17" => 'Trincomalee',"13" => 'Vavuniya');
             
                 foreach ($districts as $key => $value) {
-                    if ($key == $_SESSION['district']) { 
-                        echo "<label for='district'><b>13. District: </b></label>". $_SESSION['district']." - " .$value."<br>";
+                    if ($key == $district) { 
+                        echo "<label for='district'><b>13. District: </b></label>". $key." - " .$value."<br>";
                    
                     }
                 }?>
@@ -54,7 +55,7 @@ ob_start();
 
             <h4><b>A/L Details: </b></h4>
             <?php foreach($alresults as $alresult): ?><br>
-            <label for="alindex"><b>14. A/L Index No:</b></label><?php echo $_SESSION['alindex']; ?><br>
+            <label for="alindex"><b>14. A/L Index No:</b></label><?php echo $alresult['AL_index']; ?><br>
             <label for="alyear"><b>15. A/L Year: </b></label>2018<br>
             <label for="alstream"><b>16. Stream: </b></label><?php echo $alresult['stream'] ?><br>
             <label for="almedium"><b>17. Medium: </b></label><?php echo $alresult['medium'] ?><br>
@@ -95,7 +96,7 @@ ob_start();
                 <?php endforeach; ?>
                 <br>
             <h4><b>O/L Details: </b></h4>
-            <br>&nbsp;&nbsp;<label for="olattempts"><b>21. Number of Attempts: </b><?php echo $_SESSION['attempts']; ?>
+            <br>&nbsp;&nbsp;<label for="olattempts"><b>21. Number of Attempts: </b><?php echo $attempts; ?>
             <?php foreach($olresults1 as $olresult1): if( $olresult1["OL_index"] != "N/A"){?><br>
                 <label for="olindex"><b>22. Index Number: </b><?php echo $olresult1["OL_index"]; ?><br><br>
                 <h4><b>O/L Results: </b></h4>
@@ -283,8 +284,8 @@ ob_start();
             <li><?php echo $course3["course_no"]; ?> - <?php echo $course3["name"]; ?></li>
         <?php } ?>
     </ol>
-    <?php if($_SESSION['pemarks1'] != NULL){ ?>
-        <label for="pemarks"><b>23. Physical Education Marks: </b></label><?php echo $_SESSION['pemarks1']; ?><br><br>
+    <?php if($pemarks1 != NULL){ ?>
+        <label for="pemarks"><b>23. Physical Education Marks: </b></label><?php echo $pemarks1; ?><br><br>
     <?php }?>
     <!-- <h5>Declaration: </h5>
         <p style="text-align: justify">I am aware that I have forwarded my application in accordance with paragraph10.0 of the Gazette Notification, after reading and comprehending the Gazette Notification well. I certify that I have already acquired the qualifications mentioned in the Gazette Notification relevant to the Courses that have been applied by me. I am aware that the particulars furnished in the application by me are true and correct. I am aware that if any particulars given by me in this application are found to be false or incorrect or contradictory to the Gazette Notification, I am liable to be disqualified before selection or to be discontinued after selection. I certify that I have not registered to follow a course in a University/University Institute/any other Higher Education Institute/ I am not currently following a relevant course in an afore mentioned institute. I further certify that I agree to be discontinued from the course if It is found that the section 8.4 of the Gazette Notification has been/is violated by me. I declare that I agree to accept any punishment pronounced by the disciplinary board of the National College of Education and the Ministry of Education if I am found and proven to have been engaged in any action against the code of conduct of National Colleges of Education.</p>

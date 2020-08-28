@@ -3,6 +3,7 @@ function myFunction() {
   alert("Your Application is submitted. Thank you!");
 }
 </script>
+
 <?php
   if (!isset($_SESSION["alindex"])){
     redirect('/');
