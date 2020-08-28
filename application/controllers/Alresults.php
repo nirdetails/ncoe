@@ -33,6 +33,7 @@ class Alresults extends CI_Controller{
 
             $this->session->set_userdata('alindex', $alindex);
             $this->session->set_userdata('git', $git);
+            $this->session->set_userdata('pdfdone', 0);
 
             $data['alresults'] = $this->alresults_model-> get_alresults();
 

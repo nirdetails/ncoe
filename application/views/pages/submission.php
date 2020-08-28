@@ -5,9 +5,15 @@ function myFunction() {
 </script>
 
 <?php
-  if (!isset($_SESSION["alindex"])){
-    redirect('/');
-  }
+if($_SESSION['pdfdone'] == 1){
+  session_destroy();
+  redirect('/');
+}
+  // if (!isset($_SESSION["alindex"])){
+  //   redirect('/');
+  // }
+  // var_dump($_SESSION['pdfdone']);
+
 ?>
   <h2><?= $title; ?></h2>
   <?php echo form_open_multipart('submission/submit'); ?>

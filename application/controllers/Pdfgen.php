@@ -4,10 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Pdfgen extends CI_Controller {
     function pdf($palindex = NULL)
 	{
-        // $_SESSION['pdfdone'] = 1;
-        if (!isset($_SESSION["alindex"])){
-            redirect('/');
-        }
+        // if (!isset($_SESSION["alindex"])){
+        //     redirect('/');
+        // }
         $data['fullname'] = $_SESSION['fullname'];
         $data['namewithinitials'] = $_SESSION['namewithinitials'];
         $data['addressline1'] = $_SESSION['addressline1'];
@@ -56,17 +55,13 @@ class Pdfgen extends CI_Controller {
             $course_no = $data['course3s'];
             $data['course3'] = $this->courses_model->get_courses($course_no);
         }
-    /*
-        ---- ---- ---- ----
-        your code here
-        ---- ---- ---- ----
-    */
-        $this->session->set_userdata('pdfdone', 1);
         
+        $this->session->set_userdata('pdfdone', 1);
         $this->load->view('pages/pdfreport', $data);
-        $this->session->unset_userdata('alindex', 'olindex1', 'olindex2', 'olindex3', 'fullname', 'namewithinitials', 
-            'addressline1', 'addressline2', 'addressline3', 'addressline4', 'district', 'nic', 'gender',
-            'title', 'ethnicity', 'mobile', 'home', 'email', 'sripada', 'sworker', 'pirivena', 'palindex');
-        session_destroy();
+
+        // $this->session->unset_userdata('alindex', 'olindex1', 'olindex2', 'olindex3', 'fullname', 'namewithinitials', 
+        //     'addressline1', 'addressline2', 'addressline3', 'addressline4', 'district', 'nic', 'gender',
+        //     'title', 'ethnicity', 'mobile', 'home', 'email', 'sripada', 'sworker', 'pirivena', 'palindex');
+        // session_destroy();
     }
 }

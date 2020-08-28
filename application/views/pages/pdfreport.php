@@ -16,10 +16,7 @@ $obj_pdf->SetFont('helvetica', '', 12);
 $obj_pdf->setFontSubsetting(false);
 $obj_pdf->AddPage();
 ob_start();
-    // we can have any view part here like HTML, PHP etc
-    // var_dump($_SESSION);
-    // var_dump($alresults);
-    // $_SESSION['pdfdone'] = 1;
+// we can have any view part here like HTML, PHP etc
 ?>    
 
     <body>
