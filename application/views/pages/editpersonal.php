@@ -74,7 +74,7 @@
               <label for="gender">Gender: </label><br>
               <input type="radio" name="gender"
               <?php if (isset($gender) && $gender=="female") echo "checked";?>
-              value="female" checked>Female
+              value="female">Female
               <input type="radio" name="gender"
               <?php if (isset($gender) && $gender=="male") echo "checked";?>
               value="male" checked>Male

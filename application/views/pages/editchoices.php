@@ -55,7 +55,7 @@
         <div class="form-group">
           <label for="coursename"><b>Physical Education Marks: </b></label><br>
           <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
-          <input type="number" class="form-control" id="pemarks1" name="pemarks1" >    
+          <input type="number" value="<?php echo $_SESSION['pemarks1']; ?>" class="form-control" id="pemarks1" name="pemarks1" >    
         </div>
       </div>
       <div id="div2" class="col-sm-12">
@@ -72,8 +72,14 @@
   <div class="col-sm-12" id="category"  style="display :none">  
     <div class="form-group">
       <label for="category">Category: </label><br>
-      <input type="radio" name="category" value="Catholic">Catholic
-      <input type="radio" name="category" value="Christianity">Christianity
+      <?php if($_SESSION['category'] == "Catholic" ){ ?>
+        <input type="radio" name="category" value="Catholic" checked>Catholic
+        <input type="radio" name="category" value="Christianity">Christianity
+      <?php } ?>
+      <?php if($_SESSION['category'] == "Christianity" ){ ?>
+        <input type="radio" name="category" value="Catholic">Catholic
+        <input type="radio" name="category" value="Christianity" checked>Christianity
+      <?php } ?>
     </div>
   </div>
   <div id="box" style="display :none">
@@ -99,7 +105,7 @@
   <div class="col-sm-4" style="padding-left: 0px; display :none;" id="gitmarks">
     <div class="form-group">
       <label for="gitmk"><b>GIT Marks: </b></label><br>
-      <input type="number" class="form-control" id="gitmk" name="gitmk" >    
+      <input type="number" class="form-control" id="gitmk" name="gitmk" value="<?php echo $_SESSION['gitmk']; ?>">    
     </div>
   </div>
   
