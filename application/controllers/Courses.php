@@ -25,20 +25,6 @@ class Courses extends CI_Controller{
         $this->load->view('templates/footer');
     }
 
-    public function info($course_no = NULL){
-        // var_dump($course_no);
-        $data['course'] = $this->courses_model->get_courses($course_no);
-        // if(empty($data['post'])){
-        //     show_404();
-        // }
-        // var_dump($data['course']);
-        $data['title'] = 'Course Page';
-        // echo "Awkward";
-        $this->load->view('templates/header');
-        $this->load->view('pages/courseinfo',$data);
-        $this->load->view('templates/footer');
-    }
-
     public function nextpage(){
         
         $course1 = $this->input->post("course1");
@@ -46,6 +32,7 @@ class Courses extends CI_Controller{
         $course3 = $this->input->post("course3");
         $pemarks1 = $this->input->post("pemarks1");
         $category = $this->input->post("category");
+        $gitmarks = $this->input->post("gitmk");
 
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'pdf';
@@ -126,6 +113,7 @@ class Courses extends CI_Controller{
             $this->session->set_userdata('course3', $course3);
             $this->session->set_userdata('pemarks1', $pemarks1);
             $this->session->set_userdata('category', $category);
+            $this->session->set_userdata('gitmk', $gitmarks);
             // var_dump($post_file);
             $this->session->set_userdata('post_file1', $post_file1);
             $this->session->set_userdata('post_file2', $post_file2);
@@ -146,8 +134,10 @@ class Courses extends CI_Controller{
         $data['title'] = 'Course Selection';
         //validation
         $course1 = $this->input->post("course1");
+        $course2 = $this->input->post("course2");
+        $course3 = $this->input->post("course3");
         $this->form_validation->set_rules('course1', 'course1', 'required');
-
+        // var_dump($course1);
         // $myfile = $this->input->post("myfile");
 
         if($this->form_validation->run() === FALSE){
@@ -158,9 +148,10 @@ class Courses extends CI_Controller{
             $this->load->view('templates/footer');
        
         }else{
-            if($course1 == 15 || $course1 == 14){
-                $this->form_validation->set_rules('category', 'category', 'required');
+            if($course1 == '15' || $course1 == '14' || $course2 == '15' || $course2 == '14' || $course3 == '15' || $course3 == '14'){
+                $this->form_validation->set_rules('category', 'Category', 'required');
     
+                // var_dump($course1);
                 if($this->form_validation->run() === FALSE){
                     $data['courses'] = $this->courses_model-> get_courses();
                     
@@ -171,14 +162,22 @@ class Courses extends CI_Controller{
                     $this->nextpage();
                     redirect('students/index');
                 }
-            }else{
-                $this->nextpage();
-                redirect('students/index');
-            }
-
-            if($course1 == 28 || $course1 == 29){
+            }elseif($course1 == '28' || $course1 == '29' || $course2 == '28' || $course2 == '29' || $course3 == '28' || $course3 == '29'){
                 $this->form_validation->set_rules('pemarks1', 'PE marks', 'required');
     
+                // var_dump($course1);
+                if($this->form_validation->run() === FALSE){
+                    $data['courses'] = $this->courses_model-> get_courses();
+                    
+                    $this->load->view('templates/header');
+                    $this->load->view('pages/prefer',$data);
+                    $this->load->view('templates/footer');
+                }else{
+                    $this->nextpage();
+                    redirect('students/index');
+                }
+            }elseif($course1 == '42' || $course1 == '43' || $course1 == '44' || $course2 == '42' || $course2 == '43' || $course2 == '44' || $course3 == '42' || $course3 == '43' || $course3 == '44'){
+                $this->form_validation->set_rules('gitmk', 'GIT marks', 'required');
                 if($this->form_validation->run() === FALSE){
                     $data['courses'] = $this->courses_model-> get_courses();
                     
@@ -195,13 +194,15 @@ class Courses extends CI_Controller{
             }
         }
     }
-
+    
     public function editsubmit(){
         $data['title'] = 'Course Selection';
         //validation
         $course1 = $this->input->post("course1");
+        $course2 = $this->input->post("course2");
+        $course3 = $this->input->post("course3");
         $this->form_validation->set_rules('course1', 'course1', 'required');
-
+        // var_dump($course1);
         // $myfile = $this->input->post("myfile");
 
         if($this->form_validation->run() === FALSE){
@@ -212,9 +213,10 @@ class Courses extends CI_Controller{
             $this->load->view('templates/footer');
        
         }else{
-            if($course1 == 15 || $course1 == 14){
-                $this->form_validation->set_rules('category', 'category', 'required');
+            if($course1 == '15' || $course1 == '14' || $course2 == '15' || $course2 == '14' || $course3 == '15' || $course3 == '14'){
+                $this->form_validation->set_rules('category', 'Category', 'required');
     
+                // var_dump($course1);
                 if($this->form_validation->run() === FALSE){
                     $data['courses'] = $this->courses_model-> get_courses();
                     
@@ -225,14 +227,22 @@ class Courses extends CI_Controller{
                     $this->nextpage();
                     redirect('submission/index');
                 }
-            }else{
-                $this->nextpage();
-                redirect('submission/index');
-            }
-
-            if($course1 == 28 || $course1 == 29){
+            }elseif($course1 == '28' || $course1 == '29' || $course2 == '28' || $course2 == '29' || $course3 == '28' || $course3 == '29'){
                 $this->form_validation->set_rules('pemarks1', 'PE marks', 'required');
     
+                // var_dump($course1);
+                if($this->form_validation->run() === FALSE){
+                    $data['courses'] = $this->courses_model-> get_courses();
+                    
+                    $this->load->view('templates/header');
+                    $this->load->view('pages/editchoices',$data);
+                    $this->load->view('templates/footer');
+                }else{
+                    $this->nextpage();
+                    redirect('submission/index');
+                }
+            }elseif($course1 == '42' || $course1 == '43' || $course1 == '44' || $course2 == '42' || $course2 == '43' || $course2 == '44' || $course3 == '42' || $course3 == '43' || $course3 == '44'){
+                $this->form_validation->set_rules('gitmk', 'GIT marks', 'required');
                 if($this->form_validation->run() === FALSE){
                     $data['courses'] = $this->courses_model-> get_courses();
                     
@@ -247,8 +257,8 @@ class Courses extends CI_Controller{
                 $this->nextpage();
                 redirect('submission/index');
             }
-        }
-    }
-            
+        } 
+    }     
 }
+                // redirect('submission/index');
     

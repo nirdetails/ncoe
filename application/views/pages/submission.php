@@ -48,6 +48,7 @@ if($_SESSION['pdfdone'] == 1){
     <input type="hidden" value="<?php echo $_SESSION['course3']; ?>" name="course3">
     <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks1">
     <input type="hidden" value="<?php echo $_SESSION['category']; ?>" name="category">
+    <input type="hidden" value="<?php echo $_SESSION['gitmk']; ?>" name="gitmk">
 
     <?php if($_SESSION['pemarks1'] != NULL){  ?>
       <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks">

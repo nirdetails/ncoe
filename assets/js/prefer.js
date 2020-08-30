@@ -12,6 +12,7 @@ $("#category").hide();
     var chr = 0;
     var pe = 0;
     var west = 0;
+    var git = 0;
 
     if(c1 == '11' || c1 == '12' || c1 =='13' || c1 == '14' || c1 == '15' || c2 == '11' || c2 == '12' || c2 =='13' || c2 == '14' || c2 == '15' || c3 == '11' || c3 == '12' || c3 =='13' || c3 == '14' || c3 == '15' ){
       rel = 1;
@@ -37,6 +38,12 @@ $("#category").hide();
       west = 0;
     }
 
+    if(c1 == '42' || c1 == '43' || c1 == '44' ||  c2 == '42' || c2 == '43' || c2 == '44' || c3 == '42'|| c3 == '43'|| c3 == '44'){
+      git = 1;
+    }else{
+      git = 0;
+    }
+
     if(rel == 1){
       $("#box").show(); 
     }else{
@@ -59,6 +66,12 @@ $("#category").hide();
       $("#west").show();
     }else{
       $("#west").hide();
+    }
+
+    if(git == 1){
+      $("#gitmarks").show();
+    }else{
+      $("#gitmarks").hide();
     }
 
     if(c1 == c2 || c1 == c3){
@@ -76,6 +89,7 @@ $("#category").hide();
     var chr = 0;
     var pe = 0;
     var west = 0;
+    var git = 0;
 
     if(c1 == '11' || c1 == '12' || c1 =='13' || c1 == '14' || c1 == '15' || c2 == '11' || c2 == '12' || c2 =='13' || c2 == '14' || c2 == '15' || c3 == '11' || c3 == '12' || c3 =='13' || c3 == '14' || c3 == '15' ){
       rel = 1;
@@ -101,6 +115,12 @@ $("#category").hide();
       west = 0;
     }
 
+    if(c1 == '42' || c1 == '43' || c1 == '44' ||  c2 == '42' || c2 == '43' || c2 == '44' || c3 == '42'|| c3 == '43'|| c3 == '44'){
+      git = 1;
+    }else{
+      git = 0;
+    }
+
     if(rel == 1){
       $("#box").show(); 
     }else{
@@ -123,6 +143,12 @@ $("#category").hide();
       $("#west").show();
     }else{
       $("#west").hide();
+    }
+
+    if(git == 1){
+      $("#gitmarks").show();
+    }else{
+      $("#gitmarks").hide();
     }
 
     if(c1 == c2 || c3 == c2){
@@ -141,6 +167,7 @@ $("#category").hide();
     var chr = 0;
     var pe = 0;
     var west = 0;
+    var git = 0;
 
     if(c1 == '11' || c1 == '12' || c1 =='13' || c1 == '14' || c1 == '15' || c2 == '11' || c2 == '12' || c2 =='13' || c2 == '14' || c2 == '15' || c3 == '11' || c3 == '12' || c3 =='13' || c3 == '14' || c3 == '15' ){
       rel = 1;
@@ -166,6 +193,12 @@ $("#category").hide();
       west = 0;
     }
 
+    if(c1 == '42' || c1 == '43' || c1 == '44' ||  c2 == '42' || c2 == '43' || c2 == '44' || c3 == '42'|| c3 == '43'|| c3 == '44'){
+      git = 1;
+    }else{
+      git = 0;
+    }
+
     if(rel == 1){
       $("#box").show(); 
     }else{
@@ -188,6 +221,12 @@ $("#category").hide();
       $("#west").show();
     }else{
       $("#west").hide();
+    }
+
+    if(git == 1){
+      $("#gitmarks").show();
+    }else{
+      $("#gitmarks").hide();
     }
 
     if(c1 == c3 || c2 == c3){

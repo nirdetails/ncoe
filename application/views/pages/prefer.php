@@ -84,6 +84,13 @@
     <input title="you can upload 3 Certificates only" type="file" id="wupload3" name="wupload3" multiple><br><br>
   </div>
 
+  <div class="col-sm-4" style="padding-left: 0px; display :none;" id="gitmarks">
+    <div class="form-group">
+      <label for="gitmk"><b>GIT Marks: </b></label><br>
+      <input type="number" class="form-control" id="gitmk" name="gitmk" >    
+    </div>
+  </div>
+
   <div style="text-align :right">     
     <input type="submit" name="btnnext" class="btn btn-info" value="Submit">
   </div>

@@ -29,7 +29,8 @@ class Courses_model extends CI_Model{
             'category' => $this->input->post('category'),
             'filename' => $post_file1.','.$post_file2.','.$post_file3,
             'filenamer' => $post_filer1.','.$post_filer2.','.$post_filer3,
-            'filenamew' => $post_filew1.','.$post_filew2.','.$post_filew3
+            'filenamew' => $post_filew1.','.$post_filew2.','.$post_filew3,
+            'gitmarks' => $this->input->post('gitmk'),
        );
 
     // Insert preference detail
