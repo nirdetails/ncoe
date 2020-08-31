@@ -309,10 +309,6 @@ $("#category").hide(); //14, 15
       $("#gitmarks").hide();
     }
 
-    if(c1 == c2 || c1 == c3){
-      alert("Select a different subject");
-      $( "#course1" )[0].selectedIndex = "";
-    }
   });
 
   $("#course2" ).ready(function() {
@@ -384,11 +380,6 @@ $("#category").hide(); //14, 15
       $("#gitmarks").show();
     }else{
       $("#gitmarks").hide();
-    }
-
-    if(c1 == c2 || c3 == c2){
-      alert("Select a different subject");
-      $( "#course2" )[0].selectedIndex = "";
     }
       
   });
@@ -462,10 +453,5 @@ $("#category").hide(); //14, 15
       $("#gitmarks").show();
     }else{
       $("#gitmarks").hide();
-    }
-
-    if(c1 == c3 || c2 == c3){
-      alert("Select a different subject");
-      $( "#course3" )[0].selectedIndex = "";
     }
   });
