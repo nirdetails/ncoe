@@ -3,6 +3,11 @@
   if (!isset($_SESSION["alindex"])){
     redirect('/');
   }
+
+  $block = "display: block";
+  $none = "display:none";
+
+  
 ?>
   <h2>Edit your Courses Here..... </h2>
   <span style="color: red;"><?php echo validation_errors(); ?></span>
@@ -50,7 +55,7 @@
   <input type="hidden" name="alindex" value="<?php echo $_SESSION['alindex']; ?>">
 <?php } ?>
 <div class="row" >
-    <div id="certificates" style="display :none">
+    <div id="certificates">
       <div class="col-sm-12">
         <div class="form-group">
           <label for="coursename"><b>Physical Education Marks: </b></label><br>
@@ -69,7 +74,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-12" id="category"  style="display :none">  
+  <div class="col-sm-12" id="category" >  
     <div class="form-group">
       <label for="category">Category: </label><br>
       <?php if($_SESSION['category'] == "Catholic" ){ ?>
@@ -82,7 +87,7 @@
       <?php } ?>
     </div>
   </div>
-  <div id="box" style="display :none">
+  <div id="box">
     <label for="myfile"><b>Upload your religion Certificates:</b></label><br>
     <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></label><br>
     <label><span style="color:red">* </span><i>Use esch button to upload one file. You can upload upto 3 files<br></i></label><br>
@@ -92,7 +97,7 @@
     <input title="you can upload 3 Certificates only" type="file" id="rupload3" name="rupload3" multiple><br><br>
   </div>
 
-  <div id="west" style="display :none">
+  <div id="west">
     <label for="myfile"><b>Upload your Western Music Certificates:</b></label><br>
     <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></label><br>
     <label><span style="color:red">* </span><i>Use esch button to upload one file. You can upload upto 3 files<br></i></label><br>
