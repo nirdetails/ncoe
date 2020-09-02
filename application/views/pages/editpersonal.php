@@ -83,31 +83,42 @@
          </div>
         <?php } ?>
     </div>
-
+<?php $titlevals = array('Mr', 'Miss', 'Rev'); ?>
     <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group"> 
-            <label for="title">Title: <span style="color:red">* <?php echo form_error('title'); ?></span></label>
-                <select class="form-control" id="title" placeholder="Mr/Mrs/Miss/Rev.." name="title">
-                  <option value="">Select</option>
-                  <option value="Mr">Mr</option>
-                  <option value="Miss">Miss</option>
-                  <option value="Rev">Rev</option>
-                </select>
-             </div>
+      <div class="col-sm-6">
+        <div class="form-group"> 
+          <label for="title">Title: <span style="color:red">* <?php echo form_error('title'); ?></span></label>
+          <select class="form-control" id="title" placeholder="Mr/Mrs/Miss/Rev.." name="title">
+          <option value="">Select</option>
+          <?php 
+          foreach($titlevals as $titleval){
+            if($titleval == $_SESSION['title']){
+              echo "<option value='$titleval' Selected>$titleval</option>";
+            }else{
+              echo "<option value='$titleval'>$titleval</option>";
+            }
+          }
+          ?>
+          </select>
         </div>
+        </div>
+        <?php $ethnicvals  = array('Sinhalese', 'Sri Lankan Tamil' , 'Tamil of Indian Origin', 'Muslim', 'Other'); ?>
         <div class="col-sm-6">   
             <div class="form-group">          
             <label for="ethnicity">Ethnicity: <span style="color:red">* <?php echo form_error('ethnicity'); ?></span></label>
-                <select class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity">
-                  <option value="">Select</option>
-                  <option value="Sinhalese">Sinhalese</option>
-                  <option value="Sri Lankan Tamil">Sri Lankan Tamil</option>
-                  <option value="Tamil of Indian Origin">Tamil of Indian Origin</option>
-                  <option value="Muslim">Muslim</option>
-                  <option value="Other">Other</option>
-                </select>
-             </div>
+            <select class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity">
+            <option value="">Select</option>
+            <?php
+              foreach($ethnicvals as $ethnicval){
+                if($ethnicval == $_SESSION['ethnicity']){
+                  echo "<option value='$ethnicval' Selected>$ethnicval</option>";
+                }else{
+                  echo "<option value='$ethnicval'>$ethnicval</option>";
+                }
+              }
+            ?>
+            </select>
+            </div>
         </div>
     </div>
 

@@ -107,21 +107,22 @@
     <input title="you can upload 3 Certificates only" type="file" id="wupload2" name="wupload2" multiple><br><br>
     <input title="you can upload 3 Certificates only" type="file" id="wupload3" name="wupload3" multiple><br><br>
   </div>
-
+<?php $gitgrades = array('A','B','C','S','F','+','X','N'); ?>
   <div class="col-sm-4" style="padding-left: 0px; display :none;" id="gitmarks">
     <div class="form-group">
     <label for="gitmk"><b>GIT Grades: </b></label><br>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
       <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade" value="<?php echo $_SESSION['gitmk']; ?>">
         <option value="0" selected disabled>Select your Grade</option>
-        <option value="A">A</option>
-        <option value="B">B</option>
-        <option value="C">C</option>
-        <option value="S">S</option>
-        <option value="F">F</option>
-        <option value="+">+</option>
-        <option value="X">X</option>
-        <option value="N">N</option>
+        <?php
+          foreach($gitgrades as $gitgrade){
+            if($gitgrade == $_SESSION['gitmk']){
+              echo "<option value='$gitgrade' selected>$gitgrade</option>";
+            }else{
+              echo "<option value='$gitgrade'>$gitgrade</option>";
+            }
+          }
+        ?>
       </select>    
     </div>
   </div>
