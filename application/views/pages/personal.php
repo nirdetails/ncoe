@@ -119,20 +119,20 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group"> 
-               <label for="mobile">Mobile: <span style="color:red">* </span></label>
+               <label for="mobile">Mobile: </label>
                 <input type="text" class="form-control" id="mobile" placeholder="0700000000" name="mobile">
             </div>
         </div>
         <div class="col-sm-6">  
             <div class="form-group">           
-                <label for="home">Home: <span style="color:red">* </span></label>
+                <label for="home">Home: </label>
                 <input type="text" class="form-control" id="home" placeholder="0000000000" name="home"> 
             </div>     
         </div>
     </div>
 
     <div class="form-group">            
-            <label for="home">Email: <span style="color:red">* </span></label>
+            <label for="home">Email: </label>
             <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email">             
     </div>
     <input type="hidden" value="<?php echo $_SESSION['alindex']; ?>" name="alindex">

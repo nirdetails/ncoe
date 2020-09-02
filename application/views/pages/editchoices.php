@@ -110,8 +110,19 @@
 
   <div class="col-sm-4" style="padding-left: 0px; display :none;" id="gitmarks">
     <div class="form-group">
-      <label for="gitmk"><b>GIT Marks: </b></label><br>
-      <input type="number" class="form-control" id="gitmk" name="gitmk" value="<?php echo $_SESSION['gitmk']; ?>">    
+    <label for="gitmk"><b>GIT Grades: </b></label><br>
+      <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
+      <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade" value="<?php echo $_SESSION['gitmk']; ?>">
+        <option value="0" selected disabled>Select your Grade</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="S">S</option>
+        <option value="F">F</option>
+        <option value="+">+</option>
+        <option value="X">X</option>
+        <option value="N">N</option>
+      </select>    
     </div>
   </div>
   

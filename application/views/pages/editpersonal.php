@@ -87,14 +87,26 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group"> 
-                <label for="title">Title: </label>
-                <input type="text" class="form-control" id="title" placeholder="Mr/Mrs/Miss/Rev.." name="title" value="<?php echo $_SESSION['title']; ?>">
+            <label for="title">Title: <span style="color:red">* <?php echo form_error('title'); ?></span></label>
+                <select class="form-control" id="title" placeholder="Mr/Mrs/Miss/Rev.." name="title">
+                  <option value="">Select</option>
+                  <option value="Mr">Mr</option>
+                  <option value="Miss">Miss</option>
+                  <option value="Rev">Rev</option>
+                </select>
              </div>
         </div>
         <div class="col-sm-6">   
             <div class="form-group">          
-                <label for="ethnicity">Ethnicity: </label>
-                <input type="text" class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity" value="<?php echo $_SESSION['ethnicity']; ?>">      
+            <label for="ethnicity">Ethnicity: <span style="color:red">* <?php echo form_error('ethnicity'); ?></span></label>
+                <select class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity">
+                  <option value="">Select</option>
+                  <option value="Sinhalese">Sinhalese</option>
+                  <option value="Sri Lankan Tamil">Sri Lankan Tamil</option>
+                  <option value="Tamil of Indian Origin">Tamil of Indian Origin</option>
+                  <option value="Muslim">Muslim</option>
+                  <option value="Other">Other</option>
+                </select>
              </div>
         </div>
     </div>

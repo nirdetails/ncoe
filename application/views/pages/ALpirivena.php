@@ -258,7 +258,7 @@
             </div>
         </div>
     
-    <div class="col-sm-4">
+    <!-- <div class="col-sm-4">
         <div class="form-group">
             <label for="git">Sat for the GIT exam: <span style="color:red">* <?php echo form_error('git'); ?></span></label>
             <select class="form-control" id="git" name="git" placeholder="Enter the GIT marks">
@@ -267,7 +267,7 @@
                 <option value="no">NO</option>
             </select>
         </div>
-    </div>
+    </div> -->
 </div>
 <div style="text-align:center">
     <button style="margin-top:25px; margin-left:15px" type="submit" class="btn btn-info">Submit</button>

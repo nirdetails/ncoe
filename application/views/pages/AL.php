@@ -7,12 +7,12 @@
     <input type="text" class="form-control" id="index" placeholder="Enter your A\L index number" name="index">
   </div>
   <div class="form-group">
-    <label for="git">Sat for the GIT exam: </label>
+    <!-- <label for="git">Sat for the GIT exam: </label>
     <select class="form-control" id="git" name="git" placeholder="Enter the GIT marks">
       <option value="">SELECT</option>
       <option value="yes">YES</option>
       <option value="no">NO</option>
-    </select>
+    </select> -->
   </div>
   <!-- <div class="form-group">
     <label for="stream">Stream</label>
