@@ -6,7 +6,8 @@
 ?>
   <h2>Select your Courses Here..... </h2>
   <span style="color: red;"><?php echo validation_errors(); ?></span>
-  <?php echo form_open_multipart('courses/select'); ?>
+  <?php // echo form_open_multipart('courses/select'); ?>
+<form action="<?php echo site_url(); ?>courses/select" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <div class="form-group">
     <label for="preference1">Select Your First Preference: </label>
     <select class="form-control" id="course1" name="course1">

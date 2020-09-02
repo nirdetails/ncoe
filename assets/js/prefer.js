@@ -3,9 +3,7 @@ $("#box").hide(); // 28, 29
 $("#west").hide(); // 25
 $("#category").hide(); //14, 15 
 
-
-
-  $( "#course1" ).change(function() {
+  $("#course1" ).change(function() {
     var c1 = $( "#course1" ).val()
     var c2 = $( "#course2" ).val()
     var c3 = $( "#course3" ).val()

@@ -6,7 +6,8 @@
   }
 ?>
 <?php echo validation_errors(); ?>
-<?php echo form_open_multipart('students/personaldetails'); ?>
+<?php // echo form_open_multipart('students/personaldetails'); ?>
+<form action="<?php echo site_url(); ?>students/personaldetails" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <div class="form-group">
   <?php // var_dump($_SESSION['sworker']); ?>
       <label for="fullname">Name in Full: </label>

@@ -5,7 +5,8 @@
   }
 ?>
 <span style="color: red;"><?php echo validation_errors(); ?></span>
-<?php echo form_open_multipart('students/sripada'); ?>
+<form action="<?php echo site_url(); ?>students/sripada" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<?php // echo form_open_multipart('students/sripada'); ?>
     <div class="form-group">
       <label for="index1" id="label1" title=" National College of Education">Are you applying for Sripada NCoE? <span style="color:red">* </span></label>
       <select name="sripada"  id="sripada" height="4" class="form-control">

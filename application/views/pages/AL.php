@@ -1,6 +1,7 @@
 <h2><?= $title; ?></h2>
 <span style="color: red;"><?php echo validation_errors(); ?></span>
-<?php echo form_open_multipart('alresults/checkalres'); ?>
+<?php // echo form_open_multipart('alresults/checkalres'); ?>
+<form action="<?php echo site_url(); ?>alresults/checkalres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <div class="form-group">
     <label for="index">A\L index number: <span style="color:red">* </span></label>
     <input type="text" class="form-control" id="index" placeholder="Enter your A\L index number" name="index">

@@ -16,7 +16,8 @@ if($_SESSION['pdfdone'] == 1){
 
 ?>
   <h2><?= $title; ?></h2>
-  <?php echo form_open_multipart('submission/submit'); ?>
+<form action="<?php echo site_url(); ?>submission/submit" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+  <?php //echo form_open_multipart('submission/submit'); ?>
     <input type="hidden" value="<?php echo $_SESSION['alindex']; ?>" name="alindex">
     <input type="hidden" value="<?php echo $_SESSION['olindex1']; ?>" name="olindex1">
     <input type="hidden" value="<?php echo $_SESSION['olindex2']; ?>" name="olindex2">

@@ -1,6 +1,7 @@
  <h2><?= $title; ?></h2>
 <?php // echo validation_errors(); ?>
-<?php echo form_open_multipart('Alpirivena/checkalres'); ?>
+<?php //echo form_open_multipart('Alpirivena/checkalres'); ?>
+<form action="<?php echo site_url(); ?>Alpirivena/checkalres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
@@ -284,4 +285,17 @@
 <div class="row">
   &nbsp;
 </div>
-<script src="<?php echo site_url(); ?>assets/js/alpir.js"></script>
+<!-- <script src="<?php //echo site_url(); ?>assets/js/alpir.js"></script> -->
+<script>
+$("#alyear").change(function(){
+    var alyear = $(this).val();
+
+    if(alyear == 2018){
+        $("#alyear")[0].selectedIndex = "";
+        window.location.href = "<?php echo site_url(); ?>/alresults";
+
+    }
+    // alert(alyear);
+
+});
+</script>
