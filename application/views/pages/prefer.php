@@ -1,332 +1,111 @@
-<?php include "header.php" ?>
-<html>
-<head>
-<script>
-
-
-$(function(){
-  $("input[type='submit']").click(function(){
-      var $fileUpload = $("input[type='file']");
-      if (parseInt($fileUpload.get(0).files.length)>3){
-       alert("You can only upload a maximum of 3 certificates");
-      }
-  });    
-});
-
-
-</script>
-<style>	
-	body{
-		background: #aaa;
-	}
-	.container{
-		background: #fff;
-		padding: 10px;
-		margin-top: 10px;
-		border-radius: 10px;
-		max-width: 700px;
-	}
-</style>
-</head>
-<body>
-<div class="container">
+<?php // var_dump($courses); ?>
+<?php
+  if (!isset($_SESSION["alindex"])){
+    redirect('/');
+  }
+?>
   <h2>Select your Courses Here..... </h2>
-  <form name="courseform" action="/action_page.php">
+  <span style="color: red;"><?php echo validation_errors(); ?></span>
+  <?php // echo form_open_multipart('courses/select'); ?>
+<form action="<?php echo site_url(); ?>courses/select" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <div class="form-group">
-      <label for="preference1">Select Your First Preference: </label>
-      <select class="form-control" id="course1" name="course1"  onchange = "ShowHideDiv()" required>
-            <option >First course</option>                        
-            <option >Primary Education (Sinhala)</option>                        
-            <option >Primary Education (Tamil)</option>
-            <option >Science (Sinhala)</option>
-            <option >Science (Tamil)</option>
-            <option >Science (English)</option>
-            <option >Mathematics (Sinhala)</option>
-            <option >Mathematics (Tamil)</option>
-            <option >Mathematics (English)</option>
-            <option >Social Science (Sinhala)</option>
-            <option >Social Science (Tamil)</option>
-            <option value="A">Buddhism</option>
-            <option value="B">Hinduism</option>
-            <option value="C">Islam</option>
-            <option value="D">Catholicism / Christianity (Sinhala)</option>
-            <option value="E">Catholicism / Christianity (Tamil)</option>
-            <option >First Language (Sinhala)</option>
-            <option >FirstLanguage(Tamil)</option>
-            <option >English</option>
-            <option >Art (Sinhala)</option>
-            <option >Art (Tamil)</option>
-            <option >Dance (Oriental)</option>
-            <option >Dance ( Bharatha)</option>
-            <option >Music (Oriental)</option>
-            <option >Music (Carnatic)</option>
-            <option value="F">Western Music</option>
-            <option >Drama andTheatre (Sinhala)</option>
-            <option >Drama andTheatre (Tamil)</option>
-            <option value="Y">Physical Education (Sinhala)</option>
-            <option value="N">Physical Education (Tamil)</option>
-            <option >Home Economics (Sinhala)</option>
-            <option >Home Economics (Tamil)</option>
-            <option >Agriculture and Food Technology (Sinhala)</option>
-            <option >Agriculture and Food Technology (Tamil)</option>
-            <option >Technical Studies – Crafts and Art (Sinhala)</option>
-            <option >Technical Studies – Crafts and Art (Tamil)</option>
-            <option >Design and Construction Technology (Sinhala)</option>
-            <option >Design and Mechanical Technology (Sinhala)</option>
-            <option >Design and Electrical and Electronic Technology (Sinhala)</option>
-            <option >Design and Construction Technology (Tamil)</option>
-            <option >Design and Mechanical Technology (Tamil)</option>
-            <option >Design and Electrical and Electronic Technology (Tamil)</option>
-            <option >Information Communication Technology (Sinhala)</option>
-            <option >Information Communication Technology (Tamil)</option>
-            <option >Information Communication Technology (English)</option>
-            <option >Second Language (Sinhala)</option>
-            <option >Second Language (Tamil)</option>
-            <option >Special Education (Sinhala)</option>
-            <option >Special Education (Tamil)</option>
-            <option >Buisness & Accounting Studies  (Sinhala)</option>
-            <option >Buisness  & Accounting Studies (Tamil)</option>                                              </select>
-    </div>
-
+    <label for="preference1">Select Your First Preference: </label>
+    <select class="form-control" id="course1" name="course1">
+      <option value="">SELECT</option>
+      <?php foreach($courses as $course): ?>
+        <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
+      <?php endforeach; ?>                                                   
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="preference2">Select Your Second Preference: </label>
+    <select class="form-control" id="course2" name="course2">
+      <option value="">SELECT</option>
+      <?php foreach($courses as $course): ?>
+        <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
+      <?php endforeach; ?>                                                   
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="preference3">Select Your Third Preference: </label>
+    <select class="form-control" id="course3" name="course3">
+      <option value="">SELECT</option>
+      <?php foreach($courses as $course): ?>
+        <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
+      <?php endforeach; ?>                                                   
+    </select>
+  </div>
+<?php if($_SESSION['alindex'] != ""){ ?>
+  <input type="hidden" name="alindex" value="<?php echo $_SESSION['alindex']; ?>">
+<?php } ?>
   <div class="row" >
     <div id="certificates" style="display :none">
-      <div class="col-sm-6">
-      <div class="form-group">
-        <label for="coursename"><b>Physical Education Marks: </b></label>
-        <input type="number" class="form-control" id="marks" name="fullname" >    
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="coursename"><b>Physical Education Marks: </b></label><br>
+          <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
+          <input type="number" class="form-control" id="pemarks1" name="pemarks1" >    
+        </div>
+      </div>
+      <div id="div2" class="col-sm-12">
+        <label for="myfile"  ><b>Upload your Physical Education Certificates:</b></label><br>
+        <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></label><br>
+        <label><span style="color:red">* </span><i>Use esch button to upload one file. You can upload upto 3 files<br></i></label><br>
+        <label><span style="color:red">* </span><i>Only pdf files are accepted.<br></i></p></label><br>
+        <input title="you can upload 3 Certificates only" type="file" id="peupload1" name="peupload1" multiple><br><br>
+        <input title="you can upload 3 Certificates only" type="file" id="peupload2" name="peupload2" multiple><br><br>
+        <input title="you can upload 3 Certificates only" type="file" id="peupload3" name="peupload3" multiple><br><br>
       </div>
     </div>
-
-    <div id="div2" class="col-sm-6">
-    <form action="/action_page.php">
-      <label for="myfile"  ><b>Upload your Certificates:</b></label>
-      <input title="you can upload 3 Certificates only" type="file" id="myfile" name="myfile" multiple><br><br>
-    </form>
-    </div>
-    </div>
-</div>
-
-<div id="box" style="display :none">
-  <form action="/action_page.php">
-     <label for="myfile"><b>Upload your Certificates:</b></label>
-     <input title="you can upload 3 Certificates only" type="file" id="myfile" name="myfile" multiple><br><br>
-  </form>
-</div>
-
-
+  </div>
+  <div class="col-sm-12" id="category"  style="display :none">  
     <div class="form-group">
-      <label for="preference2">Select Your Second Preference: </label>
-      <select class="form-control" id="course2" name="course2" onchange = "ShowHideDiv2()" required>
-      <option >First course</option>                        
-            <option >Primary Education (Sinhala)</option>                        
-            <option >Primary Education (Tamil)</option>
-            <option >Science (Sinhala)</option>
-            <option >Science (Tamil)</option>
-            <option >Science (English)</option>
-            <option >Mathematics (Sinhala)</option>
-            <option >Mathematics (Tamil)</option>
-            <option >Mathematics (English)</option>
-            <option >Social Science (Sinhala)</option>
-            <option >Social Science (Tamil)</option>
-            <option value="A">Buddhism</option>
-            <option value="B">Hinduism</option>
-            <option value="C">Islam</option>
-            <option value="D">Catholicism / Christianity (Sinhala)</option>
-            <option value="E">Catholicism / Christianity (Tamil)</option>
-            <option >First Language (Sinhala)</option>
-            <option >FirstLanguage(Tamil)</option>
-            <option >English</option>
-            <option >Art (Sinhala)</option>
-            <option >Art (Tamil)</option>
-            <option >Dance (Oriental)</option>
-            <option >Dance ( Bharatha)</option>
-            <option >Music (Oriental)</option>
-            <option >Music (Carnatic)</option>
-            <option value="F">Western Music</option>
-            <option >Drama andTheatre (Sinhala)</option>
-            <option >Drama andTheatre (Tamil)</option>
-            <option value="Y">Physical Education (Sinhala)</option>
-            <option value="N">Physical Education (Tamil)</option>
-            <option >Home Economics (Sinhala)</option>
-            <option >Home Economics (Tamil)</option>
-            <option >Agriculture and Food Technology (Sinhala)</option>
-            <option >Agriculture and Food Technology (Tamil)</option>
-            <option >Technical Studies – Crafts and Art (Sinhala)</option>
-            <option >Technical Studies – Crafts and Art (Tamil)</option>
-            <option >Design and Construction Technology (Sinhala)</option>
-            <option >Design and Mechanical Technology (Sinhala)</option>
-            <option >Design and Electrical and Electronic Technology (Sinhala)</option>
-            <option >Design and Construction Technology (Tamil)</option>
-            <option >Design and Mechanical Technology (Tamil)</option>
-            <option >Design and Electrical and Electronic Technology (Tamil)</option>
-            <option >Information Communication Technology (Sinhala)</option>
-            <option >Information Communication Technology (Tamil)</option>
-            <option >Information Communication Technology (English)</option>
-            <option >Second Language (Sinhala)</option>
-            <option >Second Language (Tamil)</option>
-            <option >Special Education (Sinhala)</option>
-            <option >Special Education (Tamil)</option>
-            <option >Buisness & Accounting Studies  (Sinhala)</option>
-            <option >Buisness  & Accounting Studies (Tamil)</option>                                             </select>
+      <label for="category">Category: </label><br>
+      <input type="radio" name="category" value="Catholic">Catholic
+      <input type="radio" name="category" value="Christianity">Christianity
     </div>
+  </div>
+  <div id="box" style="display :none">
+    <label for="myfile"><b>Upload your religion Certificates:</b></label><br>
+    <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></label><br>
+    <label><span style="color:red">* </span><i>Use esch button to upload one file. You can upload upto 3 files<br></i></label><br>
+    <label><span style="color:red">* </span><i>Only pdf files are accepted.<br></i></p></label><br>
+    <input title="you can upload 3 Certificates only" type="file" id="rupload1" name="rupload1" multiple><br><br>
+    <input title="you can upload 3 Certificates only" type="file" id="rupload2" name="rupload2" multiple><br><br>
+    <input title="you can upload 3 Certificates only" type="file" id="rupload3" name="rupload3" multiple><br><br>
+  </div>
 
-  <div class="row">
-  <div id="certificates2" style="display :none">
-    <div class="col-sm-6">
+  <div id="west" style="display :none">
+    <label for="myfile"><b>Upload your Western Music Certificates:</b></label><br>
+    <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></label><br>
+    <label><span style="color:red">* </span><i>Use esch button to upload one file. You can upload upto 3 files<br></i></label><br>
+    <label><span style="color:red">* </span><i>Only pdf files are accepted.<br></i></p></label><br>
+    <input title="you can upload 3 Certificates only" type="file" id="wupload1" name="wupload1" multiple><br><br>
+    <input title="you can upload 3 Certificates only" type="file" id="wupload2" name="wupload2" multiple><br><br>
+    <input title="you can upload 3 Certificates only" type="file" id="wupload3" name="wupload3" multiple><br><br>
+  </div>
+
+  <div class="col-sm-4" style="padding-left: 0px; display :none;" id="gitmarks">
     <div class="form-group">
-      <label for="coursename"><b>Physical Education Marks: </b></label>
-      <input type="number" class="form-control" id="marks" name="fullname" >    
+      <label for="gitmk"><b>GIT Grades: </b></label><br>
+      <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
+      <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade">
+        <option value="0" selected disabled>Select your Grade</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="S">S</option>
+        <option value="F">F</option>
+        <option value="+">+</option>
+        <option value="X">X</option>
+        <option value="N">N</option>
+      </select>
     </div>
   </div>
 
-  <div class="col-sm-6">
-  <form action="/action_page.php">
-     <label for="myfile"  ><b>Upload your Certificates:</b></label>
-     <input title="you can upload 3 Certificates only" type="file" id="myfile" name="myfile" multiple><br><br>
+  <div style="text-align :right">     
+    <input type="submit" name="btnnext" class="btn btn-info" value="Submit">
+  </div>
+
   </form>
-  </div>
-  </div>
-</div>
-<div id="box2" style="display :none">
-  <form action="/action_page.php">
-     <label for="myfile"  ><b>Upload your Certificates:</b></label>
-     <input title="you can upload 3 Certificates only" type="file" id="myfile" name="myfile" multiple><br><br>
-  </form>
-  </div>
-
-    <div class="form-group">
-      <label for="preference3">Select Your Third Preference: </label>
-      <select class="form-control" id="course3" name="course3" onchange = "ShowHideDiv3()" required>
-      <option >Primary Education (Sinhala)</option>                        
-            <option >Primary Education (Tamil)</option>
-            <option >Science (Sinhala)</option>
-            <option >Science (Tamil)</option>
-            <option >Science (English)</option>
-            <option >Mathematics (Sinhala)</option>
-            <option >Mathematics (Tamil)</option>
-            <option >Mathematics (English)</option>
-            <option >Social Science (Sinhala)</option>
-            <option >Social Science (Tamil)</option>
-            <option value="A">Buddhism</option>
-            <option value="B">Hinduism</option>
-            <option value="C">Islam</option>
-            <option value="D">Catholicism / Christianity (Sinhala)</option>
-            <option value="E">Catholicism / Christianity (Tamil)</option>
-            <option >First Language (Sinhala)</option>
-            <option >FirstLanguage(Tamil)</option>
-            <option >English</option>
-            <option >Art (Sinhala)</option>
-            <option >Art (Tamil)</option>
-            <option >Dance (Oriental)</option>
-            <option >Dance ( Bharatha)</option>
-            <option >Music (Oriental)</option>
-            <option >Music (Carnatic)</option>
-            <option value="F">Western Music</option>
-            <option >Drama andTheatre (Sinhala)</option>
-            <option >Drama andTheatre (Tamil)</option>
-            <option value="Y">Physical Education (Sinhala)</option>
-            <option value="N">Physical Education (Tamil)</option>
-            <option >Home Economics (Sinhala)</option>
-            <option >Home Economics (Tamil)</option>
-            <option >Agriculture and Food Technology (Sinhala)</option>
-            <option >Agriculture and Food Technology (Tamil)</option>
-            <option >Technical Studies – Crafts and Art (Sinhala)</option>
-            <option >Technical Studies – Crafts and Art (Tamil)</option>
-            <option >Design and Construction Technology (Sinhala)</option>
-            <option >Design and Mechanical Technology (Sinhala)</option>
-            <option >Design and Electrical and Electronic Technology (Sinhala)</option>
-            <option >Design and Construction Technology (Tamil)</option>
-            <option >Design and Mechanical Technology (Tamil)</option>
-            <option >Design and Electrical and Electronic Technology (Tamil)</option>
-            <option >Information Communication Technology (Sinhala)</option>
-            <option >Information Communication Technology (Tamil)</option>
-            <option >Information Communication Technology (English)</option>
-            <option >Second Language (Sinhala)</option>
-            <option >Second Language (Tamil)</option>
-            <option >Special Education (Sinhala)</option>
-            <option >Special Education (Tamil)</option>
-            <option >Buisness & Accounting Studies  (Sinhala)</option>
-            <option >Buisness  & Accounting Studies (Tamil)</option>                                             </select>
-    </div>
-
-  <div class="row">
-  <div id="certificates3" style="display :none">
-    <div class="col-sm-6">
-    <div class="form-group">
-      <label for="coursename"><b>Physical Education Marks: </b></label>
-      <input type="number" class="form-control" id="marks" name="fullname" >    
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-  <form action="/action_page.php">
-     <label for="myfile"  ><b>Upload your Certificates:</b></label>
-     <input title="you can upload 3 Certificates only" type="file" id="myfile" name="myfile" multiple><br><br>
-  </form>
-  </div>
-  </div>
-</div>
-<div id="box3" style="display :none">
-  <form action="/action_page.php">
-     <label for="myfile"  ><b>Upload your Certificates:</b></label>
-     <input title="you can upload 3 Certificates only" type="file" id="myfile" name="myfile" multiple><br><br>
-  </form>
-  </div>
-
-    <div style="text-align :right">     
-      <input type="submit" value="Next" class="btn btn-info" />      
-    </div>
-  </form>
-</div>
-
-</body>
-</html>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script>
-$("#certificates").hide();
-$("#box").hide();
-
-  $( "#course1" ).change(function() {
-    if($( "#course1" ).val() == "Y" || $( "#course1" ).val() == "N"){
-      $("#certificates").show();
-      $("#box").hide();
-    }else if($( "#course1" ).val() == "A" || $( "#course1" ).val() == "B" || $( "#course1" ).val() == "C" || $( "#course1" ).val() == "D" || $( "#course1" ).val() == "E" || $( "#course1" ).val() == "F"){
-      $("#box").show();
-      $("#certificates").hide();
-    }else{
-      $("#certificates").hide();
-      $("#box").hide();
-    }
-      
-  });
-
-  $( "#course2" ).change(function() {
-    if($( "#course2" ).val() == "Y" || $( "#course2" ).val() == "N"){
-      $("#certificates2").show();
-      $("#box2").hide();
-    }else if($( "#course2" ).val() == "A" || $( "#course2" ).val() == "B" || $( "#course2" ).val() == "C" || $( "#course2" ).val() == "D" || $( "#course2" ).val() == "E" || $( "#course2" ).val() == "F"){
-      $("#box2").show();
-      $("#certificates2").hide();
-    }else{
-      $("#certificates2").hide();
-      $("#box2").hide();
-    }
-      
-  });
-
-  $( "#course3" ).change(function() {
-    if($( "#course3" ).val() == "Y" || $( "#course3" ).val() == "N"){
-      $("#certificates3").show();
-      $("#box3").hide();
-    }else if($( "#course3" ).val() == "A" || $( "#course3" ).val() == "B" || $( "#course3" ).val() == "C" || $( "#course3" ).val() == "D" || $( "#course3" ).val() == "E" || $( "#course3" ).val() == "F"){
-      $("#box3").show();
-      $("#certificates3").hide();
-    }else{
-      $("#certificates3").hide();
-      $("#box3").hide();
-    }
-      
-  });
-
-</script>
-<script src="js/prefer.js">
+  <script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>
