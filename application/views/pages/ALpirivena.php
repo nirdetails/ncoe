@@ -1,4 +1,4 @@
-<h2><?= $title; ?></h2>
+ <h2><?= $title; ?></h2>
 <?php // echo validation_errors(); ?>
 <?php //echo form_open_multipart('Alpirivena/checkalres'); ?>
 <form action="<?php echo site_url(); ?>Alpirivena/checkalres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
