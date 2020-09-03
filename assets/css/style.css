@@ -1,10 +1,20 @@
-/* body{
-    background: #aaa;
+html, body {
+  height: 100%;
+  margin: 0;
 }
-.container{
-    background: #fff;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    max-width: 700px;
-} */
+.content {
+  padding: 20px;
+  min-height: 100%;
+  margin: 0 auto -50px;
+}
+.footer {
+  position: fixed;
+  top : auto;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 40px; 
+} 

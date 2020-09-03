@@ -9,17 +9,32 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="/">NCOE</a>
+        <div class="container" style="padding-top: 1em; padding-bottom: 1em">
+            <img src="<?php echo base_url();?>assets/images/filename.jpg" height="50px" width="50px">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="navbar-brand" href="<?php echo base_url();?>"><h2>National Colleges Of Education</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            	<div class="navbar-nav">
-                	<a class="nav-item nav-link active mr-auto" href="<?php echo base_url();?>">Home</a>
-            	</div>
-        	</div>
+                <div class="navbar-nav" style="width: 100%;">
+                    <a class="btn btn-success" style="height: 60%; " target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (STE).pdf" download>View Gazette</a>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <p class="nav-item nav-link active mr-auto" style="font-size: small;">
+                    <table style="font-size: small; color: white;"><b>
+                        <tr><td>Contact: &nbsp;</td><td>0112787303</td></tr>
+                        <tr><td></td><td>0112787385</td></tr> 
+                        <tr><td></td><td>0112787393</td></tr> 
+                        <tr><td></td><td>0112787399</td></tr> 
+                        <tr><td></td><td>0112787444</td></tr>
+                        <tr><td>Email: </td><td>ncoe-application@gmail.com</td></tr></b>
+                    </table>
+                    </p> 
+                </div>
+            </div>
         </div>
-		</nav>
-		<div class="container">
+        </nav>
+        <div class="row">&nbsp;</div>
+		<div class="container"  style="height: 100%;">
 		

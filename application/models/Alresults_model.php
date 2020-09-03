@@ -4,7 +4,14 @@ class Alresults_model extends CI_Model{
         $this->load->database();
     }
 
-    public function get_alresults(){
+    public function get_alresults($alindex = FALSE){
+        if($alindex == NULL){
+            $alindex = $_SESSION['alindex'];
+            $this->db->where('AL_index', $alindex);
+            $query = $this->db->get('al_result');
+
+            return $query->result_array();
+        }
         $alindex = $this->input->post('index');
         $this->db->where('AL_index', $alindex);
         $query = $this->db->get('al_result');

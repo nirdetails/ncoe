@@ -5,7 +5,12 @@ class Pages extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst($page);
-
+        $this->load->library('session');
+        // var_dump($_SESSION["__ci_last_regenerate"]);
+        
+        if (!isset($_SESSION["__ci_last_regenerate"])){
+            redirect('/');
+        }
         $this->load->view('templates/header');
         $this->load->view('pages/'.$page,$data);
         $this->load->view('templates/footer');
