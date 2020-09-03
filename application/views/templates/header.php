@@ -18,10 +18,10 @@
             </button>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="btn btn-success" target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (STE).pdf" download>View Gazette</a>
+                <div class="navbar-nav" style="width: 100%;">
+                    <a class="btn btn-success" style="height: 60%; " target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (STE).pdf" download>View Gazette</a>
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    <p class="nav-item nav-link active mr-auto"><b>Contact: 0112-2235706</b></p> 
+                    <p class="nav-item nav-link active mr-auto"><b>Contact: <br>Email: <br>ncoe-application@gmail.com</b></p> 
                 </div>
             </div>
         </div>
