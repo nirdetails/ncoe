@@ -21,7 +21,16 @@
                 <div class="navbar-nav" style="width: 100%;">
                     <a class="btn btn-success" style="height: 60%; " target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (STE).pdf" download>View Gazette</a>
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    <p class="nav-item nav-link active mr-auto"><b>Contact: <br>Email: <br>ncoe-application@gmail.com</b></p> 
+                    <p class="nav-item nav-link active mr-auto" style="font-size: small;">
+                    <table style="font-size: small; color: white;"><b>
+                        <tr><td>Contact: &nbsp;</td><td>0112787303</td></tr>
+                        <tr><td></td><td>0112787385</td></tr> 
+                        <tr><td></td><td>0112787393</td></tr> 
+                        <tr><td></td><td>0112787399</td></tr> 
+                        <tr><td></td><td>0112787444</td></tr>
+                        <tr><td>Email: </td><td>ncoe-application@gmail.com</td></tr></b>
+                    </table>
+                    </p> 
                 </div>
             </div>
         </div>

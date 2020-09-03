@@ -1,4 +1,4 @@
-<h2><?= $title; ?></h2>
+
 <?php session_destroy(); ?>
 <?php // var_dump($_SESSION); ?>
 <div class="row">
