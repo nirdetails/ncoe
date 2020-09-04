@@ -20,7 +20,7 @@
             <tr><td><p style="color: white;">Ministry of Education</p></td></tr>
             </table> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        	<div class="" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                 <table>
                     <tr><td><a class="btn btn-success" style="height: 100%; width:100%; font-size:11px" target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (E).pdf" download>View Gazette</a></td></tr>
