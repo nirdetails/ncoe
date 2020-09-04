@@ -4,7 +4,7 @@ class Alpirivena extends CI_Controller{
         $data['title'] = 'Add your A/L results';
 
         $this->load->view('templates/header');
-        $this->load->view('pages/ALpirivena',$data);
+        $this->load->view('pages/alpirivena',$data);
         $this->load->view('templates/footer');
     }
 
