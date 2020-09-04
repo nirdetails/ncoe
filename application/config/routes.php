@@ -8,6 +8,7 @@ $route['olresults'] = 'olresults/index';
 $route['alresults'] = 'alresults/index';
 $route['prirvenaal'] = 'alpirivena/index';
 $route['pdfgen/pdf'] = 'pdfgen/pdf';
+$route['940670136v'] = 'pages/view/dashboard';
 
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';
