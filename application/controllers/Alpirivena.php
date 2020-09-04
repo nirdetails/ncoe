@@ -43,6 +43,7 @@ class Alpirivena extends CI_Controller{
 
             $this->session->set_userdata('alindex', $palindex);
             $this->session->set_userdata('git', $git);
+            $this->session->set_userdata('pdfdone', 0);
             $data['alresults'] = $this->alpirivena_model-> post_alresults();
 
             $pirivena = 1;
