@@ -19,10 +19,14 @@
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" style="width: 100%;">
-                    <a class="btn btn-success" style="height: 60%; " target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (STE).pdf" download>View Gazette</a>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <table>
+                    <tr><td><a class="btn btn-success" style="height: 100%; width:100%; font-size:11px" target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (E).pdf" download>View Gazette</a></td></tr>
+                    <tr><td><a class="btn btn-success" style="height: 100%; width:100%; font-size:11px" target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (S).pdf" download>ගැසට් පත්‍රය</a></td></tr>
+                    <tr><td><a class="btn btn-success" style="height: 100%; width:100%; font-size:11px" target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (T).pdf" download>வர்த்தமானப் பத்திரிகை</a></td></tr>
+                </table>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <p class="nav-item nav-link active mr-auto" style="font-size: small;">
-                    <table style="font-size: small; color: white;"><b>
+                    <table style="font-size: small; color: white; width:100%"><b>
                         <tr><td>Contact: &nbsp;</td><td>0112787303</td></tr>
                         <tr><td></td><td>0112787385</td></tr> 
                         <tr><td></td><td>0112787393</td></tr> 
