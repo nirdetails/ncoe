@@ -184,7 +184,7 @@
                 <option value="">SELECT</option>
                 <?php
                         foreach($alsubs as $key => $value){
-                            echo "<option value='$key'>$key - $value</option>";
+                            echo "<option value='$key'>$key - $value</option>";//comment
                         }
                     ?>
                 </select>
