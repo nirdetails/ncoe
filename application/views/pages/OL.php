@@ -1,7 +1,7 @@
 <h2><?= $title; ?></h2>
 <?php
   if (!isset($_SESSION["alindex"])){
-    redirect('/');//red
+    redirect('/');
   }
 ?>
 <span style="color: red;"><?php echo validation_errors(); ?></span>
