@@ -108,4 +108,5 @@
   </div>
 
   </form>
-  <script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>
+
+<script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>

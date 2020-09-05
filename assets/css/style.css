@@ -8,13 +8,12 @@ html, body {
   margin: 0 auto -50px;
 }
 .footer {
-  position: fixed;
-  top : auto;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: black;
   color: white;
   text-align: center;
-  height: 40px; 
-} 
+  height: 10%;
+}

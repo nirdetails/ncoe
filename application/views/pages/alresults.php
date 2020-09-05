@@ -86,6 +86,15 @@
   <a class="btn btn-primary" href="<?php echo site_url(); ?>/olresults">Next</a>  
   <!-- <button  type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
   </div>
-
+  </div>
+<div class="row">
+  &nbsp;
+</div>
+<br>
+<footer class="footer">
+    <div class="container">
+        <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
+    </div>
+</footer>
 
 
