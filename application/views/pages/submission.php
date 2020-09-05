@@ -76,3 +76,10 @@ if($_SESSION['pdfdone'] == 1){
       <div class="col-sm-4">&nbsp;</div>
     </div>
   </form>
+</div>
+<br>
+<footer class="footer">
+    <div class="container">
+        <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
+    </div>
+</footer>

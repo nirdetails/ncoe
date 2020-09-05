@@ -2,10 +2,6 @@
 </div>
  <!-- Site footer -->
  
-<div class="row">
-  &nbsp;
-</div>
-<br>
 <!-- <footer class="footer">
    <div class="container footer-text">
        <h5 style="padding-top:7px;">Ministry of Education<h5>
