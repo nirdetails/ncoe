@@ -31,7 +31,8 @@
                     <p class="nav-item nav-link active mr-auto" style="font-size: small;">
                     <table style="font-size: small; color: white; width:100%"><b>
                         <tr><td colspan="2"><b>For Help</b></td></tr>
-                        <tr><td>Contact: </td><td>0112787303</td></tr>
+                        <tr><td>Contact: </td><td>1919</td></tr>
+                        <tr><td></td><td>0112787303</td></tr>
                         <tr><td></td><td>0112787385</td></tr> 
                         <tr><td></td><td>0112787393</td></tr> 
                         <tr><td></td><td>0112787399</td></tr> 
