@@ -8,7 +8,7 @@
 <span style="color: red;text-decoration: underline; margin: auto; font-size: 28px;"><b>විශේෂ දැනුම් දීමයි..!</b></span>
 <br>
 <span style="margin: auto; font-size: 24px;">
-අයදුම්පත්‍රය පිරවීමට ප්‍රථම ගැසට් පත්‍රයේ උපදෙස් <span style="color: red;text-decoration: underline; font-size: 25px;"><b>අනිවාර්යයෙන්ම</b></span> කියවිය යුතුය. විශේෂ උපදෙස් මෙතනින්. <a target="_blank" href="<?php echo base_url();?>/assets/files/Instructions(S).pdf">මෙතනින්.</a>
+අයදුම්පත්‍රය පිරවීමට ප්‍රථම ගැසට් පත්‍රයේ උපදෙස් <span style="color: red;text-decoration: underline; font-size: 25px;"><b>අනිවාර්යයෙන්ම</b></span> කියවිය යුතුය. විශේෂ උපදෙස් <a target="_blank" href="<?php echo base_url();?>/assets/files/Instructions(S).pdf">මෙතනින්.</a>
 </span>
 <br>
 <br>
