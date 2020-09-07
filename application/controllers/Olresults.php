@@ -27,11 +27,6 @@ class Olresults extends CI_Controller{
             $olindex2 = $this->input->post('index2');
             $olindex3 = $this->input->post('index3');
             $attempts = $this->input->post('sel1');
-
-            $this->session->set_userdata('olindex1', $olindex1);
-            $this->session->set_userdata('olindex2', $olindex2);
-            $this->session->set_userdata('olindex3', $olindex3);
-            $this->session->set_userdata('attempts', $attempts);
             
             if($olindex1 != ""){
                 $data['olresults1'] = $this->olresults_model-> get_olresults1($olind1);
@@ -96,6 +91,11 @@ class Olresults extends CI_Controller{
                 $this->load->view('pages/olresults',$data);
                 $this->load->view('templates/footer');
             }
+
+            $this->session->set_userdata('olindex1', $olindex1);
+            $this->session->set_userdata('olindex2', $olindex2);
+            $this->session->set_userdata('olindex3', $olindex3);
+            $this->session->set_userdata('attempts', $attempts);
         }
         // var_dump($data);
         

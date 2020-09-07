@@ -5,7 +5,7 @@ class Olresults_model extends CI_Model{
     }
 
     public function get_olresults1($olind1 = FALSE){
-        if($olind1 == NULL){
+        if($olind1 == NULL && isset($_SESSION['olindex1']) && !empty($_SESSION['olindex1'])){
             $olindex1 = $_SESSION['olindex1'];
             $query1 = $this->db->get_where('ol_result', array('OL_index' => $olindex1));
 
@@ -19,7 +19,7 @@ class Olresults_model extends CI_Model{
     }
 
     public function get_olresults2($olind2 = FALSE){
-        if($olind2 == NULL){
+        if($olind2 == NULL && isset($_SESSION['olindex2']) && !empty($_SESSION['olindex2'])){
             $olindex2 = $_SESSION['olindex2'];
             $query2 = $this->db->get_where('ol_result', array('OL_index' => $olindex2));
 
@@ -33,7 +33,7 @@ class Olresults_model extends CI_Model{
     }
 
     public function get_olresults3($olind3 = FALSE){
-        if($olind3 == NULL){
+        if($olind3 == NULL && isset($_SESSION['olindex3']) && !empty($_SESSION['olindex3'])){
             $olindex3 = $_SESSION['olindex3'];
             $query3 = $this->db->get_where('ol_result', array('OL_index' => $olindex3));
         

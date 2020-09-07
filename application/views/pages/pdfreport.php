@@ -43,7 +43,6 @@ ob_start();
                 foreach ($districts as $key => $value) {
                     if ($key == $district) { 
                         echo "<label for='district'><b>13. District: </b></label>". $key." - " .$value."<br>";
-                   
                     }
                 }?>
             <!-- <label for="Sripada">12. Are you applying for Sripada NCoE? </label><br>
