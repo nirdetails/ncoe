@@ -51,9 +51,9 @@ class Olresults extends CI_Controller{
                 $data['olresults2'] = '';
                 $olindex2 = 'N/A';
             }
-            if($olindex3 != "" && $olindex3 != $olindex1 && $olindex3 != $olindex2){
+            if($olindex2 != "" && $olindex3 != "" && $olindex3 != $olindex1 && $olindex3 != $olindex2){
                 $data['olresults3'] = $this->olresults_model-> get_olresults3($olind3);
-                if(!empty($data['olresults3'])){
+                if(!empty($data['olresults3']) && !empty($data['olresults2'])){
                     if($data['olresults3'][0]['year'] != $data['olresults1'][0]['year'] && $data['olresults3'][0]['year'] != $data['olresults2'][0]['year']){
                     
                     }else{
