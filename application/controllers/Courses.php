@@ -36,7 +36,7 @@ class Courses extends CI_Controller{
 
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'pdf';
-        $config['max_size'] = 2048;
+        $config['max_size'] = 10240;
         $config['max_file_uploads'] = 3;
 
         $this->load->library('upload', $config);
