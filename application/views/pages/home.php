@@ -31,13 +31,15 @@
     <p style="text-align:center; font-weight:900; text-decoration: underline; font-size: 20px; color: red;"> 2020 වර්ෂයේ විද්‍යාපීඨ අයදුම්කරන්නන් වෙත කෙරෙන විශේෂ දැනුම් දීමයි.</p>
 •	2020.09.04 දිනැති ගැසට් නිවේදනයේ පාඨමාලා අංක 49 හා 50 - ව්‍යාපාර හා ගිණුම්කරණ අධ්‍යයනය (සිංහල හා දෙමළ මාධ්‍ය) පාඨමාලා සඳහා 2018 වර්ෂයේ අ.පො.ස. (උ.පෙළ) විභාගය සඳහා ගිණුම්කරණය, ව්‍යාපාර අධ්‍යයනය හා ආර්ථික විද්‍යාව යන විෂය තුන හදාරන ලද අයදුම්කරුවන්ට ද අදාළ මාධ්‍යයෙන් ඉල්ලුම් කල හැක.
 <br>
+<a href="<?php echo base_url();?>/assets/files/Special_Notice(s).pdf">වැඩි විස්තර</a> 
 <br>
 <p style="text-align:center; font-weight:900; text-decoration: underline; font-size: 20px; color: red;">2020 ஆம் ஆண்டிற்கு கல்வியியற் கல்லூரிக்கு விண்ணப்பிப்பவர்களின் விசேட கவனத்திற்கு.</p>
 •	04.09.2020 ஆம் திகதிய வர்த்தமானி அறிவித்தலின் பாடநெறி இலக்கம் 49 மற்றும் 50 - வர்த்தகம் மற்றும் கணக்கீட்டுக் கல்வி (சிங்களம் மற்றும் தமிழ் மொழிமூலம்) பாடநெறிக்காக 2018 ஆம் ஆண்டு க.பொ.த (உ.தர) பரீட்சையின் கணக்கியல், வணிகக்கல்வி, மற்றும் பொருளியல் ஆகிய மூன்று பாடங்களிலும் சித்தியடைந்த விண்ணப்பதாரிகளுக்கு உரிய மொழியில் விண்ணப்பிக்க முடியும். 
-<br>
+<br><a href="<?php echo base_url();?>/assets/files/Special_Notice(t).pdf">மேலும் தகவல்</a> 
 <br>
 <p style="text-align:center; font-weight:900; text-decoration: underline; font-size: 20px; color: red;">Special Notice for NCoE Applicants in year 2020</p>
-•	Applicants those who have passed the G.C.E.(A/L) in year 2018 with Accounting, Business Studies and Economics of the Commerce Stream can apply in the relevant medium for the course No 49 / 50 – Business and Accounting studies (Sinhala / Tamil) mentioned in the Gazette Notification on 04.09.2020.
+•	Applicants those who have passed the G.C.E.(A/L) in year 2018 with Accounting, Business Studies and Economics of the Commerce Stream can apply in the relevant medium for the course No 49 / 50 – Business and Accounting studies (Sinhala / Tamil) mentioned in the Gazette Notification on 04.09.2020. 
+<br><a href="<?php echo base_url();?>/assets/files/Special_Notice(e).pdf">More Info.</a>
 <br>
     </div>
 </div>
@@ -66,15 +68,18 @@
     </div>
 </div>
 <br><br>
-<!-- <div class="row" style="margin: auto; text-align:center;">
+<!-- <form action="<?php //echo site_url(); ?>editrec/index" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<div class="row" style="margin: auto; text-align:center;">
     <div class="col-sm-4">&nbsp;</div>
     <div class="col-sm-4" style="border: 5px solid green; padding: 10px;">
+    <span style="color: red;"><?php // echo validation_errors(); ?></span>
         Enter A/L Index Number
         <input class="form-control" type="text" name="alindex" id="alindex" style="width: 100%;"><br>
-        <a class="btn btn-warning" href="#" style="width: 100%;">Edit my records</a>
+        <input type="submit" class="btn btn-warning" style="width: 100%;" value="Edit my records">
     </div>
     <div class="col-sm-4">&nbsp;</div>
-</div> -->
+</div>
+</form> -->
  <!-- Site footer -->
 </div>
 <div class="row" style="height: 80%">
