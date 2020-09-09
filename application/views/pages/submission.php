@@ -9,9 +9,9 @@ if($_SESSION['pdfdone'] == 1){
   session_destroy();
   redirect('/');
 }
-  // if (!isset($_SESSION["alindex"])){
-  //   redirect('/');
-  // }
+  if (!isset($_SESSION["alindex"])){
+    redirect('/');
+  }
   // var_dump($_SESSION['pdfdone']);
 
 ?>
@@ -71,8 +71,15 @@ if($_SESSION['pdfdone'] == 1){
     <div class="row">
       <div class="col-sm-4">&nbsp;</div>
       <div class="col-sm-4">
-        <button style= "padding:20px;font-size:20px; width: 100%;" type="submit" name="btnprv" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Submit</button>
+        <button formtarget="_blank" style= "padding:20px;font-size:20px; width: 100%;" type="submit" name="btnprv" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Submit</button>
       </div>
       <div class="col-sm-4">&nbsp;</div>
     </div>
   </form>
+</div>
+<br>
+<footer class="footer">
+    <div class="container">
+        <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
+    </div>
+</footer>

@@ -31,7 +31,6 @@ class Pdfgen extends CI_Controller {
         $data['course3s'] = $_SESSION['course3'];
         $data['gitmk'] = $_SESSION['gitmk'];
 
-
 		$data['title'] = 'Test Page';
         $this->load->helper('pdf_helper');
         if($data['pirivena'] == 1){

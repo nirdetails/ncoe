@@ -54,6 +54,9 @@
       <a class="btn btn-primary" style="display:none" id="submit_button"  href="<?php echo site_url(); ?>/submission">Accept</a> 
     </div>
   </div>
+</form>
+</div>
+
 <script>
   var termsCheckBox = document.getElementById("gridCheck1")
   function terms_changed(){

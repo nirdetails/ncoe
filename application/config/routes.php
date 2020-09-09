@@ -9,6 +9,8 @@ $route['alresults'] = 'alresults/index';
 $route['prirvenaal'] = 'alpirivena/index';
 $route['pdfgen/pdf'] = 'pdfgen/pdf';
 
+$route['dashboard'] = 'dashboard/view/dashboard';
+
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';

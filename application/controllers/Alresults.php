@@ -58,8 +58,6 @@ class Alresults extends CI_Controller{
             }
             
         }
-
         // var_dump($alstream);
-        
     }
 }
