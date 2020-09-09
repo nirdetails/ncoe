@@ -79,12 +79,14 @@
     <div class="form-group">
       <label for="category">Category: </label><br>
       <?php if($_SESSION['category'] == "Catholic" ){ ?>
-        <input type="radio" name="category" value="Catholic" checked>Catholic
-        <input type="radio" name="category" value="Christianity">Christianity
-      <?php } ?>
-      <?php if($_SESSION['category'] == "Christianity" ){ ?>
+        <input type="radio" name="category" value="Catholic" checked> Catholic
+        <input type="radio" name="category" value="Christianity"> Christianity
+      <?php }elseif($_SESSION['category'] == "Christianity" ){ ?>
+        <input type="radio" name="category" value="Catholic"> Catholic
+        <input type="radio" name="category" value="Christianity" checked> Christianity
+        <?php } else{ ?>
         <input type="radio" name="category" value="Catholic">Catholic
-        <input type="radio" name="category" value="Christianity" checked>Christianity
+        <input type="radio" name="category" value="Christianity"> Christianity
       <?php } ?>
     </div>
   </div>
@@ -112,7 +114,7 @@
     <div class="form-group">
     <label for="gitmk"><b>GIT Grades: </b></label><br>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
-      <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade" value="<?php echo $_SESSION['gitmk']; ?>">
+      <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade">
         <option value="0" selected disabled>Select your Grade</option>
         <?php
           foreach($gitgrades as $gitgrade){

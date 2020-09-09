@@ -68,7 +68,7 @@
     </div>
 </div>
 <br><br>
-<!-- <form action="<?php //echo site_url(); ?>editrec/index" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<!-- <form action="<?php // echo site_url(); ?>editrec/index" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <div class="row" style="margin: auto; text-align:center;">
     <div class="col-sm-4">&nbsp;</div>
     <div class="col-sm-4" style="border: 5px solid green; padding: 10px;">
