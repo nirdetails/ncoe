@@ -79,12 +79,14 @@
     <div class="form-group">
       <label for="category">Category: </label><br>
       <?php if($_SESSION['category'] == "Catholic" ){ ?>
-        <input type="radio" name="category" value="Catholic" checked>Catholic
-        <input type="radio" name="category" value="Christianity">Christianity
-      <?php } ?>
-      <?php if($_SESSION['category'] == "Christianity" ){ ?>
+        <input type="radio" name="category" value="Catholic" checked> Catholic
+        <input type="radio" name="category" value="Christianity"> Christianity
+      <?php }elseif($_SESSION['category'] == "Christianity" ){ ?>
+        <input type="radio" name="category" value="Catholic"> Catholic
+        <input type="radio" name="category" value="Christianity" checked> Christianity
+        <?php } else{ ?>
         <input type="radio" name="category" value="Catholic">Catholic
-        <input type="radio" name="category" value="Christianity" checked>Christianity
+        <input type="radio" name="category" value="Christianity"> Christianity
       <?php } ?>
     </div>
   </div>
