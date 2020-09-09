@@ -62,10 +62,16 @@
   </div>
 
   <div class="col-sm-12" id="category"  style="display :none">  
-    <div class="form-group">
+  <div class="form-group">
       <label for="category">Category: </label><br>
-      <input type="radio" name="category" value="Catholic"> Catholic &nbsp;
-      <input type="radio" name="category" value="Christianity"> Christianity
+      <?php if($select['category'] == "Catholic" ){ ?>
+        <input type="radio" name="category" value="Catholic" checked>Catholic
+        <input type="radio" name="category" value="Christianity">Christianity
+      <?php } ?>
+      <?php if($select['category'] == "Christianity" ){ ?>
+        <input type="radio" name="category" value="Catholic">Catholic
+        <input type="radio" name="category" value="Christianity" checked>Christianity
+      <?php } ?>
     </div>
   </div>
 <?php $gitgrades = array('A','B','C','S','F','+','X','N'); ?>
@@ -189,18 +195,42 @@
         <?php } ?>
     </div>
 
+    <?php $titlevals = array('Mr', 'Miss', 'Rev'); ?>
     <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group"> 
-                <label for="title">Title: </label>
-                <input type="text" class="form-control" id="title" placeholder="Mr/Mrs/Miss/Rev.." name="title" value="<?php echo $person['Title']; ?>">
-             </div>
+      <div class="col-sm-6">
+        <div class="form-group"> 
+          <label for="title">Title: <span style="color:red">* <?php echo form_error('title'); ?></span></label>
+          <select class="form-control" id="title" placeholder="Mr/Mrs/Miss/Rev.." name="title">
+          <option value="">Select</option>
+          <?php 
+          foreach($titlevals as $titleval){
+            if($titleval == $person['Title']){
+              echo "<option value='$titleval' Selected>$titleval</option>";
+            }else{
+              echo "<option value='$titleval'>$titleval</option>";
+            }
+          }
+          ?>
+          </select>
         </div>
+        </div>
+        <?php $ethnicvals  = array('Sinhalese', 'Sri Lankan Tamil' , 'Tamil of Indian Origin', 'Muslim', 'Other'); ?>
         <div class="col-sm-6">   
             <div class="form-group">          
-                <label for="ethnicity">Ethnicity: </label>
-                <input type="text" class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity" value="<?php echo $person['Ethnicity']; ?>">      
-             </div>
+            <label for="ethnicity">Ethnicity: <span style="color:red">* <?php echo form_error('ethnicity'); ?></span></label>
+            <select class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity">
+            <option value="">Select</option>
+            <?php
+              foreach($ethnicvals as $ethnicval){
+                if($ethnicval == $person['Ethnicity']){
+                  echo "<option value='$ethnicval' Selected>$ethnicval</option>";
+                }else{
+                  echo "<option value='$ethnicval'>$ethnicval</option>";
+                }
+              }
+            ?>
+            </select>
+            </div>
         </div>
     </div>
 
@@ -225,6 +255,10 @@
             <label for="home">Email: </label>
             <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email" value="<?php echo $person['email']; ?>">             
     </div>
+    <?php 
+      $version = $person['version'] + 1;
+    ?>
+    <input type="hidden" value="<?php echo $version; ?>" name="version" id="version">
     <!-- <button type="submit" name="btnprv" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span> Previous</button> -->
     <!-- <a class="btn btn-primary" href="">Recheck</a> -->
     <button formtarget="_blank" type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Submit </button>
