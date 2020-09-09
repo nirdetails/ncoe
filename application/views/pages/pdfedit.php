@@ -48,7 +48,7 @@ ob_start();
             <!-- <label for="Sripada">12. Are you applying for Sripada NCoE? </label><br>
             <label for="state">13. Are your parents are State Workers? </label><br><br> -->
             <?php } ?>
-            
+            <?php var_dump($alresult); ?>
             <?php foreach($alresult as $alres){ ?> 
             <h4><b>A/L Details: </b></h4>
             <label for="alindex"><b>13. A/L Index No:</b></label><?php echo $alres['AL_index']; ?><br>
