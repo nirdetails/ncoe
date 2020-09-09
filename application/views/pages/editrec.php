@@ -5,7 +5,7 @@
 <form action="<?php echo site_url(); ?>editrec/editdata" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <?php foreach($selection as $select){ ?>
   <div class="form-group">
-    <label for="preference1">Select Your First Preference: </label>
+    <label for="preference1">Select Your First Preference: </label><span style="color:red">* <?php echo form_error('course1'); ?></span>
     <select class="form-control" id="course1" name="course1">
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
@@ -54,7 +54,7 @@
           <label for="coursename"><b>Physical Education Marks: </b></label><br>
           <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
           <?php foreach($personal as $person){ ?>
-            <input type="number" class="form-control" id="pemarks" name="pemarks" value="<?php echo $person['pemarks'] ?>">  
+            <input type="text" class="form-control" id="pemarks" name="pemarks" value="<?php echo $person['pemarks'] ?>">  
           <?php } ?>   
         </div>
       </div>
@@ -63,15 +63,18 @@
 
   <div class="col-sm-12" id="category"  style="display :none">  
   <div class="form-group">
-      <label for="category">Category: </label><br>
+      <label for="category">Category: </label><span style="color:red">* </span><br>
       <?php if($select['category'] == "Catholic" ){ ?>
-        <input type="radio" name="category" value="Catholic" checked>Catholic
-        <input type="radio" name="category" value="Christianity">Christianity
-      <?php } ?>
-      <?php if($select['category'] == "Christianity" ){ ?>
-        <input type="radio" name="category" value="Catholic">Catholic
-        <input type="radio" name="category" value="Christianity" checked>Christianity
-      <?php } ?>
+        <input type="radio" name="category" value="Catholic" checked> Catholic &nbsp;
+        <input type="radio" name="category" value="Christianity"> Christianity
+      <?php } elseif($select['category'] == "Christianity" ){ ?>
+        <input type="radio" name="category" value="Catholic"> Catholic &nbsp;
+        <input type="radio" name="category" value="Christianity" checked> Christianity
+      <?php } else{ ?>
+        <input type="radio" name="category" value="Catholic"> Catholic &nbsp;
+        <input type="radio" name="category" value="Christianity"> Christianity
+      <?php }
+      ?>
     </div>
   </div>
 <?php $gitgrades = array('A','B','C','S','F','+','X','N'); ?>
@@ -81,7 +84,7 @@
   <div class="col-sm-4" style="padding-left: 0px; display :none;" id="gitmarks">
   <?php //} ?>
     <div class="form-group">
-    <label for="gitmk"><b>GIT Grades: </b></label><br>
+    <label for="gitmk"><b>GIT Grades: </b></label><br><span style="color:red">* </span>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
       <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade">
         <option value="0" selected disabled>Select your Grade</option>
@@ -105,7 +108,7 @@
 <div class="form-group">
     
 <div class="form-group">
-      <label for="emailindex" style="display :block">O/L index number:</label>
+      <label for="emailindex" style="display :block">O/L index number:</label><span style="color:red">* <?php echo form_error('olindex1'); ?></span>
       <input value="<?php echo $person['OLindex1']; ?>" type="text" class="form-control" id="olindex1" placeholder="Enter your  1st index " name="olindex1" style="display :block">
     </div>
 
@@ -121,26 +124,26 @@
 <hr>
   <div class="form-group">
   <?php // var_dump($_SESSION['sworker']); ?>
-      <label for="fullname">Name in Full: </label>
+      <label for="fullname">Name in Full: </label><span style="color:red">* <?php echo form_error('fullname'); ?></span>
       <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" name="fullname" value="<?php echo $person['fullname']; ?>">
     </div>
     <div class="form-group">
-      <label for="namewithinitials">Name with Initials: </label>
+      <label for="namewithinitials">Name with Initials: </label><span style="color:red">* <?php echo form_error('namewithinitials'); ?></span>
       <input type="text" class="form-control" id="namewithinitials" placeholder="Enter your name with Initials" name="namewithinitials" value="<?php echo $person['namewithinitials']; ?>">
     </div>
     <div class="form-group">
-      <label for="dob">Date of Birth: </label>
+      <label for="dob">Date of Birth: </label><span style="color:red">* <?php echo form_error('dob'); ?></span>
       <input type="date" class="form-control" id="dob"  name="dob" value="<?php echo $person['dob']; ?>">
     </div>
     <div class="form-group">
-      <label for="address">Permanent Address: </label>
+      <label for="address">Permanent Address: </label><span style="color:red">* <?php echo form_error('Addressl1'); ?></span>
       <input type="text" class="form-control" id="addressline1" placeholder="Enter your address- line01" name="addressline1" value="<?php echo $person['Addressl1']; ?>"><br>
       <input type="text" class="form-control" id="addressline2" placeholder="Enter your address- line02" name="addressline2" value="<?php echo $person['Addressl2']; ?>"><br>
       <input type="text" class="form-control" id="addressline3" placeholder="Enter your address- line03" name="addressline3" value="<?php echo $person['Addressl3']; ?>"><br>
       <input type="text" class="form-control" id="addressline4" placeholder="Enter your address- line04" name="addressline4" value="<?php echo $person['Addressl4']; ?>"><br>
     </div>
     <div class="form-group">
-      <label for="district">Recendent District Name and Number: </label>
+      <label for="district">Recendent District Name and Number: </label><span style="color:red">* <?php echo form_error('district'); ?></span>
       <!-- <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district"> -->
       <?php 
         $districts = array('16' => 'Ampara', "20" => 'Anuradhapura',"22" => 'Badulla',"15" => 'Batticaloa',"01" => 'Colombo',"07" => 'Galle',"02" => 'Gampaha',"09" => 'Hambantota',"10" => 'Jaffna',"03" => 'Kaluthara',"04" => 'Kandy',"25" => 'Kegalle',"11" => 'Kilinochchi',"18" => 'Kurunegala',"12" => 'Mannar',"05" => 'Matale',"08" => 'Matara',"23" => 'Monaragala',"14" => 'Mullaitivu',"06" => 'Nuwara Eliya',"21" => 'Polonnaruwa',"19" => 'Puttalam',"24" => 'Ratnapura',"17" => 'Trincomalee',"13" => 'Vavuniya');
@@ -161,7 +164,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
-             <label for="nic">NIC Number: </label>
+             <label for="nic">NIC Number: </label><span style="color:red">* <?php echo form_error('nic'); ?></span>
              <input type="text" class="form-control" id="nic" placeholder="Enter your NIC" name="nic" value="<?php echo $person['NIC']; ?>">
            </div>
         </div>
@@ -169,7 +172,7 @@
         <?php if($person['Gender'] == "female"){ ?>
         <div class="col-sm-6">  
             <div class="form-group">
-              <label for="gender">Gender: </label><br>
+              <label for="gender">Gender: </label><span style="color:red">* <?php echo form_error('gender'); ?></span><br>
               <input type="radio" name="gender"
               <?php if (isset($gender) && $gender=="female") echo "checked";?>
               value="female" checked>Female
@@ -183,7 +186,7 @@
         <?php if($person['Gender'] == "male"){ ?>
         <div class="col-sm-6">  
             <div class="form-group">
-              <label for="gender">Gender: </label><br>
+              <label for="gender">Gender: </label><span style="color:red">* <?php echo form_error('gender'); ?></span><br><br>
               <input type="radio" name="gender"
               <?php if (isset($gender) && $gender=="female") echo "checked";?>
               value="female">Female

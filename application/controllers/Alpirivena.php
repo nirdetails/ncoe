@@ -49,7 +49,7 @@ class Alpirivena extends CI_Controller{
             $pirivena = 1;
             $this->session->set_userdata('pirivena', $pirivena);
             $this->load->view('templates/header');
-            $this->load->view('pages/OL',$data);
+            $this->load->view('pages/ol',$data);
             $this->load->view('templates/footer');
 
         }
