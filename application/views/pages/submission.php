@@ -9,9 +9,9 @@ if($_SESSION['pdfdone'] == 1){
   session_destroy();
   redirect('/');
 }
-  // if (!isset($_SESSION["alindex"])){
-  //   redirect('/');
-  // }
+  if (!isset($_SESSION["alindex"])){
+    redirect('/');
+  }
   // var_dump($_SESSION['pdfdone']);
 
 ?>

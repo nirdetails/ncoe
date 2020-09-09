@@ -112,7 +112,7 @@
     <div class="form-group">
     <label for="gitmk"><b>GIT Grades: </b></label><br>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
-      <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade" value="<?php echo $_SESSION['gitmk']; ?>">
+      <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade">
         <option value="0" selected disabled>Select your Grade</option>
         <?php
           foreach($gitgrades as $gitgrade){

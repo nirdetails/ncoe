@@ -31,11 +31,33 @@ class Courses_model extends CI_Model{
             'filenamer' => $post_filer1.','.$post_filer2.','.$post_filer3,
             'filenamew' => $post_filew1.','.$post_filew2.','.$post_filew3,
             'gitmarks' => $this->input->post('gitmk'),
-       );
+        );
 
-    // Insert preference detail
-         return $this->db->insert('courseselect', $data);//Tablename is used as 'student      
+        // Insert preference detail
+        return $this->db->insert('courseselect', $data);//Tablename is used as 'student      
 
 
+    }
+
+    public function choiceDetails(){
+        $alindex = $this->input->post('alindex');
+        $this->db->where('stuid', $alindex);
+        $query = $this->db->get('courseselect');
+
+        return $query->result_array();
+    }
+
+    public function updatecourses(){
+        $alindex = $this->input->post('alindex');
+        $data = array(
+            'pref1' => $this->input->post('course1'),
+            'pref2' => $this->input->post('course2'),
+            'pref3' => $this->input->post('course3'),
+            'category' => $this->input->post('category'),
+            'gitmarks' => $this->input->post('gitmk')
+        );
+
+        $this->db->where('stuid', $alindex);
+		return $this->db->update('courseselect', $data);
     }
 }

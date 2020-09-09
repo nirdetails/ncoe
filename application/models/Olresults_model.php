@@ -45,4 +45,28 @@ class Olresults_model extends CI_Model{
         return $query3->result_array();
         // var_dump($query);
     }
+
+    public function edit_ol1(){
+        $olindex1 = $this->input->post('olindex1');
+        $this->db->where('OL_index', $olindex1);
+        $query = $this->db->get('ol_result');
+
+        return $query->result_array();
+    }
+
+    public function edit_ol2(){
+        $olindex2 = $this->input->post('olindex2');
+        $this->db->where('OL_index', $olindex2);
+        $query = $this->db->get('ol_result');
+
+        return $query->result_array();
+    }
+
+    public function edit_ol3(){
+        $olindex3 = $this->input->post('olindex3');
+        $this->db->where('OL_index', $olindex3);
+        $query = $this->db->get('ol_result');
+
+        return $query->result_array();
+    }
 }
