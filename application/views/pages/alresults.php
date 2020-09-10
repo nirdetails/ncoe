@@ -32,16 +32,16 @@
     <tbody>
       <tr>
         <td><?php echo $alresult['attempt'] ?></td>
-        <?php if($alresult['medium'] == 1){ ?>
+        <?php if($alresult['medium'] == 'S'){ ?>
           <td><?php echo "Sinhala" ?></td>
-        <?php }elseif($alresult['medium'] == 2){ ?>
+        <?php }elseif($alresult['medium'] == 'T'){ ?>
           <td><?php echo "Tamil" ?></td>
-        <?php }elseif($alresult['medium'] == 3){ ?>
+        <?php }elseif($alresult['medium'] == 'E'){ ?>
           <td><?php "English" ?></td>
         <?php } ?>
         <?php 
           if (!array_key_exists($alresult['sub1'], $alsubs)) {
-            echo "<td>". $alresult['sub1'] ."</td>";
+            // echo "<td>". $alresult['sub1'] ."</td>";
           }
           foreach($alsubs as $key => $value){
             if($key == $alresult['sub1']){
@@ -51,9 +51,10 @@
         ?>
         <!-- <td><?php //echo $alresult['sub1'] ?></td> -->
         <td><?php echo $alresult['grade1'] ?></td>
+
         <?php 
           if (!array_key_exists($alresult['sub2'], $alsubs)) {
-            echo "<td>". $alresult['sub2'] ."</td>";
+            // echo "<td>". $alresult['sub2'] ."</td>";
           }
           foreach($alsubs as $key => $value){
             if($key == $alresult['sub2']){
@@ -63,9 +64,10 @@
         ?>
         <td><?php echo $alresult['grade2'] ?></td>
         <!-- <td><?php //echo $alresult['sub3'] ?></td> -->
+
         <?php 
           if (!array_key_exists($alresult['sub3'], $alsubs)) {
-            echo "<td>". $alresult['sub3'] ."</td>";
+            // echo "<td>". $alresult['sub3'] ."</td>";
           }
           foreach($alsubs as $key => $value){
             if($key == $alresult['sub3']){
@@ -74,6 +76,7 @@
           }
         ?>
         <td><?php echo $alresult['grade3'] ?></td>
+        
         <!-- <td><?php //echo $alresult['sub4'] ?></td> -->
         <!-- <td><?php //echo $alresult['grade4'] ?></td> -->
         <!-- <td><?php //echo $alresult['gentst'] ?></td> -->

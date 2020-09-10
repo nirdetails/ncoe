@@ -100,4 +100,28 @@ class Olresults extends CI_Controller{
         // var_dump($data);
         
     }
+
+    public function checkpirolres(){
+        $this->form_validation->set_rules('index1', 'Index Number', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        $this->form_validation->set_rules('index2', 'Index Number', 'is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        $this->form_validation->set_rules('index3', 'Index Number', 'is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        if($this->form_validation->run() === FALSE){
+            $data['title'] = 'Enter Mulika Pirivena index numbers';
+            $this->load->view('templates/header');
+            $this->load->view('pages/olpirivena', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $olindex1 = $this->input->post('index1');
+            $olindex2 = $this->input->post('index2');
+            $olindex3 = $this->input->post('index3');
+            $attempts = $this->input->post('sel1');
+
+            $this->session->set_userdata('olindex1', $olindex1);
+            $this->session->set_userdata('olindex2', $olindex2);
+            $this->session->set_userdata('olindex3', $olindex3);
+            $this->session->set_userdata('attempts', $attempts);
+
+            redirect('students/sripada');
+        }
+    }
 }

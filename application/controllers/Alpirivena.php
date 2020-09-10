@@ -10,7 +10,7 @@ class Alpirivena extends CI_Controller{
 
 
     public function checkalres(){
-        $data['title'] = 'Enter O/L index number';
+        $data['title'] = 'Enter Mulika Pirivena index numbers';
 
         $this->form_validation->set_rules('alyear', 'Year', 'required');
         $this->form_validation->set_rules('index', 'Index No.', 'required|is_exist[stuents.alindex]');
@@ -49,7 +49,7 @@ class Alpirivena extends CI_Controller{
             $pirivena = 1;
             $this->session->set_userdata('pirivena', $pirivena);
             $this->load->view('templates/header');
-            $this->load->view('pages/ol',$data);
+            $this->load->view('pages/olpirivena',$data);
             $this->load->view('templates/footer');
 
         }
