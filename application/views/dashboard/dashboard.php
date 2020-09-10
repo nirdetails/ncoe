@@ -6,18 +6,18 @@
     <input type="submit" value="Submit" name="nicsubmit">
 <br><br>
 </form>
-<form action="<?php echo site_url(); ?>editrec/index" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<!-- <form action="<?php //echo site_url(); ?>editrec/index" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <div class="row" style="margin: auto; text-align:center;">
     <div class="col-sm-4">&nbsp;</div>
     <div class="col-sm-4" style="border: 5px solid green; padding: 10px;">
-    <span style="color: red;"><?php echo validation_errors(); ?></span>
+    <span style="color: red;"><?php //echo validation_errors(); ?></span>
         Enter A/L Index Number
         <input class="form-control" type="text" name="alindex" id="alindex" style="width: 100%;"><br>
         <input type="submit" class="btn btn-warning" style="width: 100%;" value="Edit my records">
     </div>
     <div class="col-sm-4">&nbsp;</div>
 </div>
-</form>
+</form> -->
 <?php
     $correct = 0;
     if(isset($_POST['nicsubmit'])){
