@@ -103,7 +103,7 @@
 </div>
 
 <hr>
-<?php } ?>
+<?php break; } ?>
 <?php foreach($personal as $person){ ?>
 <div class="form-group">
     
@@ -265,7 +265,7 @@
     <!-- <button type="submit" name="btnprv" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span> Previous</button> -->
     <!-- <a class="btn btn-primary" href="">Recheck</a> -->
     <button formtarget="_blank" type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Submit </button>
-<?php } ?>
+<?php break; } ?>
 </form>
 <script src="<?php echo site_url(); ?>assets/js/sripada.js"></script>
 <script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>
