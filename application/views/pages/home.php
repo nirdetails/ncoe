@@ -45,6 +45,22 @@
 </div>
 <br>
 <div class="row">
+    <div class="col-sm-12" style="border: 5px solid blue; padding: 10px; text-align:center; width: 100%">
+        <span style="text-align:center; font-weight:900; text-decoration: underline; font-size: 20px; color:red;">අයදුම්පත්‍රය සංස්කරණය කිරීමේ අවස්ථාව.</span><br>
+        2020 වර්ෂය සඳහා ජාතික අධ්‍යාපන විද්‍යාපීඨවලට ශික්ෂණලාභීන් බඳවා ගැනීම සඳහා මාර්ගගත ක්‍රමවේදය ඔස්සේ අයදුම් කිරීමේ දී සිදු වූ අතපසු වීම් වෙතොත් ඒවා නැවත නිවැරදි කර යොමු කිරීම සඳහා 2020.09.26 දින සිට 2020.09.30 දින දක්වා අවස්ථාව ලබා දෙනු ලැබේ. ඒ සම්බන්ධ උපදෙස් ඉදිරයේ දී ලබා දෙනු ඇත.</br>
+        <span style="text-align:center; font-weight:900; font-size: 18px;">සැ.යු. - එම කාලසීමාව තුළ නව අයදුම් කිරීම් සඳහා අවස්ථාව ලබා දෙනු නොලැබේ.</span>
+        <br><br>
+        <span style="text-align:center; font-weight:900; text-decoration: underline; font-size: 18px; color:red;">விண்ணப்பத்தை மாற்றியமைப்பதற்கான வாய்ப்பு.</span><br>
+        <span style="font-size: 16px">2020 ஆம் ஆண்டிற்கு தேசிய கல்வியியற் கல்லூரிகளுக்கு பயிலுனர்களை ஆட்சேர்ப்புச் செய்வதற்கு தொடரறா (ழுடெiநெ) முறையியல் ஊடாக விண்ணப்பிக்கும் போது ஏதாவது பிழைகள் ஏற்பட்டிருந்தால் அவற்றை சரியாக திருத்திக்கொள்வதற்காக 26.09.2020 ஆம் திகதி தொடக்கம் 30.09.2020 ஆம் திகதி வரை சந்தர்ப்பம் வழங்கப்படவுள்ளது. இது தொடர்பான அறிவுறுத்தல்கள் பின்னர் வழங்கப்படும்.</span><br>
+        <span style="text-align:center; font-weight:900; font-size: 16px;">கவனத்திற்கொள்க – அக் காலப்பகுதிக்குள் புதிதாக விண்ணப்பிப்பதற்;கு சந்தர்ப்பம் வழங்கப்படமாட்டாது. </span>
+        <br><br>
+        <span style="text-align:center; font-weight:900; text-decoration: underline; font-size: 20px; color:red;">Opportunity to edit the application.</span><br>
+        <span style="font-size: 18px">A chance will be given to the applicants to edit the mistakes / errors done in applying for the National Colleges of Education Admission in year 2020 through online system, from 26.09.2020 to 30.09.2020. Further instructions will be provided later.</span><br> 
+        <span style="text-align:center; font-weight:900; font-size: 18px;">Note	- No new applications will be accepted during that period.</span><br>
+    </div>
+</div>
+<br>
+<div class="row">
     <div class="col-sm-2">
     </div>
     <div class="col-sm-4">
@@ -68,11 +84,11 @@
     </div>
 </div>
 <br><br>
-<!-- <form action="<?php // echo site_url(); ?>editrec/index" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<!-- <form action="<?php echo site_url(); ?>editrec/index" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <div class="row" style="margin: auto; text-align:center;">
     <div class="col-sm-4">&nbsp;</div>
     <div class="col-sm-4" style="border: 5px solid green; padding: 10px;">
-    <span style="color: red;"><?php // echo validation_errors(); ?></span>
+    <span style="color: red;"><?php echo validation_errors(); ?></span>
         Enter A/L Index Number
         <input class="form-control" type="text" name="alindex" id="alindex" style="width: 100%;"><br>
         <input type="submit" class="btn btn-warning" style="width: 100%;" value="Edit my records">
@@ -82,7 +98,10 @@
 </form> -->
  <!-- Site footer -->
 </div>
-<div class="row" style="height: 80%">
+<div class="row" style="height: 100%">
+  &nbsp;
+</div>
+<div class="row" style="height: 50%">
   &nbsp;
 </div>
 <br>
