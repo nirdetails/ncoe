@@ -39,7 +39,7 @@ class Editrec extends CI_Controller{
         $this->form_validation->set_rules('dob', 'Date of Birth', 'required');
         $this->form_validation->set_rules('addressline1', 'Permenant Address', 'required');
         $this->form_validation->set_rules('district', 'Recendent District Name and Number', 'required');
-        $this->form_validation->set_rules('nic', 'NIC Number', 'required|is_exist[stuents.NIC]|max_length[12]|min_length[10]');
+        $this->form_validation->set_rules('nic', 'NIC Number', 'required|max_length[12]|min_length[10]');
         $this->form_validation->set_rules('gender', 'Gender', 'required');
         $this->form_validation->set_rules('title', 'Title', 'required');
         $this->form_validation->set_rules('ethnicity', 'Ethnicity', 'required');

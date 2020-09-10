@@ -47,8 +47,7 @@ ob_start();
                 }?>
             <!-- <label for="Sripada">12. Are you applying for Sripada NCoE? </label><br>
             <label for="state">13. Are your parents are State Workers? </label><br><br> -->
-            <?php } ?>
-            <?php var_dump($alresult); ?>
+            <?php break; } ?>
             <?php foreach($alresult as $alres){ ?> 
             <h4><b>A/L Details: </b></h4>
             <label for="alindex"><b>13. A/L Index No:</b></label><?php echo $alres['AL_index']; ?><br>
@@ -88,7 +87,7 @@ ob_start();
                 <div style="height: 10px;"></div>
                 <br><br>
                 <label><b>19. Z-score: </b></label><?php echo $alres['zscore'] ?><br>
-            <?php } ?>
+            <?php break; } ?>
                 <br>
 
             <?php foreach($olresults1 as $olresult1){ if( $olresult1["OL_index"] != "N/A"){?><br>
@@ -147,7 +146,7 @@ ob_start();
                         <td><?php echo $olresult1['grade9']; ?></td>
                     </tr>
                 </table><br>
-            <?php }} ?>
+            <?php } break; } ?>
 
             <?php foreach($olresults2 as $olresult2){ if( $olresult2["OL_index"] != "N/A"){?>
             <label for="olindex">20. Index Number: <?php echo $olresult2["OL_index"]; ?><br><br>
@@ -204,7 +203,7 @@ ob_start();
                     <td><?php echo $olresult2['grade9']; ?></td>
                 </tr>
             </table><br>
-            <?php }}; ?>
+            <?php } break; }; ?>
 
             <?php foreach($olresults3 as $olresult3){ if( $olresult3["OL_index"] != "N/A"){?>
             <label for="olindex"><b>20. Index Number: </b><?php echo $olresult3["OL_index"] ?><br><br>
@@ -261,7 +260,7 @@ ob_start();
                     <td><?php echo $olresult3['grade9']; ?></td>
                 </tr>
             </table><br>
-            <?php }}; ?>
+            <?php } break; }; ?>
             
     <h4><b>Selected Courses: </b></h4>
     <ol>
@@ -293,12 +292,12 @@ ob_start();
     foreach($personal as $person){ 
         if($person['pemarks'] != NULL){ ?>
             <label for="pemarks"><b>21. Physical Education Marks: </b></label><?php echo $person['pemarks']; ?><br><br>
-    <?php }}?>
+    <?php } break; }?>
     <?php 
     foreach($selection as $select){
         if($select['gitmarks'] != NULL){ ?>
             <label for="gitmk"><b>22. GIT Grades: </b></label><?php echo $select['gitmarks']; ?><br><br>
-    <?php }} ?>
+    <?php } break; } ?>
     <!-- <h5>Declaration: </h5>
         <p style="text-align: justify">I am aware that I have forwarded my application in accordance with paragraph10.0 of the Gazette Notification, after reading and comprehending the Gazette Notification well. I certify that I have already acquired the qualifications mentioned in the Gazette Notification relevant to the Courses that have been applied by me. I am aware that the particulars furnished in the application by me are true and correct. I am aware that if any particulars given by me in this application are found to be false or incorrect or contradictory to the Gazette Notification, I am liable to be disqualified before selection or to be discontinued after selection. I certify that I have not registered to follow a course in a University/University Institute/any other Higher Education Institute/ I am not currently following a relevant course in an afore mentioned institute. I further certify that I agree to be discontinued from the course if It is found that the section 8.4 of the Gazette Notification has been/is violated by me. I declare that I agree to accept any punishment pronounced by the disciplinary board of the National College of Education and the Ministry of Education if I am found and proven to have been engaged in any action against the code of conduct of National Colleges of Education.</p>
         <div style="text-align:center">
@@ -306,7 +305,7 @@ ob_start();
         </div> -->
         23. Version No: <?php foreach($personal as $person){
             echo $person['version'];
-        } ?>
+        break; } ?>
     </div>
 </body>
 <?php
