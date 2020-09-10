@@ -46,19 +46,19 @@
 <br>
 <div class="row">
     <div class="col-sm-12" style="border: 5px solid blue; padding: 10px; text-align:center; width: 100%">
-        <span style="text-align:center; font-weight:900; text-decoration: underline; font-size: 20px; color:red;">අයදුම්පත්‍රය සංස්කරණය කිරීමේ අවස්ථාව.</span><br>
+        <span style="text-align:center; font-weight:900; text-decoration: underline; font-size: 20px; color:red;">අයදුම්පත්‍රයේ ඇතුලත් කරන ලද තොරතුරු සංස්කරණය සදහා අවස්ථාව.</span><br>
         2020 වර්ෂය සඳහා ජාතික අධ්‍යාපන විද්‍යාපීඨවලට ශික්ෂණලාභීන් බඳවා ගැනීම සඳහා මාර්ගගත ක්‍රමවේදය ඔස්සේ අයදුම් කිරීමේ දී සිදු වූ අතපසු වීම් වෙතොත් ඒවා නැවත නිවැරදි කර යොමු කිරීම සඳහා 
         <span style="font-weight:900; font-size: 18px; text-decoration: underline; color: #6600FF">2020.09.26</span> දින සිට 
         <span style="font-weight:900; font-size: 18px; text-decoration: underline; color: #6600FF">2020.09.30</span> දින දක්වා අවස්ථාව ලබා දෙනු ලැබේ. ඒ සම්බන්ධ උපදෙස් ඉදිරයේ දී ලබා දෙනු ඇත.</br>
         <span style="text-align:center; font-weight:900; font-size: 18px;">සැ.යු. - එම කාලසීමාව තුළ නව අයදුම් කිරීම් සඳහා අවස්ථාව ලබා දෙනු නොලැබේ.</span>
         <br><br>
-        <span style="text-align:center; font-weight:900; text-decoration: underline; font-size: 18px; color:red;">விண்ணப்பத்தை மாற்றியமைப்பதற்கான வாய்ப்பு.</span><br>
+        <span style="text-align:center; font-weight:900; text-decoration: underline; font-size: 18px; color:red;">ஏற்கனவே சமர்ப்பிக்கப்பட்ட விண்ணப்பத்தில் திருத்தம் மேற்கொள்வதற்கான வாய்ப்பு.</span><br>
         <span style="font-size: 16px">2020 ஆம் ஆண்டிற்கு தேசிய கல்வியியற் கல்லூரிகளுக்கு பயிலுனர்களை ஆட்சேர்ப்புச் செய்வதற்கு தொடரறா (ழுடெiநெ) முறையியல் ஊடாக விண்ணப்பிக்கும் போது ஏதாவது பிழைகள் ஏற்பட்டிருந்தால் அவற்றை சரியாக திருத்திக்கொள்வதற்காக 
         <span style="font-weight:900; font-size: 16px; text-decoration: underline; color: #6600FF">26.09.2020</span> ஆம் திகதி தொடக்கம் 
         <span style="font-weight:900; font-size: 16px; text-decoration: underline; color: #6600FF">30.09.2020</span> ஆம் திகதி வரை சந்தர்ப்பம் வழங்கப்படவுள்ளது. இது தொடர்பான அறிவுறுத்தல்கள் பின்னர் வழங்கப்படும்.</span><br>
         <span style="text-align:center; font-weight:900; font-size: 16px;">கவனத்திற்கொள்க – அக் காலப்பகுதிக்குள் புதிதாக விண்ணப்பிப்பதற்;கு சந்தர்ப்பம் வழங்கப்படமாட்டாது. </span>
         <br><br>
-        <span style="text-align:center; font-weight:900; text-decoration: underline; font-size: 20px; color:red;">Opportunity to edit the application.</span><br>
+        <span style="text-align:center; font-weight:900; text-decoration: underline; font-size: 20px; color:red;">Opportunity to edit the information in the already submitted application.</span><br>
         <span style="font-size: 18px">A chance will be given to the applicants to edit the mistakes / errors done in applying for the National Colleges of Education Admission in year 2020 through online system, from 
         <span style="font-weight:900; font-size: 18px; text-decoration: underline; color: #6600FF">26.09.2020</span> to 
         <span style="font-weight:900; font-size: 18px; text-decoration: underline; color: #6600FF">30.09.2020</span>. Further instructions will be provided later.</span><br> 
