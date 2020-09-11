@@ -37,7 +37,7 @@
 <br>
 <div class="row">
   <div class="col-sm-4">
-    <!-- <a href="" class="btn btn-primary">Mulika Pirivena</a> -->
+    <a href="<?php echo site_url(); ?>/olpirivena" class="btn btn-primary">Mulika Pirivena</a>
   </div>
 </div>
 </div>

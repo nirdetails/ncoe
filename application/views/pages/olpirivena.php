@@ -1,4 +1,4 @@
-<h2><?= $title; ?></h2>
+<h2>Enter Mulika Pirivena index numbers</h2>
 <?php
   if (!isset($_SESSION["alindex"])){
     redirect('/');
