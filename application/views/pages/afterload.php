@@ -1,7 +1,7 @@
 <?php
-  // if (!isset($_SESSION["nic"])){
-  //   redirect('/');
-  // }
+  if (!isset($_SESSION["nic"])){
+    redirect('/');
+  }
 ?>
 <!DOCTYPE html>
 <html>

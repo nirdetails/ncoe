@@ -51,7 +51,7 @@
     <div id="certificates" style="display :none">
       <div class="col-sm-12">
         <div class="form-group">
-          <label for="coursename"><b>Physical Education Marks: </b></label><br>
+          <label for="coursename"><b>Physical Education Marks: </b></label><span style="color:red">* <?php echo form_error('pemarks'); ?></span><br>
           <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
           <?php foreach($personal as $person){ ?>
             <input type="text" class="form-control" id="pemarks" name="pemarks" value="<?php echo $person['pemarks'] ?>">  
@@ -63,7 +63,7 @@
 
   <div class="col-sm-12" id="category"  style="display :none">  
   <div class="form-group">
-      <label for="category">Category: </label><span style="color:red">* </span><br>
+      <label for="category">Category: </label><span style="color:red">* <?php echo form_error('category'); ?></span><br>
       <?php if($select['category'] == "Catholic" ){ ?>
         <input type="radio" name="category" value="Catholic" checked> Catholic &nbsp;
         <input type="radio" name="category" value="Christianity"> Christianity
@@ -84,7 +84,7 @@
   <div class="col-sm-4" style="padding-left: 0px; display :none;" id="gitmarks">
   <?php //} ?>
     <div class="form-group">
-    <label for="gitmk"><b>GIT Grades: </b></label><br><span style="color:red">* </span>
+    <label for="gitmk"><b>GIT Grades: </b></label><br><span style="color:red">* <?php echo form_error('gitmk'); ?></span>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
       <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade">
         <option value="0" selected disabled>Select your Grade</option>
