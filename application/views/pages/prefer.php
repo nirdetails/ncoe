@@ -61,8 +61,8 @@
   <div class="col-sm-12" id="category"  style="display :none">  
     <div class="form-group">
       <label for="category">Category: </label><br>
-      <input type="radio" name="category" value="Catholic">Catholic
-      <input type="radio" name="category" value="Christianity">Christianity
+      <input type="radio" name="category" value="Catholic"> Catholic
+      <input type="radio" name="category" value="Christianity"> Christianity
     </div>
   </div>
   <div id="box" style="display :none">

@@ -16,6 +16,7 @@ $obj_pdf->SetFont('helvetica', '', 12);
 $obj_pdf->setFontSubsetting(false);
 $obj_pdf->AddPage();
 ob_start();
+// var_dump($alresult);
 // we can have any view part here like HTML, PHP etc
 ?>    
 

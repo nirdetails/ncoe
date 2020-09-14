@@ -77,6 +77,9 @@ class Editrec extends CI_Controller{
             $data['courses'] = $this->courses_model-> get_courses();
 
             $data['alresult'] = $this->alresults_model-> get_alresults();
+            if (empty($data['alresult'])){
+                $data['alresult'] = $this->alpirivena_model-> get_palresults();
+            }
             $data['olresults1'] = $this->olresults_model-> edit_ol1();
             $data['olresults2'] = $this->olresults_model-> edit_ol2();
             $data['olresults3'] = $this->olresults_model-> edit_ol3();
