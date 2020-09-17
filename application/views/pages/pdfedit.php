@@ -49,10 +49,14 @@ ob_start();
             <!-- <label for="Sripada">12. Are you applying for Sripada NCoE? </label><br>
             <label for="state">13. Are your parents are State Workers? </label><br><br> -->
             <?php break; } ?>
-            <?php foreach($alresult as $alres){ ?> 
+            <?php foreach($alresult as $alres){ //var_dump($alres);?> 
             <h4><b>A/L Details: </b></h4>
             <label for="alindex"><b>13. A/L Index No:</b></label><?php echo $alres['AL_index']; ?><br>
-            <label for="alyear"><b>14. A/L Year: </b></label>2018<br>
+            <?php if(array_key_exists('Year', $alres)){
+                echo '<label for="alyear"><b>14. A/L Year: </b></label>'.$alres['Year'].'<br>';
+            }else{
+                echo '<label for="alyear"><b>14. A/L Year: </b></label>2018<br>';
+            }?>
             <label for="alstream"><b>15. Stream: </b></label><?php echo $alres['stream'] ?><br>
             <label for="almedium"><b>16. Medium: </b></label><?php echo $alres['medium'] ?><br>
             <label for="alattempt"><b>17. Attempt: </b></label><?php echo $alres['attempt'] ?><br><br>
@@ -91,9 +95,12 @@ ob_start();
             <?php break; } ?>
                 <br>
 
-            <?php foreach($olresults1 as $olresult1){ if( $olresult1["OL_index"] != "N/A"){?><br>
             <h4><b>O/L Details: </b></h4>
-                <label for="olindex"><b>20. Index Number: </b><?php echo $olresult1["OL_index"]; ?><br><br>
+            <?php foreach($personal as $person){ ?>
+                <label for="olindex"><b>&nbsp;&nbsp; 20. Index Number 1: </b><?php echo $person["OLindex1"]; ?><br>
+            <?php }?>
+            <?php foreach($olresults1 as $olresult1){ if( $olresult1["OL_index"] != "N/A"){?><br>
+                <br>
                 <h4><b>O/L Results: </b></h4>
                 <table style="width: 100%">
                     <tr>
@@ -149,8 +156,11 @@ ob_start();
                 </table><br>
             <?php } break; } ?>
 
+            <?php foreach($personal as $person){ ?>
+                <label for="olindex"><b> 20. Index Number 2: </b><?php echo $person["OLindex2"]; ?><br>
+            <?php }?>
             <?php foreach($olresults2 as $olresult2){ if( $olresult2["OL_index"] != "N/A"){?>
-            <label for="olindex">20. Index Number: <?php echo $olresult2["OL_index"]; ?><br><br>
+            <br>
             <h4>O/L Results: </h4>
             <table>
                 <tr>
@@ -206,8 +216,11 @@ ob_start();
             </table><br>
             <?php } break; }; ?>
 
+            <?php foreach($personal as $person){ ?>
+                <label for="olindex"><b> 20. Index Number 3: </b><?php echo $person["OLindex3"] ?><br>
+            <?php }?>
             <?php foreach($olresults3 as $olresult3){ if( $olresult3["OL_index"] != "N/A"){?>
-            <label for="olindex"><b>20. Index Number: </b><?php echo $olresult3["OL_index"] ?><br><br>
+            <br>
             <h4><b>O/L Results: </b></h4>
             <table>
                 <tr>
