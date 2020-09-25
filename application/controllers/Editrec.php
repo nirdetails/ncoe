@@ -51,9 +51,9 @@ class Editrec extends CI_Controller{
         if($course1 == '28' || $course1 == '29' || $course2 == '28' || $course2 == '29' || $course3 == '28' || $course3 == '29'){
             $this->form_validation->set_rules('pemarks', 'PE marks', 'required');
         }
-        if($course1 == '42' || $course1 == '43' || $course1 == '44' || $course2 == '42' || $course2 == '43' || $course2 == '44' || $course3 == '42' || $course3 == '43' || $course3 == '44'){
-            $this->form_validation->set_rules('gitmk', 'GIT marks', 'required');
-        }
+        // if($course1 == '42' || $course1 == '43' || $course1 == '44' || $course2 == '42' || $course2 == '43' || $course2 == '44' || $course3 == '42' || $course3 == '43' || $course3 == '44'){
+        //     $this->form_validation->set_rules('gitmk', 'GIT marks', 'required');
+        // }
 
         if($this->form_validation->run() === FALSE){
             $data['title'] = 'Edit Your Records...';
