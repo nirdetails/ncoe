@@ -259,7 +259,7 @@
             <label for="home">Email: </label>
             <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email" value="<?php echo $person['email']; ?>">             
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="index1" id="label1" title=" National College of Education">Are you applying for Sripada NCoE? <span style="color:red">* <?php echo form_error('sripada'); ?></span></label>
       <select name="sripada"  id="sripada" height="4" class="form-control">
         <option selected value="">SELECT</option>
@@ -278,7 +278,7 @@
         </select>
       <br>
 
-    </div>
+    </div> -->
     
     <?php 
       $version = $person['version'] + 1;
