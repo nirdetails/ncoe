@@ -270,7 +270,7 @@
     </div> -->
 </div>
 <div style="text-align:center">
-    <button style="margin-top:25px; margin-left:15px" type="submit" class="btn btn-info">Submit</button>
+    <!-- <button style="margin-top:25px; margin-left:15px" type="submit" class="btn btn-info">Submit</button> -->
 </div>
 </div>
 </form>
