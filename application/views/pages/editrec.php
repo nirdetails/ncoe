@@ -14,7 +14,6 @@
         <?php }else{ ?> 
           <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
         <?php } ?>
-      <?php break; ?>
       <?php endforeach; ?>                                                   
     </select>
   </div>
@@ -28,7 +27,6 @@
         <?php }else{ ?> 
           <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
         <?php } ?>
-        <?php break; ?>
         <?php endforeach; ?>                                                   
     </select>
   </div>
@@ -42,7 +40,6 @@
           <?php }else{ ?> 
             <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
           <?php } ?>
-          <?php break; ?>
       <?php endforeach; ?>                                                   
     </select>
   </div>
@@ -262,6 +259,27 @@
             <label for="home">Email: </label>
             <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email" value="<?php echo $person['email']; ?>">             
     </div>
+    <div class="form-group">
+      <label for="index1" id="label1" title=" National College of Education">Are you applying for Sripada NCoE? <span style="color:red">* <?php echo form_error('sripada'); ?></span></label>
+      <select name="sripada"  id="sripada" height="4" class="form-control">
+        <option selected value="">SELECT</option>
+        <option id="y" >Yes</option>
+        <option id="n" >No</option>
+    </select>
+    </div>
+    <br>
+   
+    <div class="form-group">
+    <label for="sworker" id="label2" name="state" style="display :none">Are you a child of a Estate Worker? <span style="color:red">* <?php echo form_error('sworker'); ?></span></label>
+      <select name="sworker"  id="sworker" height="4" style="display :none" class="form-control">
+        <option selected value="">SELECT</option>
+        <option id="y">Yes</option>
+        <option id="n">No</option>
+        </select>
+      <br>
+
+    </div>
+    
     <?php 
       $version = $person['version'] + 1;
     ?>
@@ -273,3 +291,4 @@
 </form>
 <script src="<?php echo site_url(); ?>assets/js/sripada.js"></script>
 <script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>
+<script src="<?php echo site_url(); ?>assets/js/sripada.js">
