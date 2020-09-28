@@ -14,6 +14,7 @@
         <?php }else{ ?> 
           <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
         <?php } ?>
+      <?php break; ?>
       <?php endforeach; ?>                                                   
     </select>
   </div>
@@ -27,6 +28,7 @@
         <?php }else{ ?> 
           <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
         <?php } ?>
+        <?php break; ?>
         <?php endforeach; ?>                                                   
     </select>
   </div>
@@ -40,6 +42,7 @@
           <?php }else{ ?> 
             <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
           <?php } ?>
+          <?php break; ?>
       <?php endforeach; ?>                                                   
     </select>
   </div>
@@ -55,6 +58,7 @@
           <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
           <?php foreach($personal as $person){ ?>
             <input type="text" class="form-control" id="pemarks" name="pemarks" value="<?php echo $person['pemarks'] ?>">  
+            <?php break; ?>
           <?php } ?>   
         </div>
       </div>
