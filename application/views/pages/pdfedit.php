@@ -299,7 +299,7 @@ ob_start();
                     echo "<li>".$select['pref3']." - ".$course['name']."</li>";
                 }
             }
-        }
+        break; }
         ?>
     </ol>
     <?php
