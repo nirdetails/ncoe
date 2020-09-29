@@ -289,5 +289,5 @@
     <button formtarget="_blank" type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Submit </button>
 <?php break; } ?>
 </form>
-<script src="<?php echo site_url(); ?>assets/js/sripada2.js">
+	<script src="<?php echo site_url(); ?>assets/js/sripada2.js"></script>
 <script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>
