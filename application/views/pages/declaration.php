@@ -41,7 +41,7 @@
    
     <div class="form-group row">
     <!-- <div class="col-sm-2">Checkbox</div> -->
-    <div class="col-sm-10">
+    <!-- <div class="col-sm-10">
       <div class="form-check" style="font-size:20px;padding-left:50px">
         <input class="form-check-input" type="checkbox" id="gridCheck1" onchange="terms_changed()">
         <label style="font-size:20px;padding-left:10px" class="form-check-label" for="gridCheck1">
@@ -49,9 +49,9 @@
         </label>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group"> -->
       <!-- <button type="submit" id="submit_button" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
-      <a class="btn btn-primary" style="display:none" id="submit_button"  href="<?php echo site_url(); ?>/submission">Accept</a> 
+      <!-- <a class="btn btn-primary" style="display:none" id="submit_button"  href="<?php echo site_url(); ?>/submission">Accept</a>  -->
     </div>
   </div>
 </form>
