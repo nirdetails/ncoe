@@ -70,9 +70,9 @@ if($_SESSION['pdfdone'] == 1){
     </div>
     <div class="row">
       <div class="col-sm-4">&nbsp;</div>
-      <div class="col-sm-4">
+      <!-- <div class="col-sm-4">
         <button style= "padding:20px;font-size:20px; width: 100%;" type="submit" name="btnprv" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Submit</button>
-      </div>
+      </div> -->
       <div class="col-sm-4">&nbsp;</div>
     </div>
   </form>
