@@ -58,12 +58,12 @@ if($_SESSION['pdfdone'] == 1){
       <div class="col-sm-3">
         &nbsp;
       </div>
-      <div class="col-sm-3 form-group">
-        <a href="<?php echo site_url(); ?>pages/view/editpersonal" class="btn btn-info" style="width: 100%; height: 4em">Recheck Personal Details</a>
+      <!-- <div class="col-sm-3 form-group">
+        <a href="<?php //echo site_url(); ?>pages/view/editpersonal" class="btn btn-info" style="width: 100%; height: 4em">Recheck Personal Details</a>
       </div>
       <div class="col-sm-3 form-group">
-        <a href="<?php echo site_url(); ?>courses/edit" class="btn btn-info" style="width: 100%; height: 4em">Recheck Choices</a>
-      </div>
+        <a href="<?php //echo site_url(); ?>courses/edit" class="btn btn-info" style="width: 100%; height: 4em">Recheck Choices</a>
+      </div> -->
       <div class="col-sm-3">
         &nbsp;
       </div>
