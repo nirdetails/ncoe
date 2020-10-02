@@ -47,6 +47,11 @@ class Students_model extends CI_Model{
         return $query->result_array();
     }
 
+    public function getStudents(){
+        $query = $this->db->get('stuents');
+        return $query->result_array();
+    } 
+
     public function updatepersonal(){
         $alindex = $this->input->post('alindex');
 
