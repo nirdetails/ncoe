@@ -10,6 +10,7 @@ $route['prirvenaal'] = 'alpirivena/index';
 $route['pdfgen/pdf'] = 'pdfgen/pdf';
 
 $route['dashboard'] = 'dashboard/view/dashboard';
+$route['records'] = 'dashboard/records/records';
 
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';
