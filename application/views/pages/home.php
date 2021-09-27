@@ -90,4 +90,4 @@
     <div class="container">
         <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
     </div>
-</footer>
+</footer><!--The update -->
