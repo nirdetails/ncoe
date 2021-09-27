@@ -1,13 +1,19 @@
 <h2><?= $title; ?></h2>
-<?php echo validation_errors(); ?>
-<?php echo form_open_multipart('olresults/checkolres'); ?>
+<?php
+  if (!isset($_SESSION["alindex"])){
+    redirect('/');
+  }
+?>
+<span style="color: red;"><?php echo validation_errors(); ?></span>
+<?php // echo form_open_multipart('olresults/checkolres'); ?>
+<form action="<?php echo site_url(); ?>olresults/checkolres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <div class="form-group">
-      <label for="attempts">How many attempts?</label>
+      <label for="attempts">How many times have you sat for O/L exam? <span style="color:red">* </span></label>
       <select name="sel1" class="form-control" id="sel1">
-        <option id="def" selected>ATTEMPTS</option>
-        <option id="1">1</option>
-        <option id="2">2</option>
-        <option id="3">3</option>
+        <option id="def" selected value="">ATTEMPTS</option>
+        <option id="1" value="1">1</option>
+        <option id="2" value="2">2</option>
+        <option id="3" value="3">3</option>
       </select>
       <br>
     
@@ -27,5 +33,20 @@
     </div>
     <button type="submit" class="btn btn-info">Submit</button>
 </form>
+<br>
+<br>
+<div class="row">
+  <div class="col-sm-4">
+    <!-- <a href="<?php echo site_url(); ?>/olpirivena" class="btn btn-primary">Mulika Pirivena</a> -->
+  </div>
+</div>
+</div>
+</div>
+<br>
+<footer class="footer">
+    <div class="container">
+        <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
+    </div>
+</footer>
 <script src="<?php echo site_url(); ?>assets/js/ol.js"></script>
 
