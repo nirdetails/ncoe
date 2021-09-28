@@ -51,10 +51,11 @@
     <div id="certificates" style="display :none">
       <div class="col-sm-12">
         <div class="form-group">
-          <label for="coursename"><b>Physical Education Marks: </b></label><br>
+          <label for="coursename"><b>Physical Education Marks: </b></label><span style="color:red">* <?php echo form_error('pemarks'); ?></span><br>
           <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
           <?php foreach($personal as $person){ ?>
             <input type="text" class="form-control" id="pemarks" name="pemarks" value="<?php echo $person['pemarks'] ?>">  
+            <?php break; ?>
           <?php } ?>   
         </div>
       </div>
@@ -63,7 +64,7 @@
 
   <div class="col-sm-12" id="category"  style="display :none">  
   <div class="form-group">
-      <label for="category">Category: </label><span style="color:red">* </span><br>
+      <label for="category">Category: </label><span style="color:red">* <?php echo form_error('category'); ?></span><br>
       <?php if($select['category'] == "Catholic" ){ ?>
         <input type="radio" name="category" value="Catholic" checked> Catholic &nbsp;
         <input type="radio" name="category" value="Christianity"> Christianity
@@ -84,7 +85,7 @@
   <div class="col-sm-4" style="padding-left: 0px; display :none;" id="gitmarks">
   <?php //} ?>
     <div class="form-group">
-    <label for="gitmk"><b>GIT Grades: </b></label><br><span style="color:red">* </span>
+    <label for="gitmk"><b>GIT Grades: </b></label><br><span style="color:red">* <?php echo form_error('gitmk'); ?></span>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
       <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade">
         <option value="0" selected disabled>Select your Grade</option>
@@ -103,7 +104,7 @@
 </div>
 
 <hr>
-<?php } ?>
+<?php break; } ?>
 <?php foreach($personal as $person){ ?>
 <div class="form-group">
     
@@ -258,14 +259,35 @@
             <label for="home">Email: </label>
             <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email" value="<?php echo $person['email']; ?>">             
     </div>
+    <div class="form-group">
+      <label for="index1" id="label1" title=" National College of Education">Are you applying for Sripada NCoE? <span style="color:red">* <?php echo form_error('sripada'); ?><?php echo form_error('sworker'); ?></span></label>
+      <select name="sripada"  id="sripada" height="4" class="form-control" >
+        <option selected value="">SELECT</option>
+        <option  value="1">Yes</option>
+        <option  value="0">No</option>
+    </select>
+    </div>
+    <br>
+   
+    <div class="form-group">
+    <label for="sworker" id="label2" name="state" style="display: none;">Are you a child of a Estate Worker? <span style="color:red">* </span></label>
+      <select name="sworker"  id="sworker" height="4" style="display: none;" class="form-control">
+        <option selected value="">SELECT</option>
+        <option  value="1">Yes</option>
+        <option  value="0">No</option>
+        </select>
+      <br>
+
+    </div>
+    
     <?php 
       $version = $person['version'] + 1;
     ?>
     <input type="hidden" value="<?php echo $version; ?>" name="version" id="version">
     <!-- <button type="submit" name="btnprv" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span> Previous</button> -->
     <!-- <a class="btn btn-primary" href="">Recheck</a> -->
-    <button formtarget="_blank" type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Submit </button>
-<?php } ?>
+    <!-- <button formtarget="_blank" type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Submit </button> -->
+<?php break; } ?>
 </form>
-<script src="<?php echo site_url(); ?>assets/js/sripada.js"></script>
+<script src="<?php echo site_url(); ?>assets/js/sripada2.js"></script>
 <script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>

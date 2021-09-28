@@ -2,10 +2,24 @@
 <span style="color: red;"><?php echo validation_errors(); ?></span>
 <?php // echo form_open_multipart('alresults/checkalres'); ?>
 <form action="<?php echo site_url(); ?>alresults/checkalres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-  <div class="form-group">
-    <label for="index">A\L index number: <span style="color:red">* </span></label>
-    <input type="text" class="form-control" id="index" placeholder="Enter your A\L index number" name="index">
-  </div>
+	
+	<div class="row">
+		<div class="col-12 col-sm-6">
+			<div class="form-group">
+				<label for="year">A\L year: <span style="color:red">* </span></label>
+				<input type="text" class="form-control" id="year" placeholder="Enter your A/L year" name="year">
+			</div>
+		</div>
+		<div class="col-12 col-sm-6">
+			<div class="form-group">
+				<label for="index">A\L index number: <span style="color:red">* </span></label>
+				<input type="text" class="form-control" id="index" placeholder="Enter your A\L index number" name="index">
+			</div>
+		</div>
+
+	</div>
+
+	
   <div class="form-group">
     <!-- <label for="git">Sat for the GIT exam: </label>
     <select class="form-control" id="git" name="git" placeholder="Enter the GIT marks">
