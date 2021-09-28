@@ -20,6 +20,7 @@ class Alresults extends CI_Controller{
         $data['title'] = 'A/L Results sheet';
         // $this->load->helper('security');
         $this->form_validation->set_rules('index','Index Number', 'required|xss_clean|is_exist[stuents.alindex]');
+				$this->form_validation->set_rules('year','AL Year', 'required|xss_clean|is_exist[stuents.year]');
         // $this->form_validation->set_rules('git','GIT', 'required');
 
         if($this->form_validation->run() === FALSE){
