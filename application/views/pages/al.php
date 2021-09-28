@@ -5,10 +5,14 @@
 	
 	<div class="row">
 		<div class="col-12 col-sm-6">
-			<div class="form-group">
-				<label for="year">A\L year: <span style="color:red">* </span></label>
-				<input type="text" class="form-control" id="year" placeholder="Enter your A/L year" name="year">
-			</div>
+    <div class="form-group">
+                <label for="index">A\L year: <span style="color:red">*</span></label>
+                <select class="form-control" id="year" placeholder="Enter your A\L year" name="year">
+                    <option value="">SELECT</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
 		</div>
 		<div class="col-12 col-sm-6">
 			<div class="form-group">
