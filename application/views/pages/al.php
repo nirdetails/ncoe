@@ -17,7 +17,8 @@
 			</div>
 		</div>
 
-	</div>
+		<!-- Validation error messages goes here -->
+		
 
 	
   <div class="form-group">
@@ -44,7 +45,7 @@
     <!-- <br>
   </div> -->
   
-  <button type="submit" class="btn btn-info">Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
 </div>
