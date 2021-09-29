@@ -413,7 +413,7 @@
         </tbody>
       </table>
       </div>
-      <!-- <a class="btn btn-primary" href="<?php echo site_url(); ?>/sripada">Next</a> -->
+      <a class="btn btn-primary" href="<?php echo site_url(); ?>/sripada">Next</a>
     </div>
    
   <!-- </div> -->

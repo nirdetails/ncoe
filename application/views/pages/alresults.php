@@ -86,7 +86,7 @@
   </table>
   <?php endforeach; ?>
   <div style="text-align:right">
-  <!-- <a class="btn btn-primary" href="<?php echo site_url(); ?>/olresults">Next</a>   -->
+  <a class="btn btn-primary" href="<?php echo site_url(); ?>/olresults">Next</a>  
   <!-- <button  type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
   </div>
   </div>
