@@ -149,7 +149,7 @@ if (!defined('PDF_HEADER_TITLE')) {
 }
 
 if (!defined('PDF_HEADER_STRING')) {
-	define ('PDF_HEADER_STRING', "PDF report - NCOE");//Add Header PDF
+	define ('PDF_HEADER_STRING', "by Nicola Asuni - Tecnick.com\nwww.tcpdf.org");
 }
 
 if (!defined('PDF_UNIT')) {
