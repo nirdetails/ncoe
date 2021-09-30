@@ -4,23 +4,33 @@
 <form action="<?php echo site_url(); ?>alresults/checkalres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 	
 	<div class="row">
-		<div class="col-12 col-sm-6">
-    <div class="form-group">
-                <label for="index">A\L year: <span style="color:red">*</span></label>
-                <select class="form-control" id="year" placeholder="Enter your A\L year" name="year">
-                    <option value="">SELECT</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                </select>
-            </div>
+		<div class="col-12 col-sm-4">
+			<div class="form-group">
+				<label for="index">A\L year: <span style="color:red">*</span></label>
+				<select class="form-control" id="year" placeholder="Select your A\L year" name="year">
+						<option value="">SELECT</option>
+						<option value="2019">2019</option>
+						<option value="2020">2020</option>
+				</select>
+			</div>
 		</div>
-		<div class="col-12 col-sm-6">
+		<div class="col-12 col-sm-4">
+			<div class="form-group">
+				<label for="index">Syllabus: <span style="color:red">*</span></label>
+				<select class="form-control" id="year" placeholder="Select the syllabus mode" name="year">
+						<option value="">SELECT</option>
+						<option value="Old">Old</option>
+						<option value="New">New</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-12 col-sm-4">
 			<div class="form-group">
 				<label for="index">A\L index number: <span style="color:red">* </span></label>
 				<input type="text" class="form-control" id="index" placeholder="Enter your A\L index number" name="index">
 			</div>
 		</div>
-
+	</div>
 		<!-- Validation error messages goes here -->
 		
 
@@ -49,10 +59,10 @@
     <!-- <br>
   </div> -->
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+	<button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
-</div>
+
 <div class="row">
   &nbsp;
 </div>
