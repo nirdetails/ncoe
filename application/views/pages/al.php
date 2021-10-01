@@ -1,5 +1,7 @@
-<h2><?= $title; ?></h2>
-<span style="color: red;"><?php echo validation_errors(); ?></span>
+<div class="container mb-5">
+	<h2><?= $title; ?></h2>
+</div>
+
 <?php // echo form_open_multipart('alresults/checkalres'); ?>
 <form action="<?php echo site_url(); ?>alresults/checkalres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 	
@@ -7,6 +9,7 @@
 		<div class="col-12 col-sm-4">
 			<div class="form-group">
 				<label for="index">A\L year: <span style="color:red">*</span></label>
+				<span style="color: red;"><?php echo form_error('year'); ?></span>
 				<select class="form-control" id="year" placeholder="Select your A\L year" name="year">
 						<option value="">SELECT</option>
 						<option value="2019">2019</option>
@@ -17,7 +20,8 @@
 		<div class="col-12 col-sm-4">
 			<div class="form-group">
 				<label for="index">Syllabus: <span style="color:red">*</span></label>
-				<select class="form-control" id="year" placeholder="Select the syllabus mode" name="year">
+				<span style="color: red;"><?php echo form_error('syllabus'); ?></span>
+				<select class="form-control" id="syllabus" placeholder="Select the syllabus mode" name="syllabus">
 						<option value="">SELECT</option>
 						<option value="Old">Old</option>
 						<option value="New">New</option>
@@ -27,7 +31,8 @@
 		<div class="col-12 col-sm-4">
 			<div class="form-group">
 				<label for="index">A\L index number: <span style="color:red">* </span></label>
-				<input type="text" class="form-control" id="index" placeholder="Enter your A\L index number" name="index">
+				<span style="color: red;"><?php echo form_error('alindex'); ?></span>
+				<input type="text" class="form-control" id="alindex" placeholder="Enter your A\L index number" name="alindex" value="<?php echo set_value('alindex'); ?>">
 			</div>
 		</div>
 	</div>
