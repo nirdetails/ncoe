@@ -72,6 +72,10 @@
   &nbsp;
 </div>
 <br>
+<div class="row">
+  &nbsp;
+</div>
+<br>
 <footer class="footer">
     <div class="container">
         <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
