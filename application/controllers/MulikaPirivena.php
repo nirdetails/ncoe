@@ -10,8 +10,7 @@ class MulikaPirivena extends CI_Controller{
 
     public function checkmulres(){
         $data['title'] = 'Mulika Pirivena Exam Results';
-
-        
+    
         $pirivena = 1;
         $this->session->set_userdata('pirivena', $pirivena);
         $this->load->view('templates/header');
