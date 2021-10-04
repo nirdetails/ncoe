@@ -1,7 +1,8 @@
 <?php
 class Alresults extends CI_Controller{
-    public function index(){
-        $data['title'] = 'Enter A/L index number';
+    
+	public function index(){
+        $data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
 
         $this->load->view('templates/header');
         $this->load->view('pages/al',$data);
@@ -17,48 +18,63 @@ class Alresults extends CI_Controller{
     // }
 
     public function checkalres($alindex = NULL){
-        $data['title'] = 'A/L Results sheet';
-        // $this->load->helper('security');
-        $this->form_validation->set_rules('index','Index Number', 'required|xss_clean|is_exist[stuents.alindex]');
-		$this->form_validation->set_rules('year','AL Year', 'required|xss_clean|is_exist[stuents.AL_year]');
-        // $this->form_validation->set_rules('git','GIT', 'required');
+		$data['title'] = 'A/L Results sheet';
+		$this->load->helper('form', 'url');
+		$this->load->library('form_validation');
 
-        if($this->form_validation->run() === FALSE){
-            $data['title'] = 'Enter A/L index number';
-            $this->load->view('templates/header');
-            $this->load->view('pages/al', $data);
-            $this->load->view('templates/footer');
-        } else {
-            $alindex = $this->input->post('index');
-            $git = $this->input->post('git');
+		
+		// Check whether any input fields are empty, if so flash error message - done
+        // If all fields are filled, then compare the values with database - done
+        // If all the values are ok, then proceed to results page - done
+        // Otherwise flash error message - doneName
+		// Edit the results page
 
-            $this->session->set_userdata('alindex', $alindex);
-            $this->session->set_userdata('git', $git);
-            $this->session->set_userdata('pdfdone', 0);
+		// set the validation rules
+		$this->form_validation->set_rules('year', 'A/L Year', 'required');
+		$this->form_validation->set_rules('syllabus', 'Syllabus Type', 'required');
+		$this->form_validation->set_rules('alindex', 'Index Number', 'required');
+		$this->form_validation->set_message('required', '{field} is a required field');
 
-            $data['alresults'] = $this->alresults_model-> get_alresults();
+		// checking validation rules
+		if($this->form_validation->run() == FALSE) {
 
-            // var_dump($data['alresults']);
-            $pirivena = 0;
-            $this->session->set_userdata('pirivena', $pirivena);
-            // $alstream = $this->input->post('sel1');
-            // $this->session->set_userdata('alstream', $alstream);
-            // redirect('alresults');
-            
-            if (empty($data['alresults'])) {
-                // list is empty.
-                $data['title'] = 'Al index';
-                echo "<script>alert('Please enter a valid Index')</script>";
-                $this->load->view('templates/header');
-                $this->load->view('pages/al',$data);
-                $this->load->view('templates/footer');
-            }else{
-                $this->load->view('templates/header');
-                $this->load->view('pages/alresults',$data);
-                $this->load->view('templates/footer');
-            }
-            
-        }
-        // var_dump($alstream);
+			$data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
+
+			$this->load->view('templates/header');
+			$this->load->view('pages/al', $data);
+			$this->load->view('templates/footer');
+			
+
+		} else {
+			// assign variable values got from the POST request 
+			$year = $this->input->post('year');
+			$syllabus = $this->input->post('syllabus');
+			$alindex = $this->input->post('alindex');
+
+			$this->session->set_userdata('year', $year);
+			$this->session->set_userdata('syallabus', $syllabus);
+			$this->session->set_userdata('alindex', $alindex);
+			// var_dump($year);
+
+			// check whether those values are match with any database record
+			$this->load->model('Alresults_model');
+			$data['alresults'] = $this->Alresults_model->get_alresults();
+
+			if( !empty($data['alresults']) ) {
+
+				$data['title'] = 'Al index';
+				$this->load->view('templates/header');
+				$this->load->view('pages/alresults',$data);
+				$this->load->view('templates/footer');
+
+			} else {
+
+				$data['title'] = 'Al index';
+				$this->load->view('templates/header');
+				$this->load->view('pages/al',$data);
+				$this->load->view('templates/footer');
+
+			}
+		}
     }
 }

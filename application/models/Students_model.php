@@ -23,6 +23,7 @@ class Students_model extends CI_Model{
             'home' => $this->input->post('home'),
             'email' => $this->input->post('email'),
             'ALindex' => $this->input->post('alindex'),
+			'syllabus' => $this->input->post('syllabus'),
             'OLindex1' => $this->input->post('olindex1'),
             'OLindex2' => $this->input->post('olindex2'),
             'OLindex3' => $this->input->post('olindex3'),
