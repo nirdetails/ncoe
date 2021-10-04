@@ -15,6 +15,8 @@ class Olresults extends CI_Controller{
         $this->form_validation->set_rules('index1', 'Index Number', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
         $this->form_validation->set_rules('index2', 'Index Number', 'is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
         $this->form_validation->set_rules('index3', 'Index Number', 'is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        // $this->form_validation->set_rules('year1', );
+
         $this->form_validation->set_rules('sel1', 'Number of attempts', 'required');
         
         if($this->form_validation->run() === FALSE){

@@ -19,16 +19,19 @@
     
   <div class="form-group">
       <label for="emailindex" style="display :none">O/L index number:</label>
-      <input type="text" class="form-control" id="index1" placeholder="Enter your  1st index " name="index1" style="display :none">
+      <input type="text" class="form-control" id="year1" placeholder="Year" name="year1" style="display :none">
+      <input type="text" class="form-control" id="index1" placeholder="Enter your 1st index " name="index1" style="display :none">
     </div>
 
     <div class="form-group">
       <label for="emailindex" style="display :none">O/L index number:</label>
+      <input type="text" class="form-control" id="year2" placeholder="Year" name="year2" style="display :none">
       <input type="text" class="form-control" id="index2" placeholder="Enter your 2nd index" name="index2"  style="display :none">
     </div>
 
     <div class="form-group">
       <label for="emailindex" style="display :none">O/L index number:</label>
+      <input type="text" class="form-control" id="year3" placeholder="Year" name="year3" style="display :none">
       <input type="text" class="form-control" id="index3" placeholder="Enter your 3rd index" name="index3" style="display :none">
     </div>
     <button type="submit" class="btn btn-info">Submit</button>
