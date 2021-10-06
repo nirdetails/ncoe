@@ -98,9 +98,10 @@ class MulikaPirivena extends CI_Controller{
 
             $pirivena = 1;
             $this->session->set_userdata('pirivena', $pirivena);
-            $this->load->view('templates/header');
-            $this->load->view('pages/mulikapirivenaresults',$data);
-            $this->load->view('templates/footer');
+            $this->session->set_userdata('olindex1', $olindex1);
+            $this->session->set_userdata('olindex2', $olindex2);
+            $this->session->set_userdata('olindex3', $olindex3);
+            $this->session->set_userdata('attempts', $attempts);
 
         }
     }
