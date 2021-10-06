@@ -104,7 +104,6 @@ class MulikaPirivena extends CI_Controller{
             $this->session->set_userdata('attempts', $attempts);
 
         }
-        
     }
 }
 ?>
