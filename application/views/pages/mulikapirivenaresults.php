@@ -60,9 +60,9 @@
       </tr>
     </table> 
   <div>
-  <?php endforeach;} ?>
   <hr>
   &nbsp;
+  <?php endforeach;} ?>
   <?php if( $olresults2 != ""){foreach($olresults2 as $olresult2): ?>
   <div class="container1" id="con2">
     <table style = "font-size:14px;">
@@ -100,9 +100,9 @@
       </tr>
     </table>
   </div>
-  <?php endforeach;} ?>
   <hr>
   &nbsp;
+  <?php endforeach;} ?>
   <?php if( $olresults3 != ""){foreach($olresults3 as $olresult3): ?>
   <div class="container1" id="con2">
     <table style = "font-size:14px;">

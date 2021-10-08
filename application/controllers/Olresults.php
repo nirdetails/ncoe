@@ -117,35 +117,27 @@ class Olresults extends CI_Controller{
                 $data['olresults3'] = '';
                 $olindex3 = 'N/A';
                 $year3 = 'N/A';
-            }
-            // var_dump($olindex2);
+            } 
+            
             if (($year1 != "N/A" || $olindex1 !="N/A") && empty($data['olresults1'])){
                 echo "<script>alert('Please enter a valid year1 or Index1')</script>";
                 $data['title'] = 'Enter O/L index number/numbers';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');
-            }
-           
-            else if (($year2 != "N/A"  || $olindex2 !="N/A" )&& empty($data['olresults2'])) {
+            } else if (($year2 != "N/A"  || $olindex2 !="N/A" )&& empty($data['olresults2'])) {
                 echo "<script>alert('Please enter a valid year2 or Index2 ')</script>";
                 $data['title'] = 'Enter O/L index number/numbers';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');
-            }
-            elseif (($year3 != "N/A"  || $olindex3 !="N/A" )&& empty($data['olresults3'])) {
+            } elseif (($year3 != "N/A"  || $olindex3 !="N/A" )&& empty($data['olresults3'])) {
                 echo "<script>alert('Please enter a valid year3 or Index3')</script>";
                 $data['title'] = 'Enter O/L index number/numbers';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');
-            }
-          
-            
-        
-        
-            else{
+            } else{
             // redirect('alresults');
                 $this->load->view('templates/header');
                 $this->load->view('pages/olresults',$data);
