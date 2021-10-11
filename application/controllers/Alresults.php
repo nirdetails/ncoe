@@ -52,7 +52,7 @@ class Alresults extends CI_Controller{
 			$alindex = $this->input->post('alindex');
 
 			$this->session->set_userdata('year', $year);
-			$this->session->set_userdata('syallabus', $syllabus);
+			$this->session->set_userdata('syllabus', $syllabus);
 			$this->session->set_userdata('alindex', $alindex);
 			// var_dump($year);
 
@@ -66,7 +66,7 @@ class Alresults extends CI_Controller{
 				$this->load->view('templates/header');
 				$this->load->view('pages/alresults',$data);
 				$this->load->view('templates/footer');
-
+				$this->session->set_userdata('pdfdone', 0);
 			} else {
 
 				$data['title'] = 'Al index';

@@ -151,6 +151,8 @@ class MulikaPirivena extends CI_Controller{
             $this->session->set_userdata('year2', $year2);
             $this->session->set_userdata('year3', $year3);
             $this->session->set_userdata('attempts', $attempts);
+            $this->session->set_userdata('pirivena', 1);
+
         }
         // var_dump($data);
         

@@ -5,6 +5,7 @@ function myFunction() {
 </script>
 
 <?php
+// print_r($_SESSION);
 if($_SESSION['pdfdone'] == 1){
   session_destroy();
   redirect('/');
@@ -47,7 +48,7 @@ if($_SESSION['pdfdone'] == 1){
     <input type="hidden" value="<?php echo $_SESSION['home']; ?>" name="home">
     <input type="hidden" value="<?php echo $_SESSION['email']; ?>" name="email">
     <input type="hidden" value="<?php echo $_SESSION['pirivena']; ?>" name="pirivena">
-    <input type="hidden" value="<?php echo $_SESSION['git']; ?>" name="git">
+    <!-- <input type="hidden" value="<?php //echo $_SESSION['git']; ?>" name="git"> -->
 
     <input type="hidden" value="<?php echo $_SESSION['course1']; ?>" name="course1">
     <input type="hidden" value="<?php echo $_SESSION['course2']; ?>" name="course2">
