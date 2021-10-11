@@ -60,17 +60,14 @@ class Olresults extends CI_Controller{
             
             if($olindex1 != "" && $year1 !=""){
                 $data['olresults1'] = $this->olresults_model-> get_olresults1($olind1,$yea1);
-            }
-            else if($olindex1 != ""){
+            } else if($olindex1 != ""){
                 $data['olresults1'] = '';
-                $olindex1 = 'N/A';
-               
-            }
-            else
-            {
+                $olindex1 = 'N/A';           
+            } else {
                 $data['olresults1'] = '';
                 $year1= 'N/A';
             }
+
             if(($olindex2 != "" && $olindex2 != $olindex1) && ($year2 != "" && $year2 != $year1)){
                 $data['olresults2'] = $this->olresults_model-> get_olresults2($olind2,$yea2);
                 // var_dump($data['olresults2']);
@@ -78,9 +75,7 @@ class Olresults extends CI_Controller{
                     if($data['olresults2'][0]['year'] != $data['olresults1'][0]['year'] ){
                     
                     
-                    }
-                    
-                    else if ($olindex2 !="" && empty($data['olresults2'])){
+                    }else if ($olindex2 !="" && empty($data['olresults2'])){
                         $data['olresults2'] = '';
                         $olindex2 = 'N/A';
                         
@@ -104,16 +99,13 @@ class Olresults extends CI_Controller{
                 if(!empty($data['olresults3']) && !empty($data['olresults2'])){
                     if($data['olresults3'][0]['year'] != $data['olresults1'][0]['year'] && $data['olresults3'][0]['year'] != $data['olresults2'][0]['year']){
                        
-                    }
-                    else{
+                    } else{
                         $data['olresults3'] = '';
                         $olindex3 = 'N/A';
                         $year3 = 'N/A';
                     }
                 }
-            }
-            
-            else{
+            }else{
                 $data['olresults3'] = '';
                 $olindex3 = 'N/A';
                 $year3 = 'N/A';
