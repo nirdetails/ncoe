@@ -145,6 +145,7 @@ class Olresults extends CI_Controller{
             $this->session->set_userdata('year3', $year3);
             $this->session->set_userdata('olindex3', $olindex3);
             $this->session->set_userdata('attempts', $attempts);
+            $this->session->set_userdata('pirivena', 0);
         }
         // var_dump($data);
         
