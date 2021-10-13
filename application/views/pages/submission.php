@@ -5,10 +5,11 @@ function myFunction() {
 </script>
 
 <?php
-// print_r($_SESSION);
-if($_SESSION['pdfdone'] == 1){
-  session_destroy();
-  redirect('/');
+
+if($_SESSION['pdfdone'] == 1)   // use if($_SESSION['pdfdone'] == 0) to view the submission1.php
+{
+  // session_destroy();
+  $this->load->view('pages/submission1');
 }
   if (!isset($_SESSION["alindex"])){
     redirect('/');
