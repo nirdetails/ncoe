@@ -4,7 +4,7 @@
   if (!isset($_SESSION["alindex"])){
     redirect('/');
   }
-  // echo $_SESSION['nic'];
+  // print_r($_SESSION);
 ?>
 <span style="color: red;"><?php // echo validation_errors(); ?></span>
 <?php //echo form_open_multipart('students/personaldetails'); ?>
