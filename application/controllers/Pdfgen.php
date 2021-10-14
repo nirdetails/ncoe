@@ -35,6 +35,9 @@ class Pdfgen extends CI_Controller {
         $this->load->helper('pdf_helper');
         if($data['pirivena'] == 1){
             $data['alresults'] = $this->alpirivena_model-> get_palresults($palindex);
+            if(empty($data['alresults'])){
+                $data['alresults'] = $this->alresults_model-> get_alresults();
+            }
         }else{
             $data['alresults'] = $this->alresults_model-> get_alresults();
         }
