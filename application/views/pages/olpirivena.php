@@ -1,4 +1,4 @@
-<<h2>Enter Mulika Pirivena index numbers</h2>
+<h2><?= $title; ?></h2><br>
 <?php
   if (!isset($_SESSION["alindex"])){
     redirect('/');
@@ -6,7 +6,7 @@
 ?>
 <span style="color: red;"><?php echo validation_errors(); ?></span>
 <?php // echo form_open_multipart('olresults/checkolres'); ?>
-<form action="<?php echo site_url(); ?>olresults/checkpirolres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<!-- <form action="<?php //echo site_url(); ?>olresults/checkpirolres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <div class="form-group">
       <label for="attempts">How many times have you sat for O/L exam? <span style="color:red">* </span></label>
       <select name="sel1" class="form-control" id="sel1">
@@ -35,7 +35,10 @@
       <input type="text" class="form-control" id="index3" placeholder="Enter your 3rd index" name="index3" style="display :none">
     </div>
     <button type="submit" class="btn btn-info">Submit</button>
-</form>
+</form> -->
+<a class="btn btn-primary" href="<?php echo site_url(); ?>/olresults">Check O/L exam results</a>  
+<a class="btn btn-primary" href="<?php echo site_url(); ?>/mulika_pirivena">Check Mulika Pirivena exam results </a>  
+  
 <br>
 <br>
 <div class="row">

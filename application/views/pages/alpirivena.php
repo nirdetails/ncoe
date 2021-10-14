@@ -301,9 +301,9 @@ $("#alyear").change(function(){
     var alyear = $(this).val();
 
     if(alyear == 2018){
-        $("#alyear")[0].selectedIndex = "";
-        window.location.href = "<?php echo site_url(); ?>/alresults";
-
+        // $("#alyear")[0].selectedIndex = "";
+        // window.location.href = "<?php //echo site_url(); ?>/alresults";
+        console.log(alyear);
     }
     // alert(alyear);
 
