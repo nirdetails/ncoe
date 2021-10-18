@@ -12,8 +12,9 @@ class Alpirivena extends CI_Controller{
     public function checkalres(){
         $data['title'] = 'Select an Exam';
 
-        $this->form_validation->set_rules('alyear', 'Year', 'required');
-        $this->form_validation->set_rules('index', 'Index No.', 'required|is_exist[al_pirivena.AL_index]');
+        $this->form_validation->set_rules('year', 'Year', 'required');
+        $this->form_validation->set_rules('alindex', 'Index No.', 'required|is_exist[al_pirivena.AL_index]');
+
         $this->form_validation->set_rules('stream', 'Stream', 'required');
         $this->form_validation->set_rules('medium', 'Medium', 'required');
         $this->form_validation->set_rules('attempt', 'Attempt', 'required');
@@ -38,12 +39,15 @@ class Alpirivena extends CI_Controller{
 			$this->load->view('pages/alpirivena',$data);
 			$this->load->view('templates/footer');
         }else{
-            $palindex = $this->input->post("index");
+            $palindex = $this->input->post("alindex");
             $git = $this->input->post('git');
+            $alyear = $this->input->post('year');
 
             $this->session->set_userdata('alindex', $palindex);
             $this->session->set_userdata('git', $git);
+            $this->session->set_userdata('year',$alyear);
             $this->session->set_userdata('pdfdone', 0);
+            $this->session->set_userdata('syllabus', 'none');
             $data['alresults'] = $this->alpirivena_model-> post_alresults();
 
             
