@@ -47,7 +47,7 @@
           <input type="number" class="form-control" id="pemarks1" name="pemarks1" >    
         </div>
       </div>
-      <div id="div2" class="col-sm-12">
+      <!-- <div id="div2" class="col-sm-12">
         <label for="myfile"  ><b>Upload your Physical Education Certificates:</b></label><br>
         <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></label><br>
         <label><span style="color:red">* </span><i>Use esch button to upload one file. You can upload upto 3 files<br></i></label><br>
@@ -55,7 +55,7 @@
         <input title="you can upload 3 Certificates only" type="file" id="peupload1" name="peupload1" multiple><br><br>
         <input title="you can upload 3 Certificates only" type="file" id="peupload2" name="peupload2" multiple><br><br>
         <input title="you can upload 3 Certificates only" type="file" id="peupload3" name="peupload3" multiple><br><br>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="col-sm-12" id="category"  style="display :none">  
@@ -65,7 +65,7 @@
       <input type="radio" name="category" value="Christianity"> Christianity
     </div>
   </div>
-  <div id="box" style="display :none">
+  <!-- <div id="box" style="display :none">
     <label for="myfile"><b>Upload your religion Certificates:</b></label><br>
     <label><p><span style="color:red">* </span><i>Rename your files with NIC number "_" and file order<br><b>Ex: 90167236V_1.pdf</b></i></label><br>
     <label><span style="color:red">* </span><i>Use esch button to upload one file. You can upload upto 3 files<br></i></label><br>
@@ -83,7 +83,7 @@
     <input title="you can upload 3 Certificates only" type="file" id="wupload1" name="wupload1" multiple><br><br>
     <input title="you can upload 3 Certificates only" type="file" id="wupload2" name="wupload2" multiple><br><br>
     <input title="you can upload 3 Certificates only" type="file" id="wupload3" name="wupload3" multiple><br><br>
-  </div>
+  </div> -->
 
   <div class="col-sm-4" style="padding-left: 0px; display :none;" id="gitmarks">
     <div class="form-group">

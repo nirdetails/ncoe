@@ -11,10 +11,10 @@ class Alpirivena extends CI_Controller{
 
     public function checkalres(){
         $data['title'] = 'Select an Exam';
-    
 
         $this->form_validation->set_rules('year', 'Year', 'required');
         $this->form_validation->set_rules('alindex', 'Index No.', 'required|is_exist[al_pirivena.AL_index]');
+
         $this->form_validation->set_rules('stream', 'Stream', 'required');
         $this->form_validation->set_rules('medium', 'Medium', 'required');
         $this->form_validation->set_rules('attempt', 'Attempt', 'required');

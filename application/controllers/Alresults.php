@@ -62,19 +62,20 @@ class Alresults extends CI_Controller{
 
 			if( !empty($data['alresults']) ) {
 
-				$data['title'] = 'Al index';
+				$data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
 				$this->load->view('templates/header');
 				$this->load->view('pages/alresults',$data);
 				$this->load->view('templates/footer');
-				$this->session->set_userdata('pdfdone', 0);
+				
 			} else {
 
-				$data['title'] = 'Al index';
+				$data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
 				$this->load->view('templates/header');
 				$this->load->view('pages/al',$data);
 				$this->load->view('templates/footer');
 
 			}
+			$this->session->set_userdata('pdfdone', 0);
 		}
     }
 }
