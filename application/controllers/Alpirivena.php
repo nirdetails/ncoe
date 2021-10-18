@@ -47,6 +47,7 @@ class Alpirivena extends CI_Controller{
             $this->session->set_userdata('git', $git);
             $this->session->set_userdata('year',$alyear);
             $this->session->set_userdata('pdfdone', 0);
+            $this->session->set_userdata('syllabus', 'none');
             $data['alresults'] = $this->alpirivena_model-> post_alresults();
 
             
