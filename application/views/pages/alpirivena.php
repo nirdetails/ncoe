@@ -5,9 +5,9 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
-                <label for="index">A\L year: <span style="color:red">* <?php echo form_error('alyear'); ?></span></label>
+                <label for="index">A\L year: <span style="color:red">* <?php echo form_error('year'); ?></span></label>
                 <!-- <input type="text" class="form-control" id="alyear" placeholder="Enter your A\L year" name="alyear"> -->
-                <select class="form-control" id="alyear" placeholder="Enter your A\L year" name="alyear">
+                <select class="form-control" id="year" placeholder="Enter your A\L year" name="year">
                     <option value="">SELECT</option>
                     <option value="2018">2018</option>
                     <option value="2017">2017</option>
@@ -33,8 +33,8 @@
     <div class="row">
     <div class="col-sm-3">
         <div class="form-group">
-            <label for="index">A\L index: <span style="color:red">* <?php echo form_error('index'); ?></span></label>
-            <input type="text" class="form-control" id="index" placeholder="Enter your A\L index" name="index">
+            <label for="index">A\L index: <span style="color:red">* <?php echo form_error('alindex'); ?></span></label>
+            <input type="text" class="form-control" id="alindex" placeholder="Enter your A\L index" name="alindex">
         </div>
     </div>
     <div class="col-sm-3">
@@ -301,9 +301,9 @@ $("#alyear").change(function(){
     var alyear = $(this).val();
 
     if(alyear == 2018){
-        $("#alyear")[0].selectedIndex = "";
-        window.location.href = "<?php echo site_url(); ?>/alresults";
-
+        // $("#alyear")[0].selectedIndex = "";
+        // window.location.href = "<?php //echo site_url(); ?>/alresults";
+        console.log(alyear);
     }
     // alert(alyear);
 
