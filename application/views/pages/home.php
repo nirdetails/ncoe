@@ -56,7 +56,7 @@
     </div>
 <!-- </div>
 <div class="row"> -->
-    <?php// var_dump($_SESSION); ?>
+    <?php // var_dump($_SESSION); ?>
     <div class="col-sm-4">   
         <div class="form-group">  
             <div style="text-align :right;">
