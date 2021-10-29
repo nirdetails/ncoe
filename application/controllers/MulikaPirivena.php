@@ -41,7 +41,7 @@ class MulikaPirivena extends CI_Controller{
         if($this->form_validation->run() === FALSE){
             $data['title'] = 'Enter O/L index number/numbers';
             $this->load->view('templates/header');
-            $this->load->view('pages/ol', $data);
+            $this->load->view('pages/mulika_pirivena', $data);
             $this->load->view('templates/footer');
         } 
         else {
