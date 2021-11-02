@@ -1,4 +1,3 @@
-
 <?php
   if (!isset($_SESSION["alindex"])){
     redirect('/');
@@ -29,11 +28,16 @@
         <?php }elseif($alresult['medium'] == 'T'){ ?>
           <td><?php echo "Tamil" ?></td>
         <?php }elseif($alresult['medium'] == 'E'){ ?>
-          <td><?php "English" ?></td>
+          <td><?php echo "English" ?></td>
         <?php } ?>
         </tr>
+
         <tr>
         <th>Subject</th>
+        <th>Grade</th>
+        </tr>
+        <tr>
+
         <?php 
           if (!array_key_exists($alresult['sub1'], $alsubs)) {
             // echo "<td>". $alresult['sub1'] ."</td>";
@@ -44,15 +48,14 @@
             }
           }
         ?>
-        </tr>
-        <tr>
-        <th>Grade</th>
+      
+        
         <!-- <td><?php //echo $alresult['sub1'] ?></td> -->
         <td><?php echo $alresult['grade1'] ?></td>
         </tr>
 
         <tr>
-        <th>Subject</th>
+      
         <?php 
           if (!array_key_exists($alresult['sub2'], $alsubs)) {
             // echo "<td>". $alresult['sub2'] ."</td>";
@@ -63,15 +66,13 @@
             }
           }
         ?>
-        </tr>
-        <tr>
-        <th>Grade</th> 
+        
         <td><?php echo $alresult['grade2'] ?></td>
         <!-- <td><?php //echo $alresult['sub3'] ?></td> -->
         </tr>
 
         <tr>
-        <th>Subject</th> 
+       
         <?php 
           if (!array_key_exists($alresult['sub3'], $alsubs)) {
             // echo "<td>". $alresult['sub3'] ."</td>";
@@ -82,10 +83,7 @@
             }
           }
         ?>
-        </tr>
         
-        <tr>
-        <th>Grade</th>
         <td><?php echo $alresult['grade3'] ?></td>
         </tr>
 
