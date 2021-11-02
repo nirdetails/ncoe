@@ -51,7 +51,7 @@
     </div>
     <div class="form-group">
       <!-- <button type="submit" id="submit_button" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
-      <a class="btn btn-primary" style="display:none" id="submit_button"  href="<?php echo site_url(); ?>/submission">Accept</a> 
+      <a class="btn btn-success" style="display:none" id="submit_button"  href="<?php echo site_url(); ?>/submission">Accept</a> 
     </div>
   </div>
 </form>
