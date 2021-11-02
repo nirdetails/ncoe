@@ -7,6 +7,14 @@
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
+    <style>
+        body {
+            min-height: 100vh;
+        }
+        footer {
+            margin-top: ???px;
+        }
+    </style>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 30px;">
         <!-- <div class="container"> -->

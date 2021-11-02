@@ -1,7 +1,5 @@
-
 <?php session_destroy(); ?>
-<?php //echo $baseurl=base_url();// var_dump($_SESSION); ?>
-<?php // echo CI_VERSION; ?>
+<?php // var_dump($_SESSION); ?>
 <div class="row">
     &nbsp;
 </div>
@@ -45,31 +43,29 @@
     </div>
 </div>
 <br>
-<!-- <div class="row"> -->
-    <!-- <div class="col-sm-2">
+<div class="row">
+    <div class="col-sm-2">
     </div>
     <div class="col-sm-4">
         <div class="form-group"> 
             <div style="text-align: left;">
-                <a href="prirvenaal" class="btn btn-primary btn-lg" style="width: 100%; padding: 10px;">Clergy<br>පූජ්‍ය/ පූජක<br>மதகுருமார்கள் /வணக்கத்துக்குரியவர்கள்<br>&nbsp;<br></a>
+                <a href="prirvenaal" class="btn btn-primary btn-lg" style="width: 100%; padding: 10px;">A/L Year 2018 or other<br>&nbsp;<br></a>
             </div>      
         </div>
-    </div> -->
-<!-- </div>-->
-<div class="row"> 
-    <?php// var_dump($_SESSION); ?>
-    <div class="col-sm-4">   
     </div>
+<!-- </div>
+<div class="row"> -->
+    <?php// var_dump($_SESSION); ?>
     <div class="col-sm-4">   
         <div class="form-group">  
             <div style="text-align :right;">
-                <a href="alresults" class="btn btn-primary btn-lg" style="width: 100%; padding: 10px;"><b>Enter</b></a>
+                <a href="alresults" class="btn btn-primary btn-lg" style="width: 100%; padding: 10px;"><b>A/L Year 2019/2020 </b><br>&nbsp;<br></a>
             </div> 
         </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-2">
     </div>
-<!-- </div> -->
+</div>
 <br><br>
 <!-- <form action="<?php // echo site_url(); ?>editrec/index" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <div class="row" style="margin: auto; text-align:center;">

@@ -7,7 +7,7 @@ $route['personal'] = 'students/index';
 $route['olresults'] = 'olresults/index';
 $route['mulika_pirivena'] = 'mulikaPirivena/index';
 $route['alresults'] = 'alresults/index';
-// $route['prirvenaal'] = 'alpirivena/index';
+$route['prirvenaal'] = 'alpirivena/index';
 $route['pdfgen/pdf'] = 'pdfgen/pdf';
 
 $route['dashboard'] = 'dashboard/view/dashboard';
