@@ -4,7 +4,62 @@
     redirect('/');
   }
 ?>
-<?php $olsubnames = array( '040' => 'Music (Oriental)','011' => 'Buddhism' ,'041' => 'Music (Western)','012' => 'Saivaner'	,'042' => 'Music (Carnatic)','014' => 'Catholicism	'		,'043' => 'Art','015' => 'Christianity'			,'044' => 'Dancing (Orintal)','016' => 'Islam' ,'045' => 'Dancing (Bharata)','021' => 'Sinhala Language & Literature' ,'046' => 'Appreciation of English literary Texts','022' => 'tamil Language & Literature'	,'047' => 'Appreciation of Sinhala literary Texts','031' => 'English Language'			,'048' => 'Appreciation of Tamil Literary Texts','032' => 'Mathematics'			,'049' => 'appreciation of Arabic Literary Texts','033' => 'History	'		,'050' => 'Drama and Theatre (Sinhala)','034' => 'Science	'		,'051' => 'Drama and Theatre (Tamil)','060' => 'Business & Accounting Studies' 			,'052' => 'Drama and Theatre (English)','061' => 'Geography','080' => 'Information & Communication Technology','062' => 'Civil Education'	,'081' => 'Agriculture & Food Technology','063' => 'Entrepreneurship Studies'	,'082' => 'Aquatic bioresources Technology','064' => 'Second Language (Sinhala)','084' => 'Art & Crafts','065' => 'Second Language (Tamil)','085' => 'Home Economics','066' => 'Pali	','086' => 'Health & Physical Education','067' => 'Sanskrit','087' => 'Communication & Media Studies','068' => 'French','088' => 'Design & Construction Technology','069' => 'German'	,'089' => 'Design & Mechanical Technology','070' => 'Hindi','090' => 'Design, Electrical &  Electronic Technology','071' => 'Japanese','092' => 'Electronic Writing & Shorthand (Sinhala)','072' => 'Arabic	','093' => 'Electronic Writing & Shorthand (Tamil)','073' => 'korean','094' => 'Electronic Writing & Shorthand (English)','074' => 'Chinese' ,'075' => 'Russian'); ?>
+<?php 
+$olsubnames = array( 
+      '40' => 'Music (Oriental)',
+      '11' => 'Buddhism' ,
+      '41' => 'Music (Western)',
+      '12' => 'Saivaner'	,
+      '42' => 'Music (Carnatic)',
+      '14' => 'Catholicism	'		,
+      '43' => 'Art',
+      '15' => 'Christianity'			,
+      '44' => 'Dancing (Orintal)',
+      '16' => 'Islam' ,
+      '45' => 'Dancing (Bharata)',
+      '21' => 'Sinhala Language & Literature' ,
+      '46' => 'Appreciation of English literary Texts',
+      '22' => 'tamil Language & Literature'	,
+      '47' => 'Appreciation of Sinhala literary Texts',
+      '31' => 'English Language'			,
+      '48' => 'Appreciation of Tamil Literary Texts',
+      '32' => 'Mathematics'			,
+      '49' => 'appreciation of Arabic Literary Texts',
+      '33' => 'History	'		,
+      '50' => 'Drama and Theatre (Sinhala)',
+      '34' => 'Science	'		,
+      '51' => 'Drama and Theatre (Tamil)',
+      '60' => 'Business & Accounting Studies' 			,
+      '52' => 'Drama and Theatre (English)',
+      '61' => 'Geography',
+      '80' => 'Information & Communication Technology',
+      '62' => 'Civil Education'	,
+      '81' => 'Agriculture & Food Technology',
+      '63' => 'Entrepreneurship Studies'	,
+      '82' => 'Aquatic bioresources Technology',
+      '64' => 'Second Language (Sinhala)',
+      '84' => 'Art & Crafts',
+      '65' => 'Second Language (Tamil)',
+      '85' => 'Home Economics',
+      '66' => 'Pali	',
+      '86' => 'Health & Physical Education',
+      '67' => 'Sanskrit',
+      '87' => 'Communication & Media Studies',
+      '68' => 'French',
+      '88' => 'Design & Construction Technology',
+      '69' => 'German'	,
+      '89' => 'Design & Mechanical Technology',
+      '70' => 'Hindi',
+      '90' => 'Design, Electrical &  Electronic Technology',
+      '71' => 'Japanese',
+      '92' => 'Electronic Writing & Shorthand (Sinhala)',
+      '72' => 'Arabic	',
+      '93' => 'Electronic Writing & Shorthand (Tamil)',
+      '73' => 'korean',
+      '94' => 'Electronic Writing & Shorthand (English)',
+      '74' => 'Chinese' ,
+      '75' => 'Russian'); 
+  ?>
 <div class="row">
 <?php if( $olresults1 != ""){foreach($olresults1 as $olresult1): ?>
 <?php //$_SESSION['olindex1'] = $olresult1["OL_index"]; ?>
