@@ -1,7 +1,7 @@
 <?php
 class Editrec extends CI_Controller{
     public function index(){
-        $data['title'] = 'Edit Your Records...';
+        $data['title'] = 'Edit Your Entry';
 
         $this->form_validation->set_rules('alindex', 'AL Index Number', 'required');
         if($this->form_validation->run() === FALSE){
@@ -62,7 +62,7 @@ class Editrec extends CI_Controller{
         // }
 
         if($this->form_validation->run() === FALSE){
-            $data['title'] = 'Edit Your Records...';
+            $data['title'] = 'Edit Your Entry';
             $alindex = $this->input->post('alindex');
             $this->session->set_userdata('alindex', $alindex);
 

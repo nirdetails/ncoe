@@ -89,7 +89,7 @@ class Students_model extends CI_Model{
             'stateworker'=> $this->input->post('sworker'),
             'pirivena'=> $this->input->post('pirivena'),
             'pemarks'=> $this->input->post('pemarks'),
-            'version'=> $this->input->post('version')
+            // 'version'=> $this->input->post('version')
         );
 
         $this->db->where('ALindex', $alindex);

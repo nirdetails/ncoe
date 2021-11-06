@@ -18,24 +18,24 @@ $obj_pdf->AddPage();
 ob_start();
 // we can have any view part here like HTML, PHP etc
 ?>    
-
+   <h1>National Colleges of Education (NCoE) Admission</h1><br>
     <body>
-    <div class="container mt-5" style="padding-top: 0px;">
-            <h1>National Colleges of Education (NCoE) Admission</h1><br>
-            <label for="fullname"><b>01. Name in Full:  </b></label><?php echo $fullname; ?><br>
-            <label for="initials"><b>02. Name with Initials:    </b></label><?php echo $namewithinitials; ?><br>
+    <div class="container mt-5" style="padding-top:0px;">
+            
+            <label for="fullname"><b>01. Name in Full:  </b></label><?php echo $fullname; ?><br><br>
+            <label for="initials"><b>02. Name with Initials:    </b></label><?php echo $namewithinitials; ?><br><br>
             <label for="address"><b>03. Permanent Address: </b></label><?php echo $addressline1; ?>
             <?php echo $addressline2; ?>
             <?php echo $addressline3; ?>
-            <?php echo $addressline4; ?><br>
-            <label for="nic"><b>04. NIC Number: </b></label><?php echo $nic; ?><br>
-            <label for="dob"><b>05. Date of Birth: </b></label><?php echo $dob; ?><br> 
-            <label for="gender"><b>06. Gender: </b></label><?php echo $gender; ?><br>
-            <label for="title"><b>07. Title: </b></label><?php echo $_SESSION['title']; ?><br>
-            <label for="ethnicity"><b>08. Ethnicity: </b></label><?php echo $ethnicity; ?><br>
-            <label for="mobile"><b>09. Mobile: </b></label><?php echo $mobile; ?><br>
-            <label for="home"><b>10. Home Tel: </b></label><?php echo $home; ?><br>
-            <label for="email"><b>11. Email: </b></label><?php echo $email; ?><br>
+            <?php echo $addressline4; ?><br><br>
+            <label for="nic"><b>04. NIC Number: </b></label><?php echo $nic; ?> &nbsp;
+            <label for="dob"><b>05. Date of Birth: </b></label><?php echo $dob; ?>&nbsp;
+            <label for="gender"><b>06. Gender: </b></label><?php echo $gender; ?><br><br>
+            <label for="title"><b>07. Title: </b></label><?php echo $_SESSION['title']; ?>&nbsp;&nbsp;&nbsp;
+            <label for="ethnicity"><b>08. Ethnicity: </b></label><?php echo $ethnicity; ?><br><br>
+            <label for="mobile"><b>09. Mobile: </b></label><?php echo $mobile; ?>&nbsp;&nbsp;&nbsp;
+            <label for="home"><b>10. Home Tel: </b></label><?php echo $home; ?><br><br>
+            <label for="email"><b>11. Email: </b></label><?php echo $email; ?>&nbsp;&nbsp;&nbsp;
             <?php 
                 $districts = array('16' => 'Ampara', "20" => 'Anuradhapura',"22" => 'Badulla',"15" => 'Batticaloa',"01" => 'Colombo',"07" => 'Galle',"02" => 'Gampaha',"09" => 'Hambantota',"10" => 'Jaffna',"03" => 'Kaluthara',"04" => 'Kandy',"25" => 'Kegalle',"11" => 'Kilinochchi',"18" => 'Kurunegala',"12" => 'Mannar',"05" => 'Matale',"08" => 'Matara',"23" => 'Monaragala',"14" => 'Mullaitivu',"06" => 'Nuwara Eliya',"21" => 'Polonnaruwa',"19" => 'Puttalam',"24" => 'Ratnapura',"17" => 'Trincomalee',"13" => 'Vavuniya');
             
@@ -50,55 +50,122 @@ ob_start();
 
             <h4><b>A/L Details: </b></h4>
             <?php foreach($alresults as $alresult): ?><br>
-            <label for="alindex"><b>13. A/L Index No:</b></label><?php echo $alresult['AL_index']; ?><br>
+            <label for="alindex"><b>13. A/L Index No:</b></label><?php echo $alresult['AL_index']; ?>&nbsp;&nbsp;&nbsp;
             <?php if(isset($alresult['year'])){
-                echo '<label for="alyear"><b>14. A/L Year: </b></label>'.$alresult['year'].'<br>';
+                echo '<label for="alyear"><b>14. A/L Year: </b></label>'.$alresult['year'].'<br><br>';
             }else{
-                echo '<label for="alyear"><b>14. A/L Year: </b></label>2018<br>';
+                echo '<label for="alyear"><b>14. A/L Year: </b></label>2018<br><br>';
             }?>
             
 
-            <label for="alstream"><b>15. Stream: </b></label><?php echo $alresult['stream'] ?><br>
-            <label for="almedium"><b>16. Medium: </b></label><?php echo $alresult['medium'] ?><br>
-            <label for="alattempt"><b>17. Attempt: </b></label><?php echo $alresult['attempt'] ?><br><br>
+            <label for="alstream"><b>15. Stream: </b></label>
+            <?php if($alresult['stream']==1){ ?>
+                <?php echo "Physical Science" ?>
+                <?php }elseif($alresult['stream']==2){ ?>
+                <?php echo "Biological Science" ?>
+                <?php }elseif($alresult['stream']==3){ ?>
+                <?php echo "Commerce" ?>
+                <?php }elseif($alresult['stream']==4){ ?>
+                <?php echo "Arts" ?>
+                <?php }elseif($alresult['stream']==5){ ?>
+                <?php echo "Technology" ?>
+                <?php }elseif($alresult['stream']==6){ ?>
+                <?php echo "Common" ?>
+                <?php } ?>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                
+            <label for="almedium"><b>16. Medium: </b></label>
+
+            <?php if($alresult['medium'] == 'S'){ ?>
+          <?php echo "Sinhala" ?>
+        <?php }elseif($alresult['medium'] == 'T'){ ?>
+          <?php echo "Tamil" ?>
+        <?php }elseif($alresult['medium'] == 'E'){ ?>
+          <?php echo "English" ?>
+        <?php } ?>
+<br>
+<br>
+
+<?php 
+        $alsubs = array(1 => 'Physics', 2 =>	'Chemistry' ,7 => 'Mathematics' ,8 => 'Agricultural Science' ,9 => 'Biology' ,10 => 'Combind Mathematics' ,11 => 'Higher Mathematics' ,12 => 'Common General Test'	,13 => 'General English',14 => 'Civil Technology' ,15 => 'Mechanical Technology ',16 => 'Eletrical,Electronic and Information Technology'	,17 => 'Food Technology' ,18 => 'Agro Technology'	,19 => 'Bio- Resource Technology' ,20 => 'Information & Communication Technology' ,21 => 'Economics' ,22 => 'Geography' ,23 => 'Political Science' ,24 => 'Logic and Scientific Method'	,25 => 'History'	,28 => 'Home Economics'	,29 => 'Communication & Media Studies' ,31 => 'Business Statistics'	,32 => 'Business Studies' ,33 => 'Accounting'	,41 => 'Buddhism' ,42 => 'Hinduism' ,43 => 'Christianity' ,44 => 'Islam'				, 45 => 'Buddhist Civilization', 46 => 'Hindu Civilization', 47 => 'Islam Civilization', 48 => 'Greek & Rooman Civilization', 49 => 'Christian Civilization', 51 => 'Art', 52 => 'A Dancing (Indigenous  -Kandyan)', 52 => 'B Dancing (Indigenous  -Low country)', 52 => 'C Dancing (Indigenous Sabaragamu)', 53 => 'Dancing (Bharata)', 54 => 'Oriental Music', 55 => 'Carnatic Music', 56 => 'Western Music', 57 => 'Drama and Theatre (Sinhala)', 58 => 'Drama and Theatre (Tamil)', 59 => 'Drama and Theatre (English)', 65 => 'Engineering Technology', 66 => 'Bio Systems Technology', 67 => 'Science fot Technology', 71 => 'Sinhala', 72 => 'Tamil', 73 => 'English', 74 => 'pali', 75 => 'Sanskrit', 78 => 'Arabic', 79 => 'Malay', 81 => 'French', 82 => 'German', 83 => 'Russian', 84 => 'Hindi', 86 => 'Chinese', 87 => 'Japanese');
+      ?> 
+
+            <label for="alattempt"><b>17. Attempt: </b></label><?php echo $alresult['attempt'] ?><br>
             <h4><b>A/L Results: </b></h4>
                 <table style="width: 100%">
                 <tr>
-                    <th style="width: 10%"></th>
+                    <th style="width: 10%"><b>No</b></th>
                     <th><b>Subject</b></th>
                     <th><b>Grade</b></th>
                 </tr>
+                <br>
                 <tr>
                     <td>01. </td>
-                    <td><?php echo $alresult['sub1'] ?></td>
+                    <?php 
+          if (!array_key_exists($alresult['sub1'], $alsubs)) {
+            // echo "<td>". $alresult['sub1'] ."</td>";
+          }
+          foreach($alsubs as $key => $value){
+            if($key == $alresult['sub1']){
+              echo "<td>". $value ."</td>";
+            }
+          }
+          ?>
                     <td><?php echo $alresult['grade1'] ?></td>
                 </tr>
                 <tr>
                     <td>02. </td>
-                    <td><?php echo $alresult['sub2'] ?></td>
+                    <?php 
+          if (!array_key_exists($alresult['sub2'], $alsubs)) {
+            // echo "<td>". $alresult['sub2'] ."</td>";
+          }
+          foreach($alsubs as $key => $value){
+            if($key == $alresult['sub2']){
+              echo "<td>". $value ."</td>";
+            }
+          }
+        ?>
                     <td><?php echo $alresult['grade2'] ?></td>
                 </tr>
                 <tr>
                     <td>03. </td>
-                    <td><?php echo $alresult['sub3'] ?></td>
+                    <?php 
+          if (!array_key_exists($alresult['sub3'], $alsubs)) {
+            // echo "<td>". $alresult['sub3'] ."</td>";
+          }
+          foreach($alsubs as $key => $value){
+            if($key == $alresult['sub3']){
+              echo "<td>". $value ."</td>";
+            }
+          }
+        ?>
                     <td><?php echo $alresult['grade3'] ?></td>
                 </tr>
                 <tr>
                     <td>04. </td>
-                    <td><?php echo $alresult['sub4'] ?></td>
+                    <?php 
+          if (!array_key_exists($alresult['sub4'], $alsubs)) {
+            // echo "<td>". $alresult['sub3'] ."</td>";
+          }
+          foreach($alsubs as $key => $value){
+            if($key == $alresult['sub4']){
+              echo "<td>". $value ."</td>";
+            }
+          }
+        ?>
                     <td><?php echo $alresult['grade4'] ?></td>
                 </tr>
                 </table>
                 
                 <div style="height: 10px;"></div>
-                <br><br>
+                <br>
                 <label><b>18. Z-score: </b></label><?php echo $alresult['zscore'] ?><br>
                 <?php endforeach; ?>
                 <br>
-            <h4><b>O/L Details: </b></h4>
-            <br>&nbsp;&nbsp;<label for="olattempts"><b>19. Number of Attempts: </b><?php echo $attempts; ?><br>
+            <h4><b>O/L Details: </b></h4><br>
+            <br>&nbsp;&nbsp;<label for="olattempts"><b>19. Number of Attempts: </b><?php echo $attempts; ?><br><br>
             <?php if(isset($_SESSION['olindex1']) && $_SESSION['olindex1'] != ''){ ?>
-                <label for="olindex"><b>20. Index Number 1: </b><?php echo $_SESSION["olindex1"]; ?><br><br>
+                <label for="olindex"><b>20. Attempt 1 Index Number: </b><?php echo $_SESSION["olindex1"]; ?><br><br>
             <?php }?>
             <?php foreach($olresults1 as $olresult1): if( $olresult1["OL_index"] != "N/A"){?><br>
                 <h4><b>O/L Results: </b></h4>
@@ -157,7 +224,7 @@ ob_start();
             <?php }endforeach; ?>
 
             <?php if(isset($_SESSION['olindex2']) && $_SESSION['olindex2'] != ''){ ?>
-                <label for="olindex"><b>20. Index Number 2: </b><?php echo $_SESSION["olindex2"]; ?><br><br>
+                <label for="olindex"><b>20. Attempt 2 Index Number: </b><?php echo $_SESSION["olindex2"]; ?><br><br>
             <?php } ?>
             <?php foreach($olresults2 as $olresult2): if( $olresult2["OL_index"] != "N/A"){?>            
             <h4>O/L Results: </h4>
@@ -216,7 +283,7 @@ ob_start();
             <?php }endforeach; ?>
 
             <?php if(isset($_SESSION['olindex3']) && $_SESSION['olindex3'] != ''){ ?>
-                <label for="olindex"><b>20. Index Number 3: </b><?php echo $_SESSION["olindex3"]; ?><br><br>
+                <label for="olindex"><b>20. Attempt 3 Index Number: </b><?php echo $_SESSION["olindex3"]; ?><br><br>
             <?php } ?>
             <?php foreach($olresults3 as $olresult3): if( $olresult3["OL_index"] != "N/A"){?>
             <h4><b>O/L Results: </b></h4>

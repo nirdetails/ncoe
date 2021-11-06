@@ -10,9 +10,9 @@
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
         <?php if($course['course_no'] == $select['pref1']){?>
-        <option selected="selected" value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
+        <option selected="selected" value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo ucfirst($course['name']); ?></option>
         <?php }else{ ?> 
-          <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
+          <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo ucfirst($course['name']); ?></option>
         <?php } ?>
       <?php endforeach; ?>                                                   
     </select>
@@ -23,9 +23,9 @@
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
         <?php if($course['course_no'] == $select['pref2']){?>
-          <option selected="selected" value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
+          <option selected="selected" value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo ucfirst($course['name']); ?></option>
         <?php }else{ ?> 
-          <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
+          <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo ucfirst($course['name']); ?></option>
         <?php } ?>
         <?php endforeach; ?>                                                   
     </select>
@@ -36,9 +36,9 @@
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
         <?php if($course['course_no'] == $select['pref3']){?>
-          <option selected="selected" value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
+          <option selected="selected" value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo ucfirst($course['name']); ?></option>
           <?php }else{ ?> 
-            <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo $course['name'] ?></option>
+            <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo ucfirst($course['name']); ?></option>
           <?php } ?>
       <?php endforeach; ?>                                                   
     </select>
@@ -49,7 +49,7 @@
 
   <div class="row" >
     <div id="certificates" style="display :none">
-      <div class="col-sm-12">
+    <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;" >
         <div class="form-group">
           <label for="coursename"><b>Physical Education Marks: </b></label><span style="color:red">* <?php echo form_error('pemarks'); ?></span><br>
           <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
@@ -62,17 +62,17 @@
     </div>
   </div>
 
-  <div class="col-sm-12" id="category"  style="display :none">  
+  <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;" id="category">  
   <div class="form-group">
       <label for="category">Category: </label><span style="color:red">* <?php echo form_error('category'); ?></span><br>
       <?php if($select['category'] == "Catholic" ){ ?>
-        <input type="radio" name="category" value="Catholic" checked> Catholic &nbsp;
+        <input type="radio" name="category" value="Catholic" checked> Catholicism &nbsp;
         <input type="radio" name="category" value="Christianity"> Christianity
       <?php } elseif($select['category'] == "Christianity" ){ ?>
-        <input type="radio" name="category" value="Catholic"> Catholic &nbsp;
+        <input type="radio" name="category" value="Catholic"> Catholicism &nbsp;
         <input type="radio" name="category" value="Christianity" checked> Christianity
       <?php } else{ ?>
-        <input type="radio" name="category" value="Catholic"> Catholic &nbsp;
+        <input type="radio" name="category" value="Catholic"> Catholicism &nbsp;
         <input type="radio" name="category" value="Christianity"> Christianity
       <?php }
       ?>
@@ -82,7 +82,7 @@
 <?php //if($select['gitmarks'] != NULL || $select['gitmarks'] != ''){ ?>
   <!-- <div class="col-sm-4" style="padding-left: 0px; display :block;" id="gitmarks"> -->
 <?php //}else{ ?>
-  <div class="col-sm-4" style="padding-left: 0px; display :none;" id="gitmarks">
+  <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;" id="gitmarks">
   <?php //} ?>
     <div class="form-group">
     <label for="gitmk"><b>GIT Grades: </b></label><br><span style="color:red">* <?php echo form_error('gitmk'); ?></span>
@@ -102,7 +102,7 @@
     </div>
   </div>
 </div>
-
+<!---------------------------------------------personal details----------------------------------------->
 <hr>
 <?php break; } ?>
 <?php foreach($personal as $person){ ?>
@@ -281,12 +281,12 @@
     </div>
     
     <?php 
-      $version = $person['version'] + 1;
+      // $version = $person['version'] + 1;
     ?>
-    <input type="hidden" value="<?php echo $version; ?>" name="version" id="version">
+    <!-- <input type="hidden" value="<?php //echo $version; ?>" name="version" id="version"> -->
     <!-- <button type="submit" name="btnprv" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span> Previous</button> -->
     <!-- <a class="btn btn-primary" href="">Recheck</a> -->
-    <!-- <button formtarget="_blank" type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Submit </button> -->
+    <button formtarget="_blank" type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Submit </button>
 <?php break; } ?>
 </form>
 <script src="<?php echo site_url(); ?>assets/js/sripada2.js"></script>
