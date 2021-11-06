@@ -290,11 +290,11 @@
   &nbsp;
 </div>
 <br>
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="container">
         <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
     </div>
-</footer>
+</footer> -->
 <!-- <script src="<?php //echo site_url(); ?>assets/js/alpir.js"></script> -->
 <script>
 $("#alyear").change(function(){
