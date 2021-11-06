@@ -165,7 +165,7 @@ ob_start();
             <h4><b>O/L Details: </b></h4><br>
             <br>&nbsp;&nbsp;<label for="olattempts"><b>19. Number of Attempts: </b><?php echo $attempts; ?><br><br>
             <?php if(isset($_SESSION['olindex1']) && $_SESSION['olindex1'] != ''){ ?>
-                <label for="olindex"><b>20. Index Number 1: </b><?php echo $_SESSION["olindex1"]; ?><br><br>
+                <label for="olindex"><b>20. Attempt 1 Index Number: </b><?php echo $_SESSION["olindex1"]; ?><br><br>
             <?php }?>
             <?php foreach($olresults1 as $olresult1): if( $olresult1["OL_index"] != "N/A"){?><br>
                 <h4><b>O/L Results: </b></h4>
@@ -224,7 +224,7 @@ ob_start();
             <?php }endforeach; ?>
 
             <?php if(isset($_SESSION['olindex2']) && $_SESSION['olindex2'] != ''){ ?>
-                <label for="olindex"><b>20. Index Number 2: </b><?php echo $_SESSION["olindex2"]; ?><br><br>
+                <label for="olindex"><b>20. Attempt 2 Index Number: </b><?php echo $_SESSION["olindex2"]; ?><br><br>
             <?php } ?>
             <?php foreach($olresults2 as $olresult2): if( $olresult2["OL_index"] != "N/A"){?>            
             <h4>O/L Results: </h4>
@@ -283,7 +283,7 @@ ob_start();
             <?php }endforeach; ?>
 
             <?php if(isset($_SESSION['olindex3']) && $_SESSION['olindex3'] != ''){ ?>
-                <label for="olindex"><b>20. Index Number 3: </b><?php echo $_SESSION["olindex3"]; ?><br><br>
+                <label for="olindex"><b>20. Attempt 3 Index Number: </b><?php echo $_SESSION["olindex3"]; ?><br><br>
             <?php } ?>
             <?php foreach($olresults3 as $olresult3): if( $olresult3["OL_index"] != "N/A"){?>
             <h4><b>O/L Results: </b></h4>
