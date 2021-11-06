@@ -32,8 +32,8 @@
       <input type="text" class="form-control" id="addressline4" placeholder="Enter your address- line04" name="addressline4"><br>
     </div>
     <div class="form-group">
-      <label for="district">Recendent District Name and Number: <span style="color:red">* <?php echo form_error('district'); ?></span></label>
-      <label><i>(<span style="color:red">*</span>Applicant’s permanent address according to the section <b>“6.2 Determination of Permanent Residence”</b> of the gazette notification.)</i></label>
+      <label for="district">Permanent Residence District Name and Number: <span style="color:red">* <?php echo form_error('district'); ?></span></label>
+      <label><i>(<span style="color:red">*</span>Applicant’s permanent address according to section <b>“6.2 Determination of Permanent Residence”</b> of the gazette notification.)</i></label>
       <!-- <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district"> -->
       <select class="form-control" id="district" name="district">
         <option value="" selected disabled>Select a District</option>
@@ -101,7 +101,7 @@
         </div>
         <div class="col-sm-6">   
             <div class="form-group">          
-                <label for="ethnicity">Ethnicity: <span style="color:red">* <?php echo form_error('ethnicity'); ?></span></label>
+                <label for="ethnicity">Race: <span style="color:red">* <?php echo form_error('ethnicity'); ?></span></label>
                 <select class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity">
                   <option value="">Select</option>
                   <option value="Sinhalese">Sinhalese</option>
