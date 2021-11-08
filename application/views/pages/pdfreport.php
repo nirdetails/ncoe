@@ -20,8 +20,7 @@ ob_start();
 ?>    
    <h1>National Colleges of Education (NCoE) Admission</h1><br>
     <body>
-    <div class="container mt-5" style="padding-top:0px;">
-            
+    <div class="container mt-5" style="padding-top:0px;">           
             <label for="fullname"><b>01. Name in Full:  </b></label><?php echo $fullname; ?><br><br>
             <label for="initials"><b>02. Name with Initials:    </b></label><?php echo $namewithinitials; ?><br><br>
             <label for="address"><b>03. Permanent Address: </b></label><?php echo $addressline1; ?>
