@@ -144,8 +144,8 @@
       <input type="text" class="form-control" id="addressline4" placeholder="Enter your address- line04" name="addressline4" value="<?php echo $person['Addressl4']; ?>"><br>
     </div>
     <div class="form-group">
-      <label for="district">Recendent District Name and Number: </label><span style="color:red">* <?php echo form_error('district'); ?></span>
-      <!-- <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district"> -->
+    <label for="district">Permanent Residence District Name and Number: <span style="color:red">* <?php echo form_error('district'); ?></span></label>
+    <!-- <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district"> -->
       <?php 
         $districts = array('16' => 'Ampara', "20" => 'Anuradhapura',"22" => 'Badulla',"15" => 'Batticaloa',"01" => 'Colombo',"07" => 'Galle',"02" => 'Gampaha',"09" => 'Hambantota',"10" => 'Jaffna',"03" => 'Kaluthara',"04" => 'Kandy',"25" => 'Kegalle',"11" => 'Kilinochchi',"18" => 'Kurunegala',"12" => 'Mannar',"05" => 'Matale',"08" => 'Matara',"23" => 'Monaragala',"14" => 'Mullaitivu',"06" => 'Nuwara Eliya',"21" => 'Polonnaruwa',"19" => 'Puttalam',"24" => 'Ratnapura',"17" => 'Trincomalee',"13" => 'Vavuniya');
       ?>
@@ -221,7 +221,7 @@
         <?php $ethnicvals  = array('Sinhalese', 'Sri Lankan Tamil' , 'Tamil of Indian Origin', 'Muslim', 'Other'); ?>
         <div class="col-sm-6">   
             <div class="form-group">          
-            <label for="ethnicity">Ethnicity: <span style="color:red">* <?php echo form_error('ethnicity'); ?></span></label>
+            <label for="ethnicity">Race: <span style="color:red">* <?php echo form_error('ethnicity'); ?></span></label>
             <select class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity">
             <option value="">Select</option>
             <?php
