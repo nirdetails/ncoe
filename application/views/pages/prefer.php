@@ -41,12 +41,30 @@
   <!-- <div class="row" > -->
     <div id="certificates" style="display :none;">
       <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;">
-        <div class="form-group">
+			<label for="coursename"><b>Physical Education Marks: </b></label><br>
+				<div class="form-row">
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>O/L Examination Marks</i></p></label><br>
+						<input type="number" class="form-control col-sm-4" id="peolmarks" name="peolmarks" > 
+					</div>
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>Marks According to the Gazette</i></p></label><br>
+						<input type="number" class="form-control col-sm-4" id="pencoemarks" name="pencoemarks" > 
+					</div>
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>Total</i></p></label><br>
+						<input type="number" class="form-control col-sm-4" id="petotalmarks" name="petotalmarks" > 
+					</div>
+				</div>
+
+<!-- 
+				<div class="form-group">
           <label for="coursename"><b>Physical Education Marks: </b></label><br>
           <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
           <input type="number" class="form-control col-sm-4" id="pemarks1" name="pemarks1" >  
           &nbsp;  
-        </div>
+        </div> -->
+
       </div>
       <!-- <div id="div2" class="col-sm-12">
         <label for="myfile"  ><b>Upload your Physical Education Certificates:</b></label><br>
