@@ -61,7 +61,22 @@
           <label for="coursename"><b>Physical Education Marks: </b></label><br>
           <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label>
           <br>
-          <input type="number" value="<?php echo $_SESSION['pemarks1']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" >  
+
+          <div class="form-row">
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>O/L Examination Marks</i></p></label><br>
+						<input type="number" class="form-control col-sm-4" id="peolmarks" onBlur="calcSum();" name="peolmarks" required /> 
+					</div>
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>Marks According to the Gazette</i></p></label><br>
+						<input type="number" class="form-control col-sm-4" id="pencoemarks" onBlur="calcSum();" name="pencoemarks" required /> 
+					</div>
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>Total</i></p></label><br>
+						<input type="number" value="<?php echo $_SESSION['pemarks1']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" max=80 value="" /> 
+					</div>
+				</div>
+          <!-- <input type="number" value="<?php// echo $_SESSION['pemarks1']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" >   -->
           &nbsp;  
         </div>
       </div>
