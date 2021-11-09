@@ -59,7 +59,8 @@
       <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;">
         <div class="form-group">
           <label for="coursename"><b>Physical Education Marks: </b></label><br>
-          <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
+          <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label>
+          <br>
           <input type="number" value="<?php echo $_SESSION['pemarks1']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" >  
           &nbsp;  
         </div>
