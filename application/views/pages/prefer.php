@@ -41,21 +41,31 @@
   <!-- <div class="row" > -->
     <div id="certificates" style="display :none;">
       <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;">
-			<label for="coursename"><b>Physical Education Marks: </b></label><br>
+			<label for="coursename"><b>Physical Education: </b></label><br>
 				<div class="form-row">
 					<div class="form-group col-md-4">
 						<label><p><span style="color:red">* </span><i>O/L Examination Marks</i></p></label><br>
-						<input type="number" class="form-control col-sm-4" id="peolmarks" name="peolmarks" > 
+						<input type="number" class="form-control col-sm-4" id="peolmarks" onBlur="calcSum();" name="peolmarks" required /> 
 					</div>
 					<div class="form-group col-md-4">
 						<label><p><span style="color:red">* </span><i>Marks According to the Gazette</i></p></label><br>
-						<input type="number" class="form-control col-sm-4" id="pencoemarks" name="pencoemarks" > 
+						<input type="number" class="form-control col-sm-4" id="pencoemarks" onBlur="calcSum();" name="pencoemarks" required /> 
 					</div>
 					<div class="form-group col-md-4">
 						<label><p><span style="color:red">* </span><i>Total</i></p></label><br>
-						<input type="number" class="form-control col-sm-4" id="petotalmarks" name="petotalmarks" > 
+						<input type="number" class="form-control col-sm-4" id="pemarks1" name="pemarks1" max=80 value="" /> 
 					</div>
 				</div>
+
+				<script>
+					function calcSum()
+					{
+							var num1 = parseInt(document.getElementById("peolmarks").value);
+							var num2 = parseInt(document.getElementById("pencoemarks").value);
+							document.getElementById("pemarks1").value = num1 + num2;
+
+					}
+    		</script>
 
 <!-- 
 				<div class="form-group">
