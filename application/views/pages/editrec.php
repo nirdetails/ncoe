@@ -107,21 +107,20 @@
 <?php break; } ?>
 <?php foreach($personal as $person){ ?>
 <div class="form-group">
-    
-<div class="form-group">
-      <label for="emailindex" style="display :block">O/L index number:</label><span style="color:red">* <?php echo form_error('olindex1'); ?></span>
-      <input value="<?php echo $person['OLindex1']; ?>" type="text" class="form-control" id="olindex1" placeholder="Enter your  1st index " name="olindex1" style="display :block">
+    <!-- <div class="form-group">
+      <label for="emailindex" style="display :block">O/L index number:</label><span style="color:red">* <?php// echo form_error('olindex1'); ?></span>
+      <input value="<?php// echo $person['OLindex1']; ?>" type="text" class="form-control" id="olindex1" placeholder="Enter your  1st index " name="olindex1" style="display :block">
     </div>
 
     <div class="form-group">
       <label for="emailindex" style="display :block">O/L index number:</label>
-      <input value="<?php echo $person['OLindex2']; ?>" type="text" class="form-control" id="olindex2" placeholder="Enter your 2nd index" name="olindex2"  style="display :block">
+      <input value="<?php// echo $person['OLindex2']; ?>" type="text" class="form-control" id="olindex2" placeholder="Enter your 2nd index" name="olindex2"  style="display :block">
     </div>
 
     <div class="form-group">
       <label for="emailindex" style="display :block">O/L index number:</label>
-      <input value="<?php echo $person['OLindex3']; ?>" type="text" class="form-control" id="olindex3" placeholder="Enter your 3rd index" name="olindex3" style="display :block">
-    </div>
+      <input value="<?php// echo $person['OLindex3']; ?>" type="text" class="form-control" id="olindex3" placeholder="Enter your 3rd index" name="olindex3" style="display :block">
+    </div> -->
 <hr>
   <div class="form-group">
   <?php // var_dump($_SESSION['sworker']); ?>
@@ -259,7 +258,7 @@
             <label for="home">Email: </label>
             <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email" value="<?php echo $person['email']; ?>">             
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="index1" id="label1" title=" National College of Education">Are you applying for Sripada NCoE? <span style="color:red">* <?php echo form_error('sripada'); ?><?php echo form_error('sworker'); ?></span></label>
       <select name="sripada"  id="sripada" height="4" class="form-control" >
         <option selected value="">SELECT</option>
@@ -276,7 +275,7 @@
         <option  value="1">Yes</option>
         <option  value="0">No</option>
         </select>
-      <br>
+      <br> -->
 
     </div>
     

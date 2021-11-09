@@ -33,7 +33,7 @@ class Editrec extends CI_Controller{
         $course1 = $this->input->post("course1");
         $course2 = $this->input->post("course2");
         $course3 = $this->input->post("course3");
-        $sripada = $this->input->post("sripada");
+        // $sripada = $this->input->post("sripada");
 
         $this->form_validation->set_rules('fullname', 'Name in Full', 'required');
         $this->form_validation->set_rules('namewithinitials', 'Name with Initials', 'required');
@@ -44,13 +44,13 @@ class Editrec extends CI_Controller{
         $this->form_validation->set_rules('gender', 'Gender', 'required');
         $this->form_validation->set_rules('title', 'Title', 'required');
         $this->form_validation->set_rules('ethnicity', 'Ethnicity', 'required');
-        $this->form_validation->set_rules('olindex1', 'Index Number', 'required');
+        // $this->form_validation->set_rules('olindex1', 'Index Number', 'required');
         $this->form_validation->set_rules('course1', 'course1', 'required');
-        $this->form_validation->set_rules('sripada', 'first field', 'required');
+        // $this->form_validation->set_rules('sripada', 'first field', 'required');
 
-        if($sripada ==  "Yes"){
-            $this->form_validation->set_rules('sworker', 'Second field', 'required');
-        }
+        // if($sripada ==  "Yes"){
+        //     $this->form_validation->set_rules('sworker', 'Second field', 'required');
+        // }
         if($course1 == '15' || $course1 == '14' || $course2 == '15' || $course2 == '14' || $course3 == '15' || $course3 == '14'){
             $this->form_validation->set_rules('category', 'Category', 'required');
         }
@@ -86,6 +86,7 @@ class Editrec extends CI_Controller{
             if (empty($data['alresult'])){
                 $data['alresult'] = $this->alpirivena_model-> get_palresults();
             }
+
             $data['olresults1'] = $this->olresults_model-> edit_ol1();
             $data['olresults2'] = $this->olresults_model-> edit_ol2();
             $data['olresults3'] = $this->olresults_model-> edit_ol3();
