@@ -53,7 +53,7 @@
 					</div>
 					<div class="form-group col-md-4">
 						<label><p><span style="color:red">* </span><i>Total</i></p></label><br>
-						<input type="number" class="form-control col-sm-4" id="petotalmarks" name="petotalmarks" > 
+						<input type="number" class="form-control col-sm-4" id="pemarks1" name="pemarks1" > 
 					</div>
 				</div>
 
