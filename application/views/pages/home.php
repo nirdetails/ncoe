@@ -74,7 +74,7 @@
     <span style="color: red;"><?php echo validation_errors(); ?></span>
         Enter A/L Index Number
         <input class="form-control" type="text" name="alindex" id="alindex" style="width: 100%;"><br>
-        <input type="submit" class="btn btn-warning" style="width: 100%;" value="Edit my records">
+        <input type="submit" class="btn btn-warning" style="width: 100%;" value="Edit Application">
     </div>
     <div class="col-sm-4">&nbsp;</div>
 </div>

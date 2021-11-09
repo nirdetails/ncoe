@@ -304,6 +304,7 @@ ob_start();
     </ol>
     <?php
     foreach($personal as $person){ 
+        // var_dump($person['pemarks']);
         if($person['pemarks'] != NULL){ ?>
             <label for="pemarks"><b>21. Physical Education Marks: </b></label><?php echo $person['pemarks']; ?><br><br>
     <?php } break; }?>
@@ -317,9 +318,6 @@ ob_start();
         <div style="text-align:center">
             <strong> I Agreed </strong> <br/>
         </div> -->
-        23. Version No: <?php foreach($personal as $person){
-            echo $person['version'];
-        break; } ?>
     </div>
 </body>
 <?php
