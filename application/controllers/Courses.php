@@ -141,8 +141,7 @@ class Courses extends CI_Controller{
         // $myfile = $this->input->post("myfile");
 
         if($this->form_validation->run() === FALSE){
-            $data['courses'] = $this->courses_model-> get_courses();
-            
+            $data['courses'] = $this->courses_model->get_courses();
             $this->load->view('templates/header');
             $this->load->view('pages/prefer',$data);
             $this->load->view('templates/footer');
@@ -163,8 +162,10 @@ class Courses extends CI_Controller{
                     redirect('students/index');
                 }
             }elseif($course1 == '28' || $course1 == '29' || $course2 == '28' || $course2 == '29' || $course3 == '28' || $course3 == '29'){
-                $this->form_validation->set_rules('pemarks1', 'PE marks', 'required');
-    
+                $this->form_validation->set_rules('peolmarks', 'Physical Education marks for O/L', 'required', array('required' => 'You must provide Physical Education marks for O/L!'));
+				$this->form_validation->set_rules('pencoemarks', 'Physical Education marks accoding to the gazette', 'required', array('required' => 'You must provide Physical Education marks accoring to the gazette!'));
+				$this->form_validation->set_rules('pemarks1', 'Total marks for Physical Education', 'required', array('required' => 'Total marks for Physical Education cannot exceed more than 80'));
+
                 // var_dump($course1);
                 if($this->form_validation->run() === FALSE){
                     $data['courses'] = $this->courses_model-> get_courses();
