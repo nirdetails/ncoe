@@ -19,85 +19,257 @@ ob_start();
 // var_dump($alresult);
 // we can have any view part here like HTML, PHP etc
 ?>    
-
+    <h1>National Colleges of Education (NCoE) Admission</h1><br>
     <body>
     <div class="container mt-5" style="padding-top: 0px;">
-            <h1>National Colleges of Education (NCoE) Admission</h1><br>
+           
             <?php foreach($personal as $person){ ?>
-            <label for="fullname"><b>01. Name in Full:  </b></label><?php echo $person['fullname']; ?><br>
-            <label for="initials"><b>02. Name with Initials:    </b></label><?php echo $person['namewithinitials']; ?><br>
-            <label for="address"><b>03. Permanent Address: </b></label><?php echo $person['Addressl1']; ?>
+            <table style="width:100%">    
+            <tr> 
+            
+            <td style="width:5%"><b>01.</b></td> 
+            <td style="width:30%"><label for="fullname"><b>Name in Full</b></label></td>
+            <td style="width:5%"><b>:</b></td> 
+            <td style="width:60%"><?php echo $person['fullname']; ?></td>
+            </tr>
+            <br><br>
+
+            <tr>
+            <td style="width:1%"></td>
+            <td style="width:5%"><b>02.</b></td> 
+            <td style="width:30%"><label for="initials"><b>Name with Initials</b></label></td>
+            <td style="width:5%"><b>:</b></td> 
+            <td style="width:60%"><?php echo $person['namewithinitials']; ?></td>
+            </tr>
+            <br><br>
+
+            <tr>
+            <td style="width:1%"></td>
+            <td style="width:5%"><b>03.</b></td> 
+            <td style="width:30%"><label for="address"><b>Permanent Address</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $person['Addressl1']; ?>
             <?php echo $person['Addressl2']; ?>
             <?php echo $person['Addressl3']; ?>
-            <?php echo $person['Addressl4']; ?><br>
-            <label for="nic"><b>04. NIC Number: </b></label><?php echo $person['NIC']; ?><br>
-            <label for="dob"><b>05. Date of Birth: </b></label><?php echo $person['dob']; ?><br> 
-            <label for="gender"><b>06. Gender: </b></label><?php echo $person['Gender']; ?><br>
-            <label for="title"><b>07. Title: </b></label><?php echo $person['Title']; ?><br>
-            <label for="ethnicity"><b>08. Ethnicity: </b></label><?php echo $person['Ethnicity']; ?><br>
-            <label for="mobile"><b>09. Mobile: </b></label><?php echo $person['Mobile']; ?><br>
-            <label for="home"><b>10. Home Tel: </b></label><?php echo $person['home']; ?><br>
-            <label for="email"><b>11. Email: </b></label><?php echo $person['email']; ?><br>
+            <?php echo $person['Addressl4']; ?>
+            </td>
+            </tr>
+            <br><br>
+           
+            <tr>
+            <td style="width:1%"></td>
+            <td style="width:5%"><b>04.</b></td> 
+            <td style="width:30%"><label for="nic"><b>NIC Number</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $person['NIC']; ?></td>
+            </tr>
+            <br>
+           
+            <tr>
+            <td style="width:1%"></td>
+            <td style="width:5%"><b>05.</b></td> 
+            <td style="width:30%"><label for="dob"><b>Date of Birth</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $person['dob']; ?></td> 
+            </tr>
+            <br>
+            
+            <tr>
+            <td style="width:1%"></td>
+            <td style="width:5%"><b>06.</b></td>
+            <td style="width:30%"><label for="gender"><b>Gender</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $person['Gender']; ?></td>
+            </tr>
+            <br>
+
+            <tr>
+            <td style="width:1%"></td>
+            <td style="width:5%"><b>07.</b></td>
+            <td style="width:30%"><label for="title"><b>Title</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $person['Title']; ?></td>
+            </tr>
+            <br>
+
+
+            <tr>
+            <td style="width:1%"></td>
+            <td style="width:5%"><b>08.</b></td>
+            <td style="width:30%"><label for="ethnicity"><b>Ethnicity</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $person['Ethnicity']; ?></td>
+            </tr>
+            <br>
+
+
+            <tr>
+            <td style="width:1%"></td>
+            <td style="width:5%"><b>09.</b></td>   
+            <td style="width:30%"><label for="mobile"><b>Mobile</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $person['Mobile']; ?></td>
+            </tr>
+            <br>
+
+
+            <tr>
+            <td style="width:1%"></td>
+            <td style="width:5%"><b>10.</b></td>  
+            <td style="width:30%"><label for="home"><b>Home Tel</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $person['home']; ?></td>
+            </tr>
+            <br>
+            
+            <tr>
+            <td style="width:1%"></td>
+            <td style="width:5%"><b>11.</b></td>
+            <td style="width:30%"><label for="email"><b>Email</b></label></td>
+            <td style="width:5%"><b>:</b></td>
+            <td style="width:60%"><?php echo $person['email']; ?></td>
+            </tr>
+            <br>
+           
+            <tr>
             <?php 
                 $districts = array('16' => 'Ampara', "20" => 'Anuradhapura',"22" => 'Badulla',"15" => 'Batticaloa',"01" => 'Colombo',"07" => 'Galle',"02" => 'Gampaha',"09" => 'Hambantota',"10" => 'Jaffna',"03" => 'Kaluthara',"04" => 'Kandy',"25" => 'Kegalle',"11" => 'Kilinochchi',"18" => 'Kurunegala',"12" => 'Mannar',"05" => 'Matale',"08" => 'Matara',"23" => 'Monaragala',"14" => 'Mullaitivu',"06" => 'Nuwara Eliya',"21" => 'Polonnaruwa',"19" => 'Puttalam',"24" => 'Ratnapura',"17" => 'Trincomalee',"13" => 'Vavuniya');
             
                 foreach ($districts as $key => $value) {
                     if ($key == $person['Resdistrict']) { 
-                        echo "<label for='district'><b>12. District: </b></label>". $key." - " .$value."<br>";
+                        echo "<td style='width:1%'></td><td style='width:5%'><b>12.</b></td> <td style='width:30%'><label for='district'><b>District</b></label></td> <td style='width:5%'><b>:</b></td><td>".$key." - " .$value."</td></tr>";
                     }
                 }?>
             <!-- <label for="Sripada">12. Are you applying for Sripada NCoE? </label><br>
             <label for="state">13. Are your parents are State Workers? </label><br><br> -->
             <?php break; } ?>
-            <?php foreach($alresult as $alres){ //var_dump($alres);?> 
             <h4><b>A/L Details: </b></h4>
-            <label for="alindex"><b>13. A/L Index No:</b></label><?php echo $alres['AL_index']; ?><br>
+            <?php foreach($alresult as $alres){ //var_dump($alres);?> <br>
+           
+            <label for="alindex"><b>&nbsp;13. A/L Index No &nbsp;:&nbsp;</b></label><?php echo $alres['AL_index']; ?><br><br>
             <?php if(array_key_exists('Year', $alres)){
-                echo '<label for="alyear"><b>14. A/L Year: </b></label>'.$alres['Year'].'<br>';
-            }else{
-                echo '<label for="alyear"><b>14. A/L Year: </b></label>2018<br>';
-            }?>
-            <label for="alstream"><b>15. Stream: </b></label><?php echo $alres['stream'] ?><br>
-            <label for="almedium"><b>16. Medium: </b></label><?php echo $alres['medium'] ?><br>
-            <label for="alattempt"><b>17. Attempt: </b></label><?php echo $alres['attempt'] ?><br><br>
-            <h4><b>A/L Results: </b></h4>
+                 echo '<label for="alyear"><b>&nbsp;14. A/L Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </b></label>'.$alres['year'].'<br><br>';
+                }else{
+                    echo '<label for="alyear"><b>&nbsp;14. A/L Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </b></label>2018<br><br>';
+                }?>
+
+            <label for="alstream"><b>&nbsp;15. Stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : </b></label>
+            <?php if($alres['stream']==1){ ?>
+                <?php echo "Physical Science" ?>
+                <?php }elseif($alres['stream']==2){ ?>
+                <?php echo "Biological Science" ?>
+                <?php }elseif($alres['stream']==3){ ?>
+                <?php echo "Commerce" ?>
+                <?php }elseif($alres['stream']==4){ ?>
+                <?php echo "Arts" ?>
+                <?php }elseif($alres['stream']==5){ ?>
+                <?php echo "Technology" ?>
+                <?php }elseif($alres['stream']==6){ ?>
+                <?php echo "Common" ?>
+                <?php } ?>
+               <br>
+               <br>
+                
+
+
+
+               <label for="almedium"><b>&nbsp;16. Medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : </b></label>
+
+               <?php if($alres['medium'] == 'S'){ ?>
+                <?php echo "Sinhala" ?>
+                <?php }elseif($alres['medium'] == 'T'){ ?>
+                <?php echo "Tamil" ?>
+                <?php }elseif($alres['medium'] == 'E'){ ?>
+                <?php echo "English" ?>
+                <?php } ?>
+                <br>
+                <br>
+
+                <?php 
+                     $alsubs = array(1 => 'Physics', 2 =>	'Chemistry' ,7 => 'Mathematics' ,8 => 'Agricultural Science' ,9 => 'Biology' ,10 => 'Combind Mathematics' ,11 => 'Higher Mathematics' ,12 => 'Common General Test'	,13 => 'General English',14 => 'Civil Technology' ,15 => 'Mechanical Technology ',16 => 'Eletrical,Electronic and Information Technology'	,17 => 'Food Technology' ,18 => 'Agro Technology'	,19 => 'Bio- Resource Technology' ,20 => 'Information & Communication Technology' ,21 => 'Economics' ,22 => 'Geography' ,23 => 'Political Science' ,24 => 'Logic and Scientific Method'	,25 => 'History'	,28 => 'Home Economics'	,29 => 'Communication & Media Studies' ,31 => 'Business Statistics'	,32 => 'Business Studies' ,33 => 'Accounting'	,41 => 'Buddhism' ,42 => 'Hinduism' ,43 => 'Christianity' ,44 => 'Islam'				, 45 => 'Buddhist Civilization', 46 => 'Hindu Civilization', 47 => 'Islam Civilization', 48 => 'Greek & Rooman Civilization', 49 => 'Christian Civilization', 51 => 'Art', 52 => 'A Dancing (Indigenous  -Kandyan)', 52 => 'B Dancing (Indigenous  -Low country)', 52 => 'C Dancing (Indigenous Sabaragamu)', 53 => 'Dancing (Bharata)', 54 => 'Oriental Music', 55 => 'Carnatic Music', 56 => 'Western Music', 57 => 'Drama and Theatre (Sinhala)', 58 => 'Drama and Theatre (Tamil)', 59 => 'Drama and Theatre (English)', 65 => 'Engineering Technology', 66 => 'Bio Systems Technology', 67 => 'Science fot Technology', 71 => 'Sinhala', 72 => 'Tamil', 73 => 'English', 74 => 'pali', 75 => 'Sanskrit', 78 => 'Arabic', 79 => 'Malay', 81 => 'French', 82 => 'German', 83 => 'Russian', 84 => 'Hindi', 86 => 'Chinese', 87 => 'Japanese');
+                 ?> 
+    
+    <label for="alattempt"><b>&nbsp;17. Attempt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</b></label><?php echo $alres['attempt'] ?><br><br><br>
+           
+    <h4><b>A/L Results: </b></h4>
                 <table style="width: 100%">
                 <tr>
-                    <th style="width: 10%"></th>
+                    <th style="width: 10%"><b>No</b></th>
                     <th><b>Subject</b></th>
                     <th><b>Grade</b></th>
                 </tr>
+                <br>
                 <tr>
                     <td>01. </td>
-                    <td><?php echo $alres['sub1'] ?></td>
+                    <?php 
+          if (!array_key_exists($alres['sub1'], $alsubs)) {
+            // echo "<td>". $alresult['sub1'] ."</td>";
+          }
+          foreach($alsubs as $key => $value){
+            if($key == $alres['sub1']){
+              echo "<td>". $value ."</td>";
+            }
+          }
+          ?>
                     <td><?php echo $alres['grade1'] ?></td>
                 </tr>
                 <tr>
                     <td>02. </td>
-                    <td><?php echo $alres['sub2'] ?></td>
+                    <?php 
+          if (!array_key_exists($alres['sub2'], $alsubs)) {
+            // echo "<td>". $alresult['sub2'] ."</td>";
+          }
+          foreach($alsubs as $key => $value){
+            if($key == $alres['sub2']){
+              echo "<td>". $value ."</td>";
+            }
+          }
+        ?>
                     <td><?php echo $alres['grade2'] ?></td>
                 </tr>
                 <tr>
                     <td>03. </td>
-                    <td><?php echo $alres['sub3'] ?></td>
+                    <?php 
+          if (!array_key_exists($alres['sub3'], $alsubs)) {
+            // echo "<td>". $alresult['sub3'] ."</td>";
+          }
+          foreach($alsubs as $key => $value){
+            if($key == $alres['sub3']){
+              echo "<td>". $value ."</td>";
+            }
+          }
+        ?>
                     <td><?php echo $alres['grade3'] ?></td>
                 </tr>
                 <tr>
                     <td>04. </td>
-                    <td><?php echo $alres['sub4'] ?></td>
+                    <?php 
+          if (!array_key_exists($alres['sub4'], $alsubs)) {
+            // echo "<td>". $alresult['sub3'] ."</td>";
+          }
+          foreach($alsubs as $key => $value){
+            if($key == $alres['sub4']){
+              echo "<td>". $value ."</td>";
+            }
+          }
+        ?>
                     <td><?php echo $alres['grade4'] ?></td>
                 </tr>
                 </table>
-                
+    
+    
+    
                 <div style="height: 10px;"></div>
-                <br><br>
+                
                 <label><b>19. Z-score: </b></label><?php echo $alres['zscore'] ?><br>
             <?php break; } ?>
-                <br>
+                
 
             <h4><b>O/L Details: </b></h4>
+         
             <?php foreach($personal as $person){ ?>
-                <label for="olindex"><b>&nbsp;&nbsp; 20. Index Number 1: </b><?php echo $person["OLindex1"]; ?><br>
+                <label for="olindex"><b>&nbsp;&nbsp;20. Index Number 1: </b><?php echo $person["OLindex1"]; ?><br><br>
+                
             <?php }?>
             <?php foreach($olresults1 as $olresult1){ if( $olresult1["OL_index"] != "N/A"){?><br>
                 <br>
@@ -157,7 +329,7 @@ ob_start();
             <?php } break; } ?>
 
             <?php foreach($personal as $person){ ?>
-                <label for="olindex"><b> 20. Index Number 2: </b><?php echo $person["OLindex2"]; ?><br>
+                <label for="olindex"><b>20. Index Number 2: </b><?php echo $person["OLindex2"]; ?><br><br>
             <?php }?>
             <?php foreach($olresults2 as $olresult2){ if( $olresult2["OL_index"] != "N/A"){?>
             <br>
@@ -217,7 +389,7 @@ ob_start();
             <?php } break; }; ?>
 
             <?php foreach($personal as $person){ ?>
-                <label for="olindex"><b> 20. Index Number 3: </b><?php echo $person["OLindex3"] ?><br>
+                <label for="olindex"><b>20. Index Number 3: </b><?php echo $person["OLindex3"]; ?><br><br>
             <?php }?>
             <?php foreach($olresults3 as $olresult3){ if( $olresult3["OL_index"] != "N/A"){?>
             <br>
