@@ -66,10 +66,10 @@ if($_SESSION['pdfdone'] == 1)   // use if($_SESSION['pdfdone'] == 0) to view the
         &nbsp;
       </div>
       <div class="col-sm-3 form-group">
-        <a href="<?php echo site_url(); ?>pages/view/editpersonal" class="btn btn-info" style="width: 100%; height: 4em">Review Personal Details</a>
+        <a href="<?php echo site_url(); ?>pages/view/editpersonal" class="btn btn-info" style="width: 100%; height: 4em">Review Your Application</a>
       </div>
       <div class="col-sm-3 form-group">
-        <a href="<?php echo site_url(); ?>courses/edit" class="btn btn-info" style="width: 100%; height: 4em">Review your course selection</a>
+        <a href="<?php echo site_url(); ?>courses/edit" class="btn btn-info" style="width: 100%; height: 4em">Review Course Selection</a>
       </div>
       <div class="col-sm-3">
         &nbsp;
@@ -78,7 +78,7 @@ if($_SESSION['pdfdone'] == 1)   // use if($_SESSION['pdfdone'] == 0) to view the
     <div class="row">
       <div class="col-sm-4">&nbsp;</div>
       <div class="col-sm-4">
-        <button style= "padding:20px;font-size:20px; width: 100%;" type="submit" name="btnprv" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Submit</button>
+        <button style= "padding:20px;font-size:20px; width: 100%;" type="submit" name="btnprv" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Submit Application </button>
       </div>
       <div class="col-sm-4">&nbsp;</div>
     </div>

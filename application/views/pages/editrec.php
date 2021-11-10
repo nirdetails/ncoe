@@ -47,32 +47,47 @@
   <input type="hidden" name="alindex" value="<?php echo $_SESSION['alindex']; ?>">
 <?php } ?>
 
-  <div class="row" >
-    <div id="certificates" style="display :none">
-    <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;" >
-        <div class="form-group">
-          <label for="coursename"><b>Physical Education Marks: </b></label><span style="color:red">* <?php echo form_error('pemarks'); ?></span><br>
-          <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
-          <?php foreach($personal as $person){ ?>
-            <input type="text" class="form-control" id="pemarks" name="pemarks" value="<?php echo $person['pemarks'] ?>">  
+    <div id="certificates" style="display :none;">
+    <div class="col-sm-12" style="background-color: #ddffff; border-radius: 5px;" >
+      <div class="form-group">
+        <label for="coursename"><b>Physical Education Marks: </b></label><span style="color:red">* <?php echo form_error('pemarks'); ?></span><br>
+        <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label><br>
+        <?php foreach($personal as $person){ ?>
+          <!-- <input type="text" class="form-control" id="pemarks" name="pemarks" value="<?php// echo $person['pemarks'] ?>">  -->   
+        <div class="form-row">
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>O/L Examination Marks</i></p></label><br>
+						<input type="number" class="form-control col-sm-4" id="peolmarks" onBlur="calcSum();" name="peolmarks" required /> 
+					</div>
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>Marks According to the Gazette</i></p></label><br>
+						<input type="number" class="form-control col-sm-4" id="pencoemarks" onBlur="calcSum();" name="pencoemarks" required /> 
+					</div>
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>Total</i></p></label><br>
+						<input type="number" value="<?php echo $person['pemarks']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" max=80 value="" /> 
+					</div>
+				</div>
             <?php break; ?>
           <?php } ?>   
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;" id="category">  
+  <div class="col-sm-12" style="background-color: #ddffff; border-radius: 5px;" id="category">  
   <div class="form-group">
-      <label for="category">Category: </label><span style="color:red">* <?php echo form_error('category'); ?></span><br>
+      <label for="category"><b>Select Catholicism or Christianity: </b></label><span style="color:red">* <?php echo form_error('category'); ?></span><br>
       <?php if($select['category'] == "Catholic" ){ ?>
-        <input type="radio" name="category" value="Catholic" checked> Catholicism &nbsp;
+        <input type="radio" name="category" value="Catholic" checked> Catholicism
+        <br>
         <input type="radio" name="category" value="Christianity"> Christianity
       <?php } elseif($select['category'] == "Christianity" ){ ?>
-        <input type="radio" name="category" value="Catholic"> Catholicism &nbsp;
+        <input type="radio" name="category" value="Catholic"> Catholicism
+        <br>
         <input type="radio" name="category" value="Christianity" checked> Christianity
       <?php } else{ ?>
-        <input type="radio" name="category" value="Catholic"> Catholicism &nbsp;
+        <input type="radio" name="category" value="Catholic">Catholicism
+        <br>
         <input type="radio" name="category" value="Christianity"> Christianity
       <?php }
       ?>
@@ -82,7 +97,7 @@
 <?php //if($select['gitmarks'] != NULL || $select['gitmarks'] != ''){ ?>
   <!-- <div class="col-sm-4" style="padding-left: 0px; display :block;" id="gitmarks"> -->
 <?php //}else{ ?>
-  <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;" id="gitmarks">
+  <div class="col-sm-12" style="background-color: #ddffff; border-radius: 5px;" id="gitmarks">
   <?php //} ?>
     <div class="form-group">
     <label for="gitmk"><b>GIT Grades: </b></label><br><span style="color:red">* <?php echo form_error('gitmk'); ?></span>
@@ -242,13 +257,13 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group"> 
-               <label for="mobile">Mobile: </label>
+               <label for="mobile">Mobile Number: </label>
                 <input type="text" class="form-control" id="mobile" placeholder="0700000000" name="mobile" value="<?php echo $person['Mobile']; ?>">
             </div>
         </div>
         <div class="col-sm-6">  
             <div class="form-group">           
-                <label for="home">Home: </label>
+                <label for="home">Landline Number: </label>
                 <input type="text" class="form-control" id="home" placeholder="0000000000" name="home" value="<?php echo $person['home']; ?>"> 
             </div>     
         </div>
@@ -290,3 +305,11 @@
 </form>
 <script src="<?php echo site_url(); ?>assets/js/sripada2.js"></script>
 <script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>
+<script>
+function calcSum()
+{
+	var num1 = parseInt(document.getElementById("peolmarks").value);
+	var num2 = parseInt(document.getElementById("pencoemarks").value);
+	document.getElementById("pemarks1").value = num1 + num2;
+}
+</script>

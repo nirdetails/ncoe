@@ -127,13 +127,13 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group"> 
-               <label for="mobile">Mobile: </label>
+               <label for="mobile">Mobile Number: </label>
                 <input type="text" class="form-control" id="mobile" placeholder="0700000000" name="mobile" value="<?php echo $_SESSION['mobile']; ?>">
             </div>
         </div>
         <div class="col-sm-6">  
             <div class="form-group">           
-                <label for="home">Home: </label>
+                <label for="home">Landline Number: </label>
                 <input type="text" class="form-control" id="home" placeholder="0000000000" name="home" value="<?php echo $_SESSION['home']; ?>"> 
             </div>     
         </div>
