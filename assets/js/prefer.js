@@ -452,4 +452,13 @@ $("#category").hide(); //14, 15
     }else{
       $("#gitmarks").hide();
     }
+
   });
+
+function calcSum()
+{
+	var num1 = parseInt(document.getElementById("peolmarks").value);
+	var num2 = parseInt(document.getElementById("pencoemarks").value);
+	document.getElementById("pemarks1").value = num1 + num2;
+
+}

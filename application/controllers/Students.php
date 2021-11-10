@@ -76,7 +76,7 @@
 		}
 
         public function sripada(){
-            $data['title'] = 'Sipada Ncoe';
+            $data['title'] = 'Sripada National College of Education';
             $this->form_validation->set_rules('sripada', 'first field', 'required');
 
             // echo $this->input->post("sripada");
