@@ -57,23 +57,31 @@
         <div class="form-row">
 					<div class="form-group col-md-4">
 						<label><p><span style="color:red">* </span><i>O/L Examination Marks</i></p></label><br>
-						<input type="number" class="form-control col-sm-4" id="peolmarks" onBlur="calcSum();" name="peolmarks" required /> 
+						<!-- <input type="number" class="form-control col-sm-4" id="peolmarks" onBlur="calcSum();" name="peolmarks" required />  -->
 					</div>
 					<div class="form-group col-md-4">
 						<label><p><span style="color:red">* </span><i>Marks According to the Gazette</i></p></label><br>
-						<input type="number" class="form-control col-sm-4" id="pencoemarks" onBlur="calcSum();" name="pencoemarks" required /> 
+						<!-- <input type="number" class="form-control col-sm-4" id="pencoemarks" onBlur="calcSum();" name="pencoemarks" required />  -->
 					</div>
 					<div class="form-group col-md-4">
 						<label><p><span style="color:red">* </span><i>Total</i></p></label><br>
 						<input type="number" value="<?php echo $person['pemarks']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" max=80 value="" /> 
 					</div>
+          <br>&nbsp;
 				</div>
             <?php break; ?>
           <?php } ?>   
         </div>
       </div>
     </div>
-
+    <script>
+function calcSum()
+{
+	// var num1 = parseInt(document.getElementById("peolmarks").value);
+	// var num2 = parseInt(document.getElementById("pencoemarks").value);
+	// document.getElementById("pemarks1").value = num1 + num2;
+}
+</script>
   <div class="col-sm-12" style="background-color: #ddffff; border-radius: 5px;" id="category">  
   <div class="form-group">
       <label for="category"><b>Select Catholicism or Christianity: </b></label><span style="color:red">* <?php echo form_error('category'); ?></span><br>
@@ -91,6 +99,10 @@
         <input type="radio" name="category" value="Christianity"> Christianity
       <?php }
       ?>
+      <br>
+      <div style="height:100%">
+      &nbsp;
+      </div>
     </div>
   </div>
 <?php $gitgrades = array('A','B','C','S','F','+','X','N'); ?>
@@ -100,7 +112,7 @@
   <div class="col-sm-12" style="background-color: #ddffff; border-radius: 5px;" id="gitmarks">
   <?php //} ?>
     <div class="form-group">
-    <label for="gitmk"><b>GIT Grades: </b></label><br><span style="color:red">* <?php echo form_error('gitmk'); ?></span>
+    <label for="gitmk"><b>GIT Grades: </b></label><span style="color:red">* <?php echo form_error('gitmk'); ?></span>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
       <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade">
         <option value="0" selected disabled>Select your Grade</option>
@@ -115,6 +127,7 @@
         ?>
       </select>    
     </div>
+    <br>&nbsp;
   </div>
 </div>
 <!---------------------------------------------personal details----------------------------------------->
@@ -273,43 +286,12 @@
             <label for="home">Email: </label>
             <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email" value="<?php echo $person['email']; ?>">             
     </div>
-    <!-- <div class="form-group">
-      <label for="index1" id="label1" title=" National College of Education">Are you applying for Sripada NCoE? <span style="color:red">* <?php echo form_error('sripada'); ?><?php echo form_error('sworker'); ?></span></label>
-      <select name="sripada"  id="sripada" height="4" class="form-control" >
-        <option selected value="">SELECT</option>
-        <option  value="1">Yes</option>
-        <option  value="0">No</option>
-    </select>
-    </div>
-    <br>
-   
-    <div class="form-group">
-    <label for="sworker" id="label2" name="state" style="display: none;">Are you a child of a Estate Worker? <span style="color:red">* </span></label>
-      <select name="sworker"  id="sworker" height="4" style="display: none;" class="form-control">
-        <option selected value="">SELECT</option>
-        <option  value="1">Yes</option>
-        <option  value="0">No</option>
-        </select>
-      <br> -->
+
 
     </div>
-    
-    <?php 
-      // $version = $person['version'] + 1;
-    ?>
-    <!-- <input type="hidden" value="<?php //echo $version; ?>" name="version" id="version"> -->
-    <!-- <button type="submit" name="btnprv" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span> Previous</button> -->
-    <!-- <a class="btn btn-primary" href="">Recheck</a> -->
+
     <button formtarget="_blank" type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Submit </button>
 <?php break; } ?>
 </form>
 <script src="<?php echo site_url(); ?>assets/js/sripada2.js"></script>
 <script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>
-<script>
-function calcSum()
-{
-	var num1 = parseInt(document.getElementById("peolmarks").value);
-	var num2 = parseInt(document.getElementById("pencoemarks").value);
-	document.getElementById("pemarks1").value = num1 + num2;
-}
-</script>
