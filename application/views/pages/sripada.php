@@ -1,4 +1,4 @@
-<h2><?= $title; ?></h2>
+<h2>Sripada National College of Education</h2>
 <?php
   if (!isset($_SESSION["alindex"])){
     redirect('/');
@@ -8,7 +8,7 @@
 <form action="<?php echo site_url(); ?>students/sripada" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <?php // echo form_open_multipart('students/sripada'); ?>
     <div class="form-group">
-      <label for="index1" id="label1" title=" National College of Education">Are you applying for Sripada NCoE? <span style="color:red">* </span></label>
+      <label for="index1" id="label1" title=" National College of Education">Are you applying for Sripada National College of Education <span style="color:red">* </span></label>
       <select name="sripada"  id="sripada" height="4" class="form-control">
         <option selected value="">SELECT</option>
         <option id="y" >Yes</option>

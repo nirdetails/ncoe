@@ -56,18 +56,33 @@
   <input type="hidden" name="alindex" value="<?php echo $_SESSION['alindex']; ?>">
 <?php } ?>
 <div id="certificates" style="display :none;">
-      <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;">
+      <div class="col-sm-12" style="background-color: #ddffff; border-radius: 5px;">
         <div class="form-group">
           <label for="coursename"><b>Physical Education Marks: </b></label><br>
           <label><p><span style="color:red">* </span><i>Calculate the final score manually and enter here. When calculating do not miss the marks for G.C E O/L health science</i></p></label>
           <br>
-          <input type="number" value="<?php echo $_SESSION['pemarks1']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" >  
+
+          <div class="form-row">
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>O/L Examination Marks</i></p></label><br>
+						<input type="number" class="form-control col-sm-4" id="peolmarks" onBlur="calcSum();" name="peolmarks" required /> 
+					</div>
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>Marks According to the Gazette</i></p></label><br>
+						<input type="number" class="form-control col-sm-4" id="pencoemarks" onBlur="calcSum();" name="pencoemarks" required /> 
+					</div>
+					<div class="form-group col-md-4">
+						<label><p><span style="color:red">* </span><i>Total</i></p></label><br>
+						<input type="number" value="<?php echo $_SESSION['pemarks1']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" max=80 value="" /> 
+					</div>
+				</div>
+          <!-- <input type="number" value="<?php// echo $_SESSION['pemarks1']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" >   -->
           &nbsp;  
         </div>
       </div>
     </div>
     
-  <div class="col-sm-12" id="category"  style="display :none; background-color: #B8FD69; border-radius: 5px;">  
+  <div class="col-sm-12" id="category"  style="display :none; background-color: #ddffff; border-radius: 5px;">  
     <div class="form-group">
       <label for="category"><b>Select Catholicism or Christianity: </b></label><br>
       <?php if($_SESSION['category'] == "Catholic" ){ ?>
@@ -90,7 +105,7 @@
 
 
   <?php $gitgrades = array('A','B','C','S','F','+','X','N'); ?>
-  <div class="col-sm-12" style="display :none; background-color: #B8FD69; border-radius: 5px;" id="gitmarks">
+  <div class="col-sm-12" style="display :none; background-color: #ddffff; border-radius: 5px;" id="gitmarks">
     <div class="form-group">
     <label for="gitmk"><b>GIT Grades: </b></label><br>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
@@ -118,3 +133,11 @@
 
   </form>
   <script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>
+  <script>
+function calcSum()
+{
+	var num1 = parseInt(document.getElementById("peolmarks").value);
+	var num2 = parseInt(document.getElementById("pencoemarks").value);
+	document.getElementById("pemarks1").value = num1 + num2;
+}
+</script>

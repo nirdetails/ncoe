@@ -40,7 +40,7 @@
 <?php } ?>
   <!-- <div class="row" > -->
     <div id="certificates" style="display :none;">
-      <div class="col-sm-12" style="background-color: #B8FD69; border-radius: 5px;">
+      <div class="col-sm-12" style="background-color: #ddffff; border-radius: 5px;">
 			<label for="coursename"><b>Physical Education: </b></label><br>
 				<div class="form-row">
 					<div class="form-group col-md-4">
@@ -86,8 +86,9 @@
         <input title="you can upload 3 Certificates only" type="file" id="peupload3" name="peupload3" multiple><br><br>
       </div> -->
     </div>
+    <br>
   <!-- </div> -->
-  <div class="col-sm-12" id="category"  style="display :none; background-color: #B8FD69; border-radius: 5px;">  
+  <div class="col-sm-12" id="category"  style="display :none; background-color: #ddffff; border-radius: 5px;">  
     <div class="form-group">
       <label for="category"><b>Select Catholicism or Christianity: </b></label><br>
       <input type="radio" name="category" value="Catholic"> Catholicism
@@ -117,7 +118,7 @@
     <input title="you can upload 3 Certificates only" type="file" id="wupload3" name="wupload3" multiple><br><br>
   </div> -->
 
-  <div class="col-sm-12" style="display :none; background-color: #B8FD69; border-radius: 5px;" id="gitmarks">
+  <div class="col-sm-12" style="display :none; background-color: #ddffff; border-radius: 5px;" id="gitmarks">
     <div class="form-group">
       <label for="gitmk"><b>Select yor GIT examination grade: </b></label><br>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
