@@ -16,22 +16,58 @@
         <option id="3" value="3">3</option>
       </select>
       <br>
-    
-  <div class="form-group">
+
+     <div class="form-group">
       <label for="emailindex" style="display :none">O/L index number:</label>
-      <input type="text" class="form-control" id="year1" placeholder="Year" name="year1" style="display :none">
+      <select class="form-control" id="year1" placeholder="Year" name="year1" style="display :none">
+						<option value="">Year</option>
+						<option value="2019">2019</option>
+						<option value="2018">2018</option>
+            <option value="2017">2017</option>
+						<option value="2016">2016</option>
+            <option value="2015">2015</option>
+						<option value="2014">2014</option>
+            <option value="2013">2013</option>
+						<option value="2012">2012</option>
+            <option value="2011">2011</option>
+						<option value="2010">2010</option>
+				</select>
       <input type="text" class="form-control" id="index1" placeholder="Enter O/L index number" name="index1" style="display :none">
     </div>
 
     <div class="form-group">
       <label for="emailindex" style="display :none">O/L index number:</label>
-      <input type="text" class="form-control" id="year2" placeholder="Year" name="year2" style="display :none">
+      <select class="form-control" id="year2" placeholder="Year" name="year2" style="display :none">
+						<option value="">Year</option>
+						<option value="2019">2019</option>
+						<option value="2018">2018</option>
+            <option value="2017">2017</option>
+						<option value="2016">2016</option>
+            <option value="2015">2015</option>
+						<option value="2014">2014</option>
+            <option value="2013">2013</option>
+						<option value="2012">2012</option>
+            <option value="2011">2011</option>
+						<option value="2010">2010</option>
+				</select>
       <input type="text" class="form-control" id="index2" placeholder="Enter O/L index number" name="index2"  style="display :none">
     </div>
 
     <div class="form-group">
       <label for="emailindex" style="display :none">O/L index number:</label>
-      <input type="text" class="form-control" id="year3" placeholder="Year" name="year3" style="display :none">
+      <select class="form-control" id="year3" placeholder="Year" name="year3" style="display :none">
+						<option value="">Year</option>
+						<option value="2019">2019</option>
+						<option value="2018">2018</option>
+            <option value="2017">2017</option>
+						<option value="2016">2016</option>
+            <option value="2015">2015</option>
+						<option value="2014">2014</option>
+            <option value="2013">2013</option>
+						<option value="2012">2012</option>
+            <option value="2011">2011</option>
+						<option value="2010">2010</option>
+				</select>
       <input type="text" class="form-control" id="index3" placeholder="Enter O/L index number" name="index3" style="display :none">
     </div>
     <button type="submit" class="btn btn-info">Submit</button>
