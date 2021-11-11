@@ -14,6 +14,16 @@
         footer {
             margin-top: ???px;
         }
+
+		div .txt-notice {
+			text-align: center;
+			margin-bottom: 35px;
+		}
+
+		div .button-submit {
+			display: flex;
+			justify-content: center;
+		}
     </style>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 30px;">
