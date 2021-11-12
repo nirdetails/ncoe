@@ -41,9 +41,10 @@
         	<div class="" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                 <table>
+                <tr><td colspan="2" style="font-size: 11px; color: white; width:100%"><b>Read Gazette paper for Admission of Student Teachers to National Colleges of Education</b></td></tr>
                     <tr><td><a class="btn btn-success" style="height: 100%; width:100%; font-size:11px" target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (S).pdf" download>ගැසට් පත්‍රය</a></td></tr>
                     <tr><td><a class="btn btn-success" style="height: 100%; width:100%; font-size:11px" target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (T).pdf" download>வர்த்தமானப் பத்திரிகை</a></td></tr>
-                    <tr><td><a class="btn btn-success" style="height: 100%; width:100%; font-size:12px" target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (E).pdf" download>Gazette Paper</a></td></tr>
+                    <tr><td><a class="btn btn-success" style="height: 100%; width:100%; font-size:12px" target="_blank" href="<?php echo base_url();?>/assets/files/04--09--2020 -I(IIA) Vidya Pita Gazette (E).pdf" download>Read Gazette</a></td></tr>
                 </table>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                     <p class="nav-item nav-link active mr-auto" style="font-size: small;">

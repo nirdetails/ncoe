@@ -458,13 +458,13 @@ ob_start();
     <h2><b>&nbsp;&nbsp;06.Selected Courses: </b></h2>
     <ol>
         <li><?php if($_SESSION['course1'] != ""){ ?>
-            &nbsp;&nbsp;&nbsp;<?php echo $course1["course_no"]; ?> - <?php echo $course1["name"]; ?>            <br>
+            &nbsp;&nbsp;&nbsp;<?php echo $course1["course_no"]; ?> - <?php echo ucfirst($course1["name"]); ?>            <br>
         <?php } ?>
         <li><?php if($_SESSION['course2'] != ""){ ?>
-            &nbsp;&nbsp;&nbsp;<?php echo $course2["course_no"]; ?> - <?php echo $course2["name"]; ?>            <br>
+            &nbsp;&nbsp;&nbsp;<?php echo $course2["course_no"]; ?> - <?php echo ucfirst($course2["name"]); ?>            <br>
         <?php } ?>
         <li><?php if($_SESSION['course3'] != ""){ ?>
-            &nbsp;&nbsp;&nbsp;<?php echo $course3["course_no"]; ?> - <?php echo $course3["name"]; ?>            <br>
+            &nbsp;&nbsp;&nbsp;<?php echo $course3["course_no"]; ?> - <?php echo ucfirst($course3["name"]); ?>            <br>
         <?php } ?>
     
     </ol>
