@@ -21,7 +21,7 @@ if($_SESSION['pdfdone'] == 1)   // use if($_SESSION['pdfdone'] == 0) to view the
 		<h2><?= $title; ?></h2> 
 	-->
 	<div style="text-align: center; margin-bottom: 2em;">
-		<h1>Submission</h1>
+		<h1>Application Review and Submission</h1>
 	</div>
 <form action="<?php echo site_url(); ?>submission/submit" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <?php //echo form_open_multipart('submission/submit'); ?>
