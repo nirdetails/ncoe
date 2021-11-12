@@ -20,7 +20,7 @@ ob_start();
 ?>    
    <h1>National Colleges of Education (NCoE) Admission</h1>
    <h2>&nbsp;&nbsp;01.Personal Information</h2>
-    <body>
+
     
     <div class="container mt-5" style="padding-top:0px;"> 
     
@@ -91,7 +91,7 @@ ob_start();
             <br>
             
             <tr>
-
+            
             <td style="width:70%"><h2>&nbsp;02.Contact Information</h2></td>
             </tr>
             <br>
@@ -479,11 +479,14 @@ ob_start();
            <br>
         <?php } ?>
         </tr>
+
+        <br>
     
     
     <?php if($pemarks1 != NULL){ ?>
         <label for="pemarks">Physical Education Marks:</label><?php echo $pemarks1; ?><br><br>
     <?php }?>
+
     <?php if($gitmk != NULL){ ?>
         <label for="gitmk">GIT Grades:</label><?php echo $gitmk; ?><br><br>
     <?php }?>
@@ -493,7 +496,7 @@ ob_start();
             <strong> I Agreed </strong> <br/>
         </div> -->
     </div>
-</body>
+
 <?php
 $content = ob_get_contents();
 ob_end_clean();
