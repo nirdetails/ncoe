@@ -26,10 +26,10 @@
     </div>
     <div class="form-group">
       <label for="address">Permanent Address: <span style="color:red">* <?php echo form_error('addressline1'); echo form_error('addressline2'); echo form_error('addressline3'); echo form_error('addressline4');?></span></label>
-      <input type="text" class="form-control" id="addressline1" placeholder="Enter your address- line01" name="addressline1"><br>
-      <input type="text" class="form-control" id="addressline2" placeholder="Enter your address- line02" name="addressline2"><br>
-      <input type="text" class="form-control" id="addressline3" placeholder="Enter your address- line03" name="addressline3"><br>
-      <input type="text" class="form-control" id="addressline4" placeholder="Enter your address- line04" name="addressline4"><br>
+    <input type="text" class="form-control" id="addressline1" placeholder="Street address / P.O Box / Company name" name="addressline1"><br>
+      <input type="text" class="form-control" id="addressline2" placeholder="Apartment / Suite / Unit / Building / Floor" name="addressline2"><br>
+      <input type="text" class="form-control" id="addressline3" placeholder="City" name="addressline3"><br>
+      <input type="text" class="form-control" id="addressline4" placeholder="Postal Code" name="addressline4"><br>
     </div>
     <div class="form-group">
       <label for="district">Permanent Residence District Name and Number: <span style="color:red">* <?php echo form_error('district'); ?></span></label>
