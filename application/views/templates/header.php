@@ -15,12 +15,12 @@
             margin-top: ???px;
         }
 
-		div .txt-notice {
+		div > .text-notice {
 			text-align: center;
 			margin-bottom: 35px;
 		}
 
-		div .button-submit {
+		div > .button-submit {
 			display: flex;
 			justify-content: center;
 		}

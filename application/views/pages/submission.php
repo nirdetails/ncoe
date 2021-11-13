@@ -17,7 +17,12 @@ if($_SESSION['pdfdone'] == 1)   // use if($_SESSION['pdfdone'] == 0) to view the
   //var_dump($_SESSION['pdfdone']);
 
 ?>
-  <h2><?= $title; ?></h2>
+  <!-- 
+		<h2><?= $title; ?></h2> 
+	-->
+	<div style="text-align: center; margin-bottom: 2em;">
+		<h1>Application Review and Submission</h1>
+	</div>
 <form action="<?php echo site_url(); ?>submission/submit" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <?php //echo form_open_multipart('submission/submit'); ?>
     <input type="hidden" value="<?php echo $_SESSION['alindex']; ?>" name="alindex">
@@ -66,10 +71,10 @@ if($_SESSION['pdfdone'] == 1)   // use if($_SESSION['pdfdone'] == 0) to view the
         &nbsp;
       </div>
       <div class="col-sm-3 form-group">
-        <a href="<?php echo site_url(); ?>pages/view/editpersonal" class="btn btn-info" style="width: 100%; height: 4em">Review Your Application</a>
+        <a href="<?php echo site_url(); ?>pages/view/editpersonal" class="btn btn-info" style="width: 100%; height: 3em; font-size: 20px;">Review Application</a>
       </div>
       <div class="col-sm-3 form-group">
-        <a href="<?php echo site_url(); ?>courses/edit" class="btn btn-info" style="width: 100%; height: 4em">Review Course Selection</a>
+        <a href="<?php echo site_url(); ?>courses/edit" class="btn btn-info" style="width: 100%; height: 3em; font-size: 20px;">Review Course Selection</a>
       </div>
       <div class="col-sm-3">
         &nbsp;
