@@ -21,7 +21,7 @@ ob_start();
 ?>    
     <h1>National Colleges of Education (NCoE) Admission</h1>
     <h2>&nbsp;&nbsp;01.Personal Information</h2>
-    <body>
+    
     <div class="container mt-5" style="padding-top: 0px;">
            
             <?php foreach($personal as $person){ ?>
@@ -33,7 +33,8 @@ ob_start();
             <td style="width:5%"><b>:</b></td> 
             <td style="width:60%"><?php echo $person['fullname']; ?></td>
             </tr>
-            <br><br>
+            <br>
+            <br>
 
             <tr>
             <td style="width:1%"></td>
@@ -91,6 +92,7 @@ ob_start();
 
 
             <tr>
+                <br>
 
             <td style="width:70%"><h2>&nbsp;02.Contact Information</h2></td>
             </tr>
@@ -107,7 +109,8 @@ ob_start();
             <?php echo $person['Addressl4']; ?>
             </td>
             </tr>
-            <br><br>
+            <br>
+            <br>
 
             <tr>
             <?php 
@@ -275,9 +278,10 @@ ob_start();
                 
 
             <h2><b>&nbsp;&nbsp;05.O/L Details: </b></h2>
-         
+             <br>
             <?php foreach($personal as $person){ ?>
-                <label for="olindex"><b>&nbsp;&nbsp;&nbsp;Index Number 1: </b><?php echo $person["OLindex1"]; ?><br><br>
+
+                <label for="olindex"><b>&nbsp;Index Number 1: </b><?php echo $person["OLindex1"]; ?><br><br>
                 
             <?php }?>
             <?php foreach($olresults1 as $olresult1){ if( $olresult1["OL_index"] != "N/A"){?><br>
@@ -468,7 +472,7 @@ ob_start();
                 
                 if($course['course_no'] == $select['pref1'] )
                 {      
-                    echo "<li>".$select['pref1']." - ".$course['name']."</li>";
+                    echo "<li>".$select['pref1']." - ".ucfirst($course['name'])."</li>";
                    
                 }
             }
@@ -476,14 +480,14 @@ ob_start();
         // foreach($selection as $select){
             foreach($courses as $course){ 
                 if($course['course_no'] == $select['pref2']){
-                    echo "<li>".$select['pref2']." - ".$course['name']."</li>";
+                    echo "<li>".$select['pref2']." - ".ucfirst($course['name'])."</li>";
                 }
             }
         // }
         // foreach($selection as $select){
             foreach($courses as $course){ 
                 if($course['course_no'] == $select['pref3']){
-                    echo "<li>".$select['pref3']." - ".$course['name']."</li>";
+                    echo "<li>".$select['pref3']." - ".ucfirst($course['name'])."</li>";
                     
                 }
             }
@@ -507,7 +511,7 @@ ob_start();
             <strong> I Agreed </strong> <br/>
         </div> -->
     </div>
-</body>
+
 <?php
 $content = ob_get_contents();
 ob_end_clean();

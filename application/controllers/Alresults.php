@@ -2,7 +2,7 @@
 class Alresults extends CI_Controller{
     
 	public function index(){
-        $data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
+        $data['title'] = 'Enter your GCE Advanced Level (A/L) information';
 
         $this->load->view('templates/header');
         $this->load->view('pages/al',$data);
@@ -32,13 +32,12 @@ class Alresults extends CI_Controller{
 		// set the validation rules
 		$this->form_validation->set_rules('year', 'A/L Year', 'required');
 		$this->form_validation->set_rules('syllabus', 'Syllabus Type', 'required');
-		$this->form_validation->set_rules('alindex', 'Index Number', 'required');
+		$this->form_validation->set_rules('alindex', 'Index Number', 'required|xss_clean|is_exist[stuents.alindex]');
 		$this->form_validation->set_message('required', '{field} is a required field');
-
 		// checking validation rules
 		if($this->form_validation->run() == FALSE) {
 
-			$data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
+			$data['title'] = 'Enter your GCE Advanced Level (A/L) information';
 
 			$this->load->view('templates/header');
 			$this->load->view('pages/al', $data);
@@ -62,14 +61,14 @@ class Alresults extends CI_Controller{
 
 			if( !empty($data['alresults']) ) {
 
-				$data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
+				$data['title'] = 'Enter your GCE Advanced Level (A/L) information';
 				$this->load->view('templates/header');
 				$this->load->view('pages/alresults',$data);
 				$this->load->view('templates/footer');
 				
 			} else {
 
-				$data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
+				$data['title'] = 'Enter your GCE Advanced Level (A/L) information';
 				$this->load->view('templates/header');
 				$this->load->view('pages/al',$data);
 				$this->load->view('templates/footer');
