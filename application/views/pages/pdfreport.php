@@ -19,12 +19,14 @@ ob_start();
 // var_dump($alresult);
 // we can have any view part here like HTML, PHP etc
 ?>    
-    <h1>National Colleges of Education (NCoE) Admission</h1>
-    <h2>&nbsp;&nbsp;01.Personal Information</h2>
-    <body>
-    <div class="container mt-5" style="padding-top: 0px;">
-           
-            <table style="width:100%">    
+
+   <h1>National Colleges of Education (NCoE) Admission</h1>
+   <h2>&nbsp;&nbsp;01.Personal Information</h2>
+
+    
+    <div class="container mt-5" style="padding-top:0px;"> 
+    
+            <table style="width:100%">  
             <tr> 
             
            
@@ -90,7 +92,7 @@ ob_start();
 
 
             <tr>
-
+            
             <td style="width:70%"><h2>&nbsp;02.Contact Information</h2></td>
             </tr>
             <br>
@@ -466,17 +468,21 @@ ob_start();
         <li><?php if($_SESSION['course3'] != ""){ ?>
             &nbsp;&nbsp;&nbsp;<?php echo $course3["course_no"]; ?> - <?php echo ucfirst($course3["name"]); ?>            <br>
         <?php } ?>
+        </tr>
+
+        <br>
     
     </ol>
     <?php if($pemarks1 != NULL){ ?>
         <label for="pemarks">Physical Education Marks:</label><?php echo $pemarks1; ?><br><br>
     <?php }?>
+
     <?php if($gitmk != NULL){ ?>
         <label for="gitmk">GIT Grades:</label><?php echo $gitmk; ?><br><br>
     <?php }?>
 
     </div>
-</body>
+
 <?php
 $content = ob_get_contents();
 ob_end_clean();
