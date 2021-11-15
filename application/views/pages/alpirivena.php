@@ -8,7 +8,7 @@
                 <label for="index">A\L year: <span style="color:red">* <?php echo form_error('year'); ?></span></label>
                 <!-- <input type="text" class="form-control" id="alyear" placeholder="Enter your A\L year" name="alyear"> -->
                 <select class="form-control" id="year" placeholder="Enter your A\L year" name="year">
-                    <option value="">SELECT</option>
+                    <option value="">Select</option>
                     <option value="2018">2018</option>
                     <option value="2017">2017</option>
                     <option value="2016">2016</option>
@@ -42,7 +42,7 @@
                 <label for="stream">Stream <span style="color:red">* <?php echo form_error('stream'); ?></span></label>
                 <div class="form-group">
                 <select name="stream" class="form-control" id="stream">
-                    <option value="" selected>STREAM</option>
+                    <option value="" selected>Select</option>
                     <option value="1">Physical Science</option>
                     <option value="2">Biological Science</option>
                     <option value="3">Commerce</option>
@@ -56,10 +56,10 @@
         </div>
         <div class="col-sm-3">
             <div class="form-group">
-                <label for="index">Medium <span style="color:red">* <?php echo form_error('medium'); ?></span></label>
+                <label for="index">Medium<span style="color:red">* <?php echo form_error('medium'); ?></span></label>
                 <!-- <input type="text" class="form-control" id="medium" placeholder="Medium" name="medium"> -->
                 <select name="medium" class="form-control" id="medium">
-                    <option value="" selected>Medium</option>
+                    <option value="" selected>Select</option>
                     <option value="1">Sinhala</option>
                     <option value="2">Tamil</option>
                     <option value="3">English</option>
@@ -71,7 +71,7 @@
                 <label for="attempt">Attempt <span style="color:red">* <?php echo form_error('attempt'); ?></span></label>
                 <div class="form-group">
                 <select name="attempt" class="form-control" id="attempt">
-                    <option value="" selected>Attempt</option>
+                    <option value="" selected>Select</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -94,7 +94,7 @@
             <div class="form-group">
                 <label for="index">Subject Number <br><span style="color:red">* <?php echo form_error('subjectnumber1'); ?></span></label>
                 <select class="form-control" id="subjectnumber1" placeholder="Subject Number" name="subjectnumber1">
-                <option value="">SELECT</option>
+                <option value="">Select</option>
                     <?php
                         foreach($alsubs as $key => $value){
                             echo "<option value='$key'>$key - $value</option>";
@@ -135,7 +135,7 @@
             <div class="form-group">
                 <span style="color:red">* <?php echo form_error('subjectnumber2'); ?></span>
                 <select class="form-control" id="subjectnumber2" placeholder="Subject Number" name="subjectnumber2">
-                <option value="">SELECT</option>
+                <option value="">Select</option>
                 <?php
                     foreach($alsubs as $key => $value){
                         echo "<option value='$key'>$key - $value</option>";
@@ -181,7 +181,7 @@
             <div class="form-group">
                 <span style="color:red">* <?php echo form_error('subjectnumber3'); ?></span>
                 <select class="form-control" id="subjectnumber3" placeholder="Subject Number" name="subjectnumber3">
-                <option value="">SELECT</option>
+                <option value="">Select</option>
                 <?php
                         foreach($alsubs as $key => $value){
                             echo "<option value='$key'>$key - $value</option>";

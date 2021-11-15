@@ -2,7 +2,7 @@
 class Alresults extends CI_Controller{
     
 	public function index(){
-        $data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
+        $data['title'] = 'Enter your GCE Advanced Level (A/L) information';
 
         $this->load->view('templates/header');
         $this->load->view('pages/al',$data);
@@ -37,7 +37,7 @@ class Alresults extends CI_Controller{
 		// checking validation rules
 		if($this->form_validation->run() == FALSE) {
 
-			$data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
+			$data['title'] = 'Enter your GCE Advanced Level (A/L) information';
 
 			$this->load->view('templates/header');
 			$this->load->view('pages/al', $data);
@@ -61,14 +61,14 @@ class Alresults extends CI_Controller{
 
 			if( !empty($data['alresults']) ) {
 
-				$data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
+				$data['title'] = 'Enter your GCE Advanced Level (A/L) information';
 				$this->load->view('templates/header');
 				$this->load->view('pages/alresults',$data);
 				$this->load->view('templates/footer');
 				
 			} else {
 
-				$data['title'] = 'Enter your GCE Advanced Level(A/L) information below to see the results';
+				$data['title'] = 'Enter your GCE Advanced Level (A/L) information';
 				$this->load->view('templates/header');
 				$this->load->view('pages/al',$data);
 				$this->load->view('templates/footer');
