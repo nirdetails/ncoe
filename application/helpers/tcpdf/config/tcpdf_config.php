@@ -114,7 +114,7 @@ define ('PDF_HEADER_TITLE', 'TCPDF Example');
 /**
  * Header description string.
  */
-define ('PDF_HEADER_STRING', "©2021 Data Management Branch, \nMinistry of Education, Sri Lanka.");
+define ('PDF_HEADER_STRING', "");
 
 /**
  * Document unit of measure [pt=point, mm=millimeter, cm=centimeter, in=inch].
