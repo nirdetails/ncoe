@@ -1,7 +1,7 @@
 <?php
 	class Submission extends CI_Controller{
         public function index(){
-            $data['title'] = 'Submit your details';
+            $data['title'] = 'Submit Your Details';
     
             $this->load->view('templates/header');
             $this->load->view('pages/submission',$data);

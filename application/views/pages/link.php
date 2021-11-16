@@ -1,5 +1,5 @@
-<div class="text-notice">
-	<h5>Your Application has been submitted successfully! Click the below link to download the PDF of your application.</h5>
+<div class="text-notice mb-5">
+	<h2>Your application has been submitted successfully! Click the below link to download the PDF of your application.</h2>
 </div>
 
 

@@ -1,11 +1,15 @@
-<h2><?= $title ?></h2>
+<div class="mb-5">
+	<h2><?= $title; ?></h2>
+</div>
+
   <?php //var_dump($personal); ?>
   <?php //var_dump($_SESSION); ?>
+
 <div class="container">
 <form action="<?php echo site_url(); ?>editrec/editdata" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <?php foreach($selection as $select){ ?>
   <div class="form-group">
-    <label for="preference1">Select Your First Preference: </label><span style="color:red">* <?php echo form_error('course1'); ?></span>
+    <label for="preference1">Select Your Course Preference 1: </label><span style="color:red">* <?php echo form_error('course1'); ?></span>
     <select class="form-control" id="course1" name="course1">
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
@@ -17,8 +21,9 @@
       <?php endforeach; ?>                                                   
     </select>
   </div>
+	
   <div class="form-group">
-    <label for="preference2">Select Your Second Preference: </label>
+    <label for="preference2">Select Your Course Preference 2: </label>
     <select class="form-control" id="course2" name="course2">
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
@@ -31,7 +36,7 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="preference3">Select Your Third Preference: </label>
+    <label for="preference3">Select Your Course Preference 3: </label>
     <select class="form-control" id="course3" name="course3">
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
@@ -134,7 +139,7 @@ function calcSum()
 <hr>
 <?php break; } ?>
 <?php foreach($personal as $person){ ?>
-<div class="form-group">
+<div class="container form-group">
     <!-- <div class="form-group">
       <label for="emailindex" style="display :block">O/L index number:</label><span style="color:red">* <?php// echo form_error('olindex1'); ?></span>
       <input value="<?php// echo $person['OLindex1']; ?>" type="text" class="form-control" id="olindex1" placeholder="Enter your  1st index " name="olindex1" style="display :block">

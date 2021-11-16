@@ -1,7 +1,7 @@
 <?php
 class Olresults extends CI_Controller{
     public function index(){
-        $data['title'] = 'Enter O/L index number(s)';
+        $data['title'] = 'Enter G.C.E. Ordinary Level (O/L) Index Number(s)';
 
         $this->load->view('templates/header');
         $this->load->view('pages/ol',$data);
@@ -10,7 +10,7 @@ class Olresults extends CI_Controller{
 
 
     public function checkolres($olind1 = NULL, $olind2 = NULL, $olind3 = NULL,$yea1=NULL,$yea2=NULL,$yea3=NULL){
-        $data['title'] = 'O/L Results sheet';
+        $data['title'] = 'G.C.E. Ordinary Level (O/L) Examination Results Sheet';
         $this->form_validation->set_rules('sel1', 'Number of attempts', 'required');
         $attempts = $this->input->post('sel1');
 
@@ -40,7 +40,7 @@ class Olresults extends CI_Controller{
 
         
         if($this->form_validation->run() === FALSE){
-            $data['title'] = 'Enter O/L index number/numbers';
+            $data['title'] = 'Enter G.C.E. Ordinary Level (O/L) Index Number(s)';
             $this->load->view('templates/header');
             $this->load->view('pages/ol', $data);
             $this->load->view('templates/footer');
@@ -113,19 +113,19 @@ class Olresults extends CI_Controller{
             
             if (($year1 != "N/A" || $olindex1 !="N/A") && empty($data['olresults1'])){
                 echo "<script>alert('Please enter a valid year1 or Index1')</script>";
-                $data['title'] = 'Enter O/L index number/numbers';
+                $data['title'] = 'Enter G.C.E. Ordinary Level (O/L) Index Number(s)';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');
             } else if (($year2 != "N/A"  || $olindex2 !="N/A" )&& empty($data['olresults2'])) {
                 echo "<script>alert('Please enter a valid year2 or Index2 ')</script>";
-                $data['title'] = 'Enter O/L index number/numbers';
+                $data['title'] = 'Enter G.C.E. Ordinary Level (O/L) Index Number(s)';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');
             } elseif (($year3 != "N/A"  || $olindex3 !="N/A" )&& empty($data['olresults3'])) {
                 echo "<script>alert('Please enter a valid year3 or Index3')</script>";
-                $data['title'] = 'Enter O/L index number/numbers';
+                $data['title'] = 'Enter G.C.E. Ordinary Level (O/L) Index Number(s)';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');
@@ -162,7 +162,7 @@ class Olresults extends CI_Controller{
         
         
         if($this->form_validation->run() === FALSE){
-            $data['title'] = 'Enter Mulika Pirivena index numbers';
+            $data['title'] = 'Enter Mulika Pirivena Examination Index Numbers(s)';
             $this->load->view('templates/header');
             $this->load->view('pages/olpirivena', $data);
             $this->load->view('templates/footer');

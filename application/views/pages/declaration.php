@@ -5,7 +5,7 @@
   }
 ?>
 <form action="">
-    <div class="form-group">
+    <div class="form-group mb-5">
       <h2 style="text-align:center">Applicant's Declaration</h2>
     </div>
   <ol style="line-height:25px; text-align:justify">

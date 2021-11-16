@@ -4,12 +4,17 @@
     redirect('/');
   }
 ?>
-  <h2>Select your Courses</h2>
+
+<div class="mb-5">
+	<h2>Select Your Courses</h2>
+</div>
+
   <span style="color: red;"><?php echo validation_errors(); ?></span>
   <?php // echo form_open_multipart('courses/select'); ?>
+
 <form action="<?php echo site_url(); ?>courses/select" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <div class="form-group">
-    <label for="preference1">Select Your First Preference: </label>
+    <label for="preference1">Select Your Course Preference 1: </label>
     <select class="form-control" id="course1" name="course1">
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
@@ -18,7 +23,7 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="preference2">Select Your Second Preference: </label>
+    <label for="preference2">Select Your Course Preference 2: </label>
     <select class="form-control" id="course2" name="course2">
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
@@ -27,7 +32,7 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="preference3">Select Your Third Preference: </label>
+    <label for="preference3">Select Your Course Preference 3: </label>
     <select class="form-control" id="course3" name="course3">
       <option value="">SELECT</option>
       <?php foreach($courses as $course): ?>
@@ -35,7 +40,9 @@
       <?php endforeach; ?>                                                   
     </select>
   </div>
-<?php if($_SESSION['alindex'] != ""){ ?>
+
+
+	<?php if($_SESSION['alindex'] != ""){ ?>
   <input type="hidden" name="alindex" value="<?php echo $_SESSION['alindex']; ?>">
 <?php } ?>
   <!-- <div class="row" > -->
@@ -44,7 +51,7 @@
 			<label for="coursename"><b>Physical Education: </b></label><br>
 				<div class="form-row">
 					<div class="form-group col-md-4">
-						<label><p><span style="color:red">* </span><i>O/L Examination Marks</i></p></label><br>
+						<label><p><span style="color:red">* </span><i>G.C.E. (O/L) Examination Marks</i></p></label><br>
 						<input type="number" class="form-control col-sm-4" id="peolmarks" onBlur="calcSum();" name="peolmarks" /> 
 					</div>
 					<div class="form-group col-md-4">
@@ -52,7 +59,7 @@
 						<input type="number" class="form-control col-sm-4" id="pencoemarks" onBlur="calcSum();" name="pencoemarks" /> 
 					</div>
 					<div class="form-group col-md-4">
-						<label><p><span style="color:red">* </span><i>Total</i></p></label><br>
+						<label><p><span style="color:red">* </span><i>Total Marks</i></p></label><br>
 						<input type="number" class="form-control col-sm-4" id="pemarks1" name="pemarks1" max=80 value="" /> 
 					</div>
 				</div>
@@ -120,7 +127,7 @@
 
   <div class="col-sm-12" style="display :none; background-color: #ddffff; border-radius: 5px;" id="gitmarks">
     <div class="form-group">
-      <label for="gitmk"><b>Select yor GIT examination grade: </b></label><br>
+      <label for="gitmk"><b>Select Your General Information Technology (G.I.T.) Examination Grade: </b></label><br>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
       <select class="form-control col-sm-4"  id="gitmk" name="gitmk" placeholder="Grade">
         <option value="0" selected disabled>Select your Grade</option>
@@ -143,6 +150,6 @@
     <input type="submit" name="btnnext" class="btn btn-info" value="Submit">
   </div>
 
-  </form>
+</form>
 
 <script src="<?php echo site_url(); ?>assets/js/prefer.js"></script>
