@@ -1,7 +1,7 @@
 <?php
 class Alpirivena extends CI_Controller{
     public function index(){
-        $data['title'] = 'Add your A/L results';
+        $data['title'] = 'Add Your G.C.E. Advanced Level (A/L) Results';
 
         $this->load->view('templates/header');
         $this->load->view('pages/alpirivena',$data);
@@ -10,7 +10,7 @@ class Alpirivena extends CI_Controller{
 
 
     public function checkalres(){
-        $data['title'] = 'Select an Exam';
+        $data['title'] = 'Select an Examination';
 
         $this->form_validation->set_rules('year', 'Year', 'required');
         $this->form_validation->set_rules('alindex', 'Index No.', 'required|is_exist[al_pirivena.AL_index]');

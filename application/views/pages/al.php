@@ -1,4 +1,4 @@
-<div class="container mb-5">
+<div class="mb-5">
 	<h2><?= $title; ?></h2>
 </div>
 
@@ -8,7 +8,7 @@
 	<div class="row">
 		<div class="col-12 col-sm-4">
 			<div class="form-group">
-				<label for="index">A\L year: <span style="color:red">*</span></label>
+				<label for="index">G.C.E. (A\L) Year: <span style="color:red">*</span></label>
 				<span style="color: red;"><?php echo form_error('year'); ?></span>
 				<select class="form-control" id="year" placeholder="Select your A\L year" name="year">
 						<option value="">SELECT</option>
@@ -30,9 +30,9 @@
 		</div>
 		<div class="col-12 col-sm-4">
 			<div class="form-group">
-				<label for="index">A\L index number: <span style="color:red">* </span></label>
+				<label for="index">G.C.E. (A\L) Index Number: <span style="color:red">* </span></label>
 				<span style="color: red;"><?php echo form_error('alindex'); ?></span>
-				<input type="text" class="form-control" id="alindex" placeholder="Enter your A\L index number" name="alindex" value="<?php echo set_value('alindex'); ?>">
+				<input type="text" class="form-control" id="alindex" placeholder="Your G.C.E. (A\L) Index Number" name="alindex" value="<?php echo set_value('alindex'); ?>">
 			</div>
 		</div>
 	</div>

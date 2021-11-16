@@ -1,7 +1,7 @@
 <?php
     class Courseselect extends CI_Controller{
         public function index(){
-            $data['title'] = 'Course Selection';
+            $data['title'] = 'Courses Selection';
      //Autoload the page
             $this->load->view('templates/header');
             $this->load->view('pages/prefer',$data);
@@ -9,7 +9,7 @@
 
         }
         public function preferdetails(){
-            $data['title'] = 'Course Selection';
+            $data['title'] = 'Courses Selection';
 
             //validation
             $this->form_validation->set_rules('course1', 'course1', 'required');

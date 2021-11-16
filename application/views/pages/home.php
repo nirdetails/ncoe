@@ -9,12 +9,12 @@
         </div>
         <div class="form-group">  
             <div style="text-align :center;">
-                <a href="alresults" class="btn btn-primary btn-lg" style="width: 80%; padding: 10px;"><b>A/L Year 2019/2020 </b><br>&nbsp;<br></a>
+                <a href="alresults" class="btn btn-primary btn-lg" style="width: 80%; padding: 10px;"><b>G.C.E. (A/L) Year 2019/2020 </b><br>&nbsp;<br></a>
             </div> 
         </div>
         <div class="form-group"> 
             <div style="text-align: center;">
-                <a href="prirvenaal" class="btn btn-primary btn-lg" style="width: 80%; padding: 10px;">A/L Year 2018 or Previous Years<br>&nbsp;<br></a>
+                <a href="prirvenaal" class="btn btn-primary btn-lg" style="width: 80%; padding: 10px;">G.C.E. (A/L) Year 2018 or Previous Years<br>&nbsp;<br></a>
             </div>      
         </div>
     </div>
@@ -27,9 +27,9 @@
         <form action="<?php echo site_url(); ?>editrec/index" enctype="multipart/form-data" method="post" accept-charset="utf-8">
             <div class="row" style="margin: auto; text-align:center;">
                 <div class="col-sm-2">&nbsp;</div>
-                <div class="col-sm-8" style="background-color: #ddffff; padding: 20px; width: 100%">
+                <div class="col-sm-8" style="background-color: #ddffff; padding: 15px 20px 15px 20px; width: 100%">
                 <span style="color: red;"><?php echo validation_errors(); ?></span>
-                    Enter A/L Index Number
+                    <p style="margin-bottom: 10px;">G.C.E. (A/L) Index Number</p> 
                     <input class="form-control" type="text" name="alindex" id="alindex" style="width: 100%;"><br>
                     <input type="submit" class="btn btn-warning" style="width: 100%;" value="Edit Application">
                     <br>&nbsp;

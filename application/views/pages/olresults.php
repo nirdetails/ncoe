@@ -1,4 +1,7 @@
-<h2><?= $title; ?></h2><br>
+<div class="mb-5">
+	<h2><?= $title; ?></h2>
+</div>
+
 <?php
   if (!isset($_SESSION["alindex"])){
     redirect('/');

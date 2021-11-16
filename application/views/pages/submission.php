@@ -20,9 +20,11 @@ if($_SESSION['pdfdone'] == 1)   // use if($_SESSION['pdfdone'] == 0) to view the
   <!-- 
 		<h2><?= $title; ?></h2> 
 	-->
-	<div style="text-align: center; margin-bottom: 2em;">
-		<h1>Application Review and Submission</h1>
+
+	<div class="mb-5" style="text-align: center;">
+		<h2>Application Review and Submission</h2>
 	</div>
+
 <form action="<?php echo site_url(); ?>submission/submit" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <?php //echo form_open_multipart('submission/submit'); ?>
     <input type="hidden" value="<?php echo $_SESSION['alindex']; ?>" name="alindex">
@@ -70,11 +72,11 @@ if($_SESSION['pdfdone'] == 1)   // use if($_SESSION['pdfdone'] == 0) to view the
       <div class="col-sm-3">
         &nbsp;
       </div>
-      <div class="col-sm-3 form-group">
-        <a href="<?php echo site_url(); ?>pages/view/editpersonal" class="btn btn-info" style="width: 100%; height: 3em; font-size: 20px;">Review Application</a>
+      <div class="col-sm-3 form-group" style="text-align: center;">
+        <a href="<?php echo site_url(); ?>pages/view/editpersonal" class="btn btn-info" style="width: 85%; height: 3em; font-size: 17px;">Review Application</a>
       </div>
-      <div class="col-sm-3 form-group">
-        <a href="<?php echo site_url(); ?>courses/edit" class="btn btn-info" style="width: 100%; height: 3em; font-size: 20px;">Review Course Selection</a>
+      <div class="col-sm-3 form-group" style="text-align: center;">
+        <a href="<?php echo site_url(); ?>courses/edit" class="btn btn-info" style="width: 85%; height: 3em; font-size: 17px;">Review Course Selection</a>
       </div>
       <div class="col-sm-3">
         &nbsp;
@@ -82,8 +84,8 @@ if($_SESSION['pdfdone'] == 1)   // use if($_SESSION['pdfdone'] == 0) to view the
     </div>
     <div class="row">
       <div class="col-sm-4">&nbsp;</div>
-      <div class="col-sm-4">
-        <button style= "padding:20px;font-size:20px; width: 100%;" type="submit" name="btnprv" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Submit Application </button>
+      <div class="col-sm-4" style="text-align: center;">
+        <button style= "padding: 15px; font-size: 19px; width: 80%;" type="submit" name="btnprv" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Submit Application </button>
       </div>
       <div class="col-sm-4">&nbsp;</div>
     </div>

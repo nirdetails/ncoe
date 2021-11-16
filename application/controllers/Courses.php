@@ -131,7 +131,7 @@ class Courses extends CI_Controller{
     }
 
     public function select(){
-        $data['title'] = 'Course Selection';
+        $data['title'] = 'Courses Selection';
         //validation
         $course1 = $this->input->post("course1");
         $course2 = $this->input->post("course2");
@@ -197,7 +197,7 @@ class Courses extends CI_Controller{
     }
     
     public function editsubmit(){
-        $data['title'] = 'Course Selection';
+        $data['title'] = 'Courses Selection';
         //validation
         $course1 = $this->input->post("course1");
         $course2 = $this->input->post("course2");
