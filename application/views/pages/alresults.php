@@ -99,8 +99,8 @@
   </table>
   <?php endforeach; ?>
   <div style="text-align:left">
-  <a class="btn btn-primary" href="<?php echo site_url(); ?>/olresults">Check O/L exam results</a>  
-  <a class="btn btn-primary" href="<?php echo site_url(); ?>/mulika_pirivena">Check Mulika Pirivena exam results </a>  
+  <a class="btn btn-primary" href="<?php echo site_url(); ?>/olresults">Check G.C.E. (O/L) Examination Results</a>  
+  <a class="btn btn-primary" href="<?php echo site_url(); ?>/mulika_pirivena">Check Mulika Pirivena Examination Results</a>  
   <!-- <button  type="submit" name="btnnext" class="btn btn-info"><span  class="glyphicon glyphicon-arrow-right"></span> Next </button> -->
   </div>
   </div>
