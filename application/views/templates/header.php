@@ -32,10 +32,10 @@
             &nbsp;&nbsp;&nbsp;&nbsp;
             <table>
             <tr>
-                <td><a class="navbar-brand" href="<?php echo base_url();?>"><h4>Online Application System For Admission of Student Teachers to<br>National Colleges of Education - 2021</h4></a></td>
+                <td style="text-align: center;"><a class="navbar-brand" href="<?php echo base_url();?>"><h4>Online Application System For Admission of Student Teachers to<br>National Colleges of Education - 2021</h4></a></td>
                 <td rowspan="2"><img src="<?php echo base_url();?>assets/images/filename.jpg"  height="90px" width="90px"></td>
             </tr>
-            <tr><td><h4 style="color: white;">Ministry of Education</h4></td></tr>
+            <tr><td><h4 style="color: white; text-align: center;">Ministry of Education</h4></td></tr>
             </table> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         	<div class="" id="navbarNavAltMarkup">

@@ -1,7 +1,7 @@
 <?php
 class MulikaPirivena extends CI_Controller{
     public function index(){
-        $data['title'] = 'Enter Mulika Pirivena Exam index number(s)';
+        $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
 
         $this->load->view('templates/header');
         $this->load->view('pages/mulika_pirivena',$data);
@@ -9,7 +9,7 @@ class MulikaPirivena extends CI_Controller{
     }
 
     public function checkmulres($olind1 = NULL, $olind2 = NULL, $olind3 = NULL,$yea1=NULL,$yea2=NULL,$yea3=NULL){
-        $data['title'] = 'Mulika Pirivena Exam Results';
+        $data['title'] = 'Mulika Pirivena Examination Results';
         $this->form_validation->set_rules('sel1', 'Number of attempts', 'required');
         $attempts = $this->input->post('sel1');
 
@@ -39,7 +39,7 @@ class MulikaPirivena extends CI_Controller{
 
         
         if($this->form_validation->run() === FALSE){
-            $data['title'] = 'Enter Mulika Pirivena Exam index number(s)';
+            $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
             $this->load->view('templates/header');
             $this->load->view('pages/mulika_pirivena', $data);
             $this->load->view('templates/footer');
@@ -114,28 +114,28 @@ class MulikaPirivena extends CI_Controller{
             
             if (($year1 != "N/A" || $olindex1 !="N/A") && empty($data['olresults1'])){
                 echo "<script>alert('Please enter a valid year1 or Index1')</script>";
-                $data['title'] = 'Enter Mulika Pirivena Exam index number(s)';
+                $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
 
                 $this->load->view('templates/header');
                 $this->load->view('pages/mulika_pirivena',$data);
                 $this->load->view('templates/footer');
             } else if (($year2 != "N/A"  || $olindex2 !="N/A" )&& empty($data['olresults2'])) {
                 echo "<script>alert('Please enter a valid year2 or Index2 ')</script>";
-                $data['title'] = 'Enter Mulika Pirivena Exam index number';
+                $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
 
                 $this->load->view('templates/header');
                 $this->load->view('pages/mulika_pirivena',$data);
                 $this->load->view('templates/footer');
             } elseif (($year3 != "N/A"  || $olindex3 !="N/A" )&& empty($data['olresults3'])) {
                 echo "<script>alert('Please enter a valid year3 or Index3')</script>";
-                $data['title'] = 'Enter Mulika Pirivena Exam index number(s)';
+                $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
 
                 $this->load->view('templates/header');
                 $this->load->view('pages/mulika_pirivena',$data);
                 $this->load->view('templates/footer');
             } else{
             // redirect('alresults');
-            $data['title'] = 'Enter Mulika Pirivena Exam index number(s)';
+            $data['title'] = 'Mulika Pirivena Examination Results Sheet';
 
             $this->load->view('templates/header');
             $this->load->view('pages/mulikapirivenaresults',$data);
