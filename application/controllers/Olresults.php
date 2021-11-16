@@ -40,7 +40,7 @@ class Olresults extends CI_Controller{
 
         
         if($this->form_validation->run() === FALSE){
-            $data['title'] = 'Enter O/L index number/numbers';
+            $data['title'] = 'Enter O/L index number(s)';
             $this->load->view('templates/header');
             $this->load->view('pages/ol', $data);
             $this->load->view('templates/footer');
@@ -113,7 +113,7 @@ class Olresults extends CI_Controller{
             
             if (($year1 != "N/A" || $olindex1 !="N/A") && empty($data['olresults1'])){
                 echo "<script>alert('Please enter a valid year1 or Index1')</script>";
-                $data['title'] = 'Enter O/L index number/numbers';
+                $data['title'] = 'Enter O/L index number(s)';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');
@@ -125,7 +125,7 @@ class Olresults extends CI_Controller{
                 $this->load->view('templates/footer');
             } elseif (($year3 != "N/A"  || $olindex3 !="N/A" )&& empty($data['olresults3'])) {
                 echo "<script>alert('Please enter a valid year3 or Index3')</script>";
-                $data['title'] = 'Enter O/L index number/numbers';
+                $data['title'] = 'Enter O/L index number(s)';
                 $this->load->view('templates/header');
                 $this->load->view('pages/ol',$data);
                 $this->load->view('templates/footer');
@@ -162,7 +162,7 @@ class Olresults extends CI_Controller{
         
         
         if($this->form_validation->run() === FALSE){
-            $data['title'] = 'Enter Mulika Pirivena index numbers';
+            $data['title'] = 'Enter Mulika Pirivena index number(s)';
             $this->load->view('templates/header');
             $this->load->view('pages/olpirivena', $data);
             $this->load->view('templates/footer');

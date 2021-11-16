@@ -395,7 +395,7 @@ ob_start();
             <?php }endforeach; ?>
 
             <?php if(isset($_SESSION['olindex3']) && $_SESSION['olindex3'] != ''){ ?>
-                <label for="olindex"><b>&nbsp;Attempt 3 Index Number&nbsp;: </b><?php echo $_SESSION["olindex3"]; ?><br><br>
+                <label for="olindex"><b>&nbsp;Attempt 3 Index Number&nbsp;: </b><?php echo $_SESSION["olindex3"]; ?><br>
             <?php } ?>
             <?php foreach($olresults3 as $olresult3): if( $olresult3["OL_index"] != "N/A"){?>
             <h4><b>O/L Results: </b></h4>
@@ -455,31 +455,40 @@ ob_start();
             
     <h2><b>&nbsp;&nbsp;06.Selected Courses: </b></h2>
      
-       <table>
+       <table style="width:50%">
            <tr>
         <?php if($_SESSION['course1'] != ""){ ?>
-            <td>&nbsp;&nbsp;&nbsp;<?php echo $course1["course_no"]; ?> - <?php echo $course1["name"]; ?></td>
+            <td style="width:3%"></td>
+            <td style="width:32%"><b>Preference 1</b></td>
+            <td style="width:5%">:</td>
+            <td style="width:60%"><?php echo $course1["course_no"]; ?> - <?php echo ucfirst($course1["name"]); ?></td>
             <br>
         <?php } ?>
         </tr>
- 
+        <br>
         
         <tr>
         <?php if($_SESSION['course2'] != ""){ ?>
-            <td>&nbsp;&nbsp;&nbsp;<?php echo $course2["course_no"]; ?> - <?php echo $course2["name"]; ?></td>
-            <br>
+            <td style="width:3%"></td>
+            <td style="width:32%"><b>Preference 2</b></td>
+            <td style="width:5%">:</td>
+            <td style="width:60%"><?php echo $course2["course_no"]; ?> - <?php echo ucfirst($course2["name"]); ?></td>
+            <br><br>
             
         <?php } ?>
         </tr>
-     
+     <br>
 
        <tr>
         <?php if($_SESSION['course3'] != ""){ ?>
-            <td>&nbsp;&nbsp;&nbsp;<?php echo $course3["course_no"]; ?> - <?php echo $course3["name"]; ?></td>
+            <td style="width:3%"></td>
+            <td style="width:32%"><b>Preference 3</b></td>
+            <td style="width:5%">:</td>
+            <td style="width:60%"><?php echo $course3["course_no"]; ?> - <?php echo ucfirst($course3["name"]); ?></td>
            <br>
         <?php } ?>
         </tr>
-
+<br>
         <br>
     
     
