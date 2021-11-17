@@ -1,7 +1,7 @@
 <?php
 class Alpirivena extends CI_Controller{
     public function index(){
-        $data['title'] = 'Add Your G.C.E. Advanced Level (A/L) Results';
+        $data['title'] = 'Add Your G.C.E. Advanced Level (A/L) Examination Results';
 
         $this->load->view('templates/header');
         $this->load->view('pages/alpirivena',$data);

@@ -9,7 +9,10 @@
 
   
 ?>
+
+<div class="mb-5">
   <h2>Edit your Selections</h2>
+</div>
   <span style="color: red;"><?php echo validation_errors(); ?></span>
   <?php //echo form_open_multipart('courses/editsubmit'); ?>
 <form action="<?php echo site_url(); ?>courses/editsubmit" enctype="multipart/form-data" method="post" accept-charset="utf-8">

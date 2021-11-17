@@ -16,8 +16,8 @@
   <div class="form-group">
     <label for="preference1">Select Your Course Preference 1: </label>
     <select class="form-control" id="course1" name="course1">
-      <option value="">SELECT</option>
-      <?php foreach($courses as $course): ?>
+			<option value="">Select</option>
+			<?php foreach($courses as $course): ?>
         <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo ucfirst($course['name']); ?></option>
       <?php endforeach; ?>                                                   
     </select>
@@ -25,7 +25,7 @@
   <div class="form-group">
     <label for="preference2">Select Your Course Preference 2: </label>
     <select class="form-control" id="course2" name="course2">
-      <option value="">SELECT</option>
+      <option value="">Select</option>
       <?php foreach($courses as $course): ?>
         <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo ucfirst($course['name']); ?></option>
       <?php endforeach; ?>                                                   
@@ -34,7 +34,7 @@
   <div class="form-group">
     <label for="preference3">Select Your Course Preference 3: </label>
     <select class="form-control" id="course3" name="course3">
-      <option value="">SELECT</option>
+      <option value="">Select</option>
       <?php foreach($courses as $course): ?>
         <option value="<?php echo $course['course_no']?>"><?php echo $course['course_no']?> - <?php echo ucfirst($course['name']); ?></option>
       <?php endforeach; ?>                                                   
@@ -130,7 +130,7 @@
       <label for="gitmk"><b>Select Your General Information Technology (G.I.T.) Examination Grade: </b></label><br>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
       <select class="form-control col-sm-4"  id="gitmk" name="gitmk" placeholder="Grade">
-        <option value="0" selected disabled>Select your Grade</option>
+        <option value="0" selected disabled>Select Your Grade</option>
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
