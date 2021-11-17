@@ -5,7 +5,7 @@
   <?php //var_dump($personal); ?>
   <?php //var_dump($_SESSION); ?>
 
-<div class="container">
+
 <form action="<?php echo site_url(); ?>editrec/editdata" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <?php foreach($selection as $select){ ?>
   <div class="form-group">
@@ -61,7 +61,7 @@
           <!-- <input type="text" class="form-control" id="pemarks" name="pemarks" value="<?php// echo $person['pemarks'] ?>">  -->   
         <div class="form-row">
 					<div class="form-group col-md-4">
-						<label><p><span style="color:red">* </span><i>O/L Examination Marks</i></p></label><br>
+						<label><p><span style="color:red">* </span><i>G.C.E. (O/L) Examination Marks</i></p></label><br>
 						<!-- <input type="number" class="form-control col-sm-4" id="peolmarks" onBlur="calcSum();" name="peolmarks" required />  -->
 					</div>
 					<div class="form-group col-md-4">
@@ -117,10 +117,10 @@ function calcSum()
   <div class="col-sm-12" style="background-color: #ddffff; border-radius: 5px;" id="gitmarks">
   <?php //} ?>
     <div class="form-group">
-    <label for="gitmk"><b>GIT Grades: </b></label><span style="color:red">* <?php echo form_error('gitmk'); ?></span>
+    <label for="gitmk"><b>General Information Technology (G.I.T.) Grade: </b></label><span style="color:red">* <?php echo form_error('gitmk'); ?></span>
       <!-- <input type="number" class="form-control" id="gitmk" name="gitmk" >     -->
       <select class="form-control"  id="gitmk" name="gitmk" placeholder="Grade">
-        <option value="0" selected disabled>Select your Grade</option>
+        <option value="0" selected disabled>Select Your Grade</option>
         <?php
           foreach($gitgrades as $gitgrade){
             if($gitgrade == $select['gitmarks']){
@@ -134,12 +134,12 @@ function calcSum()
     </div>
     <br>&nbsp;
   </div>
-</div>
+
 <!---------------------------------------------personal details----------------------------------------->
 <hr>
 <?php break; } ?>
 <?php foreach($personal as $person){ ?>
-<div class="container form-group">
+<div class="form-group">
     <!-- <div class="form-group">
       <label for="emailindex" style="display :block">O/L index number:</label><span style="color:red">* <?php// echo form_error('olindex1'); ?></span>
       <input value="<?php// echo $person['OLindex1']; ?>" type="text" class="form-control" id="olindex1" placeholder="Enter your  1st index " name="olindex1" style="display :block">
@@ -158,11 +158,11 @@ function calcSum()
   <div class="form-group">
   <?php // var_dump($_SESSION['sworker']); ?>
       <label for="fullname">Name in Full: </label><span style="color:red">* <?php echo form_error('fullname'); ?></span>
-      <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" name="fullname" value="<?php echo $person['fullname']; ?>">
+      <input type="text" class="form-control" id="fullname" placeholder="Enter Your Full Name" name="fullname" value="<?php echo $person['fullname']; ?>">
     </div>
     <div class="form-group">
       <label for="namewithinitials">Name with Initials: </label><span style="color:red">* <?php echo form_error('namewithinitials'); ?></span>
-      <input type="text" class="form-control" id="namewithinitials" placeholder="Enter your name with Initials" name="namewithinitials" value="<?php echo $person['namewithinitials']; ?>">
+      <input type="text" class="form-control" id="namewithinitials" placeholder="Enter your Name with Initials" name="namewithinitials" value="<?php echo $person['namewithinitials']; ?>">
     </div>
     <div class="form-group">
       <label for="dob">Date of Birth: </label><span style="color:red">* <?php echo form_error('dob'); ?></span>
@@ -170,10 +170,10 @@ function calcSum()
     </div>
     <div class="form-group">
       <label for="address">Permanent Address: </label><span style="color:red">* <?php echo form_error('Addressl1'); ?></span>
-      <input type="text" class="form-control" id="addressline1" placeholder="Enter your address- line01" name="addressline1" value="<?php echo $person['Addressl1']; ?>"><br>
-      <input type="text" class="form-control" id="addressline2" placeholder="Enter your address- line02" name="addressline2" value="<?php echo $person['Addressl2']; ?>"><br>
-      <input type="text" class="form-control" id="addressline3" placeholder="Enter your address- line03" name="addressline3" value="<?php echo $person['Addressl3']; ?>"><br>
-      <input type="text" class="form-control" id="addressline4" placeholder="Enter your address- line04" name="addressline4" value="<?php echo $person['Addressl4']; ?>"><br>
+      <input type="text" class="form-control" id="addressline1" placeholder="Street Address / P.O Box / Company Name" name="addressline1" value="<?php echo $person['Addressl1']; ?>"><br>
+      <input type="text" class="form-control" id="addressline2" placeholder="Apartment / Suite / Unit / Building / Floor" name="addressline2" value="<?php echo $person['Addressl2']; ?>"><br>
+      <input type="text" class="form-control" id="addressline3" placeholder="City" name="addressline3" value="<?php echo $person['Addressl3']; ?>"><br>
+      <input type="text" class="form-control" id="addressline4" placeholder="Postal Code" name="addressline4" value="<?php echo $person['Addressl4']; ?>"><br>
     </div>
     <div class="form-group">
     <label for="district">Permanent Residence District Name and Number: <span style="color:red">* <?php echo form_error('district'); ?></span></label>
@@ -198,7 +198,7 @@ function calcSum()
         <div class="col-sm-6">
             <div class="form-group">
              <label for="nic">NIC Number: </label><span style="color:red">* <?php echo form_error('nic'); ?></span>
-             <input type="text" class="form-control" id="nic" placeholder="Enter your NIC" name="nic" value="<?php echo $person['NIC']; ?>">
+             <input type="text" class="form-control" id="nic" placeholder="Enter Your NIC" name="nic" value="<?php echo $person['NIC']; ?>">
            </div>
         </div>
 

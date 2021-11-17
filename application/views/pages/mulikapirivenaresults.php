@@ -452,7 +452,7 @@
   
  
     </div>
-  <div style="text-align:right">
+  <div style="text-align: left">
     <a class="btn btn-primary" href="<?php echo site_url(); ?>/sripada">Next</a>
   </div>
     

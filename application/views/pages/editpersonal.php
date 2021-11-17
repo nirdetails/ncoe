@@ -1,4 +1,7 @@
-<h2>Edit Personal Details Form</h2>
+<div class="mb-5">
+	<h2>Edit Personal Details Form</h2>
+</div>
+
 <!-- <h2>Personal Details Form</h2> -->
 <?php
   if (!isset($_SESSION["alindex"])){

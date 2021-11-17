@@ -2,7 +2,7 @@
 <br>
 <div class="row" style="text-align: center;">
     <div class="col-sm-6">
-        <h3>Create New Application</h3>
+        <h3>Create a New Application</h3>
         <div class="col-sm-12">
         <br>
         &nbsp;
