@@ -34,7 +34,7 @@
             <option value="2011">2011</option>
 						<option value="2010">2010</option>
 				</select>
-      <input type="text" class="form-control" id="index1" placeholder="Enter Mulika Piriwena Examination Index Number" name="index1" style="display :none">
+      <input type="text" class="form-control" id="index1" placeholder="Enter Mulika Pirivena Examination Index Number" name="index1" style="display :none">
     </div>
 
     <div class="form-group">
@@ -52,7 +52,7 @@
             <option value="2011">2011</option>
 						<option value="2010">2010</option>
 				</select>
-      <input type="text" class="form-control" id="index2" placeholder="Enter Mulika Piriwena Examination Index Number" name="index2"  style="display :none">
+      <input type="text" class="form-control" id="index2" placeholder="Enter Mulika Pirivena Examination Index Number" name="index2"  style="display :none">
     </div>
 
     <div class="form-group">
@@ -70,7 +70,7 @@
             <option value="2011">2011</option>
 						<option value="2010">2010</option>
 				</select>
-      <input type="text" class="form-control" id="index3" placeholder="Enter Mulika Piriwena Examination Index Number" name="index3" style="display :none">
+      <input type="text" class="form-control" id="index3" placeholder="Enter Mulika Pirivena Examination Index Number" name="index3" style="display :none">
     </div>
     <button type="submit" class="btn btn-info">Submit</button>
 </form>
