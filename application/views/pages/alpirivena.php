@@ -1,13 +1,16 @@
-<h2><?= $title; ?></h2>
+<div class="mb-5">
+	<h2><?= $title; ?></h2>
+</div>
+
 <?php // echo validation_errors(); ?>
 <?php //echo form_open_multipart('Alpirivena/checkalres'); ?>
 <form action="<?php echo site_url(); ?>Alpirivena/checkalres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
-                <label for="index">A\L year: <span style="color:red">* <?php echo form_error('year'); ?></span></label>
+                <label for="index">G.C.E. (A\L) Examination Year: <span style="color:red">* <?php echo form_error('year'); ?></span></label>
                 <!-- <input type="text" class="form-control" id="alyear" placeholder="Enter your A\L year" name="alyear"> -->
-                <select class="form-control" id="year" placeholder="Enter your A\L year" name="year">
+                <select class="form-control" id="year" placeholder="Enter Your G.C.E. (A\L) Year" name="year">
                     <option value="">Select</option>
                     <option value="2018">2018</option>
                     <option value="2017">2017</option>
@@ -29,12 +32,12 @@
         $alsubs = array(1 => 'Physics', 2 =>	'Chemistry' ,7 => 'Mathematics' ,8 => 'Agricultural Science' ,9 => 'Biology' ,10 => 'Combind Mathematics' ,11 => 'Higher Mathematics' ,12 => 'Common General Test'	,13 => 'General English',14 => 'Civil Technology' ,15 => 'Mechanical Technology ',16 => 'Eletrical,Electronic and Information Technology'	,17 => 'Food Technology' ,18 => 'Agro Technology'	,19 => 'Bio- Resource Technology' ,20 => 'Information & Communication Technology' ,21 => 'Economics' ,22 => 'Geography' ,23 => 'Political Science' ,24 => 'Logic and Scientific Method'	,25 => 'History'	,28 => 'Home Economics'	,29 => 'Communication & Media Studies' ,31 => 'Business Statistics'	,32 => 'Business Studies' ,33 => 'Accounting'	,41 => 'Buddhism' ,42 => 'Hinduism' ,43 => 'Christianity' ,44 => 'Islam'				, 45 => 'Buddhist Civilization', 46 => 'Hindu Civilization', 47 => 'Islam Civilization', 48 => 'Greek & Rooman Civilization', 49 => 'Christian Civilization', 51 => 'Art', 52 => 'A Dancing (Indigenous  -Kandyan)', 52 => 'B Dancing (Indigenous  -Low country)', 52 => 'C Dancing (Indigenous Sabaragamu)', 53 => 'Dancing (Bharata)', 54 => 'Oriental Music', 55 => 'Carnatic Music', 56 => 'Western Music', 57 => 'Drama and Theatre (Sinhala)', 58 => 'Drama and Theatre (Tamil)', 59 => 'Drama and Theatre (English)', 65 => 'Engineering Technology', 66 => 'Bio Systems Technology', 67 => 'Science fot Technology', 71 => 'Sinhala', 72 => 'Tamil', 73 => 'English', 74 => 'pali', 75 => 'Sanskrit', 78 => 'Arabic', 79 => 'Malay', 81 => 'French', 82 => 'German', 83 => 'Russian', 84 => 'Hindi', 86 => 'Chinese', 87 => 'Japanese');
     ?> 
    
-    <h2>A/L Results</h2>
+    <h2>G.C.E. Advanced Level (A/L) Examination Results</h2>
     <div class="row">
     <div class="col-sm-3">
         <div class="form-group">
-            <label for="index">A\L index: <span style="color:red">* <?php echo form_error('alindex'); ?></span></label>
-            <input type="text" class="form-control" id="alindex" placeholder="Enter your A\L index" name="alindex">
+            <label for="index">G.C.E. (A\L) Examination Index: <span style="color:red">* <?php echo form_error('alindex'); ?></span></label>
+            <input type="text" class="form-control" id="alindex" placeholder="G.C.E. (A\L) Examination Index" name="alindex">
         </div>
     </div>
     <div class="col-sm-3">
@@ -108,7 +111,7 @@
                 <div class="form-group">
                     <label for="index">Grade <br><span style="color:red">* <?php echo form_error('grade1'); ?></span></label>
                     <select class="form-control" id="grade1" placeholder="Grade" name="grade1">
-                        <option value="0" selected disabled>Select your Grade</option>
+                        <option value="0" selected disabled>Select Your Grade</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
@@ -149,7 +152,7 @@
                 <div class="form-group">
                     <span style="color:red">* <?php echo form_error('grade2'); ?></span>
                     <select class="form-control" id="grade2" placeholder="Grade" name="grade2">
-                        <option value="0" selected disabled>Select your Grade</option>
+                        <option value="0" selected disabled>Select Your Grade</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
@@ -195,7 +198,7 @@
                 <div class="form-group">
                     <span style="color:red">* <?php echo form_error('grade3'); ?></span>
                     <select class="form-control" id="grade3" placeholder="Grade" name="grade3">
-                        <option value="0" selected disabled>Select your Grade</option>
+                        <option value="0" selected disabled>Select Your Grade</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
@@ -245,8 +248,8 @@
     <div class="row">
         <div class="col-sm-4">
         <div class="form-group">
-            <label for="git">General Test Marks: <span style="color:red">* <?php echo form_error('gentst'); ?></span></label>
-            <input type="text" class="form-control" id="gentst" placeholder="General Test Marks" name="gentst">
+            <label for="git">Common General Test Marks: <span style="color:red">* <?php echo form_error('gentst'); ?></span></label>
+            <input type="text" class="form-control" id="gentst" placeholder="Common General Test Marks" name="gentst">
             <br>
         </div>
         </div>
