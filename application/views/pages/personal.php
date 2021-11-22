@@ -23,7 +23,7 @@
       <label><i>Ex: Rajapaksha W.A.S.K. </i></label>
     </div>
     <div class="form-group">
-      <label for="dob">Date of Birth: <span style="color:red">* </span></label>
+      <label for="dob">Date of Birth: <span style="color:red">*<?php echo form_error('dob');?> </span></label>
       <input type="date" class="form-control" id="dob"  name="dob">
     </div>
     <div class="form-group">
