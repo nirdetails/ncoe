@@ -32,15 +32,18 @@ class Alresults extends CI_Controller{
 		// set the validation rules
 		$this->form_validation->set_rules('year', 'A/L Year', 'required');
 		$this->form_validation->set_rules('syllabus', 'Syllabus Type', 'required');
-		$this->form_validation->set_rules('alindex', 'Index Number', 'required|xss_clean|is_exist[stuents.alindex]');
+		
+		$this->form_validation->set_rules('alindex', 'Index Number', 'required|xss_clean|is_exist[stuents.alindex]',array('is_exist' => 'You have Already submit an application,Please contact us for more support.'));
 		$this->form_validation->set_message('required', '{field} is a required field');
+		
+		
 		// checking validation rules
 		if($this->form_validation->run() == FALSE) {
-
+			// echo "<script>alert('Please enter a valid Index')</script>";
 			$data['title'] = 'Enter Your G.C.E. Advanced Level (A/L) Information';
-
+     
 			$this->load->view('templates/header');
-			$this->load->view('pages/al', $data);
+            $this->load->view('pages/al', $data);
 			$this->load->view('templates/footer');
 			
 
