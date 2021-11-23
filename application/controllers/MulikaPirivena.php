@@ -113,21 +113,21 @@ class MulikaPirivena extends CI_Controller{
             } 
             
             if (($year1 != "N/A" || $olindex1 !="N/A") && empty($data['olresults1'])){
-                echo "<script>alert('Please enter a valid year1 or Index1')</script>";
+                echo "<script>alert('Year or Index is incorrect for first attempt'')</script>";
                 $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
 
                 $this->load->view('templates/header');
                 $this->load->view('pages/mulika_pirivena',$data);
                 $this->load->view('templates/footer');
             } else if (($year2 != "N/A"  || $olindex2 !="N/A" )&& empty($data['olresults2'])) {
-                echo "<script>alert('Please enter a valid year2 or Index2 ')</script>";
+                echo "<script>alert('Year or Index is incorrect for second attempt'')</script>";
                 $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
 
                 $this->load->view('templates/header');
                 $this->load->view('pages/mulika_pirivena',$data);
                 $this->load->view('templates/footer');
             } elseif (($year3 != "N/A"  || $olindex3 !="N/A" )&& empty($data['olresults3'])) {
-                echo "<script>alert('Please enter a valid year3 or Index3')</script>";
+                echo "<script>alert('Year or Index is incorrect for third attempt'')</script>";
                 $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
 
                 $this->load->view('templates/header');
