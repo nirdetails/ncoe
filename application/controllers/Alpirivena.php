@@ -13,7 +13,7 @@ class Alpirivena extends CI_Controller{
         $data['title'] = 'Select an Examination';
 
         $this->form_validation->set_rules('year', 'Year', 'required');
-        $this->form_validation->set_rules('alindex', 'Index No.', 'required|is_exist[al_pirivena.AL_index]');
+        $this->form_validation->set_rules('alindex', 'Index No', 'required|is_exist[al_pirivena.AL_index]',array('is_exist' => 'You have Already submit an application,Please contact us for more support.'));
 
         $this->form_validation->set_rules('stream', 'Stream', 'required');
         $this->form_validation->set_rules('medium', 'Medium', 'required');
