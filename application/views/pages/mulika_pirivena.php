@@ -12,7 +12,7 @@
   <div class="form-group"> 
       <label for="attempts">Please Select Number of Attempts You've Sat for Mulika Pirivena Examination<span style="color:red">* </span></label>
       <select name="sel1" class="form-control" id="sel1">
-        <option id="def" selected value="">ATTEMPTS</option>
+        <option id="def" selected value="">Number of Attempts</option>
         <option id="1" value="1">1</option>
         <option id="2" value="2">2</option>
         <option id="3" value="3">3</option>
@@ -34,7 +34,7 @@
             <option value="2011">2011</option>
 						<option value="2010">2010</option>
 				</select>
-      <input type="text" class="form-control" id="index1" placeholder="Enter Mulika Piriwena Examination Index Number" name="index1" style="display :none">
+      <input type="text" class="form-control" id="index1" placeholder="Enter Mulika Pirivena Examination Index Number" name="index1" style="display :none">
     </div>
 
     <div class="form-group">
@@ -52,7 +52,7 @@
             <option value="2011">2011</option>
 						<option value="2010">2010</option>
 				</select>
-      <input type="text" class="form-control" id="index2" placeholder="Enter Mulika Piriwena Examination Index Number" name="index2"  style="display :none">
+      <input type="text" class="form-control" id="index2" placeholder="Enter Mulika Pirivena Examination Index Number" name="index2"  style="display :none">
     </div>
 
     <div class="form-group">
@@ -70,7 +70,7 @@
             <option value="2011">2011</option>
 						<option value="2010">2010</option>
 				</select>
-      <input type="text" class="form-control" id="index3" placeholder="Enter Mulika Piriwena Examination Index Number" name="index3" style="display :none">
+      <input type="text" class="form-control" id="index3" placeholder="Enter Mulika Pirivena Examination Index Number" name="index3" style="display :none">
     </div>
     <button type="submit" class="btn btn-info">Submit</button>
 </form>

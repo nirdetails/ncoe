@@ -11,7 +11,7 @@
 				<label for="index">G.C.E. (A\L) Year: <span style="color:red">*</span></label>
 				<span style="color: red;"><?php echo form_error('year'); ?></span>
 				<select class="form-control" id="year" placeholder="Select your A\L year" name="year">
-						<option value="">SELECT</option>
+						<option value="">Select</option>
 						<option value="2019">2019</option>
 						<option value="2020">2020</option>
 				</select>
@@ -22,7 +22,7 @@
 				<label for="index">Syllabus: <span style="color:red">*</span></label>
 				<span style="color: red;"><?php echo form_error('syllabus'); ?></span>
 				<select class="form-control" id="syllabus" placeholder="Select the syllabus mode" name="syllabus">
-						<option value="">SELECT</option>
+						<option value="">Select</option>
 						<option value="Old">Old</option>
 						<option value="New">New</option>
 				</select>

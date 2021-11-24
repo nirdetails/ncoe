@@ -20,7 +20,7 @@ ob_start();
 // we can have any view part here like HTML, PHP etc
 ?>    
     <h1>National Colleges of Education (NCoE) Admission</h1>
-    <h2>&nbsp;&nbsp;01.Personal Information</h2>
+    <h2>&nbsp;&nbsp;1. Personal Information</h2>
     
     <div class="container mt-5" style="padding-top: 0px;">
            
@@ -94,7 +94,7 @@ ob_start();
             <tr>
                 <br>
 
-            <td style="width:70%"><h2>&nbsp;02.Contact Information</h2></td>
+            <td style="width:70%"><h2>&nbsp;2. Contact Information</h2></td>
             </tr>
             <br>
 
@@ -137,7 +137,7 @@ ob_start();
             <tr>
             <td style="width:1%"></td>
             
-            <td style="width:30%"><label for="home"><b>Home Tel</b></label></td>
+            <td style="width:30%"><label for="home"><b>Landline No</b></label></td>
             <td style="width:5%"><b>:</b></td>
             <td style="width:60%"><?php echo $person['home']; ?></td>
             </tr>
@@ -156,7 +156,7 @@ ob_start();
             <!-- <label for="Sripada">12. Are you applying for Sripada NCoE? </label><br>
             <label for="state">13. Are your parents are State Workers? </label><br><br> -->
             
-            <h2><b>&nbsp;&nbsp;03.A/L Details: </b></h2>
+            <h2><b>&nbsp;&nbsp;3. A/L Details</b></h2>
             <?php foreach($alresult as $alres){ //var_dump($alres);?> <br>
            
             <label for="alindex"><b>&nbsp;A/L Index No &nbsp;:&nbsp;</b></label><?php echo $alres['AL_index']; ?><br><br>
@@ -203,7 +203,7 @@ ob_start();
                  ?> 
     
     <label for="alattempt"><b>&nbsp;Attempt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</b></label><?php echo $alres['attempt'] ?>
-    <h2><b>&nbsp;&nbsp;04.A/L Results: </b></h2>
+    <h2><b>&nbsp;&nbsp;4. A/L Results</b></h2>
                 <table style="width: 100%">
                 <tr>
                     <th style="width: 10%"><b>&nbsp;&nbsp;No</b></th>
@@ -277,7 +277,7 @@ ob_start();
             <?php break; } ?>
                 
 
-            <h2><b>&nbsp;&nbsp;05.O/L Details: </b></h2>
+            <h2><b>&nbsp;&nbsp;5. O/L Details </b></h2>
              <br>
             <?php foreach($personal as $person){ ?>
 
@@ -461,7 +461,7 @@ ob_start();
             </table>
             <?php } break; }; ?>
             
-    <h2><b>&nbsp;&nbsp;06.Selected Courses: </b></h2>
+    <h2><b>&nbsp;&nbsp;6. Selected Courses</b></h2>
     
     
         <?php 

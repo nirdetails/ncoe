@@ -23,7 +23,7 @@
             $this->form_validation->set_rules('nic', 'NIC Number', 'required|max_length[12]|min_length[10]');
             $this->form_validation->set_rules('gender', 'Gender', 'required');//gender validation
             $this->form_validation->set_rules('title', 'Title', 'required');
-            $this->form_validation->set_rules('ethnicity', 'Ethnicity', 'required');
+            $this->form_validation->set_rules('ethnicity', 'Race', 'required');
             // $this->form_validation->set_rules('mobile', 'Mobile', 'required');
             // $this->form_validation->set_rules('home', 'Home', 'required');
             // $this->form_validation->set_rules('email', 'Email', 'required');
@@ -70,7 +70,7 @@
                 $this->session->set_userdata('email', $email);
 
                 $this->load->view('templates/header');
-				$this->load->view('pages/declaration', $data);
+				$this->load->view('pages/submission', $data);
 				$this->load->view('templates/footer');
 			}
 		}

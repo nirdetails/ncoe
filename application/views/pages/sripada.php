@@ -10,9 +10,9 @@
 <form action="<?php echo site_url(); ?>students/sripada" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <?php // echo form_open_multipart('students/sripada'); ?>
     <div class="form-group">
-      <label for="index1" id="label1" title=" National College of Education">Are You Applying for Sripada National College of Education? <span style="color:red">* </span></label>
+      <label for="index1" id="label1" title=" National College of Education">Are You Applying to Sripada National College of Education? <span style="color:red">* </span></label>
       <select name="sripada"  id="sripada" height="4" class="form-control">
-        <option selected value="">SELECT</option>
+        <option selected value="">Select</option>
         <option id="y" >Yes</option>
         <option id="n" >No</option>
     </select>
@@ -22,7 +22,7 @@
     <div class="form-group">
     <label for="sworker" id="label2" name="state" style="display :none">Are You a Child of an Estate Worker? <span style="color:red">* </span></label>
       <select name="sworker"  id="sworker" height="4" style="display :none" class="form-control">
-        <option selected value="">SELECT</option>
+        <option selected value="">Select</option>
         <option id="y">Yes</option>
         <option id="n">No</option>
         </select>

@@ -13,7 +13,7 @@
   <div class="form-group">
       <label for="attempts" style="margin-bottom:10px;">Please Select Number of Attempts You've Sat for G.C.E. Ordinary Level (O/L) Examination <span style="color:red">* </span></label>
       <select name="sel1" class="form-control" id="sel1">
-        <option id="def" selected value="">ATTEMPTS</option>
+        <option id="def" selected value="">Number of Attempts</option>
         <option id="1" value="1">1</option>
         <option id="2" value="2">2</option>
         <option id="3" value="3">3</option>

@@ -19,7 +19,7 @@ ob_start();
 // we can have any view part here like HTML, PHP etc
 ?>    
    <h1>National Colleges of Education (NCoE) Admission</h1>
-   <h2>&nbsp;&nbsp;01.Personal Information</h2>
+   <h2>&nbsp;&nbsp;1. Personal Information</h2>
 
     
     <div class="container mt-5" style="padding-top:0px;"> 
@@ -92,7 +92,7 @@ ob_start();
             
             <tr>
             
-            <td style="width:70%"><h2>&nbsp;02.Contact Information</h2></td>
+            <td style="width:70%"><h2>&nbsp;2. Contact Information</h2></td>
             </tr>
             <br>
 
@@ -136,7 +136,7 @@ ob_start();
             <tr>
             <td style="width:1%"></td>
             
-            <td style="width:30%"><label for="home"><b>Home Telephone No</b></label></td>
+            <td style="width:30%"><label for="home"><b>Landline No</b></label></td>
             <td style="width:5%"><b>:</b></td>
             <td style="width:60%"><?php echo $home; ?></td>
             </tr>
@@ -157,7 +157,7 @@ ob_start();
             <label for="state">13. Are your parents are State Workers? </label><br><br> -->
            
         
-            <h2><b>&nbsp;&nbsp;03.A/L Details: </b></h2>
+            <h2><b>&nbsp;&nbsp;3. A/L Details</b></h2>
             
             <?php foreach($alresults as $alresult): ?><br>
             <label for="alindex"><b>&nbsp;A/L Index No &nbsp;:&nbsp;</b></label><?php echo $alresult['AL_index']; ?><br><br>
@@ -202,7 +202,7 @@ ob_start();
       ?> 
 
             <label for="alattempt"><b>&nbsp;Attempt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</b></label><?php echo $alresult['attempt'] ?>
-            <h2><b>&nbsp;&nbsp;04.A/L Results: </b></h2>
+            <h2><b>&nbsp;&nbsp;4. A/L Results</b></h2>
                 <table style="width: 100%">
                 <tr>
                     
@@ -223,10 +223,12 @@ ob_start();
             }
           }
           ?>
+          
                     <td><?php echo $alresult['grade1'] ?></td>
                 </tr>
                 <tr>
                     <td>&nbsp;&nbsp;02. </td>
+                    
                     <?php 
           if (!array_key_exists($alresult['sub2'], $alsubs)) {
             // echo "<td>". $alresult['sub2'] ."</td>";
@@ -270,17 +272,16 @@ ob_start();
                 </table>
                 
                 <div style="height: 10px;"></div>
-                <
                 <label><b>&nbsp;&nbsp;&nbsp;Z-score: </b></label><?php echo $alresult['zscore'] ?><br>
-                <?php endforeach; ?>
+<?php endforeach; ?>
                 
-            <h2><b>&nbsp;&nbsp;05.O/L Details: </b></h2><br>
+            <h2><b>&nbsp;&nbsp;5. O/L Details</b></h2><br>
             <br>&nbsp;&nbsp;<label for="olattempts"><b>&nbsp;Number of Attempts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b><?php echo $attempts; ?><br><br>
             <?php if(isset($_SESSION['olindex1']) && $_SESSION['olindex1'] != ''){ ?>
                 <label for="olindex"><b>&nbsp;Attempt 1 Index Number&nbsp;: </b><?php echo $_SESSION["olindex1"]; ?><br><br>
             <?php }?>
             <?php foreach($olresults1 as $olresult1): if( $olresult1["OL_index"] != "N/A"){?><br>
-                <h4><b>O/L Results: </b></h4>
+                <h4><b>O/L Results</b></h4>
                 <table style="width: 100%">
                     <tr>
                         <th style="width: 10%"></th>
@@ -453,7 +454,7 @@ ob_start();
             </table>
             <?php }endforeach; ?>
             
-    <h2><b>&nbsp;&nbsp;06.Selected Courses: </b></h2>
+    <h2><b>&nbsp;&nbsp;6. Selected Courses</b></h2>
      
        <table style="width:50%">
            <tr>
@@ -461,7 +462,7 @@ ob_start();
             <td style="width:3%"></td>
             <td style="width:32%"><b>Preference 1</b></td>
             <td style="width:5%">:</td>
-            <td style="width:60%"><?php echo $course1["course_no"]; ?> - <?php echo ucfirst($course1["name"]); ?></td>
+            <td style="width:100%"><?php echo $course1["course_no"]; ?> - <?php echo ucfirst($course1["name"]); ?></td>
             <br>
         <?php } ?>
         </tr>
@@ -472,7 +473,7 @@ ob_start();
             <td style="width:3%"></td>
             <td style="width:32%"><b>Preference 2</b></td>
             <td style="width:5%">:</td>
-            <td style="width:60%"><?php echo $course2["course_no"]; ?> - <?php echo ucfirst($course2["name"]); ?></td>
+            <td style="width:100%"><?php echo $course2["course_no"]; ?> - <?php echo ucfirst($course2["name"]); ?></td>
             <br><br>
             
         <?php } ?>
@@ -484,7 +485,7 @@ ob_start();
             <td style="width:3%"></td>
             <td style="width:32%"><b>Preference 3</b></td>
             <td style="width:5%">:</td>
-            <td style="width:60%"><?php echo $course3["course_no"]; ?> - <?php echo ucfirst($course3["name"]); ?></td>
+            <td style="width:100%"><?php echo $course3["course_no"]; ?> - <?php echo ucfirst($course3["name"]); ?></td>
            <br>
         <?php } ?>
         </tr>
