@@ -39,7 +39,7 @@ class Alresults extends CI_Controller{
 		
 		// checking validation rules
 		if($this->form_validation->run() == FALSE) {
-			// echo "<script>alert('Please enter a valid Index')</script>";
+			
 			$data['title'] = 'Enter Your G.C.E. Advanced Level (A/L) Information';
      
 			$this->load->view('templates/header');
@@ -70,6 +70,7 @@ class Alresults extends CI_Controller{
 				$this->load->view('templates/footer');
 				
 			} else {
+                echo "<script>alert('Index number is incorrect')</script>";
 
 				$data['title'] = 'Enter Your G.C.E. Advanced Level (A/L) Information';
 				$this->load->view('templates/header');
