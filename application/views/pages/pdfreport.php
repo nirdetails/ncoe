@@ -223,10 +223,12 @@ ob_start();
             }
           }
           ?>
+          
                     <td><?php echo $alresult['grade1'] ?></td>
                 </tr>
                 <tr>
                     <td>&nbsp;&nbsp;02. </td>
+                    
                     <?php 
           if (!array_key_exists($alresult['sub2'], $alsubs)) {
             // echo "<td>". $alresult['sub2'] ."</td>";
@@ -270,9 +272,8 @@ ob_start();
                 </table>
                 
                 <div style="height: 10px;"></div>
-                <
                 <label><b>&nbsp;&nbsp;&nbsp;Z-score: </b></label><?php echo $alresult['zscore'] ?><br>
-                <?php endforeach; ?>
+<?php endforeach; ?>
                 
             <h2><b>&nbsp;&nbsp;5. O/L Details</b></h2><br>
             <br>&nbsp;&nbsp;<label for="olattempts"><b>&nbsp;Number of Attempts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b><?php echo $attempts; ?><br><br>
