@@ -572,3 +572,16 @@ function calcSum() {
 	var num2 = parseInt(document.getElementById("pencoemarks").value);
 	document.getElementById("pemarks1").value = num1 + num2;
 }
+
+function calcSum1() {
+	var num1 = parseInt(document.getElementById("peolmarks1").value);
+	var num2 = parseInt(document.getElementById("pencoemarks1").value);
+	document.getElementById("pemarks2").value = num1 + num2;
+}
+
+function calcSum2() {
+	var num1 = parseInt(document.getElementById("peolmarks2").value);
+	var num2 = parseInt(document.getElementById("pencoemarks2").value);
+	document.getElementById("pemarks3").value = num1 + num2;
+}
+
