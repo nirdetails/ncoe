@@ -62,11 +62,59 @@ if($_SESSION['pdfdone'] == 1)   // use if($_SESSION['pdfdone'] == 0) to view the
     <input type="hidden" value="<?php echo $_SESSION['course2']; ?>" name="course2">
     <input type="hidden" value="<?php echo $_SESSION['course3']; ?>" name="course3">
     <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks1">
-    <input type="hidden" value="<?php echo $_SESSION['category']; ?>" name="category">
-    <input type="hidden" value="<?php echo $_SESSION['gitmk']; ?>" name="gitmk">
+    <input type="hidden" value="<?php echo $_SESSION['pemarks2']; ?>" name="pemarks2">
+    <input type="hidden" value="<?php echo $_SESSION['pemarks3']; ?>" name="pemarks3">
+    <input type="hidden" value="<?php echo $_SESSION['category1']; ?>" name="category1">
+    <input type="hidden" value="<?php echo $_SESSION['category2']; ?>" name="category2">
+    <input type="hidden" value="<?php echo $_SESSION['category3']; ?>" name="category3">
+    <input type="hidden" value="<?php echo $_SESSION['gitmk1']; ?>" name="gitmk1">
+    <input type="hidden" value="<?php echo $_SESSION['gitmk2']; ?>" name="gitmk2">
+    <input type="hidden" value="<?php echo $_SESSION['gitmk3']; ?>" name="gitmk3">
+  
+  
+    <?php if($_SESSION['gitmk1'] != NULL){  ?>
+    
+    <input type="hidden" value="<?php echo $_SESSION['gitmk1']; ?>" name="gitmk">
+  <?php } ?>
+  <?php if($_SESSION['gitmk2'] != NULL){  ?>
+    
+    <input type="hidden" value="<?php echo $_SESSION['gitmk2']; ?>" name="gitmk">
+  <?php } ?>
+  <?php if($_SESSION['gitmk3'] != NULL){  ?>
+    
+    <input type="hidden" value="<?php echo $_SESSION['gitmk3']; ?>" name="gitmk">
+  <?php } ?>
+  
+
+
+    <?php if($_SESSION['category1'] != NULL){  ?>
+    
+    <input type="hidden" value="<?php echo $_SESSION['category1']; ?>" name="category">
+  <?php } ?>
+  <?php if($_SESSION['category2'] != NULL){  ?>
+    
+    <input type="hidden" value="<?php echo $_SESSION['category2']; ?>" name="category">
+  <?php } ?>
+
+  <?php if($_SESSION['category3'] != NULL){  ?>
+    
+    <input type="hidden" value="<?php echo $_SESSION['category3']; ?>" name="category">
+  <?php } ?>
+
+
+    
 
     <?php if($_SESSION['pemarks1'] != NULL){  ?>
+    
       <input type="hidden" value="<?php echo $_SESSION['pemarks1']; ?>" name="pemarks">
+    <?php } ?>
+
+    <?php if($_SESSION['pemarks2'] != NULL){  ?>
+      <input type="hidden" value="<?php echo $_SESSION['pemarks2']; ?>" name="pemarks">
+    <?php } ?>
+
+    <?php if($_SESSION['pemarks3'] != NULL){  ?>
+      <input type="hidden" value="<?php echo $_SESSION['pemarks3']; ?>" name="pemarks">
     <?php } ?>
     <div class="row">
       <div class="col-sm-3">
