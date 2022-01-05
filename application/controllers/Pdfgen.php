@@ -25,11 +25,16 @@ class Pdfgen extends CI_Controller {
         $data['district'] = $_SESSION['district'];
         $data['attempts'] = $_SESSION['attempts'];
         $data['pemarks1'] = $_SESSION['pemarks1'];
+        $data['pemarks2'] = $_SESSION['pemarks2'];
+        $data['pemarks3'] = $_SESSION['pemarks3'];
+
         $data['pirivena'] = $_SESSION['pirivena'];
         $data['course1s'] = $_SESSION['course1'];
         $data['course2s'] = $_SESSION['course2'];
         $data['course3s'] = $_SESSION['course3'];
-        $data['gitmk'] = $_SESSION['gitmk'];
+        $data['gitmk'] = $_SESSION['gitmk1'];
+        $data['gitmk'] = $_SESSION['gitmk2'];
+        $data['gitmk'] = $_SESSION['gitmk3'];
 
 		$data['title'] = 'Test Page';
         $this->load->helper('pdf_helper');
