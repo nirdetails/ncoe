@@ -121,7 +121,7 @@ class Editrec extends CI_Controller{
 
              }
 
-             elseif($course1 == '28' || $course1 == '29'){
+            if($course1 == '28' || $course1 == '29'){
                 $this->form_validation->set_rules('pemarks1', 'Total marks for Physical Education', 'required', array('required' => 'Total marks for Physical Education is required and cannot exceed more than 80'));
                 
                 $this->editFalseRedirect();

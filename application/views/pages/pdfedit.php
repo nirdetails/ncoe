@@ -160,7 +160,7 @@ ob_start();
             <?php foreach($alresult as $alres){ //var_dump($alres);?> <br>
            
             <label for="alindex"><b>&nbsp;A/L Index No &nbsp;:&nbsp;</b></label><?php echo $alres['AL_index']; ?><br><br>
-            <?php if(array_key_exists('Year', $alres)){
+            <?php if(array_key_exists('year', $alres)){
                  echo '<label for="alyear"><b>&nbsp;A/L Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </b></label>'.$alres['year'].'<br><br>';
                 }else{
                     echo '<label for="alyear"><b>&nbsp;A/L Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </b></label>2018<br><br>';
@@ -519,5 +519,6 @@ ob_start();
 $content = ob_get_contents();
 ob_end_clean();
 $obj_pdf->writeHTML($content, true, false, true, false, '');
+ob_end_clean();
 $obj_pdf->Output('Report.pdf', 'I');
 ?>
