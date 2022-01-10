@@ -50,7 +50,10 @@
                 <label>
                   <p><span style="color:red">* </span><i>Total Marks</i></p>
                 </label><br>
-                <input type="number" value="<?php echo $person['pemarks']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" max=80 value="" />
+                <input type="number" placeholder="<?php echo $person['pemarks']; ?>" class="form-control col-sm-4" id="pemarks1" name="pemarks1" max=80  readonly/>
+
+              <input type="hidden" name="sample" id="sample" value="<?php echo $person['pemarks']; ?>">
+
               </div>
             </div>
             <?php break; ?>
@@ -169,7 +172,9 @@
                 <label>
                   <p><span style="color:red">* </span><i>Total Marks</i></p>
                 </label><br>
-                <input type="number" value="<?php echo $person['pemarks']; ?>" class="form-control col-sm-4" id="pemarks2" name="pemarks2" max=80 value="" />
+                <input type="number" placeholder="<?php echo $person['pemarks']; ?>" class="form-control col-sm-4" id="pemarks2" name="pemarks2" max=80  readonly />
+
+                <input type="hidden" name="sample" id="sample" value="<?php echo $person['pemarks']; ?>">
               </div>
             </div>
             <?php break; ?>
@@ -289,7 +294,8 @@
                 <label>
                   <p><span style="color:red">* </span><i>Total Marks</i></p>
                 </label><br>
-                <input type="number" value="<?php echo $person['pemarks']; ?>" class="form-control col-sm-4" id="pemarks3" name="pemarks3" max=80 value="" />
+                <input type="number" placeholder="<?php echo $person['pemarks']; ?>" class="form-control col-sm-4" id="pemarks3" name="pemarks3" max=80  readonly />
+                <input type="hidden" name="sample" id="sample" value="<?php echo $person['pemarks']; ?>">
               </div>
             </div>
             <?php break; ?>
