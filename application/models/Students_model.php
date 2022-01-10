@@ -35,7 +35,7 @@ class Students_model extends CI_Model{
             'stateworker'=> $this->input->post('sworker'),
             'pirivena'=> $this->input->post('pirivena'),
             'pemarks'=> $this->input->post('pemarks'),
-            'git'=> $this->input->post('git')
+            'git'=> $this->input->post('gitmk')
         );
 
         // Insert student personal detail
@@ -59,6 +59,36 @@ class Students_model extends CI_Model{
 
     public function updatepersonal(){
         $alindex = $this->input->post('alindex');
+
+
+        $pemarks = null;
+        if($this->input->post('pemarks1')){
+            $pemarks = $this->input->post('pemarks1');
+        }
+
+        elseif($this->input->post('pemarks2')){
+            $pemarks = $this->input->post('pemarks2');
+        }
+        elseif($this->input->post('pemarks3')){
+            $pemarks = $this->input->post('pemarks3');
+        }
+        else{
+            $pemarks = $this->input->post('sample');
+        }
+
+        
+        $gitmk = null;
+        if($this->input->post('course1') == "42" || $this->input->post('course1') == "43" || $this->input->post('course1') == "44"){
+            $gitmk = $this->input->post('gitmk1');
+        }
+
+        if($this->input->post('course2') == "42" || $this->input->post('course2') == "43" || $this->input->post('course2') == "44"){
+            $gitmk = $this->input->post('gitmk2');
+        }
+
+        if($this->input->post('course3') == "42" || $this->input->post('course3') == "43" || $this->input->post('course3') == "44"){
+            $gitmk = $this->input->post('gitmk3');
+        }
 
         $data = array(
             'fullname' => $this->input->post('fullname'),
@@ -88,7 +118,9 @@ class Students_model extends CI_Model{
             // 'sripadancoe'=> $this->input->post('sripada'),
             // 'stateworker'=> $this->input->post('sworker'),
             // 'pirivena'=> $this->input->post('pirivena'),
-            'pemarks'=> $this->input->post('pemarks'),
+
+            'pemarks'=>  $pemarks,
+            'git' => $gitmk,
             // 'version'=> $this->input->post('version')
         );
 

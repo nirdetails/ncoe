@@ -418,7 +418,22 @@ class Courses extends CI_Controller{
                     redirect('submission/index');
                 }
             }
-
+            
+            elseif($course1 == '28' || $course1 == '29'){
+                $this->form_validation->set_rules('pemarks1', 'PE marks', 'required');
+    
+                // var_dump($course1);
+                if($this->form_validation->run() === FALSE){
+                    $data['courses'] = $this->courses_model-> get_courses();
+                    
+                    $this->load->view('templates/header');
+                    $this->load->view('pages/editchoices',$data);
+                    $this->load->view('templates/footer');
+                }else{
+                    $this->nextpage();
+                    redirect('submission/index');
+                }
+            }
             elseif( $course2 == '28' || $course2 == '29'){
                 $this->form_validation->set_rules('pemarks2', 'PE marks', 'required');
     
@@ -433,9 +448,7 @@ class Courses extends CI_Controller{
                     $this->nextpage();
                     redirect('submission/index');
                 }
-            }
-
-            elseif($course3 == '28' || $course3 == '29'){
+            }elseif($course3 == '28' || $course3 == '29'){
                 $this->form_validation->set_rules('pemarks3', 'PE marks', 'required');
     
                 // var_dump($course1);

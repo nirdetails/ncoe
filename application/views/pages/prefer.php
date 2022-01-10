@@ -41,7 +41,7 @@
 							</div>
 							<div class="form-group col-md-4">
 								<label><p><span style="color:red">* </span><i>Total Marks</i></p></label><br>
-								<input type="number" class="form-control col-sm-4" id="pemarks1" name="pemarks1" max=80 value="" /> 
+								<input type="number" class="form-control col-sm-4" id="pemarks1" name="pemarks1" max=80 value="" readonly /> 
 							</div>
 						</div>
 
@@ -120,7 +120,7 @@
 							</div>
 							<div class="form-group col-md-4">
 								<label><p><span style="color:red">* </span><i>Total Marks</i></p></label><br>
-								<input type="number" class="form-control col-sm-4" id="pemarks2" name="pemarks2" max=80 value="" /> 
+								<input type="number" class="form-control col-sm-4" id="pemarks2" name="pemarks2" max=80 value="" readonly/> 
 							</div>
 						</div>
 
@@ -197,7 +197,7 @@
 							</div>
 							<div class="form-group col-md-4">
 								<label><p><span style="color:red">* </span><i>Total Marks</i></p></label><br>
-								<input type="number" class="form-control col-sm-4" id="pemarks3" name="pemarks3" max=80 value="" /> 
+								<input type="number" class="form-control col-sm-4" id="pemarks3" name="pemarks3" max=80 value="" readonly/> 
 							</div>
 						</div>
 

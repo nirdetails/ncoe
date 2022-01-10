@@ -33,7 +33,7 @@ class Alresults extends CI_Controller{
 		$this->form_validation->set_rules('year', 'A/L Year', 'required');
 		$this->form_validation->set_rules('syllabus', 'Syllabus Type', 'required');
 		
-		$this->form_validation->set_rules('alindex', 'Index Number', 'required|xss_clean|is_exist[stuents.alindex]',array('is_exist' => 'You have Already submit an application,Please contact us for more support.'));
+		$this->form_validation->set_rules('alindex', 'Index Number', 'required|xss_clean|is_exist[stuents.alindex]',array('is_exist' => 'You have Already submit an application, Please contact us for more support.'));
 		$this->form_validation->set_message('required', '{field} is a required field');
 		
 		
