@@ -6,7 +6,7 @@
     redirect('/');
   }
 ?>
-<span style="color: red;"><?php //echo validation_errors(); ?></span>
+<span style="color: red;"><?php echo validation_errors(); ?></span>
 <?php // echo form_open_multipart('olresults/checkolres'); ?>
 <form action="<?php echo site_url(); ?>mulikaPirivena/checkmulres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
   <div class="form-group"> 
@@ -86,9 +86,8 @@
 
 <br>
 <footer class="footer">
-    <!-- <div class="container"> -->
+    <div class="container"> 
         <span><h4>©2020 Data Management Branch, Ministry of Education, Sri Lanka.</h4></span>
-    <!-- </div> -->
+    </div> 
 </footer>
 <script src="<?php echo site_url(); ?>assets/js/ol.js"></script>
-
