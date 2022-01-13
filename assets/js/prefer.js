@@ -19,6 +19,14 @@ $("#course1").change(function () {
 	var pe = 0;
 	var west = 0;
 	var git = 0;
+	if (c1 == c2 || c1 == c3) {
+		alert("Select a different subject");
+		$("#course1")[0].selectedIndex = "";
+		$("#category1").hide();
+		$("#certificates1").hide();
+		$("#gitmarks1").hide();
+	}
+	else{
 
 	if (
 		c1 == "11" ||
@@ -95,11 +103,8 @@ $("#course1").change(function () {
 	} else {
 		$("#gitmarks1").hide();
 	}
-
-	if (c1 == c2 || c1 == c3) {
-		alert("Select a different subject");
-		$("#course1")[0].selectedIndex = "";
 	}
+	
 });
 
 $("#course2").change(function () {
@@ -112,6 +117,14 @@ $("#course2").change(function () {
 	var pe = 0;
 	var west = 0;
 	var git = 0;
+	if (c2 == c1 || c2 == c3) {
+		alert("Select a different subject");
+		$("#course2")[0].selectedIndex = "";
+		$("#category2").hide();
+		$("#certificates2").hide();
+		$("#gitmarks2").hide();
+	}
+	else{
 
 	if (
 		
@@ -193,10 +206,7 @@ $("#course2").change(function () {
 		$("#gitmarks2").hide();
 	}
 
-	if (c2 == c1 || c2 == c3) {
-		alert("Select a different subject");
-		$("#course2")[0].selectedIndex = "";
-	}
+}
 });
 
 $("#course3").change(function () {
@@ -209,6 +219,15 @@ $("#course3").change(function () {
 	var pe = 0;
 	var west = 0;
 	var git = 0;
+
+	if (c3 == c1 || c3 == c2) {
+		alert("Select a different subject");
+		$("#course3")[0].selectedIndex = "";
+		$("#category3").hide();
+		$("#certificates3").hide();
+		$("#gitmarks3").hide();
+	}
+	else{
 
 	if (
 		
@@ -290,10 +309,7 @@ $("#course3").change(function () {
 		$("#gitmarks3").hide();
 	}
 
-	if (c3 == c1 || c3 == c2) {
-		alert("Select a different subject");
-		$("#course3")[0].selectedIndex = "";
-	}
+}
 });
 
 //Onload
