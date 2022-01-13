@@ -16,23 +16,23 @@ class MulikaPirivena extends CI_Controller{
         if($attempts==1)
         {
          $this->form_validation->set_rules('year1','Ol Year1','required|Integer');
-         $this->form_validation->set_rules('index1', 'Index Number1', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+         $this->form_validation->set_rules('index1', 'Index Number1', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number1 you entered is already exist, Please contact us for more support.'));
         }
         else if($attempts==2)
         {
         $this->form_validation->set_rules('year1','Ol Year1','required|Integer');
-        $this->form_validation->set_rules('index1', 'Index Number1', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        $this->form_validation->set_rules('index1', 'Index Number1', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number1 you entered is already exist, Please contact us for more support.'));
         $this->form_validation->set_rules('year2','Ol Year2','required|Integer');
-        $this->form_validation->set_rules('index2', 'Index Number2', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        $this->form_validation->set_rules('index2', 'Index Number2', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number2 you entered is already exist, Please contact us for more support.'));
         }
         else if($attempts==3)
         {
         $this->form_validation->set_rules('year1','Ol Year1','required|Integer');
-        $this->form_validation->set_rules('index1', 'Index Number1', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        $this->form_validation->set_rules('index1', 'Index Number1', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number1 you entered is already exist, Please contact us for more support.'));
         $this->form_validation->set_rules('year2','Ol Year2','required|Integer');
-        $this->form_validation->set_rules('index2', 'Index Number2', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        $this->form_validation->set_rules('index2', 'Index Number2', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number2 you entered is already exist, Please contact us for more support.'));
         $this->form_validation->set_rules('year3','Ol Year3','required|Integer');
-        $this->form_validation->set_rules('index3', 'Index Number3', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]');
+        $this->form_validation->set_rules('index3', 'Index Number3', 'required|is_exist[stuents.olindex1]|is_exist[stuents.olindex2]|is_exist[stuents.olindex3]',array('is_exist' => 'Index Number3 you entered is already exist, Please contact us for more support.'));
         }
         
         // $this->form_validation->set_rules('year1', );
@@ -45,13 +45,13 @@ class MulikaPirivena extends CI_Controller{
             $this->load->view('templates/footer');
         } 
         else {
-            $olindex1 = $this->input->post('index1');
-            $olindex2 = $this->input->post('index2');
-            $olindex3 = $this->input->post('index3');
             $year1 = $this->input->post('year1');
+            $olindex1 = $this->input->post('index1');
             $year2 = $this->input->post('year2');
+            $olindex2 = $this->input->post('index2');
             $year3 = $this->input->post('year3');
-
+            $olindex3 = $this->input->post('index3');
+            
 
             
            
@@ -113,21 +113,21 @@ class MulikaPirivena extends CI_Controller{
             } 
             
             if (($year1 != "N/A" || $olindex1 !="N/A") && empty($data['olresults1'])){
-                echo "<script>alert('Year or Index is incorrect for first attempt'')</script>";
+                echo "<script>alert('Year or Index is incorrect for first attempt')</script>";
                 $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
 
                 $this->load->view('templates/header');
                 $this->load->view('pages/mulika_pirivena',$data);
                 $this->load->view('templates/footer');
             } else if (($year2 != "N/A"  || $olindex2 !="N/A" )&& empty($data['olresults2'])) {
-                echo "<script>alert('Year or Index is incorrect for second attempt'')</script>";
+                echo "<script>alert('Year or Index is incorrect for second attempt')</script>";
                 $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
 
                 $this->load->view('templates/header');
                 $this->load->view('pages/mulika_pirivena',$data);
                 $this->load->view('templates/footer');
             } elseif (($year3 != "N/A"  || $olindex3 !="N/A" )&& empty($data['olresults3'])) {
-                echo "<script>alert('Year or Index is incorrect for third attempt'')</script>";
+                echo "<script >alert('Year or Index is incorrect for third attempt')</script>";
                 $data['title'] = 'Enter Mulika Pirivena Examination Index Number(s)';
 
                 $this->load->view('templates/header');
@@ -144,14 +144,17 @@ class MulikaPirivena extends CI_Controller{
 
 
 
-            $this->session->set_userdata('olindex1', $olindex1);
-            $this->session->set_userdata('olindex2', $olindex2);
-            $this->session->set_userdata('olindex3', $olindex3);
             $this->session->set_userdata('year1', $year1);
+            $this->session->set_userdata('olindex1', $olindex1);
             $this->session->set_userdata('year2', $year2);
+            $this->session->set_userdata('olindex2', $olindex2);
             $this->session->set_userdata('year3', $year3);
+            $this->session->set_userdata('olindex3', $olindex3);
             $this->session->set_userdata('attempts', $attempts);
             $this->session->set_userdata('pirivena', 1);
+
+
+            
 
         }
         // var_dump($data);
