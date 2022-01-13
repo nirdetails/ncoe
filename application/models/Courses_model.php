@@ -49,13 +49,38 @@ class Courses_model extends CI_Model{
     }
 
     public function updatecourses(){
+
+        $category = null;
+        if($this->input->post('course1') == "14" || $this->input->post('course1') == "15"){
+            $category = $this->input->post('category1');
+        }
+        if($this->input->post('course2') == "14" || $this->input->post('course2') == "15"){
+            $category = $this->input->post('category2');
+        }
+        if($this->input->post('course3') == "14" || $this->input->post('course3') == "15"){
+            $category = $this->input->post('category3');
+        }
+
+        $gitmk = null;
+        if($this->input->post('course1') == "42" || $this->input->post('course1') == "43" || $this->input->post('course1') == "44"){
+            $gitmk = $this->input->post('gitmk1');
+        }
+
+        if($this->input->post('course2') == "42" || $this->input->post('course2') == "43" || $this->input->post('course2') == "44"){
+            $gitmk = $this->input->post('gitmk2');
+        }
+
+        if($this->input->post('course3') == "42" || $this->input->post('course3') == "43" || $this->input->post('course3') == "44"){
+            $gitmk = $this->input->post('gitmk3');
+        }
+
         $alindex = $this->input->post('alindex');
         $data = array(
             'pref1' => $this->input->post('course1'),
             'pref2' => $this->input->post('course2'),
             'pref3' => $this->input->post('course3'),
-            'category' => $this->input->post('category'),
-            'gitmarks' => $this->input->post('gitmk')
+            'category' => $category,
+            'gitmarks' => $gitmk,
         );
 
         $this->db->where('stuid', $alindex);

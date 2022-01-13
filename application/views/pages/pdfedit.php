@@ -160,7 +160,7 @@ ob_start();
             <?php foreach($alresult as $alres){ //var_dump($alres);?> <br>
            
             <label for="alindex"><b>&nbsp;A/L Index No &nbsp;:&nbsp;</b></label><?php echo $alres['AL_index']; ?><br><br>
-            <?php if(array_key_exists('Year', $alres)){
+            <?php if(array_key_exists('year', $alres)){
                  echo '<label for="alyear"><b>&nbsp;A/L Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </b></label>'.$alres['year'].'<br><br>';
                 }else{
                     echo '<label for="alyear"><b>&nbsp;A/L Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </b></label>2018<br><br>';
@@ -496,9 +496,8 @@ ob_start();
             }
         break; }
         ?>
-    
-    <?php
-    foreach($personal as $person){ 
+    <!--
+    <?php foreach($personal as $person){ 
         // var_dump($person['pemarks']);
         if($person['pemarks'] != NULL){ ?>
             <label for="pemarks">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Physical Education Marks:</label><?php echo $person['pemarks']; ?><br><br>
@@ -508,16 +507,19 @@ ob_start();
         if($select['gitmarks'] != NULL){ ?>
             <label for="gitmk">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GIT Grades: </label><?php echo $select['gitmarks']; ?><br><br>
     <?php } break; } ?>
+        -->
     <!-- <h5>Declaration: </h5>
         <p style="text-align: justify">I am aware that I have forwarded my application in accordance with paragraph10.0 of the Gazette Notification, after reading and comprehending the Gazette Notification well. I certify that I have already acquired the qualifications mentioned in the Gazette Notification relevant to the Courses that have been applied by me. I am aware that the particulars furnished in the application by me are true and correct. I am aware that if any particulars given by me in this application are found to be false or incorrect or contradictory to the Gazette Notification, I am liable to be disqualified before selection or to be discontinued after selection. I certify that I have not registered to follow a course in a University/University Institute/any other Higher Education Institute/ I am not currently following a relevant course in an afore mentioned institute. I further certify that I agree to be discontinued from the course if It is found that the section 8.4 of the Gazette Notification has been/is violated by me. I declare that I agree to accept any punishment pronounced by the disciplinary board of the National College of Education and the Ministry of Education if I am found and proven to have been engaged in any action against the code of conduct of National Colleges of Education.</p>
         <div style="text-align:center">
             <strong> I Agreed </strong> <br/>
         </div> -->
     </div>
+    
 
 <?php
 $content = ob_get_contents();
 ob_end_clean();
 $obj_pdf->writeHTML($content, true, false, true, false, '');
+ob_end_clean();
 $obj_pdf->Output('Report.pdf', 'I');
 ?>
