@@ -3,6 +3,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script>
+    /*
 $(document).ready(function () {
 
     if($('#agree').prop("checked") == false){
@@ -76,6 +77,23 @@ $('#two').prop('disabled', true);
 
 });
 });
+*/
+$(function() {
+    $('#show').on('click', function(e) {
+        e.preventDefault();
+        $('.chk1').prop('checked', true);
+        $('#one').prop('disabled', false);
+        $('#two').prop('disabled', false);
+    });
+    $('#hide').on('click', function(e) {
+        e.preventDefault();
+        $('.chk1').prop('checked', false);
+        $('#one').prop('disabled', true);
+        $('#two').prop('disabled', true);
+    });
+});
+
+
 
 </script>
 
@@ -85,19 +103,20 @@ $('#two').prop('disabled', true);
         <br />
 </div>
 </div>
+<a id="show" href="#">All</a> | <a href="#" id="hide">None</a>
 
 <div class="col-sm-12" style="background-color: #ddffff; padding: 20px 20px 20px 25px; margin-left:50px; width: 95%; font-size: 22px">
-    <input type="checkbox" id="agree"  name="agree" value="false">
+    <input type="checkbox" class="chk1"  name="agree" >
     <label for="agree">I hereby declare that the information given below is true and accurate to the best of my knowledge.</label>
 </div>
 
 <div class="col-sm-12" style="background-color: #ddffff; padding: 20px 20px 20px 25px; margin-left:50px; width: 95%; font-size: 22px">
-    <input type="checkbox" id="agree1"  name="agree1" value="false">
+    <input type="checkbox" class="chk1" name="agree" >
     <label for="agree">I hereby declare that the information given below is true and accurate to the best of my knowledge.</label>
 </div>
 
 <div class="col-sm-12" style="background-color: #ddffff; padding: 20px 20px 20px 25px; margin-left:50px; width: 95%; font-size: 22px">
-    <input type="checkbox" id="agree2"  name="agree2" value="false">
+    <input type="checkbox" class="chk1"  name="agree">
     <label for="agree">I hereby declare that the information given below is true and accurate to the best of my knowledge.</label>
 </div>
 <br /><br /><br /><br />
@@ -113,12 +132,12 @@ $('#two').prop('disabled', true);
         <div class="form-group">  
       
         <div style="text-align :center;">
-                <button  onclick="window.location.href='alresults'"  type="button" class="btn btn-primary btn-lg" id="one"  style="width: 80%; padding: 10px;" ><b>G.C.E. (A/L) Year 2019/2020 </b><br>&nbsp;<br> </button>
+                <button  onclick="window.location.href='alresults'"  type="button" class="btn btn-primary btn-lg" id="one"  style="width: 80%; padding: 10px;" disabled="disabled"><b>G.C.E. (A/L) Year 2019/2020 </b><br>&nbsp;<br> </button>
             </div> 
         </div>
         <div class="form-group"> 
             <div style="text-align: center;">
-                <button  onclick="window.location.href='prirvenaal'" class="btn btn-primary btn-lg" type="button" id="two"  style="width: 80%; padding: 10px;" ><b>G.C.E. (A/L) Year 2018 or Previous Years</b><br>&nbsp;<br></button>
+                <button  onclick="window.location.href='prirvenaal'" class="btn btn-primary btn-lg" type="button" id="two"  style="width: 80%; padding: 10px;" disabled="disabled" ><b>G.C.E. (A/L) Year 2018 or Previous Years</b><br>&nbsp;<br></button>
             </div>      
         </div>
     </div>
