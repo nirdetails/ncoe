@@ -103,7 +103,6 @@ $(function() {
         <br />
 </div>
 </div>
-<a id="show" href="#">All</a> | <a href="#" id="hide">None</a>
 
 <div class="col-sm-12" style="background-color: #ddffff; padding: 20px 20px 20px 25px; margin-left:50px; width: 95%; font-size: 22px">
     <input type="checkbox" class="chk1"  name="agree" >
@@ -119,7 +118,14 @@ $(function() {
     <input type="checkbox" class="chk1"  name="agree">
     <label for="agree">I hereby declare that the information given below is true and accurate to the best of my knowledge.</label>
 </div>
-<br /><br /><br /><br />
+<br /><br />
+<div style="text-align :center;">
+<a id="show" href="#" class="btn btn-info" style="width: 15%; height: 2.5em; font-size: 25px; ">Agree all</a>
+<a id="hide" href="#" class="btn btn-info" style="width: 15%; height: 2.5em; font-size: 25px; ">Clear</a>
+ </div> 
+ <br /><br />
+
+
 
 
 <div class="row" style="text-align: center;">
