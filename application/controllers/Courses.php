@@ -387,7 +387,7 @@ class Courses extends CI_Controller{
             
             
             
-            elseif($course1 == '28' || $course1 == '29' || $course2 == '28' || $course2 == '29' || $course3 == '28' || $course3 == '29'){
+            elseif($course1 == '28' || $course1 == '29'){
                 $this->form_validation->set_rules('pemarks1', 'PE marks', 'required');
     
                 // var_dump($course1);
