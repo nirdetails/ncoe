@@ -1,4 +1,6 @@
+<?php ob_start(); ?>
 <?php session_destroy(); ?>
+<?php ob_end_flush(); ?>
 <br>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
@@ -91,7 +93,24 @@ $(function() {
         $('#one').prop('disabled', true);
         $('#two').prop('disabled', true);
     });
+
 });
+
+document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById('send').disabled = "true";
+    });
+    function myFunction() {
+        var nameInput = document.getElementById('alindex').value;
+        console.log(alindex);
+        if (nameInput === "") {
+            document.getElementById('send').disabled = true;
+        } else {
+        		document.getElementById('send').disabled = false;
+        }
+    }
+
+
+
 
 
 
@@ -159,8 +178,8 @@ $(function() {
                 <div class="col-sm-8" style="background-color: #ddffff; padding: 15px 20px 15px 20px; width: 100%">
                 <span style="color: red;"><?php echo validation_errors(); ?></span>
                     <p style="margin-bottom: 10px;">G.C.E. (A/L) Index Number</p> 
-                    <input class="form-control" type="text" name="alindex" id="alindex" style="width: 100%;"><br>
-                    <input type="submit" class="btn btn-warning" style="width: 100%;" value="Edit Application">
+                    <input class="form-control" type="text" name="alindex" id="alindex" style="width: 100%;" onkeyup="myFunction()"><br>
+                    <input type="submit" id="send" class="btn btn-warning" style="width: 100%;" value="Edit Application">
                     <br>&nbsp;
                 </div>
                 <div class="col-sm-2">&nbsp;</div>
