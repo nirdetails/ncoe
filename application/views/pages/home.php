@@ -1,4 +1,6 @@
+<?php ob_start(); ?>
 <?php session_destroy(); ?>
+<?php ob_end_flush(); ?>
 <br>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
