@@ -33,6 +33,25 @@
         </tr>
 
         <tr>
+          <th>Stream</th>
+          <?php if($alresult['stream'] == 1){ ?>
+          <td><?php echo "Physical Science" ?></td>
+          <?php }elseif($alresult['stream'] == 2){ ?>
+          <td><?php echo "Biological Science" ?></td>
+          <?php }elseif($alresult['stream'] == 3){ ?>
+          <td><?php echo "Commerce" ?></td>
+          <?php }elseif($alresult['stream'] == 4){ ?>
+          <td><?php echo "Arts" ?></td>
+          <?php }elseif($alresult['stream'] == 5){ ?>
+          <td><?php echo "Technology" ?></td>
+          <?php }elseif($alresult['stream'] == 6){ ?>
+          <td><?php echo "Common" ?></td>
+          <?php } ?>
+        </tr>
+          
+
+
+        <tr>
         <th>Subject</th>
         <th>Grade</th>
         </tr>
