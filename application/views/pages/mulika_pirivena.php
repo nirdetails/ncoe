@@ -9,6 +9,7 @@
 <span style="color: red;"><?php echo validation_errors(); ?></span>
 <?php // echo form_open_multipart('olresults/checkolres'); ?>
 <form action="<?php echo site_url(); ?>mulikaPirivena/checkmulres" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<label><i>(<span style="color:red">*</span>This is relevant only for the applicants to apply for the course <b>“Buddhism”</b>)</i></label>  
   <div class="form-group"> 
       <label for="attempts">Please Select Number of Attempts You've Sat for Mulika Pirivena Examination<span style="color:red">* </span></label>
       <select name="sel1" class="form-control" id="sel1">
