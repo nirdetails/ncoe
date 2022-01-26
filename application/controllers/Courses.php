@@ -195,7 +195,7 @@ class Courses extends CI_Controller{
                     redirect('students/index');
                 }
             }
-            elseif($course2 == '15' || $course2 == '14'){
+            elseif($course3 == '15' || $course3 == '14'){
                 $this->form_validation->set_rules('category3', 'Category3', 'required');
     
                 // var_dump($course1);
@@ -403,37 +403,7 @@ class Courses extends CI_Controller{
                 }
             }
             
-            elseif($course1 == '28' || $course1 == '29'){
-                $this->form_validation->set_rules('pemarks1', 'PE marks', 'required');
-    
-                // var_dump($course1);
-                if($this->form_validation->run() === FALSE){
-                    $data['courses'] = $this->courses_model-> get_courses();
-                    
-                    $this->load->view('templates/header');
-                    $this->load->view('pages/editchoices',$data);
-                    $this->load->view('templates/footer');
-                }else{
-                    $this->nextpage();
-                    redirect('submission/index');
-                }
-            }
             
-            elseif($course1 == '28' || $course1 == '29'){
-                $this->form_validation->set_rules('pemarks1', 'PE marks', 'required');
-    
-                // var_dump($course1);
-                if($this->form_validation->run() === FALSE){
-                    $data['courses'] = $this->courses_model-> get_courses();
-                    
-                    $this->load->view('templates/header');
-                    $this->load->view('pages/editchoices',$data);
-                    $this->load->view('templates/footer');
-                }else{
-                    $this->nextpage();
-                    redirect('submission/index');
-                }
-            }
             elseif( $course2 == '28' || $course2 == '29'){
                 $this->form_validation->set_rules('pemarks2', 'PE marks', 'required');
     
