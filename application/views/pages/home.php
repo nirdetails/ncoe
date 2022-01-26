@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         </div>
         <div class="form-group"> 
             <div style="text-align: center;">
-                <button  onclick="window.location.href='prirvenaal'" class="btn btn-primary btn-lg" type="button" id="two"  style="width: 80%; padding: 10px;" disabled="disabled" ><b>G.C.E. (A/L) Year 2018 or Previous Years</b><br>&nbsp;<br></button>
+                <button  onclick="window.location.href='prirvenaal'" class="btn btn-primary btn-lg" type="button" id="two"  style="width: 80%; padding: 10px;" disabled="disabled" ><b>G.C.E. (A/L) Year 2018 or Previous Years  <small>(Only for Clergy applicants)</small> </b><br>&nbsp;<br></button>
             </div>      
         </div>
     </div>
