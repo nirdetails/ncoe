@@ -35,7 +35,7 @@
     </div>
     <div class="form-group">
       <label for="district">Permanent Residence District Name and Number: <span style="color:red">* <?php echo form_error('district'); ?></span></label>
-      <label><i>(<span style="color:red">*</span>Applicant’s permanent address according to section <b>“6.2 Determination of Permanent Residence”</b> of the gazette notification.)</i></label>
+       <label><i>(<span style="color:red">*</span>Read the conditions in <b>“6.2 Determination of Permanent Residence”</b> of the gazette notification very carefully and filling this accordingly and correctly.)</i></label>
       <!-- <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district"> -->
       <select class="form-control" id="district" name="district">
         <option value="" selected disabled>Select a District</option>
