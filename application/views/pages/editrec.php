@@ -420,7 +420,7 @@
       </div>
       <div class="form-group">
         <label for="dob">Date of Birth: </label><span style="color:red">* <?php echo form_error('dob'); ?></span>
-        <input type="date" class="form-control" id="dob" name="dob" value="<?php echo $person['dob']; ?>">
+        <input type="date" class="form-control" id="dob" name="dob"  min="1997-01-01" max="2022-01-01" value="<?php echo $person['dob']; ?>">
       </div>
       <div class="form-group">
         <label for="address">Permanent Address: </label><span style="color:red">* <?php echo form_error('Addressl1'); ?></span>
