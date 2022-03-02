@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
       <label for="dob">Date of Birth: <span style="color:red">*<?php echo form_error('dob');?> </span></label>
-      <input type="date" class="form-control" id="dob"  name="dob">
+      <input type="date" class="form-control" id="dob"  name="dob" min="1997-01-01" max="2022-01-01">
     </div>
     <div class="form-group">
       <label for="address">Permanent Address: <span style="color:red">* <?php echo form_error('addressline1'); echo form_error('addressline2'); echo form_error('addressline3'); echo form_error('addressline4');?></span></label>
