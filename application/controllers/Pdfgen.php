@@ -41,10 +41,10 @@ class Pdfgen extends CI_Controller {
         if($data['pirivena'] == 1){
             $data['alresults'] = $this->alpirivena_model-> get_palresults($palindex);
             if(empty($data['alresults'])){
-                $data['alresults'] = $this->alresults_model-> get_alresults();
+                $data['alresults'] = $this->alresults_model-> get_alresults1();
             }
         }else{
-            $data['alresults'] = $this->alresults_model-> get_alresults();
+            $data['alresults'] = $this->alresults_model-> get_alresults1();
         }
         
         $data['olresults1'] = $this->olresults_model-> get_olresults1();
