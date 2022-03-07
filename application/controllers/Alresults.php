@@ -17,7 +17,7 @@ class Alresults extends CI_Controller{
     //     return ($row->count > 0) ? FALSE : TRUE;
     // }
 
-    public function checkalres($alindex = NULL){
+    public function checkalres($alindex = NULL,$year=NULL){
 		$data['title'] = 'G.C.E. Advanced Level (A/L) Results Sheet';
 		$this->load->helper('form', 'url');
 		$this->load->library('form_validation');
@@ -52,33 +52,42 @@ class Alresults extends CI_Controller{
 			$year = $this->input->post('year');
 			$syllabus = $this->input->post('syllabus');
 			$alindex = $this->input->post('alindex');
+            
 
+			if($alindex != "" && $year !=""){
+                $data['alresults'] = $this->alresults_model-> get_alresults();
+            } else if($alindex != ""){
+                $data['alresults'] = '';
+                $alindex = 'N/A';           
+            } else {
+                $data['alresults'] = '';
+                $year= 'N/A';
+            }
+
+			if (($year != "N/A" || $alindex !="N/A") && empty($data['alresults'])){
+                echo "<script>alert('Year or Index is incorrect')</script>";
+
+                $data['title'] = 'Enter Your G.C.E. Advanced Level (A/L) Information';
+                $this->load->view('templates/header');
+                $this->load->view('pages/al',$data);
+                $this->load->view('templates/footer');
+            }
+
+			else{
+				// redirect('alresults');
+					$this->load->view('templates/header');
+					$this->load->view('pages/alresults',$data);
+					$this->load->view('templates/footer');
+				}
 			$this->session->set_userdata('year', $year);
 			$this->session->set_userdata('syllabus', $syllabus);
 			$this->session->set_userdata('alindex', $alindex);
-			// var_dump($year);
+			
 
 			// check whether those values are match with any database record
-			$this->load->model('Alresults_model');
-			$data['alresults'] = $this->Alresults_model->get_alresults();
-
-			if( !empty($data['alresults']) ) {
-
-				$data['title'] = 'Enter Your G.C.E. Advanced Level (A/L) Information';
-				$this->load->view('templates/header');
-				$this->load->view('pages/alresults',$data);
-				$this->load->view('templates/footer');
-				
-			} else {
-                echo "<script>alert('Index number is incorrect')</script>";
-
-				$data['title'] = 'Enter Your G.C.E. Advanced Level (A/L) Information';
-				$this->load->view('templates/header');
-				$this->load->view('pages/al',$data);
-				$this->load->view('templates/footer');
-
-			}
-			$this->session->set_userdata('pdfdone', 0);
+			
+			$this->session->set_userdata('pdfdone',0);
+			 //var_dump($data);
 		}
     }
 }

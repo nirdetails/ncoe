@@ -150,7 +150,7 @@ class Editrec extends CI_Controller{
             $data['selection'] = $this->courses_model-> choiceDetails();
             $data['courses'] = $this->courses_model-> get_courses();
 
-            $data['alresult'] = $this->alresults_model-> get_alresults();
+            $data['alresult'] = $this->alresults_model-> get_alresults1();
             if (empty($data['alresult'])){
                 $data['alresult'] = $this->alpirivena_model-> get_palresults();
             }
