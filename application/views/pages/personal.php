@@ -43,33 +43,33 @@
       <label for="district">Permanent Residence District Name and Number: <span style="color:red">* <?php echo form_error('district'); ?></span></label>
       <label><i>(<span style="color:red">*</span>Applicant’s permanent address according to section <b>“6.2 Determination of Permanent Residence”</b> of the gazette notification.)</i></label>
       <!-- <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district"> -->
-      <select class="form-control" id="district" placeholder="Select a district" name="district" >
-      <option value="16" <?php if(isset($_POST['district']) && $_POST['district'] == "16") echo 'selected="selected"';?>>D16 - Ampara</option>
-      <option value="20" <?php if(isset($_POST['district']) && $_POST['district'] == "20") echo 'selected="selected"';?>>D20 - Anuradhapura</option>
-      <option value="22" <?php if(isset($_POST['district']) && $_POST['district'] == "22") echo 'selected="selected"';?>>D22 - Badulla</option>
-      <option value="15" <?php if(isset($_POST['district']) && $_POST['district'] == "15") echo 'selected="selected"';?>>D15 - Batticaloa</option>
-      <option value="01" <?php if(isset($_POST['district']) && $_POST['district'] == "01") echo 'selected="selected"';?>>D01 - Colombo</option>
-      <option value="07" <?php if(isset($_POST['district']) && $_POST['district'] == "07") echo 'selected="selected"';?>>D07 - Galle</option>
-      <option value="02" <?php if(isset($_POST['district']) && $_POST['district'] == "02") echo 'selected="selected"';?>>D02 - Gampaha</option> 
-      <option value="09" <?php if(isset($_POST['district']) && $_POST['district'] == "09") echo 'selected="selected"';?>>D09 - Hambantota</option>
-      <option value="10" <?php if(isset($_POST['district']) && $_POST['district'] == "10") echo 'selected="selected"';?>>D10 - Jaffna</option> 
-      <option value="03" <?php if(isset($_POST['district']) && $_POST['district'] == "03") echo 'selected="selected"';?>>D03 - Kaluthara</option> 
-      <option value="04" <?php if(isset($_POST['district']) && $_POST['district'] == "04") echo 'selected="selected"';?>>D04 - Kandy</option>  
-      <option value="25" <?php if(isset($_POST['district']) && $_POST['district'] == "25") echo 'selected="selected"';?>>D25 - Kegalle</option>  
-      <option value="11" <?php if(isset($_POST['district']) && $_POST['district'] == "11") echo 'selected="selected"';?>>D11 - Kilinochchi</option> 
-      <option value="18" <?php if(isset($_POST['district']) && $_POST['district'] == "18") echo 'selected="selected"';?>>D18 - Kurunegala</option> 
-      <option value="12" <?php if(isset($_POST['district']) && $_POST['district'] == "12") echo 'selected="selected"';?>>D12 - Mannar</option> 
-      <option value="05" <?php if(isset($_POST['district']) && $_POST['district'] == "05") echo 'selected="selected"';?>>D05 - Matale</option> 
-      <option value="08" <?php if(isset($_POST['district']) && $_POST['district'] == "08") echo 'selected="selected"';?>>D08 - Matara</option> 
-      <option value="23" <?php if(isset($_POST['district']) && $_POST['district'] == "23") echo 'selected="selected"';?>>D23 - Monaragala</option>
-      <option value="14" <?php if(isset($_POST['district']) && $_POST['district'] == "14") echo 'selected="selected"';?>>D14 - Mullaitivu</option> 
-      <option value="06" <?php if(isset($_POST['district']) && $_POST['district'] == "06") echo 'selected="selected"';?>>D06 - Nuwara Eliya</option> 
-      <option value="21" <?php if(isset($_POST['district']) && $_POST['district'] == "21") echo 'selected="selected"';?>>D21 - Polonnaruwa</option> 
-      <option value="19" <?php if(isset($_POST['district']) && $_POST['district'] == "19") echo 'selected="selected"';?>>D19 - Puttalam</option> 
-      <option value="24" <?php if(isset($_POST['district']) && $_POST['district'] == "24") echo 'selected="selected"';?>>D24 - Ratnapura</option> 
-      <option value="17" <?php if(isset($_POST['district']) && $_POST['district'] == "17") echo 'selected="selected"';?>>D17 - Trincomalee</option> 
-      <option value="13" <?php if(isset($_POST['district']) && $_POST['district'] == "13") echo 'selected="selected"';?>>D13 - Vavuniya</option> 
-        
+      <select class="form-control" id="district" name="district">
+        <option value="">Select a District</option>
+        <option value="16">D16 - Ampara</option>
+        <option value="20">D20 - Anuradhapura</option>
+        <option value="22">D22 - Badulla</option>
+        <option value="15">D15 - Batticaloa</option>
+        <option value="01">D01 - Colombo</option>
+        <option value="07">D07 - Galle</option>
+        <option value="02">D02 - Gampaha</option>
+        <option value="09">D09 - Hambantota</option>
+        <option value="10">D10 - Jaffna</option>
+        <option value="03">D03 - Kaluthara</option>
+        <option value="04">D04 - Kandy</option>
+        <option value="25">D25 - Kegalle</option>
+        <option value="11">D11 - Kilinochchi</option>
+        <option value="18">D18 - Kurunegala</option>
+        <option value="12">D12 - Mannar</option>
+        <option value="05">D05 - Matale</option>
+        <option value="08">D08 - Matara</option>
+        <option value="23">D23 - Monaragala</option>
+        <option value="14">D14 - Mullaitivu</option>
+        <option value="06">D06 - Nuwara Eliya</option>
+        <option value="21">D21 - Polonnaruwa</option>
+        <option value="19">D19 - Puttalam</option>
+        <option value="24">D24 - Ratnapura</option>
+        <option value="17">D17 - Trincomalee</option>
+        <option value="13">D13 - Vavuniya</option>
       </select>
     </div>
    
