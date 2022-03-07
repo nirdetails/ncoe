@@ -14,31 +14,37 @@
   <div class="form-group">
   <?php // var_dump($_SESSION['sworker']); ?>
       <label for="fullname">Name in Full: <span style="color:red">* <?php echo form_error('fullname'); ?></span></label>
-      <input type="text" class="form-control" id="fullname" placeholder="Enter Your Full Name" name="fullname">
+      <input type="text" class="form-control" id="fullname" placeholder="Enter Your Full Name" name="fullname" value="<?=set_value('fullname')?>" />
       <label><i>Ex: Wasala Arachchilage Saman Kumara Rajapaksha</i></label>
     </div>
     <div class="form-group">
       <label for="namewithinitials">Name with Initials: <span style="color:red">* <?php echo form_error('namewithinitials'); ?></span></label>
-      <input type="text" class="form-control" id="namewithinitials" placeholder="Enter Your Name with Initials" name="namewithinitials">
+      <input type="text" class="form-control" id="namewithinitials" placeholder="Enter Your Name with Initials" name="namewithinitials" value="<?=set_value('namewithinitials')?>" />
       <label><i>Ex: Rajapaksha W.A.S.K. </i></label>
     </div>
     <div class="form-group">
       <label for="dob">Date of Birth: <span style="color:red">*<?php echo form_error('dob');?> </span></label>
-      <input type="date" class="form-control" id="dob"  name="dob">
+      <input type="date" class="form-control" id="dob"  name="dob" min="1997-01-01" max="2022-01-01" value="<?=set_value('dob')?>" / >
     </div>
     <div class="form-group">
       <label for="address">Permanent Address: <span style="color:red">* <?php echo form_error('addressline1'); echo form_error('addressline2'); echo form_error('addressline3'); echo form_error('addressline4');?></span></label>
-    <input type="text" class="form-control" id="addressline1" placeholder="Street Address / P.O Box / Company Name" name="addressline1"><br>
-      <input type="text" class="form-control" id="addressline2" placeholder="Apartment / Suite / Unit / Building / Floor" name="addressline2"><br>
-      <input type="text" class="form-control" id="addressline3" placeholder="City" name="addressline3"><br>
-      <input type="text" class="form-control" id="addressline4" placeholder="Postal Code" name="addressline4"><br>
+    <input type="text" class="form-control" id="addressline1" placeholder="Street Address / P.O Box / Company Name" name="addressline1" value="<?=set_value('addressline1')?>" /><br>
+      <input type="text" class="form-control" id="addressline2" placeholder="Apartment / Suite / Unit / Building / Floor" name="addressline2" value="<?=set_value('addressline2')?>" /><br>
+      <input type="text" class="form-control" id="addressline3" placeholder="City" name="addressline3" value="<?=set_value('addressline3')?>" /><br>
+      <input type="text" class="form-control" id="addressline4" placeholder="Postal Code" name="addressline4" value="<?=set_value('addressline4')?>" /><br>
     </div>
+ 
+
+
+
+
+
     <div class="form-group">
       <label for="district">Permanent Residence District Name and Number: <span style="color:red">* <?php echo form_error('district'); ?></span></label>
        <label><i>(<span style="color:red">*</span>Read the conditions in <b>“6.2 Determination of Permanent Residence”</b> of the gazette notification very carefully and filling this accordingly and correctly.)</i></label>
       <!-- <input type="text" class="form-control" id="district" placeholder="Enter your district name and number" name="district"> -->
       <select class="form-control" id="district" name="district">
-        <option value="" selected disabled>Select a District</option>
+        <option value="">Select a District</option>
         <option value="16">D16 - Ampara</option>
         <option value="20">D20 - Anuradhapura</option>
         <option value="22">D22 - Badulla</option>
@@ -71,7 +77,7 @@
         <div class="col-sm-6">
             <div class="form-group">
              <label for="nic">NIC Number: <span style="color:red">* <?php echo form_error('nic'); ?></span></label>
-             <input type="text" class="form-control" id="nic" placeholder="Enter Your NIC" name="nic">
+             <input type="text" class="form-control" id="nic" placeholder="Enter Your NIC" name="nic" value="<?=set_value('nic')?>" />
            </div>
         </div>
 
@@ -80,37 +86,42 @@
               <label for="gender">Gender: <span style="color:red">* <?php echo form_error('gender'); ?></span></label><br>
               <input type="radio" name="gender"
               <?php if (isset($gender) && $gender=="female") echo "checked";?>
-              value="female"> Female
+              value="female" <?php if(isset($_POST['gender']) && $_POST['gender'] == "female") echo "checked";?>> Female
               <input type="radio" name="gender"
               <?php if (isset($gender) && $gender=="male") echo "checked";?>
-              value="male"> Male
+              value="male" <?php if(isset($_POST['gender']) && $_POST['gender'] == "male") echo "checked";?>> Male
             </div>
          </div>
 
     </div>
+
+
+
+
+    
 
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group"> 
                 <label for="title">Title: <span style="color:red">* <?php echo form_error('title'); ?></span></label>
                 <select class="form-control" id="title" placeholder="Mr/Mrs/Miss/Rev.." name="title">
-                  <option value="">Select</option>
-                  <option value="Mr">Mr</option>
-                  <option value="Miss">Miss</option>
-                  <option value="Rev">Rev</option>
+                <option value="Mr" <?php if(isset($_POST['title']) && $_POST['title'] == "Mr") echo 'selected="selected"';?>>Mr</option>
+                <option value="Miss" <?php if(isset($_POST['title']) && $_POST['title'] == "Miss") echo 'selected="selected"';?>>Miss</option>
+                <option value="Rev" <?php if(isset($_POST['title']) && $_POST['title'] == "Rev") echo 'selected="selected"';?>>Rev</option>
+                 
                 </select>
              </div>
         </div>
         <div class="col-sm-6">   
             <div class="form-group">          
                 <label for="ethnicity">Race: <span style="color:red">* <?php echo form_error('ethnicity'); ?></span></label>
-                <select class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity">
-                  <option value="">Select</option>
-                  <option value="Sinhalese">Sinhalese</option>
-                  <option value="Sri Lankan Tamil">Sri Lankan Tamil</option>
-                  <option value="Tamil of Indian Origin">Tamil of Indian Origin</option>
-                  <option value="Muslim">Muslim</option>
-                  <option value="Other">Other</option>
+                <select class="form-control" id="ethnicity" placeholder="Enter your Ethnicity" name="ethnicity" >
+                <option value="Sinhalese" <?php if(isset($_POST['ethnicity']) && $_POST['ethnicity'] == "Sinhalese") echo 'selected="selected"';?>>Sinhalese</option>
+                <option value="Sri Lankan Tamil" <?php if(isset($_POST['ethnicity']) && $_POST['ethnicity'] == "Sri Lankan Tamil") echo 'selected="selected"';?>>Sri Lankan Tamil</option>  
+                <option value="Tamil of Indian Origin" <?php if(isset($_POST['ethnicity']) && $_POST['ethnicity'] == "Tamil of Indian Origin") echo 'selected="selected"';?>>Tamil of Indian Origin</option>  
+                <option value="Muslim" <?php if(isset($_POST['ethnicity']) && $_POST['ethnicity'] == "Muslim") echo 'selected="selected"';?>>Muslim</option>  
+                <option value="Other" <?php if(isset($_POST['ethnicity']) && $_POST['ethnicity'] == "Other") echo 'selected="selected"';?>>Other</option>   
+          
                 </select>      
              </div>
         </div>
@@ -122,20 +133,20 @@
         <div class="col-sm-6">
             <div class="form-group"> 
                <label for="mobile">Mobile Number: </label>
-                <input type="text" class="form-control" id="mobile" placeholder="0700000000" name="mobile">
+                <input type="text" class="form-control" id="mobile" placeholder="0700000000" name="mobile" value="<?=set_value('mobile')?>" />
             </div>
         </div>
         <div class="col-sm-6">  
             <div class="form-group">           
                 <label for="home">Landline Number: </label>
-                <input type="text" class="form-control" id="home" placeholder="0000000000" name="home"> 
+                <input type="text" class="form-control" id="home" placeholder="0000000000" name="home" value="<?=set_value('home')?>" /> 
             </div>     
         </div>
     </div>
 
     <div class="form-group">            
             <label for="home">Email: </label>
-            <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email">             
+            <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email" value="<?=set_value('email')?>" />             
     </div>
    
     <input type="hidden" value="<?php echo $_SESSION['alindex']; ?>" name="alindex">
