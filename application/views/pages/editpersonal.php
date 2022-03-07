@@ -22,7 +22,7 @@
     </div>
     <div class="form-group">
       <label for="dob">Date of Birth: </label>
-      <input type="date" class="form-control" id="dob"  name="dob" value="<?php echo $_SESSION['dob']; ?>">
+      <input type="date" class="form-control" id="dob"  name="dob" min="1997-01-01" max="2022-01-01" value="<?php echo $_SESSION['dob']; ?>">
     </div>
     <div class="form-group">
       <label for="address">Permanent Address: </label>
