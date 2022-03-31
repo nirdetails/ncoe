@@ -1,5 +1,11 @@
 <?php ob_start(); ?>
-<?php session_destroy(); ?>
+<?php 
+if(session_id() !== '' || isset($_SESSION) || session_status() !== PHP_SESSION_NONE) {
+    // session isn't started
+    session_destroy(); 
+}
+// var_dump($_SESSION);
+?>
 <?php ob_end_flush(); ?>
 <br>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
