@@ -31,8 +31,7 @@ class Alresults extends CI_Controller{
 
 		// set the validation rules
 		$this->form_validation->set_rules('year', 'A/L Year', 'required');
-		$this->form_validation->set_rules('syllabus', 'Syllabus Type', 'required');
-		
+		$this->form_validation->set_rules('syllabus', 'Syllabus Type', 'required');	
 		$this->form_validation->set_rules('alindex', 'Index Number', 'required|xss_clean|is_exist[stuents.alindex]',array('is_exist' => 'You have Already submit an application, Please contact us for more support.'));
 		$this->form_validation->set_message('required', '{field} is a required field');
 		
@@ -53,6 +52,9 @@ class Alresults extends CI_Controller{
 			$syllabus = $this->input->post('syllabus');
 			$alindex = $this->input->post('alindex');
             
+			$this->session->set_userdata('year', $year);
+			$this->session->set_userdata('syllabus', $syllabus);
+			$this->session->set_userdata('alindex', $alindex);
 
 			if($alindex != "" && $year !=""){
                 $data['alresults'] = $this->alresults_model-> get_alresults();
@@ -75,13 +77,11 @@ class Alresults extends CI_Controller{
 
 			else{
 				// redirect('alresults');
-					$this->load->view('templates/header');
-					$this->load->view('pages/alresults',$data);
-					$this->load->view('templates/footer');
-				}
-			$this->session->set_userdata('year', $year);
-			$this->session->set_userdata('syllabus', $syllabus);
-			$this->session->set_userdata('alindex', $alindex);
+				$this->load->view('templates/header');
+				$this->load->view('pages/alresults',$data);
+				$this->load->view('templates/footer');
+			}
+			
 			
 
 			// check whether those values are match with any database record

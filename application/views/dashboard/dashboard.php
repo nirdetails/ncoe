@@ -2,7 +2,7 @@
 
 <form action="" method="POST">
     Enter password: 
-    <input type="text" name="nicu" id="nicu">
+    <input type="password" name="nicu" id="nicu">
     <input type="submit" value="Submit" name="nicsubmit">
 <br><br>
 </form>
@@ -22,6 +22,17 @@
             
             echo $this->db->count_all('stuents');
             echo " Total Records";
+
+            echo "<table border = 1 >
+                        <tr> 
+                            <td>District</td> 
+                            <td>Count</td>
+                        </tr>
+                        <tr> 
+                            <td>Kurunegala</td> 
+                            <td>" . $this->db->count_all('stuents')->where('Resdistrict', '09'). "</td>
+                        </tr>
+                </table>";
 ?>
             <br><br>
             <div class="row" style="padding-left: 10px;">
